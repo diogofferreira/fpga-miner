@@ -1,0 +1,309 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May  3 12:52:59 2018
+# Process ID: 12538
+# Current directory: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_xlconcat_0_synth_1
+# Command line: vivado -log design_1_microblaze_0_xlconcat_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_microblaze_0_xlconcat_0.tcl
+# Log file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_xlconcat_0_synth_1/design_1_microblaze_0_xlconcat_0.vds
+# Journal file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_xlconcat_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_microblaze_0_xlconcat_0.tcl -notrace
+Command: synth_design -top design_1_microblaze_0_xlconcat_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12551 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1254.074 ; gain = 81.000 ; free physical = 9408 ; free virtual = 12232
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_xlconcat_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/synth/design_1_microblaze_0_xlconcat_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'xlconcat_v2_1_1_xlconcat' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 2 - type: integer 
+	Parameter NUM_PORTS bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (1#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_xlconcat_0' (2#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/synth/design_1_microblaze_0_xlconcat_0.v:58]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In31[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1296.605 ; gain = 123.531 ; free physical = 9417 ; free virtual = 12243
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1296.605 ; gain = 123.531 ; free physical = 9417 ; free virtual = 12243
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1536.426 ; gain = 0.000 ; free physical = 8867 ; free virtual = 11708
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1536.426 ; gain = 363.352 ; free physical = 9006 ; free virtual = 11849
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1536.426 ; gain = 363.352 ; free physical = 9006 ; free virtual = 11849
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1536.426 ; gain = 363.352 ; free physical = 9008 ; free virtual = 11851
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1536.426 ; gain = 363.352 ; free physical = 9008 ; free virtual = 11851
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3330] design design_1_microblaze_0_xlconcat_0 has an empty top module
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1536.426 ; gain = 363.352 ; free physical = 9007 ; free virtual = 11850
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1579.426 ; gain = 406.352 ; free physical = 8769 ; free virtual = 11619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1579.426 ; gain = 406.352 ; free physical = 8769 ; free virtual = 11619
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8768 ; free virtual = 11618
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8768 ; free virtual = 11617
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8768 ; free virtual = 11617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8768 ; free virtual = 11617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8768 ; free virtual = 11617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8767 ; free virtual = 11617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8767 ; free virtual = 11617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.441 ; gain = 415.367 ; free physical = 8767 ; free virtual = 11617
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1588.441 ; gain = 175.547 ; free physical = 8823 ; free virtual = 11673
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1588.449 ; gain = 415.367 ; free physical = 8830 ; free virtual = 11679
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+13 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 1596.441 ; gain = 442.465 ; free physical = 8808 ; free virtual = 11658
+INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_xlconcat_0_synth_1/design_1_microblaze_0_xlconcat_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/design_1_microblaze_0_xlconcat_0.xci
+INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_xlconcat_0_synth_1/design_1_microblaze_0_xlconcat_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_microblaze_0_xlconcat_0_utilization_synth.rpt -pb design_1_microblaze_0_xlconcat_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1600.441 ; gain = 0.000 ; free physical = 8809 ; free virtual = 11659
+INFO: [Common 17-206] Exiting Vivado at Thu May  3 12:53:59 2018...

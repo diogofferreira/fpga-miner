@@ -1,0 +1,807 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May  3 12:56:05 2018
+# Process ID: 13812
+# Current directory: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1
+# Command line: vivado -log design_1_microblaze_0_axi_intc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_microblaze_0_axi_intc_0.tcl
+# Log file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1/design_1_microblaze_0_axi_intc_0.vds
+# Journal file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_microblaze_0_axi_intc_0.tcl -notrace
+Command: synth_design -top design_1_microblaze_0_axi_intc_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13920 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1255.074 ; gain = 82.000 ; free physical = 9372 ; free virtual = 12345
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_intc_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/synth/design_1_microblaze_0_axi_intc_0.vhd:89]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_INSTANCE bound to: design_1_microblaze_0_axi_intc_0 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 2 - type: integer 
+	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111111111111110 
+	Parameter C_KIND_OF_EDGE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_KIND_OF_LVL bound to: 32'b11111111111111111111111111111111 
+	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111111111111110 
+	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_IVAR_RESET_VALUE bound to: 32'b00000000000000000000000000010000 
+	Parameter C_ENABLE_ASYNC bound to: 0 - type: integer 
+	Parameter C_HAS_IPR bound to: 1 - type: integer 
+	Parameter C_HAS_SIE bound to: 1 - type: integer 
+	Parameter C_HAS_CIE bound to: 1 - type: integer 
+	Parameter C_HAS_IVR bound to: 1 - type: integer 
+	Parameter C_HAS_ILR bound to: 0 - type: integer 
+	Parameter C_IRQ_IS_LEVEL bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE bound to: 1'b1 
+	Parameter C_DISABLE_SYNCHRONIZERS bound to: 0 - type: integer 
+	Parameter C_MB_CLK_NOT_CONNECTED bound to: 1 - type: integer 
+	Parameter C_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_EN_CASCADE_MODE bound to: 0 - type: integer 
+	Parameter C_CASCADE_MASTER bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_intc' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:3651' bound to instance 'U0' of component 'axi_intc' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/synth/design_1_microblaze_0_axi_intc_0.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'axi_intc' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:3769]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_INSTANCE bound to: design_1_microblaze_0_axi_intc_0 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 2 - type: integer 
+	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: -2 - type: integer 
+	Parameter C_KIND_OF_EDGE bound to: -1 - type: integer 
+	Parameter C_KIND_OF_LVL bound to: -1 - type: integer 
+	Parameter C_ASYNC_INTR bound to: -2 - type: integer 
+	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_IVAR_RESET_VALUE bound to: 16 - type: integer 
+	Parameter C_HAS_IPR bound to: 1 - type: integer 
+	Parameter C_HAS_SIE bound to: 1 - type: integer 
+	Parameter C_HAS_CIE bound to: 1 - type: integer 
+	Parameter C_HAS_IVR bound to: 1 - type: integer 
+	Parameter C_HAS_ILR bound to: 0 - type: integer 
+	Parameter C_IRQ_IS_LEVEL bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE bound to: 1'b1 
+	Parameter C_DISABLE_SYNCHRONIZERS bound to: 0 - type: integer 
+	Parameter C_MB_CLK_NOT_CONNECTED bound to: 1 - type: integer 
+	Parameter C_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_ENABLE_ASYNC bound to: 0 - type: integer 
+	Parameter C_EN_CASCADE_MODE bound to: 0 - type: integer 
+	Parameter C_CASCADE_MASTER bound to: 0 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:3696]
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:3697]
+INFO: [Synth 8-638] synthesizing module 'intc_core' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:782]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_DWIDTH bound to: 32 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 2 - type: integer 
+	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: -2 - type: integer 
+	Parameter C_KIND_OF_EDGE bound to: -1 - type: integer 
+	Parameter C_KIND_OF_LVL bound to: -1 - type: integer 
+	Parameter C_ASYNC_INTR bound to: -2 - type: integer 
+	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_HAS_IPR bound to: 1 - type: integer 
+	Parameter C_HAS_SIE bound to: 1 - type: integer 
+	Parameter C_HAS_CIE bound to: 1 - type: integer 
+	Parameter C_HAS_IVR bound to: 1 - type: integer 
+	Parameter C_HAS_ILR bound to: 0 - type: integer 
+	Parameter C_IRQ_IS_LEVEL bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE bound to: 1'b1 
+	Parameter C_DISABLE_SYNCHRONIZERS bound to: 0 - type: integer 
+	Parameter C_MB_CLK_NOT_CONNECTED bound to: 1 - type: integer 
+	Parameter C_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_IVAR_RESET_VALUE bound to: 16 - type: integer 
+	Parameter C_EN_CASCADE_MODE bound to: 0 - type: integer 
+	Parameter C_CASCADE_MASTER bound to: 0 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* buffer_type = "none" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:752]
+INFO: [Synth 8-638] synthesizing module 'shared_ram_ivar' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:321]
+	Parameter C_WIDTH bound to: 32 - type: integer 
+	Parameter C_DPRAM_DEPTH bound to: 16 - type: integer 
+	Parameter C_ADDR_LINES bound to: 4 - type: integer 
+	Parameter C_IVAR_RESET_VALUE bound to: 16 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:325]
+INFO: [Synth 8-256] done synthesizing module 'shared_ram_ivar' (1#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:321]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:2019]
+WARNING: [Synth 8-6014] Unused sequential element ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.second_ack_sync_d3_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:1387]
+INFO: [Synth 8-256] done synthesizing module 'intc_core' (2#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:782]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000101111111 
+	Parameter C_USE_WSTRB bound to: 1 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000101111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000001000000000000000000000000000000000001 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000101111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000001000000000000000000000000000000000001 
+	Parameter C_IPIF_ABUS_WIDTH bound to: 9 - type: integer 
+	Parameter C_IPIF_DBUS_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 383 - type: integer 
+	Parameter C_USE_WSTRB bound to: 1 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+	Parameter C_BUS_AWIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 383 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000101111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000001000000000000000000000000000000000001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_BAR bound to: 9'b000000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_BAR bound to: 9'b100000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (4#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (5#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (6#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_intc' (7#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:3769]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_intc_0' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/synth/design_1_microblaze_0_axi_intc_0.vhd:89]
+WARNING: [Synth 8-3331] design pselect_f__parameterized16 has unconnected port A[2]
+WARNING: [Synth 8-3331] design pselect_f__parameterized16 has unconnected port A[3]
+WARNING: [Synth 8-3331] design pselect_f__parameterized16 has unconnected port A[4]
+WARNING: [Synth 8-3331] design pselect_f__parameterized16 has unconnected port A[5]
+WARNING: [Synth 8-3331] design pselect_f__parameterized16 has unconnected port A[6]
+WARNING: [Synth 8-3331] design pselect_f__parameterized16 has unconnected port A[7]
+WARNING: [Synth 8-3331] design pselect_f__parameterized16 has unconnected port A[8]
+WARNING: [Synth 8-3331] design pselect_f has unconnected port A[3]
+WARNING: [Synth 8-3331] design pselect_f has unconnected port A[4]
+WARNING: [Synth 8-3331] design pselect_f has unconnected port A[5]
+WARNING: [Synth 8-3331] design pselect_f has unconnected port A[6]
+WARNING: [Synth 8-3331] design pselect_f has unconnected port A[7]
+WARNING: [Synth 8-3331] design pselect_f has unconnected port A[8]
+WARNING: [Synth 8-3331] design address_decoder has unconnected port Bus_RNW
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[3]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[4]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[5]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[10]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[11]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[12]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[13]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[14]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_rdce[15]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[1]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[6]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[9]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[10]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[11]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[12]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[13]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[14]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Bus2ip_wrce[15]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Processor_clk
+WARNING: [Synth 8-3331] design intc_core has unconnected port processor_rst
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[31]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[30]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[29]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[28]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[27]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[26]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[25]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[24]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[23]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[22]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[21]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[20]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[19]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[18]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[17]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[16]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[15]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[14]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[13]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[12]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[11]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[10]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[9]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[8]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[7]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[6]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[5]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[4]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[3]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[2]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[1]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[0]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port irq_in
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1299.605 ; gain = 126.531 ; free physical = 9318 ; free virtual = 12291
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1299.605 ; gain = 126.531 ; free physical = 9308 ; free virtual = 12282
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'U0'
+Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_clocks.xdc] for cell 'U0'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1637.426 ; gain = 0.000 ; free physical = 8626 ; free virtual = 11721
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8766 ; free virtual = 11768
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8766 ; free virtual = 11768
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8768 ; free virtual = 11770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "ivr_out" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "iar" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "iar" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "in_idle" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Irq_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8757 ; free virtual = 11759
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 59    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 38    
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module shared_ram_ivar 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+Module intc_core 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 28    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module pselect_f 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module address_decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 20    
+Module slave_attachment 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+Module axi_intc 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "INTC_CORE_I/ivr_out" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port processor_clk
+WARNING: [Synth 8-3331] design axi_intc has unconnected port processor_rst
+WARNING: [Synth 8-3331] design axi_intc has unconnected port irq_in
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[31]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[30]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[29]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[28]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[27]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[26]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[25]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[24]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[23]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[22]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[21]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[20]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[19]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[18]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[17]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[16]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[15]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[14]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[13]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[12]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[11]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[10]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[9]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[8]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[7]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[6]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[5]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[4]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[3]
+WARNING: [Synth 8-3331] design axi_intc has unconnected port interrupt_address_in[2]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[2]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[3]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[4]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[5]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[6]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[7]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[8]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[9]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[10]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[11]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[12]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[13]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[14]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[15]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[16]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[17]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[18]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[19]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[20]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[21]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[22]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[23]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[24]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[25]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[26]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[27]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[28]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[29]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[30]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\INTC_CORE_I/IPR_GEN.ipr_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[1]) is unused and will be removed from module axi_intc.
+WARNING: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[0]) is unused and will be removed from module axi_intc.
+WARNING: [Synth 8-3332] Sequential element (INTC_CORE_I/IPR_GEN.ipr_reg[31]) is unused and will be removed from module axi_intc.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8742 ; free virtual = 11744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+--------------------------------------------------------------------------------+----------------+----------------------+-----------------+
+|Module Name | RTL Object                                                                     | Inference      | Size (Depth x Width) | Primitives      | 
++------------+--------------------------------------------------------------------------------+----------------+----------------------+-----------------+
+|U0          | INTC_CORE_I/IVAR_FAST_MODE_GEN.IVAR_REG_MEM_AXI_CLK_GEN.IVAR_REG_MEM_I/ram_reg | User Attribute | 16 x 32              | RAM16X1D x 32   | 
++------------+--------------------------------------------------------------------------------+----------------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:50 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8535 ; free virtual = 11576
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+--------------------------------------------------------------------------------+----------------+----------------------+-----------------+
+|Module Name | RTL Object                                                                     | Inference      | Size (Depth x Width) | Primitives      | 
++------------+--------------------------------------------------------------------------------+----------------+----------------------+-----------------+
+|U0          | INTC_CORE_I/IVAR_FAST_MODE_GEN.IVAR_REG_MEM_AXI_CLK_GEN.IVAR_REG_MEM_I/ram_reg | User Attribute | 16 x 32              | RAM16X1D x 32   | 
++------------+--------------------------------------------------------------------------------+----------------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0]) is unused and will be removed from module axi_intc.
+WARNING: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0]) is unused and will be removed from module axi_intc.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8530 ; free virtual = 11571
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     2|
+|2     |LUT2     |    16|
+|3     |LUT3     |    49|
+|4     |LUT4     |    32|
+|5     |LUT5     |    14|
+|6     |LUT6     |    30|
+|7     |RAM16X1D |    32|
+|8     |FDRE     |   177|
+|9     |FDSE     |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------------------+-----------------+------+
+|      |Instance                                                           |Module           |Cells |
++------+-------------------------------------------------------------------+-----------------+------+
+|1     |top                                                                |                 |   353|
+|2     |  U0                                                               |axi_intc         |   353|
+|3     |    AXI_LITE_IPIF_I                                                |axi_lite_ipif    |   184|
+|4     |      I_SLAVE_ATTACHMENT                                           |slave_attachment |   184|
+|5     |        I_DECODER                                                  |address_decoder  |    96|
+|6     |    INTC_CORE_I                                                    |intc_core        |   165|
+|7     |      \IVAR_FAST_MODE_GEN.IVAR_REG_MEM_AXI_CLK_GEN.IVAR_REG_MEM_I  |shared_ram_ivar  |    96|
++------+-------------------------------------------------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.426 ; gain = 464.352 ; free physical = 8531 ; free virtual = 11571
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1637.426 ; gain = 126.531 ; free physical = 8584 ; free virtual = 11625
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1637.434 ; gain = 464.352 ; free physical = 8585 ; free virtual = 11626
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+109 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1637.434 ; gain = 483.457 ; free physical = 8582 ; free virtual = 11622
+INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1/design_1_microblaze_0_axi_intc_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xci
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_microblaze_0_axi_intc_0_synth_1/design_1_microblaze_0_axi_intc_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_microblaze_0_axi_intc_0_utilization_synth.rpt -pb design_1_microblaze_0_axi_intc_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1661.438 ; gain = 0.000 ; free physical = 8582 ; free virtual = 11623
+INFO: [Common 17-206] Exiting Vivado at Thu May  3 12:57:10 2018...
