@@ -2,6 +2,9 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.mb.exe.debug.1230204851;xilinx.gnu.mb.exe.debug.1230204851.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="c:\xilinx\sdk\2017.4\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
+<includePath path="c:\xilinx\sdk\2017.4\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
+<includePath path="c:\xilinx\sdk\2017.4\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="/opt/Xilinx/SDK/2017.4/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
 <includePath path="/opt/Xilinx/SDK/2017.4/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
 <includePath path="/opt/Xilinx/SDK/2017.4/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>
@@ -446,6 +449,9 @@
 </instance>
 <instance id="xilinx.gnu.mb.exe.debug.1230204851;xilinx.gnu.mb.exe.debug.1230204851.;xilinx.gnu.mb.c.toolchain.compiler.debug.939482048;xilinx.gnu.compiler.input.133350503">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="c:\xilinx\sdk\2017.4\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
+<includePath path="c:\xilinx\sdk\2017.4\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
+<includePath path="c:\xilinx\sdk\2017.4\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="/opt/Xilinx/SDK/2017.4/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
 <includePath path="/opt/Xilinx/SDK/2017.4/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
 <includePath path="/opt/Xilinx/SDK/2017.4/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>

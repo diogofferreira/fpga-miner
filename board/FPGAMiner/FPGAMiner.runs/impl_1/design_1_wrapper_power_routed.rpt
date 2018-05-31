@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-| Date             : Mon May 14 15:44:20 2018
-| Host             : mac running 64-bit Arch Linux
+| Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date             : Thu May 31 01:00:19 2018
+| Host             : hp-laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.361        |
+| Total On-Chip Power (W)  | 0.374        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.262        |
+| Dynamic (W)              | 0.275        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 83.4         |
-| Junction Temperature (C) | 26.6         |
+| Max Ambient (C)          | 83.3         |
+| Junction Temperature (C) | 26.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.029 |       10 |       --- |             --- |
-| Slice Logic              |     0.019 |    14917 |       --- |             --- |
-|   LUT as Logic           |     0.014 |     5358 |     63400 |            8.45 |
-|   LUT as Distributed RAM |     0.003 |      434 |     19000 |            2.28 |
-|   Register               |    <0.001 |     5619 |    126800 |            4.43 |
-|   CARRY4                 |    <0.001 |      143 |     15850 |            0.90 |
-|   LUT as Shift Register  |    <0.001 |      519 |     19000 |            2.73 |
-|   F7/F8 Muxes            |    <0.001 |      322 |     63400 |            0.51 |
-|   Others                 |    <0.001 |     1057 |       --- |             --- |
-| Signals                  |     0.028 |    10072 |       --- |             --- |
-| Block RAM                |     0.039 |       22 |       135 |           16.30 |
+| Clocks                   |     0.040 |       11 |       --- |             --- |
+| Slice Logic              |     0.020 |    20013 |       --- |             --- |
+|   LUT as Logic           |     0.015 |     6768 |     63400 |           10.68 |
+|   LUT as Distributed RAM |     0.003 |      458 |     19000 |            2.41 |
+|   Register               |     0.001 |     8536 |    126800 |            6.73 |
+|   CARRY4                 |    <0.001 |      207 |     15850 |            1.31 |
+|   LUT as Shift Register  |    <0.001 |      665 |     19000 |            3.50 |
+|   F7/F8 Muxes            |    <0.001 |      343 |     63400 |            0.54 |
+|   Others                 |    <0.001 |     1316 |       --- |             --- |
+| Signals                  |     0.030 |    14105 |       --- |             --- |
+| Block RAM                |     0.039 |       24 |       135 |           17.78 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
-| I/O                      |     0.040 |       59 |       210 |           28.10 |
+| I/O                      |     0.041 |       59 |       210 |           28.10 |
 | Static Power             |     0.099 |          |           |                 |
-| Total                    |     0.361 |          |           |                 |
+| Total                    |     0.374 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.132 |       0.115 |      0.016 |
+| Vccint    |       1.000 |     0.145 |       0.128 |      0.016 |
 | Vccaux    |       1.800 |     0.078 |       0.060 |      0.018 |
 | Vcco33    |       3.300 |     0.015 |       0.011 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -129,18 +129,19 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------------------------------------------------------+---------------------------------------------------------+-----------------+
-| Clock                                                      | Domain                                                  | Constraint (ns) |
-+------------------------------------------------------------+---------------------------------------------------------+-----------------+
-| clk_out1_design_1_clk_wiz_1_0                              | design_1_i/clk_wiz_1/inst/clk_out1_design_1_clk_wiz_1_0 |            10.0 |
-| clk_out2_design_1_clk_wiz_1_0                              | design_1_i/clk_wiz_1/inst/clk_out2_design_1_clk_wiz_1_0 |            20.0 |
-| clkfbout_design_1_clk_wiz_1_0                              | design_1_i/clk_wiz_1/inst/clkfbout_design_1_clk_wiz_1_0 |            10.0 |
-| design_1_i/axi_ethernetlite_0/U0/phy_rx_clk                | design_1_i/axi_ethernetlite_0/U0/C                      |            40.0 |
-| design_1_i/axi_ethernetlite_0/U0/phy_tx_clk                | design_1_i/axi_ethernetlite_0/U0/phy_tx_clk_core        |            40.0 |
-| design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK   | design_1_i/mdm_1/U0/Use_E2.BSCAN_I/drck_i               |            33.3 |
-| design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE | design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Ext_JTAG_UPDATE      |            33.3 |
-| sys_clock                                                  | sys_clock                                               |            10.0 |
-+------------------------------------------------------------+---------------------------------------------------------+-----------------+
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                               | Constraint (ns) |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| clk_out1_design_1_clk_wiz_1_0                                                              | design_1_i/clk_wiz_1/inst/clk_out1_design_1_clk_wiz_1_0              |            10.0 |
+| clk_out2_design_1_clk_wiz_1_0                                                              | design_1_i/clk_wiz_1/inst/clk_out2_design_1_clk_wiz_1_0              |            20.0 |
+| clkfbout_design_1_clk_wiz_1_0                                                              | design_1_i/clk_wiz_1/inst/clkfbout_design_1_clk_wiz_1_0              |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |            33.0 |
+| design_1_i/axi_ethernetlite_0/U0/phy_rx_clk                                                | design_1_i/axi_ethernetlite_0/U0/C                                   |            40.0 |
+| design_1_i/axi_ethernetlite_0/U0/phy_tx_clk                                                | design_1_i/axi_ethernetlite_0/U0/phy_tx_clk_core                     |            40.0 |
+| design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                   | design_1_i/mdm_1/U0/Use_E2.BSCAN_I/drck_i                            |            33.3 |
+| design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                 | design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Ext_JTAG_UPDATE                   |            33.3 |
+| sys_clock                                                                                  | sys_clock                                                            |            10.0 |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -152,7 +153,7 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                              | Power (W) |
 +---------------------------------------------------------------------------------------------------+-----------+
-| design_1_wrapper                                                                                  |     0.262 |
+| design_1_wrapper                                                                                  |     0.275 |
 |   cellular_ram_dq_iobuf_0                                                                         |    <0.001 |
 |   cellular_ram_dq_iobuf_1                                                                         |    <0.001 |
 |   cellular_ram_dq_iobuf_10                                                                        |    <0.001 |
@@ -169,7 +170,92 @@ Table of Contents
 |   cellular_ram_dq_iobuf_7                                                                         |    <0.001 |
 |   cellular_ram_dq_iobuf_8                                                                         |    <0.001 |
 |   cellular_ram_dq_iobuf_9                                                                         |    <0.001 |
+|   dbg_hub                                                                                         |     0.003 |
+|     inst                                                                                          |     0.003 |
+|       BSCANID.u_xsdbm_id                                                                          |     0.003 |
+|         CORE_XSDB.UUT_MASTER                                                                      |     0.003 |
+|           U_ICON_INTERFACE                                                                        |     0.002 |
+|             U_CMD1                                                                                |    <0.001 |
+|             U_CMD2                                                                                |    <0.001 |
+|             U_CMD3                                                                                |    <0.001 |
+|             U_CMD4                                                                                |    <0.001 |
+|             U_CMD5                                                                                |    <0.001 |
+|             U_CMD6_RD                                                                             |    <0.001 |
+|               U_RD_FIFO                                                                           |    <0.001 |
+|                 SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst                                             |    <0.001 |
+|                   inst_fifo_gen                                                                   |    <0.001 |
+|                     gconvfifo.rf                                                                  |    <0.001 |
+|                       grf.rf                                                                      |    <0.001 |
+|                         gntv_or_sync_fifo.gcx.clkx                                                |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[1].rd_stg_inst                                    |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[1].wr_stg_inst                                    |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[2].rd_stg_inst                                    |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[2].wr_stg_inst                                    |    <0.001 |
+|                         gntv_or_sync_fifo.gl0.rd                                                  |    <0.001 |
+|                           gr1.gr1_int.rfwft                                                       |    <0.001 |
+|                           gras.rsts                                                               |    <0.001 |
+|                           rpntr                                                                   |    <0.001 |
+|                         gntv_or_sync_fifo.gl0.wr                                                  |    <0.001 |
+|                           gwas.wsts                                                               |    <0.001 |
+|                           wpntr                                                                   |    <0.001 |
+|                         gntv_or_sync_fifo.mem                                                     |    <0.001 |
+|                           gdm.dm_gen.dm                                                           |    <0.001 |
+|                             RAM_reg_0_15_0_5                                                      |    <0.001 |
+|                             RAM_reg_0_15_12_15                                                    |    <0.001 |
+|                             RAM_reg_0_15_6_11                                                     |    <0.001 |
+|                         rstblk                                                                    |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst                |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst                |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst                |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst                |    <0.001 |
+|             U_CMD6_WR                                                                             |    <0.001 |
+|               U_WR_FIFO                                                                           |    <0.001 |
+|                 SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst                                             |    <0.001 |
+|                   inst_fifo_gen                                                                   |    <0.001 |
+|                     gconvfifo.rf                                                                  |    <0.001 |
+|                       grf.rf                                                                      |    <0.001 |
+|                         gntv_or_sync_fifo.gcx.clkx                                                |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[1].rd_stg_inst                                    |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[1].wr_stg_inst                                    |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[2].rd_stg_inst                                    |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[2].wr_stg_inst                                    |    <0.001 |
+|                         gntv_or_sync_fifo.gl0.rd                                                  |    <0.001 |
+|                           gras.rsts                                                               |    <0.001 |
+|                           rpntr                                                                   |    <0.001 |
+|                         gntv_or_sync_fifo.gl0.wr                                                  |    <0.001 |
+|                           gwas.wsts                                                               |    <0.001 |
+|                           wpntr                                                                   |    <0.001 |
+|                         gntv_or_sync_fifo.mem                                                     |    <0.001 |
+|                           gdm.dm_gen.dm                                                           |    <0.001 |
+|                             RAM_reg_0_15_0_5                                                      |    <0.001 |
+|                             RAM_reg_0_15_12_15                                                    |    <0.001 |
+|                             RAM_reg_0_15_6_11                                                     |    <0.001 |
+|                         rstblk                                                                    |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst                |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst                |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst                |    <0.001 |
+|                           ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst                |    <0.001 |
+|             U_CMD7_CTL                                                                            |    <0.001 |
+|             U_CMD7_STAT                                                                           |    <0.001 |
+|             U_STATIC_STATUS                                                                       |    <0.001 |
+|           U_XSDB_ADDRESS_CONTROLLER                                                               |    <0.001 |
+|           U_XSDB_BURST_WD_LEN_CONTROLLER                                                          |    <0.001 |
+|           U_XSDB_BUS_CONTROLLER                                                                   |    <0.001 |
+|             U_RD_ABORT_FLAG                                                                       |    <0.001 |
+|             U_RD_REQ_FLAG                                                                         |    <0.001 |
+|             U_TIMER                                                                               |    <0.001 |
+|           U_XSDB_BUS_MSTR2SL_PORT_IFACE                                                           |    <0.001 |
+|         CORE_XSDB.U_ICON                                                                          |    <0.001 |
+|           U_CMD                                                                                   |    <0.001 |
+|           U_STAT                                                                                  |    <0.001 |
+|           U_SYNC                                                                                  |    <0.001 |
+|         SWITCH_N_EXT_BSCAN.bscan_inst                                                             |    <0.001 |
+|         SWITCH_N_EXT_BSCAN.bscan_switch                                                           |    <0.001 |
 |   design_1_i                                                                                      |     0.222 |
+|     MinerCoprocessor_0                                                                            |     0.003 |
+|       U0                                                                                          |     0.003 |
+|         MinerCoprocessor_v1_0_M00_AXIS_inst                                                       |    <0.001 |
+|         MinerCoprocessor_v1_0_S00_AXIS_inst                                                       |     0.002 |
 |     axi_emc_0                                                                                     |     0.010 |
 |       U0                                                                                          |     0.010 |
 |         AXI_EMC_NATIVE_INTERFACE_I                                                                |     0.007 |
@@ -194,8 +280,8 @@ Table of Contents
 |             BURST_CNT                                                                             |    <0.001 |
 |           MEM_STATE_MACHINE_I                                                                     |     0.001 |
 |           MEM_STEER_I                                                                             |    <0.001 |
-|     axi_ethernetlite_0                                                                            |     0.009 |
-|       U0                                                                                          |     0.009 |
+|     axi_ethernetlite_0                                                                            |     0.008 |
+|       U0                                                                                          |     0.008 |
 |         BUS_RST_RX_SYNC_CORE_I                                                                    |    <0.001 |
 |         BUS_RST_TX_SYNC_CORE_I                                                                    |    <0.001 |
 |         CDC_PHY_TX_DATA_OUT                                                                       |    <0.001 |
@@ -284,12 +370,12 @@ Table of Contents
 |           RX_PONG_GEN.RX_PONG_I                                                                   |    <0.001 |
 |             xpm_mem_gen.xpm_memory_inst                                                           |    <0.001 |
 |               xpm_memory_base_inst                                                                |    <0.001 |
-|           TX_PING                                                                                 |    <0.001 |
-|             xpm_mem_gen.xpm_memory_inst                                                           |    <0.001 |
-|               xpm_memory_base_inst                                                                |    <0.001 |
-|           TX_PONG_GEN.TX_PONG_I                                                                   |     0.002 |
-|             xpm_mem_gen.xpm_memory_inst                                                           |     0.002 |
-|               xpm_memory_base_inst                                                                |     0.002 |
+|           TX_PING                                                                                 |     0.001 |
+|             xpm_mem_gen.xpm_memory_inst                                                           |     0.001 |
+|               xpm_memory_base_inst                                                                |     0.001 |
+|           TX_PONG_GEN.TX_PONG_I                                                                   |     0.001 |
+|             xpm_mem_gen.xpm_memory_inst                                                           |     0.001 |
+|               xpm_memory_base_inst                                                                |     0.001 |
 |     axi_smc                                                                                       |     0.031 |
 |       inst                                                                                        |     0.031 |
 |         clk_map                                                                                   |    <0.001 |
@@ -322,8 +408,8 @@ Table of Contents
 |                   gen_xpm_memory_fifo.inst_fifo                                                   |    <0.001 |
 |                     gen_mem_rep[0].inst_rd_addrb                                                  |    <0.001 |
 |                     gen_wr.inst_wr_addra_p1                                                       |    <0.001 |
-|                 gen_normal_area.inst_fifo_node_payld                                              |    <0.001 |
-|                   gen_xpm_memory_fifo.inst_fifo                                                   |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                              |     0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                                   |     0.001 |
 |                     gen_mem_rep[0].inst_rd_addrb                                                  |    <0.001 |
 |                     gen_mem_rep[0].inst_wr_addra                                                  |    <0.001 |
 |                     gen_mem_rep[0].inst_xpm_memory                                                |    <0.001 |
@@ -449,7 +535,7 @@ Table of Contents
 |                       xpm_memory_base_inst                                                        |    <0.001 |
 |                         gen_wr_a.gen_word_narrow.mem_reg_0_3_0_0                                  |    <0.001 |
 |                     gen_wr.inst_wr_addra_p1                                                       |    <0.001 |
-|         s00_entry_pipeline                                                                        |     0.010 |
+|         s00_entry_pipeline                                                                        |     0.009 |
 |           s00_mmu                                                                                 |     0.004 |
 |             inst                                                                                  |     0.004 |
 |               ar_reg_stall                                                                        |    <0.001 |
@@ -679,7 +765,7 @@ Table of Contents
 |                 gen_normal_area.inst_fifo_send                                                    |    <0.001 |
 |               inst_si_handler                                                                     |    <0.001 |
 |                 inst_arb_stall_late                                                               |    <0.001 |
-|         s01_entry_pipeline                                                                        |     0.006 |
+|         s01_entry_pipeline                                                                        |     0.005 |
 |           s01_mmu                                                                                 |     0.002 |
 |             inst                                                                                  |     0.002 |
 |               ar_reg_stall                                                                        |    <0.001 |
@@ -817,7 +903,7 @@ Table of Contents
 |           COUNTER_0_I                                                                             |     0.001 |
 |             COUNTER_I                                                                             |     0.001 |
 |           GEN_SECOND_TIMER.COUNTER_1_I                                                            |     0.001 |
-|             COUNTER_I                                                                             |     0.001 |
+|             COUNTER_I                                                                             |    <0.001 |
 |           READ_MUX_I                                                                              |    <0.001 |
 |           TIMER_CONTROL_I                                                                         |    <0.001 |
 |             INPUT_DOUBLE_REGS                                                                     |    <0.001 |
@@ -862,9 +948,9 @@ Table of Contents
 |     microblaze_0                                                                                  |     0.052 |
 |       U0                                                                                          |     0.052 |
 |         MicroBlaze_Core_I                                                                         |     0.052 |
-|           Performance.Core                                                                        |     0.052 |
+|           Performance.Core                                                                        |     0.051 |
 |             Data_Flow_I                                                                           |     0.007 |
-|               ALU_I                                                                               |     0.001 |
+|               ALU_I                                                                               |     0.002 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                                 |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                                            |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_V5                                                           |    <0.001 |
@@ -877,15 +963,15 @@ Table of Contents
 |                 Using_FPGA.ALL_Bits[11].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[12].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[13].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[14].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
@@ -893,15 +979,15 @@ Table of Contents
 |                 Using_FPGA.ALL_Bits[15].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[16].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[17].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[18].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
@@ -909,19 +995,19 @@ Table of Contents
 |                 Using_FPGA.ALL_Bits[19].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[1].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[20].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[21].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[22].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
@@ -929,7 +1015,7 @@ Table of Contents
 |                 Using_FPGA.ALL_Bits[23].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[24].ALU_Bit_I1                                                |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
@@ -969,15 +1055,15 @@ Table of Contents
 |                 Using_FPGA.ALL_Bits[3].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[4].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[5].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[6].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
@@ -985,15 +1071,15 @@ Table of Contents
 |                 Using_FPGA.ALL_Bits[7].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[8].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |                 Using_FPGA.ALL_Bits[9].ALU_Bit_I1                                                 |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                                       |    <0.001 |
 |                     Using_FPGA.Native                                                             |    <0.001 |
-|                   Not_Last_Bit.MUXCY_XOR_I                                                        |     0.000 |
+|                   Not_Last_Bit.MUXCY_XOR_I                                                        |    <0.001 |
 |               Byte_Doublet_Handle_gti_I                                                           |     0.001 |
 |               Data_Flow_Logic_I                                                                   |    <0.001 |
 |                 Gen_Bits[0].MEM_EX_Result_Inst                                                    |    <0.001 |
@@ -1028,7 +1114,7 @@ Table of Contents
 |                 Gen_Bits[7].MEM_EX_Result_Inst                                                    |    <0.001 |
 |                 Gen_Bits[8].MEM_EX_Result_Inst                                                    |    <0.001 |
 |                 Gen_Bits[9].MEM_EX_Result_Inst                                                    |    <0.001 |
-|               Operand_Select_I                                                                    |     0.001 |
+|               Operand_Select_I                                                                    |    <0.001 |
 |                 Gen_Bit[0].MUXF7_I1                                                               |    <0.001 |
 |                 Gen_Bit[10].MUXF7_I1                                                              |    <0.001 |
 |                 Gen_Bit[11].MUXF7_I1                                                              |    <0.001 |
@@ -1235,11 +1321,13 @@ Table of Contents
 |               msr_reg_i                                                                           |    <0.001 |
 |                 MEM_MSR_Bits[24].Using_FDR.MSR_I                                                  |    <0.001 |
 |                 MEM_MSR_Bits[26].Using_FDR.MSR_I                                                  |    <0.001 |
+|                 MEM_MSR_Bits[27].Using_FDR.MSR_I                                                  |    <0.001 |
 |                 MEM_MSR_Bits[28].Using_FDR.MSR_I                                                  |    <0.001 |
 |                 MEM_MSR_Bits[29].Using_FDR.MSR_I                                                  |    <0.001 |
 |                 MEM_MSR_Bits[30].Using_FDR.MSR_I                                                  |    <0.001 |
 |                 OF_EX_MSR_Bits[24].Using_FDR.MSR_ex_I                                             |    <0.001 |
 |                 OF_EX_MSR_Bits[26].Using_FDR.MSR_ex_I                                             |    <0.001 |
+|                 OF_EX_MSR_Bits[27].Using_FDR.MSR_ex_I                                             |    <0.001 |
 |                 OF_EX_MSR_Bits[28].Using_FDR.MSR_ex_I                                             |    <0.001 |
 |                 OF_EX_MSR_Bits[28].Using_FDR.MSR_of_I                                             |    <0.001 |
 |                 OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I                                             |    <0.001 |
@@ -1518,6 +1606,7 @@ Table of Contents
 |             Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1                                              |    <0.001 |
 |             Use_Debug_Logic.Master_Core.Debug_Perf                                                |     0.001 |
 |               Serial_Dbg_Intf.SRL16E_1                                                            |    <0.001 |
+|               Serial_Dbg_Intf.SRL16E_2                                                            |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_3                                                            |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_4                                                            |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_7                                                            |     0.000 |
@@ -1563,8 +1652,8 @@ Table of Contents
 |                 Compare[7].SRLC16E_I                                                              |    <0.001 |
 |                 The_First_BreakPoints.MUXCY_Post                                                  |    <0.001 |
 |               sync_trig_out_0                                                                     |    <0.001 |
-|             Using_DCache.Using_WriteThrough.DCache_I1                                             |     0.014 |
-|               DATA_RAM_Module                                                                     |     0.009 |
+|             Using_DCache.Using_WriteThrough.DCache_I1                                             |     0.015 |
+|               DATA_RAM_Module                                                                     |     0.010 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[0].RAMB36_I1                                 |     0.002 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[1].RAMB36_I1                                 |     0.002 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[2].RAMB36_I1                                 |     0.002 |
@@ -1573,8 +1662,8 @@ Table of Contents
 |               Gen_WE[1].SUM_I                                                                     |    <0.001 |
 |               Gen_WE[2].SUM_I                                                                     |    <0.001 |
 |               Gen_WE[3].SUM_I                                                                     |    <0.001 |
-|               TAG_RAM_Module                                                                      |     0.002 |
-|                 Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1                                |     0.002 |
+|               TAG_RAM_Module                                                                      |     0.003 |
+|                 Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1                                |     0.003 |
 |               Use_XX_Accesses3.xx_access_read_miss                                                |    <0.001 |
 |                 MUXCY_I                                                                           |    <0.001 |
 |               Use_XX_Accesses_Hit.dcache_data_strobe_sel2_carry_or                                |    <0.001 |
@@ -1781,9 +1870,9 @@ Table of Contents
 |               MUXCY_I                                                                             |     0.000 |
 |             Using_Debug.Using_ICache.debug_combinded_carry_or_I                                   |     0.000 |
 |               MUXCY_I                                                                             |     0.000 |
-|             Using_ICache.ICache_I1                                                                |     0.022 |
+|             Using_ICache.ICache_I1                                                                |     0.021 |
 |               Cache_Interface_I1                                                                  |    <0.001 |
-|               Data_RAM_Module                                                                     |     0.017 |
+|               Data_RAM_Module                                                                     |     0.016 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[0].RAMB36_I1                                 |     0.004 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[1].RAMB36_I1                                 |     0.004 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[2].RAMB36_I1                                 |     0.004 |
@@ -1808,6 +1897,39 @@ Table of Contents
 |           Reset_DFF                                                                               |    <0.001 |
 |           Using_Async_Wakeup_0.Wakeup_DFF                                                         |    <0.001 |
 |           Using_Async_Wakeup_1.Wakeup_DFF                                                         |    <0.001 |
+|           Using_Streaming.Streaming_AXI_I                                                         |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[0].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[10].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[11].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[12].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[13].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[14].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[15].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[16].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[17].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[18].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[19].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[1].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[20].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[21].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[22].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[23].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[24].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[25].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[26].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[27].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[28].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[29].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[2].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[30].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[31].MEM_EX_Result_Inst                                  |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[3].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[4].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[5].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[6].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[7].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[8].MEM_EX_Result_Inst                                   |    <0.001 |
+|             Read_AXI_Performance.Gen_Bits[9].MEM_EX_Result_Inst                                   |    <0.001 |
 |     microblaze_0_axi_intc                                                                         |     0.001 |
 |       U0                                                                                          |     0.001 |
 |         AXI_LITE_IPIF_I                                                                           |    <0.001 |
@@ -1887,8 +2009,8 @@ Table of Contents
 |                 ramloop[7].ram.r                                                                  |    <0.001 |
 |                   prim_noinit.ram                                                                 |    <0.001 |
 |     microblaze_0_xlconcat                                                                         |     0.000 |
-|     mii_to_rmii_0                                                                                 |    <0.001 |
-|       U0                                                                                          |    <0.001 |
+|     mii_to_rmii_0                                                                                 |     0.001 |
+|       U0                                                                                          |     0.001 |
 |         RMII_FIXED.I_RX                                                                           |    <0.001 |
 |           RX_100_MBPS.I_SRL_FIFO                                                                  |    <0.001 |
 |         RMII_FIXED.I_TX                                                                           |    <0.001 |
@@ -1900,6 +2022,219 @@ Table of Contents
 |         SEQ                                                                                       |    <0.001 |
 |           SEQ_COUNTER                                                                             |    <0.001 |
 |   eth_mdio_mdc_mdio_iobuf                                                                         |    <0.001 |
+|   u_ila_0                                                                                         |     0.009 |
+|     inst                                                                                          |     0.009 |
+|       ila_core_inst                                                                               |     0.009 |
+|         ila_trace_memory_inst                                                                     |     0.001 |
+|           SUBCORE_RAM_BLK_MEM_1.trace_block_memory                                                |     0.001 |
+|             inst_blk_mem_gen                                                                      |     0.001 |
+|               gnbram.gnativebmg.native_blk_mem_gen                                                |     0.001 |
+|                 valid.cstr                                                                        |     0.001 |
+|                   ramloop[0].ram.r                                                                |    <0.001 |
+|                     prim_noinit.ram                                                               |    <0.001 |
+|                   ramloop[1].ram.r                                                                |    <0.001 |
+|                     prim_noinit.ram                                                               |    <0.001 |
+|         u_ila_cap_ctrl                                                                            |    <0.001 |
+|           U_CDONE                                                                                 |    <0.001 |
+|           U_NS0                                                                                   |    <0.001 |
+|           U_NS1                                                                                   |    <0.001 |
+|           u_cap_addrgen                                                                           |    <0.001 |
+|             U_CMPRESET                                                                            |    <0.001 |
+|             u_cap_sample_counter                                                                  |    <0.001 |
+|               U_SCE                                                                               |    <0.001 |
+|               U_SCMPCE                                                                            |    <0.001 |
+|               U_SCRST                                                                             |    <0.001 |
+|               u_scnt_cmp                                                                          |    <0.001 |
+|                 allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                           |    <0.001 |
+|                   DUT                                                                             |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                  |    <0.001 |
+|                       u_srlA                                                                      |    <0.001 |
+|                       u_srlB                                                                      |    <0.001 |
+|                       u_srlC                                                                      |    <0.001 |
+|                       u_srlD                                                                      |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE                                  |    <0.001 |
+|                       u_srlA                                                                      |    <0.001 |
+|                       u_srlB                                                                      |    <0.001 |
+|                       u_srlC                                                                      |    <0.001 |
+|                       u_srlD                                                                      |    <0.001 |
+|             u_cap_window_counter                                                                  |    <0.001 |
+|               U_WCE                                                                               |    <0.001 |
+|               U_WHCMPCE                                                                           |    <0.001 |
+|               U_WLCMPCE                                                                           |    <0.001 |
+|               u_wcnt_hcmp                                                                         |    <0.001 |
+|                 allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                           |    <0.001 |
+|                   DUT                                                                             |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                  |    <0.001 |
+|                       u_srlA                                                                      |    <0.001 |
+|                       u_srlB                                                                      |    <0.001 |
+|                       u_srlC                                                                      |    <0.001 |
+|                       u_srlD                                                                      |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE                                  |    <0.001 |
+|                       u_srlA                                                                      |    <0.001 |
+|                       u_srlB                                                                      |    <0.001 |
+|                       u_srlC                                                                      |    <0.001 |
+|                       u_srlD                                                                      |    <0.001 |
+|               u_wcnt_lcmp                                                                         |    <0.001 |
+|                 allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                           |    <0.001 |
+|                   DUT                                                                             |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                  |    <0.001 |
+|                       u_srlA                                                                      |    <0.001 |
+|                       u_srlB                                                                      |    <0.001 |
+|                       u_srlC                                                                      |    <0.001 |
+|                       u_srlD                                                                      |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE                                  |    <0.001 |
+|                       u_srlA                                                                      |    <0.001 |
+|                       u_srlB                                                                      |    <0.001 |
+|                       u_srlC                                                                      |    <0.001 |
+|                       u_srlD                                                                      |    <0.001 |
+|         u_ila_regs                                                                                |     0.004 |
+|           MU_SRL[0].mu_srl_reg                                                                    |    <0.001 |
+|           MU_SRL[1].mu_srl_reg                                                                    |    <0.001 |
+|           MU_SRL[2].mu_srl_reg                                                                    |    <0.001 |
+|           MU_SRL[3].mu_srl_reg                                                                    |    <0.001 |
+|           MU_SRL[4].mu_srl_reg                                                                    |    <0.001 |
+|           MU_SRL[5].mu_srl_reg                                                                    |    <0.001 |
+|           TC_SRL[0].tc_srl_reg                                                                    |    <0.001 |
+|           U_XSDB_SLAVE                                                                            |     0.001 |
+|           reg_15                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_16                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_17                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_18                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_19                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_1a                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_6                                                                                   |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_7                                                                                   |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_8                                                                                   |    <0.001 |
+|             I_EN_STAT_EQ1.U_STAT                                                                  |    <0.001 |
+|           reg_80                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_81                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_82                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_83                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_84                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_85                                                                                  |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_887                                                                                 |    <0.001 |
+|             I_EN_STAT_EQ1.U_STAT                                                                  |    <0.001 |
+|           reg_88d                                                                                 |    <0.001 |
+|             I_EN_STAT_EQ1.U_STAT                                                                  |    <0.001 |
+|           reg_890                                                                                 |    <0.001 |
+|             I_EN_STAT_EQ1.U_STAT                                                                  |    <0.001 |
+|           reg_9                                                                                   |    <0.001 |
+|             I_EN_STAT_EQ1.U_STAT                                                                  |    <0.001 |
+|           reg_srl_fff                                                                             |    <0.001 |
+|           reg_stream_ffd                                                                          |    <0.001 |
+|             I_EN_CTL_EQ1.U_CTL                                                                    |    <0.001 |
+|           reg_stream_ffe                                                                          |    <0.001 |
+|             I_EN_STAT_EQ1.U_STAT                                                                  |    <0.001 |
+|         u_ila_reset_ctrl                                                                          |    <0.001 |
+|           arm_detection_inst                                                                      |    <0.001 |
+|           asyncrounous_transfer.arm_in_transfer_inst                                              |    <0.001 |
+|           asyncrounous_transfer.arm_out_transfer_inst                                             |    <0.001 |
+|           asyncrounous_transfer.halt_in_transfer_inst                                             |    <0.001 |
+|           asyncrounous_transfer.halt_out_transfer_inst                                            |    <0.001 |
+|           halt_detection_inst                                                                     |    <0.001 |
+|         u_trig                                                                                    |     0.001 |
+|           N_DDR_TC.N_DDR_TC_INST[0].U_TC                                                          |    <0.001 |
+|             allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                               |    <0.001 |
+|               DUT                                                                                 |    <0.001 |
+|                 I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                      |    <0.001 |
+|                   u_srlA                                                                          |    <0.001 |
+|                   u_srlB                                                                          |    <0.001 |
+|                   u_srlC                                                                          |    <0.001 |
+|                   u_srlD                                                                          |    <0.001 |
+|           U_TM                                                                                    |    <0.001 |
+|             N_DDR_MODE.G_NMU[0].U_M                                                               |    <0.001 |
+|               allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                             |    <0.001 |
+|                 DUT                                                                               |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[2].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[3].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|             N_DDR_MODE.G_NMU[1].U_M                                                               |    <0.001 |
+|               allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                             |    <0.001 |
+|                 DUT                                                                               |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[2].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[3].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|             N_DDR_MODE.G_NMU[2].U_M                                                               |    <0.001 |
+|               allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                             |    <0.001 |
+|                 DUT                                                                               |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|             N_DDR_MODE.G_NMU[3].U_M                                                               |    <0.001 |
+|               allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                             |    <0.001 |
+|                 DUT                                                                               |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|             N_DDR_MODE.G_NMU[4].U_M                                                               |    <0.001 |
+|               allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                             |    <0.001 |
+|                 DUT                                                                               |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|             N_DDR_MODE.G_NMU[5].U_M                                                               |    <0.001 |
+|               allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst                             |    <0.001 |
+|                 DUT                                                                               |    <0.001 |
+|                   I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE                                    |    <0.001 |
+|                     u_srlA                                                                        |    <0.001 |
+|                     u_srlB                                                                        |    <0.001 |
+|                     u_srlC                                                                        |    <0.001 |
+|                     u_srlD                                                                        |    <0.001 |
+|         xsdb_memory_read_inst                                                                     |    <0.001 |
 +---------------------------------------------------------------------------------------------------+-----------+
 
 

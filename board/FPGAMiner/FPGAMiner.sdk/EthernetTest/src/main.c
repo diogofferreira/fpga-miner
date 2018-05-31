@@ -37,6 +37,8 @@
 #include "netif/xadapter.h"
 
 #include "platform.h"
+#include "mb_interface.h"
+
 #include "platform_config.h"
 #if defined (__arm__) || defined(__aarch64__)
 #include "xil_printf.h"
@@ -181,6 +183,39 @@ int main()
 
 	/* start the application (web server, rxtest, txtest, etc..) */
 	start_application();
+
+	/* Coprocessor test */
+	unsigned int i, v, r;
+	xil_printf("\n\rHello Stream Coprocessor\n\r");
+
+	putfsl(0x656C6C6F, 0);
+	getfsl(r, 0);
+		xil_printf("\nR:%08x", r);
+	putfsl(0x656C6C6F, 0);
+	putfsl(0x656C6C6F, 0);
+	putfsl(0x656C6C6F, 0);
+	putfsl(0x656C6C6F, 0);
+	putfsl(0x656C6C6F, 0);
+	putfsl(0x2C20776f, 0);
+	putfsl(0x726C6421, 0);
+	putfsl(0x726C6421, 0);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	getfsl(r, 0);
+	xil_printf("\nR:%08x", r);
+	xil_printf("\nDone!");
 
 	/* receive and process packets */
 	while (1) {

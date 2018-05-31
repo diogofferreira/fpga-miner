@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
---Date        : Mon May 14 15:39:14 2018
---Host        : mac running 64-bit Arch Linux
+--Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+--Date        : Thu May 31 00:08:20 2018
+--Host        : hp-laptop running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -1858,7 +1858,7 @@ entity design_1 is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=9,da_mb_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=9,da_mb_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -1918,6 +1918,14 @@ architecture STRUCTURE of design_1 is
     Dbg_Update : in STD_LOGIC;
     Debug_Rst : in STD_LOGIC;
     Dbg_Disable : in STD_LOGIC;
+    M0_AXIS_TLAST : out STD_LOGIC;
+    M0_AXIS_TDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M0_AXIS_TVALID : out STD_LOGIC;
+    M0_AXIS_TREADY : in STD_LOGIC;
+    S0_AXIS_TLAST : in STD_LOGIC;
+    S0_AXIS_TDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S0_AXIS_TVALID : in STD_LOGIC;
+    S0_AXIS_TREADY : out STD_LOGIC;
     M_AXI_IC_AWID : out STD_LOGIC_VECTOR ( 0 to 0 );
     M_AXI_IC_AWADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
     M_AXI_IC_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -2324,6 +2332,28 @@ architecture STRUCTURE of design_1 is
     M00_AXI_rready : out STD_LOGIC
   );
   end component design_1_axi_smc_0;
+  component design_1_MinerCoprocessor_0_0 is
+  port (
+    m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axis_tlast : out STD_LOGIC;
+    m00_axis_tvalid : out STD_LOGIC;
+    m00_axis_tready : in STD_LOGIC;
+    m00_axis_aclk : in STD_LOGIC;
+    m00_axis_aresetn : in STD_LOGIC;
+    s00_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axis_tlast : in STD_LOGIC;
+    s00_axis_tvalid : in STD_LOGIC;
+    s00_axis_tready : out STD_LOGIC;
+    s00_axis_aclk : in STD_LOGIC;
+    s00_axis_aresetn : in STD_LOGIC
+  );
+  end component design_1_MinerCoprocessor_0_0;
+  signal MinerCoprocessor_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal MinerCoprocessor_0_M00_AXIS_TLAST : STD_LOGIC;
+  signal MinerCoprocessor_0_M00_AXIS_TREADY : STD_LOGIC;
+  signal MinerCoprocessor_0_M00_AXIS_TVALID : STD_LOGIC;
   signal axi_emc_0_EMC_INTF_ADDR : STD_LOGIC_VECTOR ( 22 downto 0 );
   signal axi_emc_0_EMC_INTF_ADV_LDN : STD_LOGIC;
   signal axi_emc_0_EMC_INTF_BEN : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -2387,6 +2417,10 @@ architecture STRUCTURE of design_1 is
   signal clk_wiz_1_locked : STD_LOGIC;
   signal mdm_1_debug_sys_rst : STD_LOGIC;
   signal microblaze_0_Clk : STD_LOGIC;
+  signal microblaze_0_M0_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal microblaze_0_M0_AXIS_TLAST : STD_LOGIC;
+  signal microblaze_0_M0_AXIS_TREADY : STD_LOGIC;
+  signal microblaze_0_M0_AXIS_TVALID : STD_LOGIC;
   signal microblaze_0_M_AXI_DC_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_M_AXI_DC_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_M_AXI_DC_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2565,6 +2599,7 @@ architecture STRUCTURE of design_1 is
   signal rst_clk_wiz_1_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sys_clock_1 : STD_LOGIC;
+  signal NLW_MinerCoprocessor_0_m00_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_emc_0_mem_cken_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_emc_0_mem_lbon_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_emc_0_mem_rnw_UNCONNECTED : STD_LOGIC;
@@ -2659,6 +2694,23 @@ begin
   reset_1 <= reset;
   sys_clock_1 <= sys_clock;
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
+MinerCoprocessor_0: component design_1_MinerCoprocessor_0_0
+     port map (
+      m00_axis_aclk => microblaze_0_Clk,
+      m00_axis_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      m00_axis_tdata(31 downto 0) => MinerCoprocessor_0_M00_AXIS_TDATA(31 downto 0),
+      m00_axis_tlast => MinerCoprocessor_0_M00_AXIS_TLAST,
+      m00_axis_tready => MinerCoprocessor_0_M00_AXIS_TREADY,
+      m00_axis_tstrb(3 downto 0) => NLW_MinerCoprocessor_0_m00_axis_tstrb_UNCONNECTED(3 downto 0),
+      m00_axis_tvalid => MinerCoprocessor_0_M00_AXIS_TVALID,
+      s00_axis_aclk => microblaze_0_Clk,
+      s00_axis_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      s00_axis_tdata(31 downto 0) => microblaze_0_M0_AXIS_TDATA(31 downto 0),
+      s00_axis_tlast => microblaze_0_M0_AXIS_TLAST,
+      s00_axis_tready => microblaze_0_M0_AXIS_TREADY,
+      s00_axis_tstrb(3 downto 0) => B"1111",
+      s00_axis_tvalid => microblaze_0_M0_AXIS_TVALID
+    );
 axi_emc_0: component design_1_axi_emc_0_0
      port map (
       mem_a(31 downto 23) => NLW_axi_emc_0_mem_a_UNCONNECTED(31 downto 23),
@@ -2975,6 +3027,10 @@ microblaze_0: component design_1_microblaze_0_0
       Interrupt_Address(29) => microblaze_0_interrupt_ADDRESS(2),
       Interrupt_Address(30) => microblaze_0_interrupt_ADDRESS(1),
       Interrupt_Address(31) => microblaze_0_interrupt_ADDRESS(0),
+      M0_AXIS_TDATA(31 downto 0) => microblaze_0_M0_AXIS_TDATA(31 downto 0),
+      M0_AXIS_TLAST => microblaze_0_M0_AXIS_TLAST,
+      M0_AXIS_TREADY => microblaze_0_M0_AXIS_TREADY,
+      M0_AXIS_TVALID => microblaze_0_M0_AXIS_TVALID,
       M_AXI_DC_ARADDR(31 downto 0) => microblaze_0_M_AXI_DC_ARADDR(31 downto 0),
       M_AXI_DC_ARBURST(1 downto 0) => microblaze_0_M_AXI_DC_ARBURST(1 downto 0),
       M_AXI_DC_ARCACHE(3 downto 0) => microblaze_0_M_AXI_DC_ARCACHE(3 downto 0),
@@ -3070,6 +3126,10 @@ microblaze_0: component design_1_microblaze_0_0
       M_AXI_IC_WVALID => NLW_microblaze_0_M_AXI_IC_WVALID_UNCONNECTED,
       Read_Strobe => microblaze_0_dlmb_1_READSTROBE,
       Reset => rst_clk_wiz_1_100M_mb_reset,
+      S0_AXIS_TDATA(31 downto 0) => MinerCoprocessor_0_M00_AXIS_TDATA(31 downto 0),
+      S0_AXIS_TLAST => MinerCoprocessor_0_M00_AXIS_TLAST,
+      S0_AXIS_TREADY => MinerCoprocessor_0_M00_AXIS_TREADY,
+      S0_AXIS_TVALID => MinerCoprocessor_0_M00_AXIS_TVALID,
       Write_Strobe => microblaze_0_dlmb_1_WRITESTROBE
     );
 microblaze_0_axi_intc: component design_1_microblaze_0_axi_intc_0

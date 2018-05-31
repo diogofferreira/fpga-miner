@@ -11,7 +11,7 @@
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.xci"/>
-        <Attr Name="ImportTime" Val="1525952511"/>
+        <Attr Name="ImportTime" Val="1525348354"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,7 +28,7 @@
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.xci"/>
-        <Attr Name="ImportTime" Val="1525952511"/>
+        <Attr Name="ImportTime" Val="1525348354"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
