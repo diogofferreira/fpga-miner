@@ -14,7 +14,8 @@ print("Connection to FPGA at {}:{} successful!".format(board_hostname, board_por
 try:
     while True:
         word = os.urandom(32)
-        print("Sending new: ", "0x{}".format(''.join(hex(x)[2:] for x in word)))
+        hex_word = ''.join("{0:#0{1}x}".format(x, 4)[2:] for x in word)
+        print("Sending new: ", "0x{}".format(hex_word))
         sock.send(word)
 
         print("Waiting for response...")
