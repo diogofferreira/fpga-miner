@@ -9,29 +9,29 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="82837fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="693457fs"></ZoomStartTime>
+      <ZoomEndTime time="763258fs"></ZoomEndTime>
+      <Cursor1Time time="512000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="404"></NameColumnWidth>
-      <ValueColumnWidth column_width="269"></ValueColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="25" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="design_1_i/MinerCoprocessor_0_M00_AXIS_TDATA" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0_M00_AXIS_TDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MinerCoprocessor_0_M00_AXIS_TDATA[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="u_ila_0_microblaze_0_M0_AXIS_TDATA" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">u_ila_0_microblaze_0_M0_AXIS_TDATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">u_ila_0_microblaze_0_M0_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_microblaze_0_M0_AXIS_TVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_microblaze_0_M0_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_microblaze_0_M0_AXIS_TVALID</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -44,10 +44,18 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="u_ila_0_microblaze_0_M0_AXIS_TVALID" type="logic">
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0_M00_AXIS_TDATA" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_0_microblaze_0_M0_AXIS_TVALID</obj_property>
-      <obj_property name="ObjectShortName">u_ila_0_microblaze_0_M0_AXIS_TVALID</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0_M00_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MinerCoprocessor_0_M00_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_MinerCoprocessor_0_M00_AXIS_TVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_MinerCoprocessor_0_M00_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_MinerCoprocessor_0_M00_AXIS_TVALID</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -64,8 +72,139 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">u_ila_0_MinerCoprocessor_0_M00_AXIS_TVALID</obj_property>
       <obj_property name="ObjectShortName">u_ila_0_MinerCoprocessor_0_M00_AXIS_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_MinerCoprocessor_0_M00_AXIS_TREADY" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_MinerCoprocessor_0_M00_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_MinerCoprocessor_0_M00_AXIS_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_microblaze_0_M0_AXIS_TVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_microblaze_0_M0_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_microblaze_0_M0_AXIS_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_microblaze_0_M0_AXIS_TLAST" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_microblaze_0_M0_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_microblaze_0_M0_AXIS_TLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_microblaze_0_M0_AXIS_TDATA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_microblaze_0_M0_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_microblaze_0_M0_AXIS_TDATA[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="lopt" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">lopt</obj_property>
+      <obj_property name="ObjectShortName">lopt</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0_M00_AXIS_TDATA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0_M00_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MinerCoprocessor_0_M00_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/readEnable" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/readEnable</obj_property>
+      <obj_property name="ObjectShortName">readEnable</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/allWordsSent" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/allWordsSent</obj_property>
+      <obj_property name="ObjectShortName">allWordsSent</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/counterMaster" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/counterMaster[3:0]</obj_property>
+      <obj_property name="ObjectShortName">counterMaster[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/counterSlave" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/counterSlave[3:0]</obj_property>
+      <obj_property name="ObjectShortName">counterSlave[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/hashOut" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/hashOut[95:32]</obj_property>
+      <obj_property name="ObjectShortName">hashOut[95:32]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/validData" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/validData</obj_property>
+      <obj_property name="ObjectShortName">validData</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_mEnable" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_mEnable</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_mEnable</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/tempHash_1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/tempHash_1[95:32]</obj_property>
+      <obj_property name="ObjectShortName">tempHash_1[95:32]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/tempHash" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/tempHash[255:128]</obj_property>
+      <obj_property name="ObjectShortName">tempHash[255:128]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/nonce" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/nonce[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nonce[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/update" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/update</obj_property>
+      <obj_property name="ObjectShortName">update</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/MinerCoprocessor_0/hashInputWord" type="array">
+      <obj_property name="ElementShortName">design_1_i/MinerCoprocessor_0/hashInputWord[287:0]</obj_property>
+      <obj_property name="ObjectShortName">hashInputWord[287:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>
