@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 31 00:08:35 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jun  1 03:25:33 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4:part0:1.1" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -111,6 +111,17 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="O" NAME="readEnable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="validData" SIGIS="undef"/>
+        <PORT DIR="O" NAME="allWordsSent" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="counterSlave" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="counterMaster" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="255" NAME="hashOut" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="255" NAME="tempHash" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="nonce" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mEnable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="update" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="287" NAME="hashInputWord" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="MinerCoprocessor_0_m00_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0" PORT="S0_AXIS_TDATA"/>

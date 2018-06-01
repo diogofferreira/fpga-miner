@@ -188,17 +188,15 @@ int main()
 	unsigned int i, v, r;
 	xil_printf("\n\rHello Stream Coprocessor\n\r");
 
-	putfsl(0x656C6C6F, 0);
-	getfsl(r, 0);
-		xil_printf("\nR:%08x", r);
-	putfsl(0x656C6C6F, 0);
-	putfsl(0x656C6C6F, 0);
-	putfsl(0x656C6C6F, 0);
-	putfsl(0x656C6C6F, 0);
-	putfsl(0x656C6C6F, 0);
-	putfsl(0x2C20776f, 0);
-	putfsl(0x726C6421, 0);
-	putfsl(0x726C6421, 0);
+	putfsl(0xb094053f, 0);
+	putfsl(0x0f672572, 0);
+	putfsl(0x3a72a942, 0);
+	putfsl(0xc30f3ab7, 0);
+	putfsl(0x8fb5af7d, 0);
+	putfsl(0xdde2382f, 0);
+	putfsl(0xe4498b95, 0);
+	putfsl(0x3b3ae45e, 0);
+	xil_printf("\nALL DONE");
 	getfsl(r, 0);
 	xil_printf("\nR:%08x", r);
 	getfsl(r, 0);

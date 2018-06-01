@@ -14,15 +14,1145 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
-    <Object name="u_ila_0" gui_info="">
+    <Object name="" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.DATA_DEPTH" value="1024"/>
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="512"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
-    <Object name="u_ila_0_microblaze_0_M0_AXIS_TDATA[31:0]" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/MinerCoprocessor_0/allWordsSent" gui_info=""/>
+    <Object name="design_1_i/MinerCoprocessor_0/counterMaster[3:0]" gui_info=""/>
+    <Object name="design_1_i/MinerCoprocessor_0/counterSlave[3:0]" gui_info=""/>
+    <Object name="design_1_i/MinerCoprocessor_0/readEnable" gui_info=""/>
+    <Object name="design_1_i/MinerCoprocessor_0/update" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/MinerCoprocessor_0/validData" gui_info=""/>
+    <Object name="u_ila_0_microblaze_0_M0_AXIS_TDATA[31:0]" gui_info=""/>
   </ObjectList>
   <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/allWordsSent"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/counterMaster[3]"/>
+        <net name="design_1_i/MinerCoprocessor_0/counterMaster[2]"/>
+        <net name="design_1_i/MinerCoprocessor_0/counterMaster[1]"/>
+        <net name="design_1_i/MinerCoprocessor_0/counterMaster[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/counterSlave[3]"/>
+        <net name="design_1_i/MinerCoprocessor_0/counterSlave[2]"/>
+        <net name="design_1_i/MinerCoprocessor_0/counterSlave[1]"/>
+        <net name="design_1_i/MinerCoprocessor_0/counterSlave[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq288&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq288&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[287:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq288&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[287]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[286]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[285]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[284]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[283]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[282]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[281]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[280]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[279]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[278]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[277]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[276]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[275]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[274]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[273]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[272]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[271]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[270]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[269]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[268]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[267]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[266]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[265]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[264]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[263]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[262]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[261]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[260]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[259]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[258]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[257]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[256]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[255]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[254]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[253]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[252]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[251]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[250]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[249]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[248]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[247]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[246]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[245]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[244]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[243]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[242]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[241]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[240]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[239]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[238]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[237]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[236]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[235]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[234]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[233]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[232]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[231]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[230]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[229]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[228]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[227]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[226]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[225]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[224]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[223]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[222]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[221]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[220]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[219]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[218]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[217]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[216]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[215]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[214]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[213]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[212]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[211]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[210]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[209]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[208]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[207]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[206]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[205]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[204]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[203]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[202]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[201]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[200]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[199]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[198]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[197]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[196]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[195]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[194]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[193]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[192]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[191]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[190]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[189]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[188]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[187]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[186]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[185]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[184]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[183]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[182]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[181]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[180]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[179]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[178]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[177]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[176]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[175]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[174]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[173]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[172]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[171]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[170]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[169]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[168]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[167]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[166]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[165]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[164]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[163]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[162]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[161]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[160]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[159]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[158]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[157]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[156]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[155]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[154]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[153]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[152]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[151]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[150]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[149]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[148]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[147]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[146]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[145]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[144]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[143]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[142]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[141]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[140]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[139]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[138]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[137]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[136]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[135]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[134]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[133]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[132]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[131]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[130]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[129]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[128]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[127]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[126]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[125]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[124]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[123]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[122]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[121]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[120]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[119]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[118]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[117]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[116]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[115]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[114]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[113]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[112]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[111]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[110]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[109]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[108]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[107]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[106]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[105]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[104]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[103]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[102]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[101]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[100]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[99]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[98]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[97]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[96]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[95]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[94]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[93]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[92]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[91]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[90]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[89]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[88]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[87]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[86]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[85]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[84]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[83]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[82]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[81]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[80]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[79]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[78]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[77]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[76]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[75]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[74]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[73]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[72]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[71]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[70]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[69]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[68]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[67]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[66]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[65]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[64]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[63]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[62]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[61]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[60]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[59]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[58]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[57]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[56]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[55]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[54]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[53]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[52]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[51]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[50]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[49]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[48]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[47]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[46]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[45]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[44]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[43]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[42]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[41]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[40]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[39]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[38]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[37]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[36]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[35]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[34]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[33]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[32]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[31]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[30]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[29]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[28]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[27]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[26]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[25]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[24]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[23]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[22]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[21]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[20]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[19]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[18]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[17]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[16]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[15]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[14]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[13]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[12]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[11]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[10]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[9]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[8]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[7]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[6]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[5]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[4]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[3]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[2]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[1]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashInputWord[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[191:64]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[255]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[254]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[253]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[252]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[251]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[250]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[249]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[248]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[247]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[246]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[245]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[244]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[243]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[242]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[241]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[240]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[239]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[238]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[237]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[236]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[235]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[234]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[233]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[232]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[231]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[230]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[229]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[228]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[227]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[226]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[225]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[224]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[223]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[222]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[221]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[220]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[219]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[218]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[217]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[216]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[215]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[214]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[213]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[212]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[211]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[210]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[209]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[208]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[207]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[206]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[205]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[204]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[203]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[202]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[201]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[200]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[199]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[198]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[197]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[196]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[195]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[194]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[193]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[192]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[191]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[190]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[189]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[188]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[187]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[186]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[185]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[184]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[183]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[182]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[181]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[180]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[179]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[178]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[177]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[176]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[175]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[174]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[173]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[172]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[171]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[170]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[169]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[168]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[167]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[166]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[165]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[164]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[163]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[162]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[161]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[160]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[159]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[158]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[157]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[156]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[155]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[154]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[153]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[152]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[151]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[150]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[149]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[148]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[147]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[146]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[145]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[144]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[143]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[142]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[141]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[140]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[139]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[138]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[137]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[136]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[135]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[134]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[133]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[132]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[131]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[130]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[129]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[128]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq256&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq256&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[255:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq256&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[255]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[254]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[253]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[252]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[251]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[250]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[249]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[248]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[247]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[246]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[245]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[244]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[243]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[242]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[241]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[240]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[239]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[238]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[237]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[236]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[235]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[234]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[233]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[232]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[231]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[230]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[229]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[228]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[227]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[226]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[225]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[224]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[223]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[222]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[221]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[220]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[219]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[218]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[217]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[216]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[215]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[214]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[213]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[212]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[211]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[210]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[209]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[208]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[207]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[206]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[205]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[204]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[203]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[202]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[201]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[200]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[199]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[198]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[197]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[196]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[195]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[194]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[193]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[192]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[191]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[190]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[189]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[188]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[187]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[186]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[185]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[184]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[183]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[182]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[181]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[180]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[179]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[178]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[177]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[176]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[175]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[174]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[173]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[172]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[171]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[170]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[169]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[168]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[167]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[166]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[165]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[164]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[163]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[162]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[161]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[160]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[159]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[158]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[157]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[156]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[155]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[154]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[153]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[152]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[151]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[150]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[149]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[148]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[147]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[146]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[145]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[144]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[143]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[142]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[141]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[140]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[139]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[138]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[137]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[136]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[135]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[134]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[133]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[132]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[131]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[130]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[129]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[128]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[127]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[126]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[125]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[124]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[123]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[122]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[121]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[120]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[119]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[118]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[117]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[116]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[115]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[114]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[113]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[112]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[111]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[110]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[109]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[108]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[107]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[106]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[105]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[104]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[103]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[102]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[101]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[100]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[99]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[98]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[97]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[96]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[95]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[94]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[93]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[92]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[91]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[90]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[89]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[88]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[87]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[86]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[85]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[84]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[83]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[82]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[81]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[80]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[79]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[78]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[77]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[76]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[75]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[74]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[73]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[72]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[71]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[70]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[69]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[68]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[67]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[66]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[65]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[64]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[63]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[62]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[61]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[60]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[59]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[58]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[57]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[56]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[55]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[54]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[53]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[52]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[51]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[50]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[49]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[48]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[47]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[46]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[45]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[44]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[43]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[42]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[41]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[40]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[39]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[38]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[37]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[36]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[35]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[34]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[33]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[32]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[31]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[30]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[29]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[28]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[27]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[26]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[25]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[24]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[23]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[22]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[21]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[20]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[19]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[18]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[17]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[16]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[15]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[14]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[13]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[12]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[11]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[10]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[9]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[8]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[7]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[6]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[5]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[4]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[3]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[2]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[1]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[95]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[94]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[93]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[92]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[91]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[90]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[89]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[88]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[87]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[86]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[85]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[84]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[83]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[82]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[81]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[80]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[79]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[78]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[77]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[76]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[75]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[74]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[73]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[72]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[71]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[70]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[69]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[68]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[67]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[66]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[65]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[64]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[63]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[62]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[61]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[60]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[59]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[58]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[57]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[56]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[55]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[54]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[53]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[52]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[51]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[50]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[49]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[48]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[47]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[46]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[45]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[44]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[43]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[42]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[41]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[40]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[39]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[38]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[37]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[36]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[35]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[34]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[33]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut[32]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[191:64]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[255]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[254]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[253]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[252]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[251]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[250]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[249]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[248]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[247]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[246]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[245]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[244]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[243]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[242]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[241]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[240]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[239]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[238]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[237]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[236]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[235]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[234]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[233]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[232]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[231]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[230]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[229]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[228]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[227]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[226]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[225]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[224]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[223]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[222]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[221]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[220]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[219]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[218]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[217]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[216]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[215]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[214]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[213]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[212]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[211]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[210]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[209]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[208]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[207]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[206]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[205]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[204]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[203]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[202]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[201]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[200]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[199]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[198]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[197]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[196]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[195]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[194]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[193]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[192]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[191]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[190]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[189]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[188]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[187]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[186]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[185]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[184]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[183]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[182]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[181]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[180]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[179]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[178]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[177]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[176]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[175]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[174]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[173]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[172]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[171]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[170]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[169]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[168]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[167]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[166]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[165]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[164]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[163]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[162]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[161]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[160]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[159]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[158]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[157]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[156]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[155]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[154]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[153]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[152]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[151]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[150]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[149]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[148]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[147]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[146]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[145]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[144]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[143]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[142]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[141]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[140]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[139]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[138]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[137]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[136]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[135]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[134]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[133]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[132]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[131]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[130]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[129]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[128]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[95]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[94]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[93]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[92]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[91]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[90]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[89]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[88]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[87]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[86]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[85]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[84]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[83]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[82]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[81]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[80]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[79]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[78]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[77]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[76]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[75]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[74]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[73]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[72]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[71]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[70]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[69]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[68]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[67]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[66]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[65]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[64]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[63]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[62]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[61]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[60]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[59]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[58]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[57]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[56]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[55]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[54]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[53]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[52]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[51]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[50]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[49]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[48]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[47]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[46]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[45]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[44]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[43]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[42]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[41]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[40]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[39]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[38]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[37]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[36]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[35]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[34]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[33]"/>
+        <net name="design_1_i/MinerCoprocessor_0/hashOut_1[32]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
@@ -33,7 +1163,354 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="MAP" value="probe2[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[31]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[30]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[29]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[28]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[27]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[26]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[25]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[24]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[23]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[22]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[21]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[20]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[19]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[18]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[17]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[16]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[15]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[14]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[13]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[12]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[11]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[10]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[9]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[8]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[7]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[6]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[5]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[4]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[3]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[2]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[1]"/>
+        <net name="design_1_i/MinerCoprocessor_0/nonce[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/readEnable"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[191:64]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[255]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[254]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[253]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[252]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[251]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[250]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[249]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[248]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[247]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[246]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[245]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[244]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[243]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[242]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[241]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[240]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[239]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[238]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[237]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[236]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[235]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[234]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[233]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[232]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[231]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[230]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[229]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[228]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[227]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[226]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[225]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[224]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[223]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[222]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[221]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[220]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[219]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[218]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[217]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[216]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[215]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[214]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[213]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[212]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[211]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[210]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[209]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[208]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[207]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[206]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[205]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[204]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[203]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[202]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[201]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[200]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[199]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[198]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[197]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[196]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[195]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[194]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[193]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[192]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[191]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[190]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[189]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[188]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[187]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[186]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[185]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[184]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[183]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[182]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[181]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[180]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[179]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[178]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[177]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[176]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[175]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[174]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[173]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[172]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[171]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[170]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[169]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[168]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[167]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[166]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[165]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[164]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[163]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[162]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[161]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[160]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[159]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[158]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[157]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[156]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[155]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[154]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[153]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[152]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[151]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[150]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[149]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[148]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[147]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[146]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[145]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[144]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[143]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[142]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[141]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[140]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[139]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[138]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[137]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[136]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[135]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[134]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[133]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[132]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[131]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[130]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[129]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash[128]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[95]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[94]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[93]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[92]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[91]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[90]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[89]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[88]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[87]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[86]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[85]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[84]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[83]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[82]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[81]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[80]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[79]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[78]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[77]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[76]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[75]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[74]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[73]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[72]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[71]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[70]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[69]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[68]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[67]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[66]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[65]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[64]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[63]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[62]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[61]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[60]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[59]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[58]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[57]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[56]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[55]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[54]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[53]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[52]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[51]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[50]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[49]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[48]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[47]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[46]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[45]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[44]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[43]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[42]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[41]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[40]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[39]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[38]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[37]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[36]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[35]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[34]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[33]"/>
+        <net name="design_1_i/MinerCoprocessor_0/tempHash_1[32]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/update"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe17[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/MinerCoprocessor_0/validData"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[31:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -85,7 +1562,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="MAP" value="probe11[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -106,7 +1583,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="MAP" value="probe13[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -127,7 +1604,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="MAP" value="probe14[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -138,21 +1615,42 @@
         <net name="u_ila_0_MinerCoprocessor_0_M00_AXIS_TVALID"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
-        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
-        <Option Id="COMPARE_VALUE.0" value="neq32&apos;h0000_0000"/>
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="MAP" value="probe9[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="neq32&apos;h0000_0000"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_mEnable"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -200,7 +1698,28 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_microblaze_0_M0_AXIS_TLAST"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -209,6 +1728,27 @@
       </probeOptions>
       <nets>
         <net name="u_ila_0_microblaze_0_M0_AXIS_TVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_validData"/>
       </nets>
     </probe>
   </probeset>

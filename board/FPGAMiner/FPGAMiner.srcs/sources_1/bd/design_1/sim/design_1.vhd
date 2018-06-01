@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Thu May 31 00:08:20 2018
+--Date        : Fri Jun  1 03:25:16 2018
 --Host        : hp-laptop running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -2334,6 +2334,17 @@ architecture STRUCTURE of design_1 is
   end component design_1_axi_smc_0;
   component design_1_MinerCoprocessor_0_0 is
   port (
+    readEnable : out STD_LOGIC;
+    validData : out STD_LOGIC;
+    allWordsSent : out STD_LOGIC;
+    counterSlave : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    counterMaster : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    hashOut : out STD_LOGIC_VECTOR ( 255 downto 0 );
+    tempHash : out STD_LOGIC_VECTOR ( 255 downto 0 );
+    nonce : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    mEnable : out STD_LOGIC;
+    update : out STD_LOGIC;
+    hashInputWord : out STD_LOGIC_VECTOR ( 287 downto 0 );
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m00_axis_tlast : out STD_LOGIC;
@@ -2599,7 +2610,18 @@ architecture STRUCTURE of design_1 is
   signal rst_clk_wiz_1_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sys_clock_1 : STD_LOGIC;
+  signal NLW_MinerCoprocessor_0_allWordsSent_UNCONNECTED : STD_LOGIC;
+  signal NLW_MinerCoprocessor_0_mEnable_UNCONNECTED : STD_LOGIC;
+  signal NLW_MinerCoprocessor_0_readEnable_UNCONNECTED : STD_LOGIC;
+  signal NLW_MinerCoprocessor_0_update_UNCONNECTED : STD_LOGIC;
+  signal NLW_MinerCoprocessor_0_validData_UNCONNECTED : STD_LOGIC;
+  signal NLW_MinerCoprocessor_0_counterMaster_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_MinerCoprocessor_0_counterSlave_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_MinerCoprocessor_0_hashInputWord_UNCONNECTED : STD_LOGIC_VECTOR ( 287 downto 0 );
+  signal NLW_MinerCoprocessor_0_hashOut_UNCONNECTED : STD_LOGIC_VECTOR ( 255 downto 0 );
   signal NLW_MinerCoprocessor_0_m00_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_MinerCoprocessor_0_nonce_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_MinerCoprocessor_0_tempHash_UNCONNECTED : STD_LOGIC_VECTOR ( 255 downto 0 );
   signal NLW_axi_emc_0_mem_cken_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_emc_0_mem_lbon_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_emc_0_mem_rnw_UNCONNECTED : STD_LOGIC;
@@ -2696,6 +2718,11 @@ begin
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
 MinerCoprocessor_0: component design_1_MinerCoprocessor_0_0
      port map (
+      allWordsSent => NLW_MinerCoprocessor_0_allWordsSent_UNCONNECTED,
+      counterMaster(3 downto 0) => NLW_MinerCoprocessor_0_counterMaster_UNCONNECTED(3 downto 0),
+      counterSlave(3 downto 0) => NLW_MinerCoprocessor_0_counterSlave_UNCONNECTED(3 downto 0),
+      hashInputWord(287 downto 0) => NLW_MinerCoprocessor_0_hashInputWord_UNCONNECTED(287 downto 0),
+      hashOut(255 downto 0) => NLW_MinerCoprocessor_0_hashOut_UNCONNECTED(255 downto 0),
       m00_axis_aclk => microblaze_0_Clk,
       m00_axis_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       m00_axis_tdata(31 downto 0) => MinerCoprocessor_0_M00_AXIS_TDATA(31 downto 0),
@@ -2703,13 +2730,19 @@ MinerCoprocessor_0: component design_1_MinerCoprocessor_0_0
       m00_axis_tready => MinerCoprocessor_0_M00_AXIS_TREADY,
       m00_axis_tstrb(3 downto 0) => NLW_MinerCoprocessor_0_m00_axis_tstrb_UNCONNECTED(3 downto 0),
       m00_axis_tvalid => MinerCoprocessor_0_M00_AXIS_TVALID,
+      mEnable => NLW_MinerCoprocessor_0_mEnable_UNCONNECTED,
+      nonce(31 downto 0) => NLW_MinerCoprocessor_0_nonce_UNCONNECTED(31 downto 0),
+      readEnable => NLW_MinerCoprocessor_0_readEnable_UNCONNECTED,
       s00_axis_aclk => microblaze_0_Clk,
       s00_axis_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       s00_axis_tdata(31 downto 0) => microblaze_0_M0_AXIS_TDATA(31 downto 0),
       s00_axis_tlast => microblaze_0_M0_AXIS_TLAST,
       s00_axis_tready => microblaze_0_M0_AXIS_TREADY,
       s00_axis_tstrb(3 downto 0) => B"1111",
-      s00_axis_tvalid => microblaze_0_M0_AXIS_TVALID
+      s00_axis_tvalid => microblaze_0_M0_AXIS_TVALID,
+      tempHash(255 downto 0) => NLW_MinerCoprocessor_0_tempHash_UNCONNECTED(255 downto 0),
+      update => NLW_MinerCoprocessor_0_update_UNCONNECTED,
+      validData => NLW_MinerCoprocessor_0_validData_UNCONNECTED
     );
 axi_emc_0: component design_1_axi_emc_0_0
      port map (
