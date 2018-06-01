@@ -13,7 +13,7 @@ print("BROKEN WORD: ", [hex_word[i*8:i*8+8] for i in range(8)])
 
 
 while True:
-    nonce_bin = struct.pack("<I", nonce)
+    nonce_bin = struct.pack(">I", nonce)
     s = word + nonce_bin
     h = hashlib.sha256()
     h.update(s)
