@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri Jun  1 03:31:54 2018
-# Process ID: 10420
+# Start of session at: Sat Jun  2 04:25:55 2018
+# Process ID: 3408
 # Current directory: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper.vdi
@@ -13,7 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
-add_files: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 304.188 ; gain = 73.457
+add_files: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 307.801 ; gain = 76.688
 Command: link_design -top design_1_wrapper -part xc7a100tcsg324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
@@ -36,7 +36,7 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/CR_Projects/Project/Developm
 INFO: [Project 1-454] Reading design checkpoint 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
 INFO: [Project 1-454] Reading design checkpoint 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-INFO: [Netlist 29-17] Analyzing 1146 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1142 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.4
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
@@ -45,15 +45,15 @@ WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a t
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.TX_IBUF_INST 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_rx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/.Xil/Vivado-10420-hp-laptop/dcp12/design_1_axi_ethernetlite_0_0.edf:51353]
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_tx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/.Xil/Vivado-10420-hp-laptop/dcp12/design_1_axi_ethernetlite_0_0.edf:51365]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_rx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/.Xil/Vivado-3408-hp-laptop/dcp12/design_1_axi_ethernetlite_0_0.edf:51353]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/axi_ethernetlite_0/phy_tx_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/.Xil/Vivado-3408-hp-laptop/dcp12/design_1_axi_ethernetlite_0_0.edf:51365]
 Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
 Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
 Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
 Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0.xdc] for cell 'design_1_i/microblaze_0_axi_intc/U0'
 Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc:50]
-get_clocks: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1351.707 ; gain = 576.633
+get_clocks: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1359.086 ; gain = 578.883
 Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
 Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
 Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
@@ -91,198 +91,320 @@ Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMine
 Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
 Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
 Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[101]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[101]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[14]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[116]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[23]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:78]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:78]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[14]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[117]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:79]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:79]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[116]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:80]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[7]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:80]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:80]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[23]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:81]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[18]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:81]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:81]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[117]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:82]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[113]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:82]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:82]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[7]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:83]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[19]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:83]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:83]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[18]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:84]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[30]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:84]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:84]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[113]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:85]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[6]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:85]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:85]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[19]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:86]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[126]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:86]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:86]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[30]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:87]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[0]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:87]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:87]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[6]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:88]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[98]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:88]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:88]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[126]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:89]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[13]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:89]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:89]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[0]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:90]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[4]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:90]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:90]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[98]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:91]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[125]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:91]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:91]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[13]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:92]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[31]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:92]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:92]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[4]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:93]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[105]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:93]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:93]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[125]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:94]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[26]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:94]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:94]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[31]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:95]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[110]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:95]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:95]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[105]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:96]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[107]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:96]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:96]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[26]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:97]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[106]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:97]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:97]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[110]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:98]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[109]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:98]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:98]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[107]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:99]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[16]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:99]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:99]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[106]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:100]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[111]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:100]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:100]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[109]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:101]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[118]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:101]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:101]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[16]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:102]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[102]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:102]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:102]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[111]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:103]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[121]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:103]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:103]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[118]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:104]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[123]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:104]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:104]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[102]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:105]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[10]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:105]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:105]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[121]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:106]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[27]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:106]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:106]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[123]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:107]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[22]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:107]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:107]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[10]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:108]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[104]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:108]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:108]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[27]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:109]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[115]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:109]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:109]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[22]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:110]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[119]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:110]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:110]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[104]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:111]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[96]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:111]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:111]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[115]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:112]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[97]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:112]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:112]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[119]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:113]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[5]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:113]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:113]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[96]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:114]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[2]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:114]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:114]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[97]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:115]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[12]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:115]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:115]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[5]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:116]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[9]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:116]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:116]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[2]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:117]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[103]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:117]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:117]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[12]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[99]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:118]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:118]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[9]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:119]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[17]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:119]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:119]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[103]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:120]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[24]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:120]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:120]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[99]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:121]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[28]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:121]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:121]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[17]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:122]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[8]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:122]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:122]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[24]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:123]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[124]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:123]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:123]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[28]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:124]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[20]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:124]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:124]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[8]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:125]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[127]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:125]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:125]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[124]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:126]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[112]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:126]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:126]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[20]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:127]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[29]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:127]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:127]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[127]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:128]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[108]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:128]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:128]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[112]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:129]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[3]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:129]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:129]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[29]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:130]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[15]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:130]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:130]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[108]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:131]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[120]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:131]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:131]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[3]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:132]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[114]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:132]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:132]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[15]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:133]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[21]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:133]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:133]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[120]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:134]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[1]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:134]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:134]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[114]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:135]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[122]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:135]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:135]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[21]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:136]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[11]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:136]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:136]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[1]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:137]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[25]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:137]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:137]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[122]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:138]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[100]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:138]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:138]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[11]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:139]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:139]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[240]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[241]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[242]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[243]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[244]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[245]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[246]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[247]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[248]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[249]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[250]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[251]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[252]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[253]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[254]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[255]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:431]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[128]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[129]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[130]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[131]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[132]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[133]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[134]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[135]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[136]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[137]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[138]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[139]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[140]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[141]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[142]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[143]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[144]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[145]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[146]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/tempHash[147]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+INFO: [Common 17-14] Message 'Vivado 12-507' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:432]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:433]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:434]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:435]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:436]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:437]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:438]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:439]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:440]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:441]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:445]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:462]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[25]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:140]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:463]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/MinerCoprocessor_0/hashOut[100]'. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:141]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:464]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:465]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:466]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:467]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:468]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:469]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:470]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:471]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:472]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:473]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:474]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:475]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:476]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:477]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:478]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:479]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:480]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:481]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:482]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:483]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:484]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:485]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:486]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:487]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:488]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:489]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:490]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:491]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:492]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:493]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:494]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:495]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:496]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:497]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc:497]
 Finished Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc]
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernetlite_0_0/design_1_axi_ethernetlite_0_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp'
@@ -391,12 +513,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 38 instances
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 65 instances
 
-34 Infos, 70 Warnings, 65 Critical Warnings and 0 Errors encountered.
+36 Infos, 106 Warnings, 113 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 1359.793 ; gain = 1055.605
+link_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1366.715 ; gain = 1058.914
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-Command: opt_design
+Command: opt_design -directive RuntimeOptimized
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
 Running DRC as a precondition to command opt_design
@@ -406,8 +529,7 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1359.793 ; gain = 0.000
-INFO: [Timing 38-35] Done setting XDC timing constraints.
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1366.715 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -415,113 +537,80 @@ Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-318] Generating core instance : dbg_hub
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
 INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "dfedb72085a88f0d".
-INFO: [Netlist 29-17] Analyzing 717 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 713 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Chipscope 16-318] Generating core instance : u_ila_0
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
-INFO: [Netlist 29-17] Analyzing 1067 Unisim elements for replacement
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "9b31f8371e5cc7bf".
+INFO: [Netlist 29-17] Analyzing 998 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1392.031 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 21e4f372f
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1394.773 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: fb54a8aa
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:09:26 . Memory (MB): peak = 1392.031 ; gain = 32.238
+Time (s): cpu = 00:00:27 ; elapsed = 00:02:22 . Memory (MB): peak = 1394.773 ; gain = 28.059
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 22 inverter(s) to 107 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 1e8b19241
+Phase 2 Retarget | Checksum: 166f33f72
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:09:34 . Memory (MB): peak = 1454.492 ; gain = 94.699
-INFO: [Opt 31-389] Phase Retarget created 238 cells and removed 406 cells
+Time (s): cpu = 00:00:36 ; elapsed = 00:02:29 . Memory (MB): peak = 1457.559 ; gain = 90.844
+INFO: [Opt 31-389] Phase Retarget created 238 cells and removed 405 cells
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Phase 3 Constant propagation | Checksum: 14799111a
+Phase 3 Constant propagation | Checksum: b809bc55
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:09:37 . Memory (MB): peak = 1454.492 ; gain = 94.699
-INFO: [Opt 31-389] Phase Constant propagation created 193 cells and removed 1096 cells
+Time (s): cpu = 00:00:38 ; elapsed = 00:02:32 . Memory (MB): peak = 1457.559 ; gain = 90.844
+INFO: [Opt 31-389] Phase Constant propagation created 193 cells and removed 1098 cells
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: b936ad39
+Phase 4 Sweep | Checksum: a23fc8b6
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:09:55 . Memory (MB): peak = 1454.492 ; gain = 94.699
+Time (s): cpu = 00:00:55 ; elapsed = 00:02:49 . Memory (MB): peak = 1457.559 ; gain = 90.844
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2386 cells
 
 Phase 5 BUFG optimization
-Phase 5 BUFG optimization | Checksum: b936ad39
+Phase 5 BUFG optimization | Checksum: a23fc8b6
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:09:56 . Memory (MB): peak = 1454.492 ; gain = 94.699
+Time (s): cpu = 00:00:56 ; elapsed = 00:02:50 . Memory (MB): peak = 1457.559 ; gain = 90.844
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
 Phase 6 Shift Register Optimization
-Phase 6 Shift Register Optimization | Checksum: b936ad39
+Phase 6 Shift Register Optimization | Checksum: a23fc8b6
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:09:58 . Memory (MB): peak = 1454.492 ; gain = 94.699
+Time (s): cpu = 00:00:57 ; elapsed = 00:02:51 . Memory (MB): peak = 1457.559 ; gain = 90.844
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1454.492 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: f4a1bcd9
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1457.559 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 11bfff649
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:10:01 . Memory (MB): peak = 1454.492 ; gain = 94.699
-
-Starting Power Optimization Task
-INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.379 | TNS=0.000 |
-Running Vector-less Activity Propagation...
-
-Finished Running Vector-less Activity Propagation
-
-
-Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 45 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 6 WE to EN ports
-Number of BRAM Ports augmented: 23 newly gated: 10 Total Ports: 90
-Ending PowerOpt Patch Enables Task | Checksum: 1a2c5bd37
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.589 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 1a2c5bd37
-
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:25 . Memory (MB): peak = 1954.074 ; gain = 499.582
-
-Starting Logic Optimization Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-
-Phase 1 Remap
-Phase 1 Remap | Checksum: 14975b457
-
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1954.074 ; gain = 0.000
-INFO: [Opt 31-389] Phase Remap created 4 cells and removed 8 cells
-Ending Logic Optimization Task | Checksum: 14975b457
-
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:00 ; elapsed = 00:02:54 . Memory (MB): peak = 1457.559 ; gain = 90.844
 INFO: [Common 17-83] Releasing license: Implementation
-74 Infos, 70 Warnings, 65 Critical Warnings and 0 Errors encountered.
+68 Infos, 106 Warnings, 113 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:02:02 ; elapsed = 00:10:35 . Memory (MB): peak = 1954.074 ; gain = 594.281
+opt_design: Time (s): cpu = 00:01:03 ; elapsed = 00:02:57 . Memory (MB): peak = 1457.559 ; gain = 90.844
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.173 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1457.559 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1954.074 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1457.559 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1954.074 ; gain = 0.000
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1457.559 ; gain = 0.000
 INFO: [Chipscope 16-240] Debug cores have already been implemented
-Command: place_design
+Command: place_design -directive RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [DRC 23-27] Running DRC with 2 threads
@@ -533,18 +622,19 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'RuntimeOptimized' directive.
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: c41b1805
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1457.559 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: bbfeee02
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.313 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.369 . Memory (MB): peak = 1457.559 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1474.820 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'design_1_i/axi_ethernetlite_0/U0/IOFFS_GEN2.DVD_FF'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
@@ -559,82 +649,82 @@ CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'design_1_i/axi_e
 CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'design_1_i/axi_ethernetlite_0/U0/IOFFS_GEN[3].RX_FF_I'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
 CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'design_1_i/axi_ethernetlite_0/U0/IOFFS_GEN[3].TX_FF_I'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11770bf6a
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c3b5d689
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1474.859 ; gain = 17.301
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 97f339b4
+Phase 1.3 Build Placer Netlist Model | Checksum: ffc970df
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 97f339b4
+Phase 1.4 Constrain Clocks/Macros | Checksum: ffc970df
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 97f339b4
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.242 ; gain = 131.684
+Phase 1 Placer Initialization | Checksum: ffc970df
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:28 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 185ccb41a
+Phase 2 Global Placement | Checksum: 160d72d8c
 
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:58 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:51 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 185ccb41a
+Phase 3.1 Commit Multi Column Macros | Checksum: 160d72d8c
 
-Time (s): cpu = 00:01:22 ; elapsed = 00:00:58 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:51 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 101629edb
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 20ca8a99d
 
-Time (s): cpu = 00:01:33 ; elapsed = 00:01:06 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:58 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1b76a2747
+Phase 3.3 Area Swap Optimization | Checksum: 19cc41d09
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:06 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1568da225
+Phase 3.4 Pipeline Register Optimization | Checksum: 1c27e7ac2
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:06 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 1568da225
+Phase 3.5 Timing Path Optimizer | Checksum: 1c27e7ac2
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:06 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 14556fd4a
+Phase 3.6 Fast Optimization | Checksum: 17ea8224d
 
-Time (s): cpu = 00:01:35 ; elapsed = 00:01:08 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: d51e4ea4
+Phase 3.7 Small Shape Detail Placement | Checksum: 14cb274e4
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:19 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:11 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 9efab4ac
+Phase 3.8 Re-assign LUT pins | Checksum: 1cc5c8ce3
 
-Time (s): cpu = 00:01:48 ; elapsed = 00:01:21 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:13 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 16c9ae979
+Phase 3.9 Pipeline Register Optimization | Checksum: 1882cbaee
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:01:21 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:13 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: d4fbe120
+Phase 3.10 Fast Optimization | Checksum: 15f22598f
 
-Time (s): cpu = 00:01:56 ; elapsed = 00:01:26 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: d4fbe120
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:17 . Memory (MB): peak = 1589.242 ; gain = 131.684
+Phase 3 Detail Placement | Checksum: 15f22598f
 
-Time (s): cpu = 00:01:56 ; elapsed = 00:01:26 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:17 . Memory (MB): peak = 1589.242 ; gain = 131.684
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -642,61 +732,61 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 15c97cf08
+Post Placement Optimization Initialization | Checksum: 2054e6380
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-33] Processed net design_1_i/microblaze_0/U0/MicroBlaze_Core_I/sync_reset, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-31] BUFG insertion identified 1 candidate nets, 0 success, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 15c97cf08
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2054e6380
 
-Time (s): cpu = 00:02:10 ; elapsed = 00:01:36 . Memory (MB): peak = 1954.074 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.314. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1a3539add
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:27 . Memory (MB): peak = 1627.793 ; gain = 170.234
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.192. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: cb23853d
 
-Time (s): cpu = 00:02:51 ; elapsed = 00:02:20 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1a3539add
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:32 . Memory (MB): peak = 1627.793 ; gain = 170.234
+Phase 4.1 Post Commit Optimization | Checksum: cb23853d
 
-Time (s): cpu = 00:02:52 ; elapsed = 00:02:20 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:32 . Memory (MB): peak = 1627.793 ; gain = 170.234
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1a3539add
+Phase 4.2 Post Placement Cleanup | Checksum: cb23853d
 
-Time (s): cpu = 00:02:52 ; elapsed = 00:02:20 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:32 . Memory (MB): peak = 1627.793 ; gain = 170.234
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1a3539add
+Phase 4.3 Placer Reporting | Checksum: cb23853d
 
-Time (s): cpu = 00:02:52 ; elapsed = 00:02:21 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:33 . Memory (MB): peak = 1627.793 ; gain = 170.234
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: f1b9f260
+Phase 4.4 Final Placement Cleanup | Checksum: a0452b76
 
-Time (s): cpu = 00:02:53 ; elapsed = 00:02:21 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: f1b9f260
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:33 . Memory (MB): peak = 1627.793 ; gain = 170.234
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: a0452b76
 
-Time (s): cpu = 00:02:53 ; elapsed = 00:02:21 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Ending Placer Task | Checksum: 67776f01
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:33 . Memory (MB): peak = 1627.793 ; gain = 170.234
+Ending Placer Task | Checksum: 206284a4
 
-Time (s): cpu = 00:02:53 ; elapsed = 00:02:21 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:33 . Memory (MB): peak = 1627.793 ; gain = 170.234
 INFO: [Common 17-83] Releasing license: Implementation
-98 Infos, 70 Warnings, 76 Critical Warnings and 0 Errors encountered.
+93 Infos, 106 Warnings, 124 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:02:59 ; elapsed = 00:02:25 . Memory (MB): peak = 1954.074 ; gain = 0.000
+place_design: Time (s): cpu = 00:02:10 ; elapsed = 00:01:37 . Memory (MB): peak = 1627.793 ; gain = 170.234
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 1628.258 ; gain = 0.465
 INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:12 . Memory (MB): peak = 1954.074 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 1628.258 ; gain = 0.465
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1954.074 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.148 . Memory (MB): peak = 1628.258 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.473 . Memory (MB): peak = 1954.074 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.473 . Memory (MB): peak = 1628.258 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Command: route_design
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.159 . Memory (MB): peak = 1628.258 ; gain = 0.000
+Command: route_design -directive RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
 Running DRC as a precondition to command route_design
@@ -717,171 +807,127 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 
 Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'RuntimeOptimized'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 1f1d6269 ConstDB: 0 ShapeSum: 485a0c98 RouteDB: 0
+Checksum: PlaceDB: 1e38a846 ConstDB: 0 ShapeSum: 229dc5e RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 6cc1b790
+Phase 1 Build RT Design | Checksum: e762d999
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 1d5e19ed NumContArr: 4f639da3 Constraints: 0 Timing: 0
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:50 . Memory (MB): peak = 1751.941 ; gain = 106.313
+Post Restoration Checksum: NetGraph: 87e43042 NumContArr: 5f7ea957 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 6cc1b790
+Phase 2.1 Create Timer | Checksum: e762d999
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:51 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:51 . Memory (MB): peak = 1751.941 ; gain = 106.313
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 6cc1b790
+Phase 2.2 Fix Topology Constraints | Checksum: e762d999
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 1751.941 ; gain = 106.313
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 6cc1b790
+Phase 2.3 Pre Route Cleanup | Checksum: e762d999
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 1751.941 ; gain = 106.313
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 12b21bfb6
+Phase 2.4 Update Timing | Checksum: 1bfad6d9f
 
-Time (s): cpu = 00:01:23 ; elapsed = 00:01:04 . Memory (MB): peak = 1954.074 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.364 | TNS=-0.935 | WHS=-3.429 | THS=-661.658|
+Time (s): cpu = 00:01:22 ; elapsed = 00:01:04 . Memory (MB): peak = 1771.676 ; gain = 126.047
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.279  | TNS=0.000  | WHS=-1.799 | THS=-690.506|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 14992ba52
+Phase 2.5.1 Update Timing | Checksum: 1b6a9fa53
 
-Time (s): cpu = 00:01:33 ; elapsed = 00:01:11 . Memory (MB): peak = 1954.074 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.364 | TNS=-0.552 | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:10 . Memory (MB): peak = 1782.664 ; gain = 137.035
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.279  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: b3a14c34
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1785316e3
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:11 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 2 Router Initialization | Checksum: a3d90e5e
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:11 . Memory (MB): peak = 1790.684 ; gain = 145.055
+Phase 2 Router Initialization | Checksum: 13d236492
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:11 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:11 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 2304af7c0
+Phase 3 Initial Routing | Checksum: 1fb53b0c6
 
-Time (s): cpu = 00:01:48 ; elapsed = 00:01:19 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:17 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 2227
+ Number of Nodes with overlaps = 2190
  Number of Nodes with overlaps = 325
- Number of Nodes with overlaps = 90
- Number of Nodes with overlaps = 32
- Number of Nodes with overlaps = 16
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 64
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.809 | TNS=-6.065 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.402 | TNS=-1.268 | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 15066cc53
+Phase 4.1 Global Iteration 0 | Checksum: 160852412
 
-Time (s): cpu = 00:02:25 ; elapsed = 00:01:41 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:36 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 382
- Number of Nodes with overlaps = 104
- Number of Nodes with overlaps = 57
- Number of Nodes with overlaps = 33
- Number of Nodes with overlaps = 23
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.700 | TNS=-5.039 | WHS=N/A    | THS=N/A    |
-
-Phase 4.2 Global Iteration 1 | Checksum: 191d936d3
-
-Time (s): cpu = 00:02:48 ; elapsed = 00:01:59 . Memory (MB): peak = 1954.074 ; gain = 0.000
-
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 350
- Number of Nodes with overlaps = 86
- Number of Nodes with overlaps = 39
- Number of Nodes with overlaps = 10
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.476 | TNS=-1.774 | WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 153cf061c
-
-Time (s): cpu = 00:03:07 ; elapsed = 00:02:14 . Memory (MB): peak = 1954.074 ; gain = 0.000
-
-Phase 4.4 Global Iteration 3
- Number of Nodes with overlaps = 317
- Number of Nodes with overlaps = 131
- Number of Nodes with overlaps = 47
- Number of Nodes with overlaps = 29
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 7
  Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.535 | TNS=-2.185 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.402 | TNS=-1.265 | WHS=N/A    | THS=N/A    |
 
-Phase 4.4 Global Iteration 3 | Checksum: 208600c0b
+Phase 4.2 Global Iteration 1 | Checksum: 15eec8eed
 
-Time (s): cpu = 00:03:32 ; elapsed = 00:02:33 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: 208600c0b
+Time (s): cpu = 00:02:19 ; elapsed = 00:01:37 . Memory (MB): peak = 1790.684 ; gain = 145.055
+Phase 4 Rip-up And Reroute | Checksum: 15eec8eed
 
-Time (s): cpu = 00:03:32 ; elapsed = 00:02:33 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:19 ; elapsed = 00:01:37 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-
-Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 2b3873bb4
-
-Time (s): cpu = 00:03:35 ; elapsed = 00:02:35 . Memory (MB): peak = 1954.074 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.397 | TNS=-0.995 | WHS=N/A    | THS=N/A    |
-
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 14530f745
+Phase 5.1 Delay CleanUp | Checksum: 12de73065
 
-Time (s): cpu = 00:03:36 ; elapsed = 00:02:35 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:38 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 14530f745
+Phase 5.2 Clock Skew Optimization | Checksum: 12de73065
 
-Time (s): cpu = 00:03:36 ; elapsed = 00:02:35 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 14530f745
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:38 . Memory (MB): peak = 1790.684 ; gain = 145.055
+Phase 5 Delay and Skew Optimization | Checksum: 12de73065
 
-Time (s): cpu = 00:03:36 ; elapsed = 00:02:35 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:38 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 100acb698
+Phase 6.1.1 Update Timing | Checksum: 1611879de
 
-Time (s): cpu = 00:03:39 ; elapsed = 00:02:37 . Memory (MB): peak = 1954.074 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.395 | TNS=-0.981 | WHS=-0.275 | THS=-0.341 |
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:40 . Memory (MB): peak = 1790.684 ; gain = 145.055
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.260 | TNS=-0.603 | WHS=0.021  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 18dda8eec
+Phase 6.1 Hold Fix Iter | Checksum: 1b57970f7
 
-Time (s): cpu = 00:03:39 ; elapsed = 00:02:37 . Memory (MB): peak = 1954.074 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 21f7ab1a6
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:40 . Memory (MB): peak = 1790.684 ; gain = 145.055
+Phase 6 Post Hold Fix | Checksum: 1b57970f7
 
-Time (s): cpu = 00:03:39 ; elapsed = 00:02:38 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:40 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 4.26722 %
-  Global Horizontal Routing Utilization  = 5.15033 %
+  Global Vertical Routing Utilization    = 3.73582 %
+  Global Horizontal Routing Utilization  = 5.05065 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -892,63 +938,57 @@ Router Utilization Summary
 
 Utilization threshold used for congestion level computation: 0.85
 Congestion Report
-North Dir 1x1 Area, Max Cong = 73.8739%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 63.964%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 79.4118%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 88.2353%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
-   INT_R_X29Y15 -> INT_R_X29Y15
-Phase 7 Route finalize | Checksum: 20a69ee5a
+North Dir 1x1 Area, Max Cong = 66.6667%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 56.7568%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 73.5294%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 72.0588%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 18d507fc7
 
-Time (s): cpu = 00:03:40 ; elapsed = 00:02:38 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:41 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 20a69ee5a
+Phase 8 Verifying routed nets | Checksum: 18d507fc7
 
-Time (s): cpu = 00:03:40 ; elapsed = 00:02:38 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:41 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 20fd9cfc3
+Phase 9 Depositing Routes | Checksum: e5309587
 
-Time (s): cpu = 00:03:42 ; elapsed = 00:02:41 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:43 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Phase 10 Post Router Timing
-
-Phase 10.1 Update Timing
-Phase 10.1 Update Timing | Checksum: 1667a25f8
-
-Time (s): cpu = 00:03:46 ; elapsed = 00:02:43 . Memory (MB): peak = 1954.074 ; gain = 0.000
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.395 | TNS=-0.981 | WHS=0.050  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.260 | TNS=-0.603 | WHS=0.021  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 1667a25f8
+Phase 10 Post Router Timing | Checksum: e5309587
 
-Time (s): cpu = 00:03:46 ; elapsed = 00:02:43 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:43 . Memory (MB): peak = 1790.684 ; gain = 145.055
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:03:46 ; elapsed = 00:02:43 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:43 . Memory (MB): peak = 1790.684 ; gain = 145.055
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-118 Infos, 82 Warnings, 76 Critical Warnings and 0 Errors encountered.
+111 Infos, 118 Warnings, 124 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:03:54 ; elapsed = 00:02:48 . Memory (MB): peak = 1954.074 ; gain = 0.000
+route_design: Time (s): cpu = 00:02:33 ; elapsed = 00:01:48 . Memory (MB): peak = 1790.684 ; gain = 162.426
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 1954.074 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 1790.684 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:25 ; elapsed = 00:00:13 . Memory (MB): peak = 1954.074 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:24 ; elapsed = 00:00:12 . Memory (MB): peak = 1790.684 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1954.074 ; gain = 0.000
+report_drc: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 1790.684 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -956,7 +996,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:35 ; elapsed = 00:00:20 . Memory (MB): peak = 1954.074 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:34 ; elapsed = 00:00:19 . Memory (MB): peak = 1869.160 ; gain = 78.477
 INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -965,9 +1005,9 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-130 Infos, 83 Warnings, 76 Critical Warnings and 0 Errors encountered.
+123 Infos, 119 Warnings, 124 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 1979.707 ; gain = 25.633
+report_power: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 1960.781 ; gain = 91.621
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -977,7 +1017,7 @@ WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Pl
 INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
 INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
-report_clock_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1984.715 ; gain = 0.000
+report_clock_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1965.793 ; gain = 0.000
 WARNING: [Memdata 28-167] Found XPM memory block design_1_i/axi_smc/inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_1_i/axi_smc/inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 WARNING: [Memdata 28-167] Found XPM memory block design_1_i/axi_smc/inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_1_i/axi_smc/inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 WARNING: [Memdata 28-167] Found XPM memory block design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
@@ -1013,7 +1053,7 @@ WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Nei
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-WARNING: [DRC RTSTAT-10] No routable loads: 21 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14], u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[15], u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[16]... and (the first 15 of 19 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 21 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14], u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[15], u_ila_0/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[16]... and (the first 15 of 19 listed).
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
@@ -1026,9 +1066,10 @@ Creating bitmap...
 Creating bitstream...
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Jun  2 04:35:46 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-151 Infos, 102 Warnings, 77 Critical Warnings and 0 Errors encountered.
+145 Infos, 138 Warnings, 125 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:01:04 ; elapsed = 00:00:53 . Memory (MB): peak = 2427.941 ; gain = 443.227
-INFO: [Common 17-206] Exiting Vivado at Fri Jun  1 03:51:22 2018...
+write_bitstream: Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 2411.996 ; gain = 446.203
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  2 04:35:47 2018...

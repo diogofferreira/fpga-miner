@@ -18,8 +18,6 @@ proc create_report { reportName command } {
 }
 set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -112,7 +110,7 @@ set_property used_in_implementation false [get_files C:/CR_Projects/Project/Deve
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 
-synth_design -top design_1_wrapper -part xc7a100tcsg324-1
+synth_design -top design_1_wrapper -part xc7a100tcsg324-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
 
 
 # disable binary constraint mode for synth run checkpoints

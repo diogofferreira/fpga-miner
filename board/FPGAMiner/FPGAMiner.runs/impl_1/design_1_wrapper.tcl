@@ -60,8 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -103,7 +101,7 @@ start_step opt_design
 set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  opt_design 
+  opt_design -directive RuntimeOptimized
   write_checkpoint -force design_1_wrapper_opt.dcp
   create_report "impl_1_opt_report_drc_0" "report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx"
   close_msg_db -file opt_design.pb
@@ -121,7 +119,7 @@ set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
   implement_debug_core 
-  place_design 
+  place_design -directive RuntimeOptimized
   write_checkpoint -force design_1_wrapper_placed.dcp
   create_report "impl_1_place_report_io_0" "report_io -file design_1_wrapper_io_placed.rpt"
   create_report "impl_1_place_report_utilization_0" "report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb"
@@ -140,7 +138,7 @@ start_step route_design
 set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design 
+  route_design -directive RuntimeOptimized
   write_checkpoint -force design_1_wrapper_routed.dcp
   create_report "impl_1_route_report_drc_0" "report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx"
   create_report "impl_1_route_report_methodology_0" "report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx"
