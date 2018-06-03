@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sat Jun  2 04:24:12 2018
+// Date        : Sat Jun  2 23:23:14 2018
 // Host        : hp-laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/design_1_MinerCoprocessor_0_0_sim_netlist.v
@@ -15,18 +15,7 @@
 (* CHECK_LICENSE_TYPE = "design_1_MinerCoprocessor_0_0,MinerCoprocessor_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MinerCoprocessor_v1_0,Vivado 2017.4" *) 
 (* NotValidForBitStream *)
 module design_1_MinerCoprocessor_0_0
-   (readEnable,
-    validData,
-    allWordsSent,
-    counterSlave,
-    counterMaster,
-    hashOut,
-    tempHash,
-    nonce,
-    mEnable,
-    update,
-    hashInputWord,
-    m00_axis_tdata,
+   (m00_axis_tdata,
     m00_axis_tstrb,
     m00_axis_tlast,
     m00_axis_tvalid,
@@ -40,17 +29,6 @@ module design_1_MinerCoprocessor_0_0
     s00_axis_tready,
     s00_axis_aclk,
     s00_axis_aresetn);
-  output readEnable;
-  output validData;
-  output allWordsSent;
-  output [3:0]counterSlave;
-  output [3:0]counterMaster;
-  output [255:0]hashOut;
-  output [255:0]tempHash;
-  output [31:0]nonce;
-  output mEnable;
-  output update;
-  output [287:0]hashInputWord;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, LAYERED_METADATA undef" *) output [31:0]m00_axis_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB" *) output [3:0]m00_axis_tstrb;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TLAST" *) output m00_axis_tlast;
@@ -68,128 +46,51 @@ module design_1_MinerCoprocessor_0_0
 
   wire \<const0> ;
   wire \<const1> ;
-  wire allWordsSent;
-  wire [3:0]counterMaster;
-  wire [3:0]counterSlave;
-  wire [287:0]hashInputWord;
-  wire [239:32]\^hashOut ;
   wire m00_axis_aclk;
   wire [31:0]m00_axis_tdata;
   wire m00_axis_tready;
   wire m00_axis_tvalid;
-  wire mEnable;
-  wire [31:0]nonce;
-  wire readEnable;
   wire s00_axis_aclk;
   wire s00_axis_aresetn;
   wire [31:0]s00_axis_tdata;
   wire s00_axis_tready;
   wire s00_axis_tvalid;
-  wire [255:0]\^tempHash ;
-  wire update;
-  wire validData;
 
-  assign hashOut[255] = \<const0> ;
-  assign hashOut[254] = \<const0> ;
-  assign hashOut[253] = \<const0> ;
-  assign hashOut[252] = \<const0> ;
-  assign hashOut[251] = \<const0> ;
-  assign hashOut[250] = \<const0> ;
-  assign hashOut[249] = \<const0> ;
-  assign hashOut[248] = \<const0> ;
-  assign hashOut[247] = \<const0> ;
-  assign hashOut[246] = \<const0> ;
-  assign hashOut[245] = \<const0> ;
-  assign hashOut[244] = \<const0> ;
-  assign hashOut[243] = \<const0> ;
-  assign hashOut[242] = \<const0> ;
-  assign hashOut[241] = \<const0> ;
-  assign hashOut[240] = \<const0> ;
-  assign hashOut[239:128] = \^hashOut [239:128];
-  assign hashOut[127:96] = \^hashOut [159:128];
-  assign hashOut[95:32] = \^hashOut [95:32];
-  assign hashOut[31:0] = \^hashOut [191:160];
   assign m00_axis_tlast = \<const0> ;
   assign m00_axis_tstrb[3] = \<const1> ;
   assign m00_axis_tstrb[2] = \<const1> ;
   assign m00_axis_tstrb[1] = \<const1> ;
   assign m00_axis_tstrb[0] = \<const1> ;
-  assign tempHash[255:192] = \^tempHash [255:192];
-  assign tempHash[191:160] = \^tempHash [31:0];
-  assign tempHash[159:128] = \^tempHash [127:96];
-  assign tempHash[127:0] = \^tempHash [127:0];
   GND GND
        (.G(\<const0> ));
   design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0 U0
-       (.Q(nonce),
-        .allWordsSent(allWordsSent),
-        .\counterMaster[0] (counterMaster[0]),
-        .\counterMaster[1] (counterMaster[1]),
-        .\counterMaster[2] (counterMaster[2]),
-        .\counterMaster[3] (counterMaster[3]),
-        .counterSlave(counterSlave),
-        .hashInputWord(hashInputWord),
-        .hashOut({\^hashOut [239:128],\^hashOut [95:32]}),
-        .m00_axis_aclk(m00_axis_aclk),
+       (.m00_axis_aclk(m00_axis_aclk),
         .m00_axis_tdata(m00_axis_tdata),
         .m00_axis_tready(m00_axis_tready),
         .m00_axis_tvalid(m00_axis_tvalid),
-        .mEnable(mEnable),
-        .readEnable(readEnable),
         .s00_axis_aclk(s00_axis_aclk),
         .s00_axis_aresetn(s00_axis_aresetn),
         .s00_axis_tdata(s00_axis_tdata),
         .s00_axis_tready(s00_axis_tready),
-        .s00_axis_tvalid(s00_axis_tvalid),
-        .tempHash({\^tempHash [255:192],\^tempHash [31:0],\^tempHash [127:32]}),
-        .update(update),
-        .validData(validData));
+        .s00_axis_tvalid(s00_axis_tvalid));
   VCC VCC
        (.P(\<const1> ));
 endmodule
 
 (* ORIG_REF_NAME = "MinerCoprocessor_v1_0" *) 
 module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0
-   (mEnable,
-    allWordsSent,
-    validData,
-    hashOut,
-    \counterMaster[0] ,
-    tempHash,
-    Q,
-    update,
-    hashInputWord,
+   (m00_axis_tvalid,
     s00_axis_tready,
-    counterSlave,
-    readEnable,
-    \counterMaster[3] ,
-    \counterMaster[2] ,
-    \counterMaster[1] ,
     m00_axis_tdata,
-    m00_axis_tvalid,
     s00_axis_tvalid,
     s00_axis_aresetn,
     m00_axis_tready,
     s00_axis_aclk,
     s00_axis_tdata,
     m00_axis_aclk);
-  output mEnable;
-  output allWordsSent;
-  output validData;
-  output [175:0]hashOut;
-  output \counterMaster[0] ;
-  output [191:0]tempHash;
-  output [31:0]Q;
-  output update;
-  output [287:0]hashInputWord;
-  output s00_axis_tready;
-  output [3:0]counterSlave;
-  output readEnable;
-  output \counterMaster[3] ;
-  output \counterMaster[2] ;
-  output \counterMaster[1] ;
-  output [31:0]m00_axis_tdata;
   output m00_axis_tvalid;
+  output s00_axis_tready;
+  output [31:0]m00_axis_tdata;
   input s00_axis_tvalid;
   input s00_axis_aresetn;
   input m00_axis_tready;
@@ -197,326 +98,318 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0
   input [31:0]s00_axis_tdata;
   input m00_axis_aclk;
 
-  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_32;
-  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_33;
-  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_40;
-  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_41;
-  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_42;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_1;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_178;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_179;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_180;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_181;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_182;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_183;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_184;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_185;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_186;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_187;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_188;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_189;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_190;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_191;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_192;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_420;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_421;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_422;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_423;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_424;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_425;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_426;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_427;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_428;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_429;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_430;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_431;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_432;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_433;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_434;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_435;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_436;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_437;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_438;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_439;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_440;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_441;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_442;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_443;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_444;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_445;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_446;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_447;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_448;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_449;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_450;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_451;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_452;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_453;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_454;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_455;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_456;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_457;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_458;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_459;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_460;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_461;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_462;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_463;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_464;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_465;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_466;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_467;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_468;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_469;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_470;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_471;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_472;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_473;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_474;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_475;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_476;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_477;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_478;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_479;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_480;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_481;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_482;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_483;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_484;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_485;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_486;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_487;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_488;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_489;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_490;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_491;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_492;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_493;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_494;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_495;
-  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_496;
-  wire [31:0]Q;
-  wire allWordsSent;
-  wire \counterMaster[0] ;
-  wire \counterMaster[1] ;
-  wire \counterMaster[2] ;
-  wire \counterMaster[3] ;
-  wire [3:0]counterSlave;
-  wire [287:0]hashInputWord;
-  wire [175:0]hashOut;
+  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_1;
+  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_2;
+  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_37;
+  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_38;
+  wire MinerCoprocessor_v1_0_M00_AXIS_inst_n_39;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_100;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_101;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_102;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_103;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_104;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_105;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_106;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_107;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_108;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_109;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_110;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_111;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_112;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_113;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_114;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_115;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_116;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_117;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_118;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_119;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_120;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_121;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_122;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_123;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_124;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_125;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_126;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_127;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_128;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_129;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_31;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_32;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_33;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_34;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_35;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_36;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_37;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_38;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_39;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_40;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_41;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_42;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_43;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_44;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_45;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_46;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_47;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_48;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_49;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_50;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_51;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_52;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_53;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_54;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_55;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_56;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_57;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_58;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_59;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_60;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_61;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_62;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_63;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_64;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_68;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_69;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_70;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_71;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_72;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_73;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_74;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_75;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_76;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_77;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_78;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_79;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_80;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_81;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_82;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_83;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_84;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_85;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_86;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_87;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_88;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_89;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_90;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_91;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_92;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_93;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_94;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_95;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_96;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_97;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_98;
+  wire MinerCoprocessor_v1_0_S00_AXIS_inst_n_99;
   wire m00_axis_aclk;
   wire [31:0]m00_axis_tdata;
   wire m00_axis_tready;
   wire m00_axis_tvalid;
-  wire mEnable;
-  wire readEnable;
   wire s00_axis_aclk;
   wire s00_axis_aresetn;
   wire [31:0]s00_axis_tdata;
   wire s00_axis_tready;
   wire s00_axis_tvalid;
-  wire [191:0]tempHash;
-  wire update;
-  wire validData;
+  wire s_allWordsSent;
+  wire [191:63]s_hashOut;
+  wire [29:0]s_nonce;
+  wire s_validData;
+  wire [0:0]sel0;
 
   design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS MinerCoprocessor_v1_0_M00_AXIS_inst
-       (.O({MinerCoprocessor_v1_0_M00_AXIS_inst_n_32,MinerCoprocessor_v1_0_M00_AXIS_inst_n_33}),
-        .Q(Q[29:0]),
-        .S({\counterMaster[3] ,\counterMaster[2] ,\counterMaster[1] }),
-        .allWordsSent(allWordsSent),
-        .\counterMaster[0] (\counterMaster[0] ),
-        .hashOut({hashOut[159],hashOut[127],hashOut[95],hashOut[63]}),
+       (.O({MinerCoprocessor_v1_0_M00_AXIS_inst_n_1,MinerCoprocessor_v1_0_M00_AXIS_inst_n_2}),
+        .Q(s_nonce),
+        .S({MinerCoprocessor_v1_0_S00_AXIS_inst_n_60,MinerCoprocessor_v1_0_S00_AXIS_inst_n_61,MinerCoprocessor_v1_0_S00_AXIS_inst_n_62,MinerCoprocessor_v1_0_S00_AXIS_inst_n_63}),
         .m00_axis_aclk(m00_axis_aclk),
         .m00_axis_tdata(m00_axis_tdata),
         .m00_axis_tready(m00_axis_tready),
         .m00_axis_tvalid(m00_axis_tvalid),
         .s00_axis_aresetn(s00_axis_aresetn),
-        .s_POFready_reg(readEnable),
-        .s_POFready_reg_0(validData),
-        .\s_dataOut_reg[0]_0 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_41),
-        .\s_dataOut_reg[0]_1 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_42),
-        .\s_dataOut_reg[192] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_450),
-        .\s_dataOut_reg[193] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_452),
-        .\s_dataOut_reg[194] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_454),
-        .\s_dataOut_reg[195] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_456),
-        .\s_dataOut_reg[196] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_458),
-        .\s_dataOut_reg[197] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_460),
-        .\s_dataOut_reg[198] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_462),
-        .\s_dataOut_reg[199] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_464),
-        .\s_dataOut_reg[200] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_466),
-        .\s_dataOut_reg[201] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_468),
-        .\s_dataOut_reg[202] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_470),
-        .\s_dataOut_reg[203] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_472),
-        .\s_dataOut_reg[204] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_474),
-        .\s_dataOut_reg[205] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_476),
-        .\s_dataOut_reg[206] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_478),
-        .\s_dataOut_reg[207] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_480),
-        .\s_dataOut_reg[208] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_482),
-        .\s_dataOut_reg[209] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_483),
-        .\s_dataOut_reg[210] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_484),
-        .\s_dataOut_reg[211] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_485),
-        .\s_dataOut_reg[212] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_486),
-        .\s_dataOut_reg[213] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_487),
-        .\s_dataOut_reg[214] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_488),
-        .\s_dataOut_reg[215] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_489),
-        .\s_dataOut_reg[216] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_490),
-        .\s_dataOut_reg[217] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_491),
-        .\s_dataOut_reg[218] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_492),
-        .\s_dataOut_reg[219] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_493),
-        .\s_dataOut_reg[220] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_494),
-        .\s_dataOut_reg[221] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_495),
-        .\s_dataOut_reg[222] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_496),
-        .\s_dataOut_reg[224] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_451),
-        .\s_dataOut_reg[225] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_453),
-        .\s_dataOut_reg[226] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_455),
-        .\s_dataOut_reg[227] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_457),
-        .\s_dataOut_reg[228] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_459),
-        .\s_dataOut_reg[229] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_461),
-        .\s_dataOut_reg[230] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_463),
-        .\s_dataOut_reg[231] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_465),
-        .\s_dataOut_reg[232] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_467),
-        .\s_dataOut_reg[233] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_469),
-        .\s_dataOut_reg[234] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_471),
-        .\s_dataOut_reg[235] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_473),
-        .\s_dataOut_reg[236] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_475),
-        .\s_dataOut_reg[237] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_477),
-        .\s_dataOut_reg[238] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_479),
-        .\s_dataOut_reg[239] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_481),
-        .\s_dataOut_reg[48] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_1),
-        .\s_dataOut_reg[49] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_178),
-        .\s_dataOut_reg[50] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_179),
-        .\s_dataOut_reg[51] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_180),
-        .\s_dataOut_reg[52] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_181),
-        .\s_dataOut_reg[53] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_182),
-        .\s_dataOut_reg[54] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_183),
-        .\s_dataOut_reg[55] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_184),
-        .\s_dataOut_reg[56] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_185),
-        .\s_dataOut_reg[57] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_186),
-        .\s_dataOut_reg[58] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_187),
-        .\s_dataOut_reg[59] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_188),
-        .\s_dataOut_reg[60] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_189),
-        .\s_dataOut_reg[61] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_190),
-        .\s_dataOut_reg[62] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_191),
-        .\s_dataOut_reg[63] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_192),
-        .\s_hashOriginalInputWord_reg[0] (MinerCoprocessor_v1_0_M00_AXIS_inst_n_40),
-        .\s_nonce_reg[12] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_438,MinerCoprocessor_v1_0_S00_AXIS_inst_n_439,MinerCoprocessor_v1_0_S00_AXIS_inst_n_440,MinerCoprocessor_v1_0_S00_AXIS_inst_n_441}),
-        .\s_nonce_reg[16] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_434,MinerCoprocessor_v1_0_S00_AXIS_inst_n_435,MinerCoprocessor_v1_0_S00_AXIS_inst_n_436,MinerCoprocessor_v1_0_S00_AXIS_inst_n_437}),
-        .\s_nonce_reg[20] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_430,MinerCoprocessor_v1_0_S00_AXIS_inst_n_431,MinerCoprocessor_v1_0_S00_AXIS_inst_n_432,MinerCoprocessor_v1_0_S00_AXIS_inst_n_433}),
-        .\s_nonce_reg[24] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_426,MinerCoprocessor_v1_0_S00_AXIS_inst_n_427,MinerCoprocessor_v1_0_S00_AXIS_inst_n_428,MinerCoprocessor_v1_0_S00_AXIS_inst_n_429}),
-        .\s_nonce_reg[28] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_422,MinerCoprocessor_v1_0_S00_AXIS_inst_n_423,MinerCoprocessor_v1_0_S00_AXIS_inst_n_424,MinerCoprocessor_v1_0_S00_AXIS_inst_n_425}),
-        .\s_nonce_reg[30] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_420,MinerCoprocessor_v1_0_S00_AXIS_inst_n_421}),
-        .\s_nonce_reg[4] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_446,MinerCoprocessor_v1_0_S00_AXIS_inst_n_447,MinerCoprocessor_v1_0_S00_AXIS_inst_n_448,MinerCoprocessor_v1_0_S00_AXIS_inst_n_449}),
-        .\s_nonce_reg[8] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_442,MinerCoprocessor_v1_0_S00_AXIS_inst_n_443,MinerCoprocessor_v1_0_S00_AXIS_inst_n_444,MinerCoprocessor_v1_0_S00_AXIS_inst_n_445}));
+        .s_POFready_reg(MinerCoprocessor_v1_0_S00_AXIS_inst_n_32),
+        .s_POFready_reg_0(MinerCoprocessor_v1_0_S00_AXIS_inst_n_31),
+        .s_POFready_reg_1(MinerCoprocessor_v1_0_S00_AXIS_inst_n_33),
+        .s_allWordsSent(s_allWordsSent),
+        .\s_counter_reg[4]_0 (sel0),
+        .\s_dataOut_reg[144] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_73),
+        .\s_dataOut_reg[145] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_75),
+        .\s_dataOut_reg[152] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_77),
+        .\s_dataOut_reg[155] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_79),
+        .\s_dataOut_reg[158] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_81),
+        .\s_dataOut_reg[191] ({s_hashOut[191],s_hashOut[159],s_hashOut[63]}),
+        .\s_dataOut_reg[192] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_68),
+        .\s_dataOut_reg[193] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_84),
+        .\s_dataOut_reg[194] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_86),
+        .\s_dataOut_reg[195] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_88),
+        .\s_dataOut_reg[196] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_90),
+        .\s_dataOut_reg[197] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_92),
+        .\s_dataOut_reg[198] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_94),
+        .\s_dataOut_reg[199] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_96),
+        .\s_dataOut_reg[200] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_98),
+        .\s_dataOut_reg[201] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_70),
+        .\s_dataOut_reg[202] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_100),
+        .\s_dataOut_reg[203] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_72),
+        .\s_dataOut_reg[204] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_102),
+        .\s_dataOut_reg[205] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_104),
+        .\s_dataOut_reg[206] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_106),
+        .\s_dataOut_reg[207] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_108),
+        .\s_dataOut_reg[208] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_74),
+        .\s_dataOut_reg[209] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_76),
+        .\s_dataOut_reg[210] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_110),
+        .\s_dataOut_reg[211] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_112),
+        .\s_dataOut_reg[212] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_114),
+        .\s_dataOut_reg[213] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_116),
+        .\s_dataOut_reg[214] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_118),
+        .\s_dataOut_reg[215] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_120),
+        .\s_dataOut_reg[216] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_78),
+        .\s_dataOut_reg[217] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_122),
+        .\s_dataOut_reg[218] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_124),
+        .\s_dataOut_reg[219] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_80),
+        .\s_dataOut_reg[220] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_126),
+        .\s_dataOut_reg[221] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_128),
+        .\s_dataOut_reg[222] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_82),
+        .\s_dataOut_reg[223] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_129),
+        .\s_dataOut_reg[224] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_64),
+        .\s_dataOut_reg[225] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_83),
+        .\s_dataOut_reg[226] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_85),
+        .\s_dataOut_reg[227] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_87),
+        .\s_dataOut_reg[228] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_89),
+        .\s_dataOut_reg[229] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_91),
+        .\s_dataOut_reg[230] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_93),
+        .\s_dataOut_reg[231] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_95),
+        .\s_dataOut_reg[232] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_97),
+        .\s_dataOut_reg[233] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_69),
+        .\s_dataOut_reg[234] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_99),
+        .\s_dataOut_reg[235] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_71),
+        .\s_dataOut_reg[236] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_101),
+        .\s_dataOut_reg[237] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_103),
+        .\s_dataOut_reg[238] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_105),
+        .\s_dataOut_reg[239] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_107),
+        .\s_dataOut_reg[31]_0 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_38),
+        .\s_dataOut_reg[31]_1 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_39),
+        .\s_dataOut_reg[50] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_109),
+        .\s_dataOut_reg[51] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_111),
+        .\s_dataOut_reg[52] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_113),
+        .\s_dataOut_reg[53] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_115),
+        .\s_dataOut_reg[54] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_117),
+        .\s_dataOut_reg[55] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_119),
+        .\s_dataOut_reg[57] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_121),
+        .\s_dataOut_reg[58] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_123),
+        .\s_dataOut_reg[60] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_125),
+        .\s_dataOut_reg[61] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_127),
+        .\s_hashOriginalInputWord_reg[0] (MinerCoprocessor_v1_0_M00_AXIS_inst_n_37),
+        .\s_nonce_reg[12] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_52,MinerCoprocessor_v1_0_S00_AXIS_inst_n_53,MinerCoprocessor_v1_0_S00_AXIS_inst_n_54,MinerCoprocessor_v1_0_S00_AXIS_inst_n_55}),
+        .\s_nonce_reg[16] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_48,MinerCoprocessor_v1_0_S00_AXIS_inst_n_49,MinerCoprocessor_v1_0_S00_AXIS_inst_n_50,MinerCoprocessor_v1_0_S00_AXIS_inst_n_51}),
+        .\s_nonce_reg[20] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_44,MinerCoprocessor_v1_0_S00_AXIS_inst_n_45,MinerCoprocessor_v1_0_S00_AXIS_inst_n_46,MinerCoprocessor_v1_0_S00_AXIS_inst_n_47}),
+        .\s_nonce_reg[24] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_40,MinerCoprocessor_v1_0_S00_AXIS_inst_n_41,MinerCoprocessor_v1_0_S00_AXIS_inst_n_42,MinerCoprocessor_v1_0_S00_AXIS_inst_n_43}),
+        .\s_nonce_reg[28] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_36,MinerCoprocessor_v1_0_S00_AXIS_inst_n_37,MinerCoprocessor_v1_0_S00_AXIS_inst_n_38,MinerCoprocessor_v1_0_S00_AXIS_inst_n_39}),
+        .\s_nonce_reg[30] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_34,MinerCoprocessor_v1_0_S00_AXIS_inst_n_35}),
+        .\s_nonce_reg[8] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_56,MinerCoprocessor_v1_0_S00_AXIS_inst_n_57,MinerCoprocessor_v1_0_S00_AXIS_inst_n_58,MinerCoprocessor_v1_0_S00_AXIS_inst_n_59}),
+        .s_validData(s_validData));
   design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS MinerCoprocessor_v1_0_S00_AXIS_inst
-       (.O({MinerCoprocessor_v1_0_M00_AXIS_inst_n_32,MinerCoprocessor_v1_0_M00_AXIS_inst_n_33}),
-        .counterSlave(counterSlave),
-        .hashInputWord(hashInputWord),
-        .hashOut(hashOut),
+       (.O({MinerCoprocessor_v1_0_M00_AXIS_inst_n_1,MinerCoprocessor_v1_0_M00_AXIS_inst_n_2}),
+        .S({MinerCoprocessor_v1_0_S00_AXIS_inst_n_60,MinerCoprocessor_v1_0_S00_AXIS_inst_n_61,MinerCoprocessor_v1_0_S00_AXIS_inst_n_62,MinerCoprocessor_v1_0_S00_AXIS_inst_n_63}),
+        .hash_output({s_hashOut[191],s_hashOut[159],s_hashOut[63]}),
         .m00_axis_tready(m00_axis_tready),
-        .mEnable(mEnable),
-        .nonce(Q),
-        .readEnable(readEnable),
+        .nonce(s_nonce),
         .s00_axis_aclk(s00_axis_aclk),
         .s00_axis_aresetn(s00_axis_aresetn),
         .s00_axis_tdata(s00_axis_tdata),
         .s00_axis_tready(s00_axis_tready),
         .s00_axis_tvalid(s00_axis_tvalid),
-        .s_allSent_reg(allWordsSent),
-        .s_allSent_reg_0(MinerCoprocessor_v1_0_M00_AXIS_inst_n_40),
-        .\s_counter_reg[0]_0 (\counterMaster[0] ),
-        .\s_counter_reg[0]_1 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_42),
-        .\s_counter_reg[0]_2 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_41),
-        .\s_dataOut_reg[0] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_450),
-        .\s_dataOut_reg[0]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_451),
-        .\s_dataOut_reg[10] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_470),
-        .\s_dataOut_reg[10]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_471),
-        .\s_dataOut_reg[11] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_472),
-        .\s_dataOut_reg[11]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_473),
-        .\s_dataOut_reg[12] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_438,MinerCoprocessor_v1_0_S00_AXIS_inst_n_439,MinerCoprocessor_v1_0_S00_AXIS_inst_n_440,MinerCoprocessor_v1_0_S00_AXIS_inst_n_441}),
-        .\s_dataOut_reg[12]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_474),
-        .\s_dataOut_reg[12]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_475),
-        .\s_dataOut_reg[13] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_476),
-        .\s_dataOut_reg[13]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_477),
-        .\s_dataOut_reg[14] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_478),
-        .\s_dataOut_reg[14]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_479),
-        .\s_dataOut_reg[15] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_480),
-        .\s_dataOut_reg[15]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_481),
-        .\s_dataOut_reg[16] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_1),
-        .\s_dataOut_reg[16]_0 ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_434,MinerCoprocessor_v1_0_S00_AXIS_inst_n_435,MinerCoprocessor_v1_0_S00_AXIS_inst_n_436,MinerCoprocessor_v1_0_S00_AXIS_inst_n_437}),
-        .\s_dataOut_reg[16]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_482),
-        .\s_dataOut_reg[17] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_178),
-        .\s_dataOut_reg[17]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_483),
-        .\s_dataOut_reg[18] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_179),
-        .\s_dataOut_reg[18]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_484),
-        .\s_dataOut_reg[19] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_180),
-        .\s_dataOut_reg[19]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_485),
-        .\s_dataOut_reg[1] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_452),
-        .\s_dataOut_reg[1]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_453),
-        .\s_dataOut_reg[20] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_181),
-        .\s_dataOut_reg[20]_0 ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_430,MinerCoprocessor_v1_0_S00_AXIS_inst_n_431,MinerCoprocessor_v1_0_S00_AXIS_inst_n_432,MinerCoprocessor_v1_0_S00_AXIS_inst_n_433}),
-        .\s_dataOut_reg[20]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_486),
-        .\s_dataOut_reg[21] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_182),
-        .\s_dataOut_reg[21]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_487),
-        .\s_dataOut_reg[22] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_183),
-        .\s_dataOut_reg[22]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_488),
-        .\s_dataOut_reg[23] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_184),
-        .\s_dataOut_reg[23]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_489),
-        .\s_dataOut_reg[24] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_185),
-        .\s_dataOut_reg[24]_0 ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_426,MinerCoprocessor_v1_0_S00_AXIS_inst_n_427,MinerCoprocessor_v1_0_S00_AXIS_inst_n_428,MinerCoprocessor_v1_0_S00_AXIS_inst_n_429}),
-        .\s_dataOut_reg[24]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_490),
-        .\s_dataOut_reg[25] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_186),
-        .\s_dataOut_reg[25]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_491),
-        .\s_dataOut_reg[26] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_187),
-        .\s_dataOut_reg[26]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_492),
-        .\s_dataOut_reg[27] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_188),
-        .\s_dataOut_reg[27]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_493),
-        .\s_dataOut_reg[28] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_189),
-        .\s_dataOut_reg[28]_0 ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_422,MinerCoprocessor_v1_0_S00_AXIS_inst_n_423,MinerCoprocessor_v1_0_S00_AXIS_inst_n_424,MinerCoprocessor_v1_0_S00_AXIS_inst_n_425}),
-        .\s_dataOut_reg[28]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_494),
-        .\s_dataOut_reg[29] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_190),
-        .\s_dataOut_reg[29]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_495),
-        .\s_dataOut_reg[2] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_454),
-        .\s_dataOut_reg[2]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_455),
-        .\s_dataOut_reg[30] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_191),
-        .\s_dataOut_reg[30]_0 ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_420,MinerCoprocessor_v1_0_S00_AXIS_inst_n_421}),
-        .\s_dataOut_reg[30]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_496),
-        .\s_dataOut_reg[31] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_192),
-        .\s_dataOut_reg[3] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_456),
-        .\s_dataOut_reg[3]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_457),
-        .\s_dataOut_reg[4] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_446,MinerCoprocessor_v1_0_S00_AXIS_inst_n_447,MinerCoprocessor_v1_0_S00_AXIS_inst_n_448,MinerCoprocessor_v1_0_S00_AXIS_inst_n_449}),
-        .\s_dataOut_reg[4]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_458),
-        .\s_dataOut_reg[4]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_459),
-        .\s_dataOut_reg[5] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_460),
-        .\s_dataOut_reg[5]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_461),
-        .\s_dataOut_reg[6] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_462),
-        .\s_dataOut_reg[6]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_463),
-        .\s_dataOut_reg[7] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_464),
-        .\s_dataOut_reg[7]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_465),
-        .\s_dataOut_reg[8] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_442,MinerCoprocessor_v1_0_S00_AXIS_inst_n_443,MinerCoprocessor_v1_0_S00_AXIS_inst_n_444,MinerCoprocessor_v1_0_S00_AXIS_inst_n_445}),
-        .\s_dataOut_reg[8]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_466),
-        .\s_dataOut_reg[8]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_467),
-        .\s_dataOut_reg[9] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_468),
-        .\s_dataOut_reg[9]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_469),
-        .tempHash(tempHash),
-        .update(update),
-        .validData(validData));
+        .s_allSent_reg(MinerCoprocessor_v1_0_M00_AXIS_inst_n_37),
+        .s_allWordsSent(s_allWordsSent),
+        .\s_counter_reg[0]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_31),
+        .\s_counter_reg[0]_1 (sel0),
+        .\s_counter_reg[0]_2 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_38),
+        .\s_counter_reg[0]_3 (MinerCoprocessor_v1_0_M00_AXIS_inst_n_39),
+        .\s_dataOut_reg[0] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_64),
+        .\s_dataOut_reg[0]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_68),
+        .\s_dataOut_reg[10] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_99),
+        .\s_dataOut_reg[10]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_100),
+        .\s_dataOut_reg[11] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_71),
+        .\s_dataOut_reg[11]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_72),
+        .\s_dataOut_reg[12] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_52,MinerCoprocessor_v1_0_S00_AXIS_inst_n_53,MinerCoprocessor_v1_0_S00_AXIS_inst_n_54,MinerCoprocessor_v1_0_S00_AXIS_inst_n_55}),
+        .\s_dataOut_reg[12]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_101),
+        .\s_dataOut_reg[12]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_102),
+        .\s_dataOut_reg[13] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_103),
+        .\s_dataOut_reg[13]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_104),
+        .\s_dataOut_reg[14] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_105),
+        .\s_dataOut_reg[14]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_106),
+        .\s_dataOut_reg[15] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_107),
+        .\s_dataOut_reg[15]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_108),
+        .\s_dataOut_reg[16] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_48,MinerCoprocessor_v1_0_S00_AXIS_inst_n_49,MinerCoprocessor_v1_0_S00_AXIS_inst_n_50,MinerCoprocessor_v1_0_S00_AXIS_inst_n_51}),
+        .\s_dataOut_reg[16]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_73),
+        .\s_dataOut_reg[16]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_74),
+        .\s_dataOut_reg[17] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_75),
+        .\s_dataOut_reg[17]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_76),
+        .\s_dataOut_reg[18] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_109),
+        .\s_dataOut_reg[18]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_110),
+        .\s_dataOut_reg[19] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_111),
+        .\s_dataOut_reg[19]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_112),
+        .\s_dataOut_reg[1] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_83),
+        .\s_dataOut_reg[1]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_84),
+        .\s_dataOut_reg[20] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_44,MinerCoprocessor_v1_0_S00_AXIS_inst_n_45,MinerCoprocessor_v1_0_S00_AXIS_inst_n_46,MinerCoprocessor_v1_0_S00_AXIS_inst_n_47}),
+        .\s_dataOut_reg[20]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_113),
+        .\s_dataOut_reg[20]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_114),
+        .\s_dataOut_reg[21] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_115),
+        .\s_dataOut_reg[21]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_116),
+        .\s_dataOut_reg[22] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_117),
+        .\s_dataOut_reg[22]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_118),
+        .\s_dataOut_reg[23] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_119),
+        .\s_dataOut_reg[23]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_120),
+        .\s_dataOut_reg[24] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_40,MinerCoprocessor_v1_0_S00_AXIS_inst_n_41,MinerCoprocessor_v1_0_S00_AXIS_inst_n_42,MinerCoprocessor_v1_0_S00_AXIS_inst_n_43}),
+        .\s_dataOut_reg[24]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_77),
+        .\s_dataOut_reg[24]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_78),
+        .\s_dataOut_reg[25] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_121),
+        .\s_dataOut_reg[25]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_122),
+        .\s_dataOut_reg[26] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_123),
+        .\s_dataOut_reg[26]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_124),
+        .\s_dataOut_reg[27] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_79),
+        .\s_dataOut_reg[27]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_80),
+        .\s_dataOut_reg[28] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_36,MinerCoprocessor_v1_0_S00_AXIS_inst_n_37,MinerCoprocessor_v1_0_S00_AXIS_inst_n_38,MinerCoprocessor_v1_0_S00_AXIS_inst_n_39}),
+        .\s_dataOut_reg[28]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_125),
+        .\s_dataOut_reg[28]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_126),
+        .\s_dataOut_reg[29] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_127),
+        .\s_dataOut_reg[29]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_128),
+        .\s_dataOut_reg[2] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_85),
+        .\s_dataOut_reg[2]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_86),
+        .\s_dataOut_reg[30] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_32),
+        .\s_dataOut_reg[30]_0 ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_34,MinerCoprocessor_v1_0_S00_AXIS_inst_n_35}),
+        .\s_dataOut_reg[30]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_81),
+        .\s_dataOut_reg[30]_2 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_82),
+        .\s_dataOut_reg[31] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_33),
+        .\s_dataOut_reg[31]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_129),
+        .\s_dataOut_reg[3] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_87),
+        .\s_dataOut_reg[3]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_88),
+        .\s_dataOut_reg[4] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_89),
+        .\s_dataOut_reg[4]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_90),
+        .\s_dataOut_reg[5] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_91),
+        .\s_dataOut_reg[5]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_92),
+        .\s_dataOut_reg[6] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_93),
+        .\s_dataOut_reg[6]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_94),
+        .\s_dataOut_reg[7] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_95),
+        .\s_dataOut_reg[7]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_96),
+        .\s_dataOut_reg[8] ({MinerCoprocessor_v1_0_S00_AXIS_inst_n_56,MinerCoprocessor_v1_0_S00_AXIS_inst_n_57,MinerCoprocessor_v1_0_S00_AXIS_inst_n_58,MinerCoprocessor_v1_0_S00_AXIS_inst_n_59}),
+        .\s_dataOut_reg[8]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_97),
+        .\s_dataOut_reg[8]_1 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_98),
+        .\s_dataOut_reg[9] (MinerCoprocessor_v1_0_S00_AXIS_inst_n_69),
+        .\s_dataOut_reg[9]_0 (MinerCoprocessor_v1_0_S00_AXIS_inst_n_70),
+        .s_validData(s_validData));
 endmodule
 
 (* ORIG_REF_NAME = "MinerCoprocessor_v1_0_M00_AXIS" *) 
 module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
-   (m00_axis_tdata,
+   (\s_counter_reg[4]_0 ,
     O,
-    \counterMaster[0] ,
-    S,
-    allWordsSent,
+    m00_axis_tdata,
+    s_allWordsSent,
     m00_axis_tvalid,
     \s_hashOriginalInputWord_reg[0] ,
-    \s_dataOut_reg[0]_0 ,
-    \s_dataOut_reg[0]_1 ,
+    \s_dataOut_reg[31]_0 ,
+    \s_dataOut_reg[31]_1 ,
     s_POFready_reg,
     m00_axis_aclk,
+    s_POFready_reg_0,
     Q,
-    \s_nonce_reg[4] ,
+    S,
     \s_nonce_reg[8] ,
     \s_nonce_reg[12] ,
     \s_nonce_reg[16] ,
@@ -524,11 +417,27 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
     \s_nonce_reg[24] ,
     \s_nonce_reg[28] ,
     \s_nonce_reg[30] ,
-    s_POFready_reg_0,
+    s_validData,
     s00_axis_aresetn,
     m00_axis_tready,
-    \s_dataOut_reg[192] ,
+    \s_dataOut_reg[158] ,
+    \s_dataOut_reg[222] ,
+    \s_dataOut_reg[155] ,
+    \s_dataOut_reg[219] ,
+    \s_dataOut_reg[152] ,
+    \s_dataOut_reg[216] ,
+    \s_dataOut_reg[145] ,
+    \s_dataOut_reg[209] ,
+    \s_dataOut_reg[144] ,
+    \s_dataOut_reg[208] ,
+    \s_dataOut_reg[235] ,
+    \s_dataOut_reg[203] ,
+    \s_dataOut_reg[233] ,
+    \s_dataOut_reg[201] ,
     \s_dataOut_reg[224] ,
+    \s_dataOut_reg[192] ,
+    \s_dataOut_reg[223] ,
+    s_POFready_reg_1,
     \s_dataOut_reg[193] ,
     \s_dataOut_reg[225] ,
     \s_dataOut_reg[194] ,
@@ -545,12 +454,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
     \s_dataOut_reg[231] ,
     \s_dataOut_reg[200] ,
     \s_dataOut_reg[232] ,
-    \s_dataOut_reg[201] ,
-    \s_dataOut_reg[233] ,
     \s_dataOut_reg[202] ,
     \s_dataOut_reg[234] ,
-    \s_dataOut_reg[203] ,
-    \s_dataOut_reg[235] ,
     \s_dataOut_reg[204] ,
     \s_dataOut_reg[236] ,
     \s_dataOut_reg[205] ,
@@ -559,10 +464,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
     \s_dataOut_reg[238] ,
     \s_dataOut_reg[207] ,
     \s_dataOut_reg[239] ,
-    \s_dataOut_reg[208] ,
-    \s_dataOut_reg[48] ,
-    \s_dataOut_reg[209] ,
-    \s_dataOut_reg[49] ,
     \s_dataOut_reg[210] ,
     \s_dataOut_reg[50] ,
     \s_dataOut_reg[211] ,
@@ -575,35 +476,28 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
     \s_dataOut_reg[54] ,
     \s_dataOut_reg[215] ,
     \s_dataOut_reg[55] ,
-    \s_dataOut_reg[216] ,
-    \s_dataOut_reg[56] ,
     \s_dataOut_reg[217] ,
     \s_dataOut_reg[57] ,
     \s_dataOut_reg[218] ,
     \s_dataOut_reg[58] ,
-    \s_dataOut_reg[219] ,
-    \s_dataOut_reg[59] ,
     \s_dataOut_reg[220] ,
     \s_dataOut_reg[60] ,
     \s_dataOut_reg[221] ,
     \s_dataOut_reg[61] ,
-    \s_dataOut_reg[222] ,
-    \s_dataOut_reg[62] ,
-    \s_dataOut_reg[63] ,
-    hashOut);
-  output [31:0]m00_axis_tdata;
+    \s_dataOut_reg[191] );
+  output [0:0]\s_counter_reg[4]_0 ;
   output [1:0]O;
-  output \counterMaster[0] ;
-  output [2:0]S;
-  output allWordsSent;
+  output [31:0]m00_axis_tdata;
+  output s_allWordsSent;
   output m00_axis_tvalid;
   output \s_hashOriginalInputWord_reg[0] ;
-  output \s_dataOut_reg[0]_0 ;
-  output \s_dataOut_reg[0]_1 ;
+  output \s_dataOut_reg[31]_0 ;
+  output \s_dataOut_reg[31]_1 ;
   input s_POFready_reg;
   input m00_axis_aclk;
+  input s_POFready_reg_0;
   input [29:0]Q;
-  input [3:0]\s_nonce_reg[4] ;
+  input [3:0]S;
   input [3:0]\s_nonce_reg[8] ;
   input [3:0]\s_nonce_reg[12] ;
   input [3:0]\s_nonce_reg[16] ;
@@ -611,11 +505,27 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   input [3:0]\s_nonce_reg[24] ;
   input [3:0]\s_nonce_reg[28] ;
   input [1:0]\s_nonce_reg[30] ;
-  input s_POFready_reg_0;
+  input s_validData;
   input s00_axis_aresetn;
   input m00_axis_tready;
-  input \s_dataOut_reg[192] ;
+  input \s_dataOut_reg[158] ;
+  input \s_dataOut_reg[222] ;
+  input \s_dataOut_reg[155] ;
+  input \s_dataOut_reg[219] ;
+  input \s_dataOut_reg[152] ;
+  input \s_dataOut_reg[216] ;
+  input \s_dataOut_reg[145] ;
+  input \s_dataOut_reg[209] ;
+  input \s_dataOut_reg[144] ;
+  input \s_dataOut_reg[208] ;
+  input \s_dataOut_reg[235] ;
+  input \s_dataOut_reg[203] ;
+  input \s_dataOut_reg[233] ;
+  input \s_dataOut_reg[201] ;
   input \s_dataOut_reg[224] ;
+  input \s_dataOut_reg[192] ;
+  input \s_dataOut_reg[223] ;
+  input s_POFready_reg_1;
   input \s_dataOut_reg[193] ;
   input \s_dataOut_reg[225] ;
   input \s_dataOut_reg[194] ;
@@ -632,12 +542,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   input \s_dataOut_reg[231] ;
   input \s_dataOut_reg[200] ;
   input \s_dataOut_reg[232] ;
-  input \s_dataOut_reg[201] ;
-  input \s_dataOut_reg[233] ;
   input \s_dataOut_reg[202] ;
   input \s_dataOut_reg[234] ;
-  input \s_dataOut_reg[203] ;
-  input \s_dataOut_reg[235] ;
   input \s_dataOut_reg[204] ;
   input \s_dataOut_reg[236] ;
   input \s_dataOut_reg[205] ;
@@ -646,10 +552,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   input \s_dataOut_reg[238] ;
   input \s_dataOut_reg[207] ;
   input \s_dataOut_reg[239] ;
-  input \s_dataOut_reg[208] ;
-  input \s_dataOut_reg[48] ;
-  input \s_dataOut_reg[209] ;
-  input \s_dataOut_reg[49] ;
   input \s_dataOut_reg[210] ;
   input \s_dataOut_reg[50] ;
   input \s_dataOut_reg[211] ;
@@ -662,31 +564,20 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   input \s_dataOut_reg[54] ;
   input \s_dataOut_reg[215] ;
   input \s_dataOut_reg[55] ;
-  input \s_dataOut_reg[216] ;
-  input \s_dataOut_reg[56] ;
   input \s_dataOut_reg[217] ;
   input \s_dataOut_reg[57] ;
   input \s_dataOut_reg[218] ;
   input \s_dataOut_reg[58] ;
-  input \s_dataOut_reg[219] ;
-  input \s_dataOut_reg[59] ;
   input \s_dataOut_reg[220] ;
   input \s_dataOut_reg[60] ;
   input \s_dataOut_reg[221] ;
   input \s_dataOut_reg[61] ;
-  input \s_dataOut_reg[222] ;
-  input \s_dataOut_reg[62] ;
-  input \s_dataOut_reg[63] ;
-  input [3:0]hashOut;
+  input [2:0]\s_dataOut_reg[191] ;
 
   wire [1:0]O;
   wire [29:0]Q;
-  wire [2:0]S;
-  wire allWordsSent;
-  wire \counterMaster[0] ;
+  wire [3:0]S;
   wire [30:1]data0;
-  wire [31:31]data1;
-  wire [3:0]hashOut;
   wire m00_axis_aclk;
   wire [31:0]m00_axis_tdata;
   wire m00_axis_tready;
@@ -694,19 +585,10 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   wire s00_axis_aresetn;
   wire s_POFready_reg;
   wire s_POFready_reg_0;
+  wire s_POFready_reg_1;
   wire s_allSent_i_1_n_0;
-  wire s_allSent_i_2_n_0;
-  wire s_allSent_i_3_n_0;
-  wire s_allSent_i_4_n_0;
-  wire s_allSent_i_5_n_0;
-  wire s_allSent_i_6_n_0;
-  wire s_allSent_i_7_n_0;
-  wire s_allSent_i_8_n_0;
-  wire s_allSent_i_9_n_0;
-  wire \s_counter[0]_i_1__0_n_0 ;
-  wire \s_counter[3]_i_1__0_n_0 ;
-  wire \s_counter[3]_i_3_n_0 ;
-  wire \s_counter[3]_i_4__0_n_0 ;
+  wire s_allWordsSent;
+  wire \s_counter[31]_i_1__0_n_0 ;
   wire \s_counter_reg[12]_i_1_n_0 ;
   wire \s_counter_reg[12]_i_1_n_1 ;
   wire \s_counter_reg[12]_i_1_n_2 ;
@@ -747,17 +629,18 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   wire \s_counter_reg[28]_i_1_n_5 ;
   wire \s_counter_reg[28]_i_1_n_6 ;
   wire \s_counter_reg[28]_i_1_n_7 ;
-  wire \s_counter_reg[31]_i_1_n_2 ;
-  wire \s_counter_reg[31]_i_1_n_3 ;
-  wire \s_counter_reg[31]_i_1_n_5 ;
-  wire \s_counter_reg[31]_i_1_n_6 ;
-  wire \s_counter_reg[31]_i_1_n_7 ;
-  wire \s_counter_reg[3]_i_2_n_0 ;
-  wire \s_counter_reg[3]_i_2_n_1 ;
-  wire \s_counter_reg[3]_i_2_n_2 ;
-  wire \s_counter_reg[3]_i_2_n_3 ;
-  wire \s_counter_reg[3]_i_2_n_4 ;
-  wire \s_counter_reg[3]_i_2_n_5 ;
+  wire \s_counter_reg[31]_i_2_n_2 ;
+  wire \s_counter_reg[31]_i_2_n_3 ;
+  wire \s_counter_reg[31]_i_2_n_5 ;
+  wire \s_counter_reg[31]_i_2_n_6 ;
+  wire \s_counter_reg[31]_i_2_n_7 ;
+  wire [0:0]\s_counter_reg[4]_0 ;
+  wire \s_counter_reg[4]_i_1_n_0 ;
+  wire \s_counter_reg[4]_i_1_n_1 ;
+  wire \s_counter_reg[4]_i_1_n_2 ;
+  wire \s_counter_reg[4]_i_1_n_3 ;
+  wire \s_counter_reg[4]_i_1_n_4 ;
+  wire \s_counter_reg[4]_i_1_n_5 ;
   wire \s_counter_reg[8]_i_1_n_0 ;
   wire \s_counter_reg[8]_i_1_n_1 ;
   wire \s_counter_reg[8]_i_1_n_2 ;
@@ -767,33 +650,39 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   wire \s_counter_reg[8]_i_1_n_6 ;
   wire \s_counter_reg[8]_i_1_n_7 ;
   wire [30:0]s_dataOut;
+  wire \s_dataOut[29]_i_3_n_0 ;
+  wire \s_dataOut[29]_i_5_n_0 ;
+  wire \s_dataOut[29]_i_6_n_0 ;
+  wire \s_dataOut[29]_i_7_n_0 ;
+  wire \s_dataOut[29]_i_8_n_0 ;
   wire \s_dataOut[30]_i_1_n_0 ;
-  wire \s_dataOut[30]_i_3_n_0 ;
+  wire \s_dataOut[30]_i_4_n_0 ;
+  wire \s_dataOut[30]_i_8_n_0 ;
   wire \s_dataOut[31]_i_10_n_0 ;
   wire \s_dataOut[31]_i_11_n_0 ;
   wire \s_dataOut[31]_i_12_n_0 ;
   wire \s_dataOut[31]_i_13_n_0 ;
   wire \s_dataOut[31]_i_14_n_0 ;
   wire \s_dataOut[31]_i_15_n_0 ;
-  wire \s_dataOut[31]_i_16_n_0 ;
-  wire \s_dataOut[31]_i_17_n_0 ;
   wire \s_dataOut[31]_i_1_n_0 ;
   wire \s_dataOut[31]_i_2_n_0 ;
   wire \s_dataOut[31]_i_4_n_0 ;
-  wire \s_dataOut[31]_i_5_n_0 ;
   wire \s_dataOut[31]_i_6_n_0 ;
-  wire \s_dataOut[31]_i_7_n_0 ;
-  wire \s_dataOut[31]_i_8_n_0 ;
-  wire \s_dataOut_reg[0]_0 ;
-  wire \s_dataOut_reg[0]_1 ;
+  wire \s_dataOut[31]_i_9_n_0 ;
   wire \s_dataOut_reg[12]_i_4_n_0 ;
   wire \s_dataOut_reg[12]_i_4_n_1 ;
   wire \s_dataOut_reg[12]_i_4_n_2 ;
   wire \s_dataOut_reg[12]_i_4_n_3 ;
-  wire \s_dataOut_reg[16]_i_4_n_0 ;
-  wire \s_dataOut_reg[16]_i_4_n_1 ;
-  wire \s_dataOut_reg[16]_i_4_n_2 ;
-  wire \s_dataOut_reg[16]_i_4_n_3 ;
+  wire \s_dataOut_reg[144] ;
+  wire \s_dataOut_reg[145] ;
+  wire \s_dataOut_reg[152] ;
+  wire \s_dataOut_reg[155] ;
+  wire \s_dataOut_reg[158] ;
+  wire \s_dataOut_reg[16]_i_2_n_0 ;
+  wire \s_dataOut_reg[16]_i_2_n_1 ;
+  wire \s_dataOut_reg[16]_i_2_n_2 ;
+  wire \s_dataOut_reg[16]_i_2_n_3 ;
+  wire [2:0]\s_dataOut_reg[191] ;
   wire \s_dataOut_reg[192] ;
   wire \s_dataOut_reg[193] ;
   wire \s_dataOut_reg[194] ;
@@ -829,6 +718,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   wire \s_dataOut_reg[220] ;
   wire \s_dataOut_reg[221] ;
   wire \s_dataOut_reg[222] ;
+  wire \s_dataOut_reg[223] ;
   wire \s_dataOut_reg[224] ;
   wire \s_dataOut_reg[225] ;
   wire \s_dataOut_reg[226] ;
@@ -845,17 +735,17 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   wire \s_dataOut_reg[237] ;
   wire \s_dataOut_reg[238] ;
   wire \s_dataOut_reg[239] ;
-  wire \s_dataOut_reg[24]_i_4_n_0 ;
-  wire \s_dataOut_reg[24]_i_4_n_1 ;
-  wire \s_dataOut_reg[24]_i_4_n_2 ;
-  wire \s_dataOut_reg[24]_i_4_n_3 ;
+  wire \s_dataOut_reg[24]_i_2_n_0 ;
+  wire \s_dataOut_reg[24]_i_2_n_1 ;
+  wire \s_dataOut_reg[24]_i_2_n_2 ;
+  wire \s_dataOut_reg[24]_i_2_n_3 ;
   wire \s_dataOut_reg[28]_i_4_n_0 ;
   wire \s_dataOut_reg[28]_i_4_n_1 ;
   wire \s_dataOut_reg[28]_i_4_n_2 ;
   wire \s_dataOut_reg[28]_i_4_n_3 ;
-  wire \s_dataOut_reg[30]_i_6_n_3 ;
-  wire \s_dataOut_reg[48] ;
-  wire \s_dataOut_reg[49] ;
+  wire \s_dataOut_reg[30]_i_5_n_3 ;
+  wire \s_dataOut_reg[31]_0 ;
+  wire \s_dataOut_reg[31]_1 ;
   wire \s_dataOut_reg[4]_i_4_n_0 ;
   wire \s_dataOut_reg[4]_i_4_n_1 ;
   wire \s_dataOut_reg[4]_i_4_n_2 ;
@@ -866,14 +756,10 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   wire \s_dataOut_reg[53] ;
   wire \s_dataOut_reg[54] ;
   wire \s_dataOut_reg[55] ;
-  wire \s_dataOut_reg[56] ;
   wire \s_dataOut_reg[57] ;
   wire \s_dataOut_reg[58] ;
-  wire \s_dataOut_reg[59] ;
   wire \s_dataOut_reg[60] ;
   wire \s_dataOut_reg[61] ;
-  wire \s_dataOut_reg[62] ;
-  wire \s_dataOut_reg[63] ;
   wire \s_dataOut_reg[8]_i_4_n_0 ;
   wire \s_dataOut_reg[8]_i_4_n_1 ;
   wire \s_dataOut_reg[8]_i_4_n_2 ;
@@ -885,149 +771,48 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   wire [3:0]\s_nonce_reg[24] ;
   wire [3:0]\s_nonce_reg[28] ;
   wire [1:0]\s_nonce_reg[30] ;
-  wire [3:0]\s_nonce_reg[4] ;
   wire [3:0]\s_nonce_reg[8] ;
+  wire s_validData;
   wire s_valid_i_1_n_0;
-  wire [31:4]sel0;
-  wire [3:2]\NLW_s_counter_reg[31]_i_1_CO_UNCONNECTED ;
-  wire [3:3]\NLW_s_counter_reg[31]_i_1_O_UNCONNECTED ;
-  wire [3:1]\NLW_s_dataOut_reg[30]_i_6_CO_UNCONNECTED ;
-  wire [3:2]\NLW_s_dataOut_reg[30]_i_6_O_UNCONNECTED ;
+  wire [31:1]sel0;
+  wire [3:2]\NLW_s_counter_reg[31]_i_2_CO_UNCONNECTED ;
+  wire [3:3]\NLW_s_counter_reg[31]_i_2_O_UNCONNECTED ;
+  wire [3:1]\NLW_s_dataOut_reg[30]_i_5_CO_UNCONNECTED ;
+  wire [3:2]\NLW_s_dataOut_reg[30]_i_5_O_UNCONNECTED ;
 
-  LUT6 #(
-    .INIT(64'h0000000000000008)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h0080)) 
     s_allSent_i_1
        (.I0(m00_axis_tready),
-        .I1(s_POFready_reg_0),
-        .I2(s_allSent_i_2_n_0),
-        .I3(s_allSent_i_3_n_0),
-        .I4(s_allSent_i_4_n_0),
-        .I5(s_allSent_i_5_n_0),
+        .I1(s_validData),
+        .I2(\s_counter_reg[4]_0 ),
+        .I3(\s_dataOut[30]_i_4_n_0 ),
         .O(s_allSent_i_1_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    s_allSent_i_2
-       (.I0(sel0[13]),
-        .I1(sel0[12]),
-        .I2(sel0[15]),
-        .I3(sel0[14]),
-        .I4(s_allSent_i_6_n_0),
-        .O(s_allSent_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFBF)) 
-    s_allSent_i_3
-       (.I0(s_allSent_i_7_n_0),
-        .I1(S[2]),
-        .I2(\counterMaster[0] ),
-        .I3(S[0]),
-        .I4(S[1]),
-        .O(s_allSent_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    s_allSent_i_4
-       (.I0(sel0[29]),
-        .I1(sel0[28]),
-        .I2(sel0[30]),
-        .I3(sel0[31]),
-        .I4(s_allSent_i_8_n_0),
-        .O(s_allSent_i_4_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    s_allSent_i_5
-       (.I0(sel0[21]),
-        .I1(sel0[20]),
-        .I2(sel0[23]),
-        .I3(sel0[22]),
-        .I4(s_allSent_i_9_n_0),
-        .O(s_allSent_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    s_allSent_i_6
-       (.I0(sel0[10]),
-        .I1(sel0[11]),
-        .I2(sel0[8]),
-        .I3(sel0[9]),
-        .O(s_allSent_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    s_allSent_i_7
-       (.I0(sel0[6]),
-        .I1(sel0[7]),
-        .I2(sel0[4]),
-        .I3(sel0[5]),
-        .O(s_allSent_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    s_allSent_i_8
-       (.I0(sel0[26]),
-        .I1(sel0[27]),
-        .I2(sel0[24]),
-        .I3(sel0[25]),
-        .O(s_allSent_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    s_allSent_i_9
-       (.I0(sel0[18]),
-        .I1(sel0[19]),
-        .I2(sel0[16]),
-        .I3(sel0[17]),
-        .O(s_allSent_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
     s_allSent_reg
        (.C(m00_axis_aclk),
         .CE(1'b1),
         .D(s_allSent_i_1_n_0),
-        .Q(allWordsSent),
+        .Q(s_allWordsSent),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \s_counter[0]_i_1__0 
-       (.I0(\counterMaster[0] ),
-        .O(\s_counter[0]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000008)) 
-    \s_counter[3]_i_1__0 
-       (.I0(m00_axis_tready),
-        .I1(s_POFready_reg_0),
-        .I2(s_allSent_i_2_n_0),
-        .I3(\s_counter[3]_i_3_n_0 ),
-        .I4(\s_counter[3]_i_4__0_n_0 ),
-        .I5(s_allSent_i_5_n_0),
-        .O(\s_counter[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \s_counter[3]_i_3 
-       (.I0(s_allSent_i_7_n_0),
-        .I1(S[0]),
-        .I2(sel0[31]),
-        .I3(sel0[29]),
-        .I4(S[1]),
-        .O(\s_counter[3]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFEFFF)) 
-    \s_counter[3]_i_4__0 
-       (.I0(sel0[30]),
-        .I1(sel0[28]),
-        .I2(S[2]),
-        .I3(\counterMaster[0] ),
-        .I4(s_allSent_i_8_n_0),
-        .O(\s_counter[3]_i_4__0_n_0 ));
+  LUT4 #(
+    .INIT(16'h4000)) 
+    \s_counter[31]_i_1__0 
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(s_validData),
+        .I3(m00_axis_tready),
+        .O(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[0] 
        (.C(m00_axis_aclk),
-        .CE(s_POFready_reg),
-        .D(\s_counter[0]_i_1__0_n_0 ),
-        .Q(\counterMaster[0] ),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .CE(1'b1),
+        .D(s_POFready_reg_0),
+        .Q(\s_counter_reg[4]_0 ),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[10] 
@@ -1035,7 +820,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[12]_i_1_n_6 ),
         .Q(sel0[10]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[11] 
@@ -1043,7 +828,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[12]_i_1_n_5 ),
         .Q(sel0[11]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[12] 
@@ -1051,7 +836,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[12]_i_1_n_4 ),
         .Q(sel0[12]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   CARRY4 \s_counter_reg[12]_i_1 
        (.CI(\s_counter_reg[8]_i_1_n_0 ),
         .CO({\s_counter_reg[12]_i_1_n_0 ,\s_counter_reg[12]_i_1_n_1 ,\s_counter_reg[12]_i_1_n_2 ,\s_counter_reg[12]_i_1_n_3 }),
@@ -1066,7 +851,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[16]_i_1_n_7 ),
         .Q(sel0[13]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[14] 
@@ -1074,7 +859,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[16]_i_1_n_6 ),
         .Q(sel0[14]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[15] 
@@ -1082,7 +867,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[16]_i_1_n_5 ),
         .Q(sel0[15]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[16] 
@@ -1090,7 +875,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[16]_i_1_n_4 ),
         .Q(sel0[16]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   CARRY4 \s_counter_reg[16]_i_1 
        (.CI(\s_counter_reg[12]_i_1_n_0 ),
         .CO({\s_counter_reg[16]_i_1_n_0 ,\s_counter_reg[16]_i_1_n_1 ,\s_counter_reg[16]_i_1_n_2 ,\s_counter_reg[16]_i_1_n_3 }),
@@ -1105,7 +890,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[20]_i_1_n_7 ),
         .Q(sel0[17]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[18] 
@@ -1113,7 +898,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[20]_i_1_n_6 ),
         .Q(sel0[18]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[19] 
@@ -1121,15 +906,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[20]_i_1_n_5 ),
         .Q(sel0[19]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[1] 
        (.C(m00_axis_aclk),
         .CE(s_POFready_reg),
         .D(O[0]),
-        .Q(S[0]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .Q(sel0[1]),
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[20] 
@@ -1137,7 +922,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[20]_i_1_n_4 ),
         .Q(sel0[20]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   CARRY4 \s_counter_reg[20]_i_1 
        (.CI(\s_counter_reg[16]_i_1_n_0 ),
         .CO({\s_counter_reg[20]_i_1_n_0 ,\s_counter_reg[20]_i_1_n_1 ,\s_counter_reg[20]_i_1_n_2 ,\s_counter_reg[20]_i_1_n_3 }),
@@ -1152,7 +937,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[24]_i_1_n_7 ),
         .Q(sel0[21]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[22] 
@@ -1160,7 +945,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[24]_i_1_n_6 ),
         .Q(sel0[22]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[23] 
@@ -1168,7 +953,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[24]_i_1_n_5 ),
         .Q(sel0[23]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[24] 
@@ -1176,7 +961,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[24]_i_1_n_4 ),
         .Q(sel0[24]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   CARRY4 \s_counter_reg[24]_i_1 
        (.CI(\s_counter_reg[20]_i_1_n_0 ),
         .CO({\s_counter_reg[24]_i_1_n_0 ,\s_counter_reg[24]_i_1_n_1 ,\s_counter_reg[24]_i_1_n_2 ,\s_counter_reg[24]_i_1_n_3 }),
@@ -1191,7 +976,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[28]_i_1_n_7 ),
         .Q(sel0[25]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[26] 
@@ -1199,7 +984,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[28]_i_1_n_6 ),
         .Q(sel0[26]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[27] 
@@ -1207,7 +992,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[28]_i_1_n_5 ),
         .Q(sel0[27]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[28] 
@@ -1215,7 +1000,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[28]_i_1_n_4 ),
         .Q(sel0[28]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   CARRY4 \s_counter_reg[28]_i_1 
        (.CI(\s_counter_reg[24]_i_1_n_0 ),
         .CO({\s_counter_reg[28]_i_1_n_0 ,\s_counter_reg[28]_i_1_n_1 ,\s_counter_reg[28]_i_1_n_2 ,\s_counter_reg[28]_i_1_n_3 }),
@@ -1228,63 +1013,63 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
     \s_counter_reg[29] 
        (.C(m00_axis_aclk),
         .CE(s_POFready_reg),
-        .D(\s_counter_reg[31]_i_1_n_7 ),
+        .D(\s_counter_reg[31]_i_2_n_7 ),
         .Q(sel0[29]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[2] 
        (.C(m00_axis_aclk),
         .CE(s_POFready_reg),
         .D(O[1]),
-        .Q(S[1]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .Q(sel0[2]),
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[30] 
        (.C(m00_axis_aclk),
         .CE(s_POFready_reg),
-        .D(\s_counter_reg[31]_i_1_n_6 ),
+        .D(\s_counter_reg[31]_i_2_n_6 ),
         .Q(sel0[30]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[31] 
        (.C(m00_axis_aclk),
         .CE(s_POFready_reg),
-        .D(\s_counter_reg[31]_i_1_n_5 ),
+        .D(\s_counter_reg[31]_i_2_n_5 ),
         .Q(sel0[31]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
-  CARRY4 \s_counter_reg[31]_i_1 
+        .R(\s_counter[31]_i_1__0_n_0 ));
+  CARRY4 \s_counter_reg[31]_i_2 
        (.CI(\s_counter_reg[28]_i_1_n_0 ),
-        .CO({\NLW_s_counter_reg[31]_i_1_CO_UNCONNECTED [3:2],\s_counter_reg[31]_i_1_n_2 ,\s_counter_reg[31]_i_1_n_3 }),
+        .CO({\NLW_s_counter_reg[31]_i_2_CO_UNCONNECTED [3:2],\s_counter_reg[31]_i_2_n_2 ,\s_counter_reg[31]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_s_counter_reg[31]_i_1_O_UNCONNECTED [3],\s_counter_reg[31]_i_1_n_5 ,\s_counter_reg[31]_i_1_n_6 ,\s_counter_reg[31]_i_1_n_7 }),
+        .O({\NLW_s_counter_reg[31]_i_2_O_UNCONNECTED [3],\s_counter_reg[31]_i_2_n_5 ,\s_counter_reg[31]_i_2_n_6 ,\s_counter_reg[31]_i_2_n_7 }),
         .S({1'b0,sel0[31:29]}));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[3] 
        (.C(m00_axis_aclk),
         .CE(s_POFready_reg),
-        .D(\s_counter_reg[3]_i_2_n_5 ),
-        .Q(S[2]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
-  CARRY4 \s_counter_reg[3]_i_2 
-       (.CI(1'b0),
-        .CO({\s_counter_reg[3]_i_2_n_0 ,\s_counter_reg[3]_i_2_n_1 ,\s_counter_reg[3]_i_2_n_2 ,\s_counter_reg[3]_i_2_n_3 }),
-        .CYINIT(\counterMaster[0] ),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\s_counter_reg[3]_i_2_n_4 ,\s_counter_reg[3]_i_2_n_5 ,O}),
-        .S({sel0[4],S}));
+        .D(\s_counter_reg[4]_i_1_n_5 ),
+        .Q(sel0[3]),
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[4] 
        (.C(m00_axis_aclk),
         .CE(s_POFready_reg),
-        .D(\s_counter_reg[3]_i_2_n_4 ),
+        .D(\s_counter_reg[4]_i_1_n_4 ),
         .Q(sel0[4]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
+  CARRY4 \s_counter_reg[4]_i_1 
+       (.CI(1'b0),
+        .CO({\s_counter_reg[4]_i_1_n_0 ,\s_counter_reg[4]_i_1_n_1 ,\s_counter_reg[4]_i_1_n_2 ,\s_counter_reg[4]_i_1_n_3 }),
+        .CYINIT(\s_counter_reg[4]_0 ),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\s_counter_reg[4]_i_1_n_4 ,\s_counter_reg[4]_i_1_n_5 ,O}),
+        .S(sel0[4:1]));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[5] 
@@ -1292,7 +1077,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[8]_i_1_n_7 ),
         .Q(sel0[5]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[6] 
@@ -1300,7 +1085,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[8]_i_1_n_6 ),
         .Q(sel0[6]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[7] 
@@ -1308,7 +1093,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[8]_i_1_n_5 ),
         .Q(sel0[7]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_counter_reg[8] 
@@ -1316,9 +1101,9 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[8]_i_1_n_4 ),
         .Q(sel0[8]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   CARRY4 \s_counter_reg[8]_i_1 
-       (.CI(\s_counter_reg[3]_i_2_n_0 ),
+       (.CI(\s_counter_reg[4]_i_1_n_0 ),
         .CO({\s_counter_reg[8]_i_1_n_0 ,\s_counter_reg[8]_i_1_n_1 ,\s_counter_reg[8]_i_1_n_2 ,\s_counter_reg[8]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
@@ -1331,493 +1116,498 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CE(s_POFready_reg),
         .D(\s_counter_reg[12]_i_1_n_7 ),
         .Q(sel0[9]),
-        .R(\s_counter[3]_i_1__0_n_0 ));
+        .R(\s_counter[31]_i_1__0_n_0 ));
   LUT6 #(
-    .INIT(64'hA2800000A280FFFF)) 
+    .INIT(64'h0123CDEF01010101)) 
     \s_dataOut[0]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[192] ),
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(Q[0]),
         .I3(\s_dataOut_reg[224] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(Q[0]),
+        .I4(\s_dataOut_reg[192] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
         .O(s_dataOut[0]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[10]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[202] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[202] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[234] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[10]),
         .O(s_dataOut[10]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'h1032DCFE10101010)) 
     \s_dataOut[11]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[203] ),
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(data0[11]),
         .I3(\s_dataOut_reg[235] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(data0[11]),
+        .I4(\s_dataOut_reg[203] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
         .O(s_dataOut[11]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[12]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[204] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[204] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[236] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[12]),
         .O(s_dataOut[12]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[13]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[205] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[205] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[237] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[13]),
         .O(s_dataOut[13]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[14]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[206] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[206] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[238] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[14]),
         .O(s_dataOut[14]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[15]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[207] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[207] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[239] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[15]),
         .O(s_dataOut[15]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'h1032DCFE10101010)) 
     \s_dataOut[16]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[208] ),
-        .I3(\s_dataOut_reg[48] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(data0[16]),
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(data0[16]),
+        .I3(\s_dataOut_reg[144] ),
+        .I4(\s_dataOut_reg[208] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
         .O(s_dataOut[16]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'h1032DCFE10101010)) 
     \s_dataOut[17]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[209] ),
-        .I3(\s_dataOut_reg[49] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(data0[17]),
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(data0[17]),
+        .I3(\s_dataOut_reg[145] ),
+        .I4(\s_dataOut_reg[209] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
         .O(s_dataOut[17]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[18]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[210] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[210] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[50] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[18]),
         .O(s_dataOut[18]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[19]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[211] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[211] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[51] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[19]),
         .O(s_dataOut[19]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[1]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[193] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[193] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[225] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[1]),
         .O(s_dataOut[1]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[20]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[212] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[212] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[52] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[20]),
         .O(s_dataOut[20]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[21]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[213] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[213] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[53] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[21]),
         .O(s_dataOut[21]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[22]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[214] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[214] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[54] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[22]),
         .O(s_dataOut[22]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[23]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[215] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[215] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[55] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[23]),
         .O(s_dataOut[23]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'h1032DCFE10101010)) 
     \s_dataOut[24]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[216] ),
-        .I3(\s_dataOut_reg[56] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(data0[24]),
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(data0[24]),
+        .I3(\s_dataOut_reg[152] ),
+        .I4(\s_dataOut_reg[216] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
         .O(s_dataOut[24]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[25]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[217] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[217] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[57] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[25]),
         .O(s_dataOut[25]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[26]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[218] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[218] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[58] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[26]),
         .O(s_dataOut[26]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'h1032DCFE10101010)) 
     \s_dataOut[27]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[219] ),
-        .I3(\s_dataOut_reg[59] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(data0[27]),
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(data0[27]),
+        .I3(\s_dataOut_reg[155] ),
+        .I4(\s_dataOut_reg[219] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
         .O(s_dataOut[27]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[28]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[220] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[220] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[60] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[28]),
         .O(s_dataOut[28]));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[29]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[221] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[221] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[61] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[29]),
         .O(s_dataOut[29]));
+  LUT4 #(
+    .INIT(16'h1011)) 
+    \s_dataOut[29]_i_3 
+       (.I0(\s_counter_reg[4]_0 ),
+        .I1(\s_counter_reg[4]_i_1_n_5 ),
+        .I2(\s_dataOut[31]_i_9_n_0 ),
+        .I3(\s_dataOut[29]_i_6_n_0 ),
+        .O(\s_dataOut[29]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'h0000000000000001)) 
+    \s_dataOut[29]_i_5 
+       (.I0(\s_dataOut[31]_i_10_n_0 ),
+        .I1(sel0[1]),
+        .I2(\s_counter_reg[4]_0 ),
+        .I3(sel0[30]),
+        .I4(sel0[31]),
+        .I5(\s_dataOut[31]_i_9_n_0 ),
+        .O(\s_dataOut[29]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h0002000000000000)) 
+    \s_dataOut[29]_i_6 
+       (.I0(\s_dataOut[29]_i_7_n_0 ),
+        .I1(\s_dataOut[31]_i_15_n_0 ),
+        .I2(\s_dataOut[31]_i_14_n_0 ),
+        .I3(\s_dataOut[29]_i_8_n_0 ),
+        .I4(\s_dataOut[31]_i_13_n_0 ),
+        .I5(\s_dataOut[31]_i_12_n_0 ),
+        .O(\s_dataOut[29]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \s_dataOut[29]_i_7 
+       (.I0(sel0[1]),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(sel0[30]),
+        .I3(sel0[31]),
+        .O(\s_dataOut[29]_i_7_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \s_dataOut[29]_i_8 
+       (.I0(sel0[29]),
+        .I1(sel0[2]),
+        .O(\s_dataOut[29]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[2]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[194] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[194] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[226] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[2]),
         .O(s_dataOut[2]));
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'h2)) 
     \s_dataOut[30]_i_1 
-       (.I0(\counterMaster[0] ),
-        .I1(\s_dataOut[31]_i_4_n_0 ),
+       (.I0(\s_counter_reg[4]_0 ),
+        .I1(\s_dataOut[31]_i_6_n_0 ),
         .O(\s_dataOut[30]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h80AAFFFF80AA0000)) 
-    \s_dataOut[30]_i_2 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[222] ),
-        .I3(\s_dataOut_reg[62] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(data0[30]),
-        .O(s_dataOut[30]));
-  LUT4 #(
-    .INIT(16'h04FB)) 
+    .INIT(64'h1032DCFE10101010)) 
     \s_dataOut[30]_i_3 
-       (.I0(O[1]),
-        .I1(\counterMaster[0] ),
-        .I2(O[0]),
-        .I3(\s_counter_reg[3]_i_2_n_5 ),
-        .O(\s_dataOut[30]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'h9)) 
-    \s_dataOut[30]_i_7 
-       (.I0(\counterMaster[0] ),
-        .I1(O[0]),
-        .O(\s_dataOut_reg[0]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h4B)) 
-    \s_dataOut[30]_i_8 
-       (.I0(O[0]),
-        .I1(\counterMaster[0] ),
-        .I2(O[1]),
-        .O(\s_dataOut_reg[0]_0 ));
-  LUT6 #(
-    .INIT(64'h00000000EA2A2A2A)) 
-    \s_dataOut[31]_i_1 
-       (.I0(m00_axis_tdata[31]),
-        .I1(m00_axis_tready),
-        .I2(s_POFready_reg_0),
-        .I3(\s_dataOut[31]_i_2_n_0 ),
-        .I4(data1),
-        .I5(\s_dataOut[31]_i_4_n_0 ),
-        .O(\s_dataOut[31]_i_1_n_0 ));
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(data0[30]),
+        .I3(\s_dataOut_reg[158] ),
+        .I4(\s_dataOut_reg[222] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
+        .O(s_dataOut[30]));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \s_dataOut[31]_i_10 
-       (.I0(sel0[22]),
-        .I1(sel0[21]),
-        .I2(sel0[24]),
-        .I3(sel0[23]),
-        .I4(\s_dataOut[31]_i_14_n_0 ),
-        .O(\s_dataOut[31]_i_10_n_0 ));
+    \s_dataOut[30]_i_4 
+       (.I0(\s_dataOut[31]_i_9_n_0 ),
+        .I1(sel0[30]),
+        .I2(sel0[31]),
+        .I3(sel0[1]),
+        .I4(\s_dataOut[31]_i_10_n_0 ),
+        .O(\s_dataOut[30]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \s_dataOut[31]_i_11 
-       (.I0(sel0[31]),
-        .I1(S[1]),
-        .O(\s_dataOut[31]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
-    .INIT(16'hFFFE)) 
-    \s_dataOut[31]_i_12 
-       (.I0(sel0[27]),
-        .I1(sel0[28]),
-        .I2(sel0[25]),
-        .I3(sel0[26]),
-        .O(\s_dataOut[31]_i_12_n_0 ));
+    .INIT(16'h5559)) 
+    \s_dataOut[30]_i_8 
+       (.I0(\s_counter_reg[4]_i_1_n_5 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(O[0]),
+        .I3(O[1]),
+        .O(\s_dataOut[30]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hFFF800F800000000)) 
+    \s_dataOut[31]_i_1 
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[223] ),
+        .I2(\s_dataOut[31]_i_4_n_0 ),
+        .I3(s_POFready_reg_1),
+        .I4(m00_axis_tdata[31]),
+        .I5(\s_dataOut[31]_i_6_n_0 ),
+        .O(\s_dataOut[31]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFF7)) 
+    \s_dataOut[31]_i_10 
+       (.I0(\s_dataOut[31]_i_12_n_0 ),
+        .I1(\s_dataOut[31]_i_13_n_0 ),
+        .I2(sel0[29]),
+        .I3(sel0[2]),
+        .I4(\s_dataOut[31]_i_14_n_0 ),
+        .I5(\s_dataOut[31]_i_15_n_0 ),
+        .O(\s_dataOut[31]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFB)) 
+    \s_dataOut[31]_i_11 
+       (.I0(sel0[28]),
+        .I1(sel0[3]),
+        .I2(sel0[4]),
+        .I3(sel0[5]),
+        .I4(sel0[27]),
+        .I5(sel0[24]),
+        .O(\s_dataOut[31]_i_11_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \s_dataOut[31]_i_12 
+       (.I0(sel0[15]),
+        .I1(sel0[14]),
+        .I2(sel0[13]),
+        .I3(sel0[12]),
+        .O(\s_dataOut[31]_i_12_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
     \s_dataOut[31]_i_13 
-       (.I0(\s_dataOut[31]_i_15_n_0 ),
-        .I1(sel0[15]),
-        .I2(sel0[16]),
-        .I3(sel0[13]),
-        .I4(sel0[14]),
-        .I5(\s_dataOut[31]_i_16_n_0 ),
+       (.I0(sel0[9]),
+        .I1(sel0[8]),
+        .I2(sel0[11]),
+        .I3(sel0[10]),
         .O(\s_dataOut[31]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \s_dataOut[31]_i_14 
-       (.I0(sel0[19]),
-        .I1(sel0[20]),
-        .I2(sel0[17]),
-        .I3(sel0[18]),
+       (.I0(sel0[23]),
+        .I1(sel0[16]),
+        .I2(sel0[20]),
+        .I3(sel0[19]),
         .O(\s_dataOut[31]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \s_dataOut[31]_i_15 
-       (.I0(sel0[11]),
-        .I1(sel0[12]),
-        .I2(sel0[9]),
-        .I3(sel0[10]),
+       (.I0(sel0[18]),
+        .I1(sel0[17]),
+        .I2(sel0[22]),
+        .I3(sel0[21]),
         .O(\s_dataOut[31]_i_15_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \s_dataOut[31]_i_16 
-       (.I0(sel0[6]),
-        .I1(sel0[5]),
-        .I2(sel0[8]),
-        .I3(sel0[7]),
-        .I4(\s_dataOut[31]_i_17_n_0 ),
-        .O(\s_dataOut[31]_i_16_n_0 ));
-  LUT5 #(
-    .INIT(32'hEFFFFFFF)) 
-    \s_dataOut[31]_i_17 
-       (.I0(S[0]),
-        .I1(sel0[4]),
-        .I2(S[2]),
-        .I3(s_POFready_reg_0),
-        .I4(m00_axis_tready),
-        .O(\s_dataOut[31]_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEFF)) 
+    .INIT(32'h00002228)) 
     \s_dataOut[31]_i_2 
-       (.I0(s_allSent_i_5_n_0),
-        .I1(\s_dataOut[31]_i_5_n_0 ),
-        .I2(sel0[30]),
-        .I3(S[2]),
-        .I4(s_allSent_i_8_n_0),
-        .I5(\s_dataOut[31]_i_6_n_0 ),
+       (.I0(\s_counter_reg[4]_0 ),
+        .I1(\s_counter_reg[4]_i_1_n_5 ),
+        .I2(O[0]),
+        .I3(O[1]),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .O(\s_dataOut[31]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hA8000800AAAAAAAA)) 
-    \s_dataOut[31]_i_3 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\s_dataOut[31]_i_7_n_0 ),
-        .I2(O[0]),
-        .I3(\counterMaster[0] ),
-        .I4(\s_dataOut[31]_i_8_n_0 ),
-        .I5(\s_dataOut_reg[63] ),
-        .O(data1));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
+    .INIT(64'hA08800AAA0880000)) 
     \s_dataOut[31]_i_4 
-       (.I0(\s_dataOut[31]_i_10_n_0 ),
-        .I1(sel0[30]),
-        .I2(sel0[29]),
-        .I3(\s_dataOut[31]_i_11_n_0 ),
-        .I4(\s_dataOut[31]_i_12_n_0 ),
-        .I5(\s_dataOut[31]_i_13_n_0 ),
+       (.I0(\s_dataOut[29]_i_3_n_0 ),
+        .I1(\s_dataOut_reg[191] [0]),
+        .I2(\s_dataOut_reg[191] [1]),
+        .I3(\s_dataOut_reg[31]_0 ),
+        .I4(\s_dataOut_reg[31]_1 ),
+        .I5(\s_dataOut_reg[191] [2]),
         .O(\s_dataOut[31]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \s_dataOut[31]_i_5 
-       (.I0(sel0[29]),
-        .I1(sel0[28]),
-        .O(\s_dataOut[31]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \s_dataOut[31]_i_6 
-       (.I0(s_allSent_i_2_n_0),
-        .I1(S[1]),
-        .I2(sel0[31]),
-        .I3(\counterMaster[0] ),
-        .I4(S[0]),
-        .I5(s_allSent_i_7_n_0),
+       (.I0(\s_dataOut[31]_i_9_n_0 ),
+        .I1(\s_dataOut[31]_i_10_n_0 ),
+        .I2(s_POFready_reg_1),
+        .I3(sel0[30]),
+        .I4(sel0[31]),
+        .I5(sel0[1]),
         .O(\s_dataOut[31]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'hEFBA208A)) 
+  LUT3 #(
+    .INIT(8'h9A)) 
     \s_dataOut[31]_i_7 
-       (.I0(hashOut[1]),
+       (.I0(O[1]),
         .I1(O[0]),
-        .I2(\counterMaster[0] ),
-        .I3(O[1]),
-        .I4(hashOut[2]),
-        .O(\s_dataOut[31]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'hEFBA208A)) 
+        .I2(\s_counter_reg[4]_0 ),
+        .O(\s_dataOut_reg[31]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h9)) 
     \s_dataOut[31]_i_8 
-       (.I0(hashOut[3]),
-        .I1(O[0]),
-        .I2(\counterMaster[0] ),
-        .I3(O[1]),
-        .I4(hashOut[0]),
-        .O(\s_dataOut[31]_i_8_n_0 ));
+       (.I0(O[0]),
+        .I1(\s_counter_reg[4]_0 ),
+        .O(\s_dataOut_reg[31]_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \s_dataOut[31]_i_9 
+       (.I0(\s_dataOut[31]_i_11_n_0 ),
+        .I1(sel0[6]),
+        .I2(sel0[7]),
+        .I3(sel0[25]),
+        .I4(sel0[26]),
+        .O(\s_dataOut[31]_i_9_n_0 ));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[3]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[195] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[195] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[227] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[3]),
         .O(s_dataOut[3]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[4]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[196] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[196] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[228] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[4]),
         .O(s_dataOut[4]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[5]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[197] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[197] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[229] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[5]),
         .O(s_dataOut[5]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFF22F222F222F2)) 
     \s_dataOut[6]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[198] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[198] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[230] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[6]),
         .O(s_dataOut[6]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[7]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[199] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[199] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[231] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[7]),
         .O(s_dataOut[7]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'hFFFFF888F888F888)) 
     \s_dataOut[8]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[200] ),
+       (.I0(\s_dataOut[31]_i_2_n_0 ),
+        .I1(\s_dataOut_reg[200] ),
+        .I2(\s_dataOut[29]_i_3_n_0 ),
         .I3(\s_dataOut_reg[232] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
+        .I4(\s_dataOut[29]_i_5_n_0 ),
         .I5(data0[8]),
         .O(s_dataOut[8]));
   LUT6 #(
-    .INIT(64'hA280FFFFA2800000)) 
+    .INIT(64'h1032DCFE10101010)) 
     \s_dataOut[9]_i_1 
-       (.I0(\s_dataOut[30]_i_3_n_0 ),
-        .I1(\counterMaster[0] ),
-        .I2(\s_dataOut_reg[201] ),
+       (.I0(\s_dataOut[30]_i_4_n_0 ),
+        .I1(\s_counter_reg[4]_0 ),
+        .I2(data0[9]),
         .I3(\s_dataOut_reg[233] ),
-        .I4(\s_dataOut[31]_i_2_n_0 ),
-        .I5(data0[9]),
+        .I4(\s_dataOut_reg[201] ),
+        .I5(\s_dataOut[30]_i_8_n_0 ),
         .O(s_dataOut[9]));
   FDRE #(
     .INIT(1'b0)) 
@@ -1890,9 +1680,9 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .D(s_dataOut[16]),
         .Q(m00_axis_tdata[16]),
         .R(\s_dataOut[30]_i_1_n_0 ));
-  CARRY4 \s_dataOut_reg[16]_i_4 
+  CARRY4 \s_dataOut_reg[16]_i_2 
        (.CI(\s_dataOut_reg[12]_i_4_n_0 ),
-        .CO({\s_dataOut_reg[16]_i_4_n_0 ,\s_dataOut_reg[16]_i_4_n_1 ,\s_dataOut_reg[16]_i_4_n_2 ,\s_dataOut_reg[16]_i_4_n_3 }),
+        .CO({\s_dataOut_reg[16]_i_2_n_0 ,\s_dataOut_reg[16]_i_2_n_1 ,\s_dataOut_reg[16]_i_2_n_2 ,\s_dataOut_reg[16]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI(Q[16:13]),
         .O(data0[16:13]),
@@ -1938,7 +1728,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .Q(m00_axis_tdata[20]),
         .R(\s_dataOut[30]_i_1_n_0 ));
   CARRY4 \s_dataOut_reg[20]_i_4 
-       (.CI(\s_dataOut_reg[16]_i_4_n_0 ),
+       (.CI(\s_dataOut_reg[16]_i_2_n_0 ),
         .CO({\s_dataOut_reg[20]_i_4_n_0 ,\s_dataOut_reg[20]_i_4_n_1 ,\s_dataOut_reg[20]_i_4_n_2 ,\s_dataOut_reg[20]_i_4_n_3 }),
         .CYINIT(1'b0),
         .DI(Q[20:17]),
@@ -1976,9 +1766,9 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .D(s_dataOut[24]),
         .Q(m00_axis_tdata[24]),
         .R(\s_dataOut[30]_i_1_n_0 ));
-  CARRY4 \s_dataOut_reg[24]_i_4 
+  CARRY4 \s_dataOut_reg[24]_i_2 
        (.CI(\s_dataOut_reg[20]_i_4_n_0 ),
-        .CO({\s_dataOut_reg[24]_i_4_n_0 ,\s_dataOut_reg[24]_i_4_n_1 ,\s_dataOut_reg[24]_i_4_n_2 ,\s_dataOut_reg[24]_i_4_n_3 }),
+        .CO({\s_dataOut_reg[24]_i_2_n_0 ,\s_dataOut_reg[24]_i_2_n_1 ,\s_dataOut_reg[24]_i_2_n_2 ,\s_dataOut_reg[24]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI(Q[24:21]),
         .O(data0[24:21]),
@@ -2016,7 +1806,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .Q(m00_axis_tdata[28]),
         .R(\s_dataOut[30]_i_1_n_0 ));
   CARRY4 \s_dataOut_reg[28]_i_4 
-       (.CI(\s_dataOut_reg[24]_i_4_n_0 ),
+       (.CI(\s_dataOut_reg[24]_i_2_n_0 ),
         .CO({\s_dataOut_reg[28]_i_4_n_0 ,\s_dataOut_reg[28]_i_4_n_1 ,\s_dataOut_reg[28]_i_4_n_2 ,\s_dataOut_reg[28]_i_4_n_3 }),
         .CYINIT(1'b0),
         .DI(Q[28:25]),
@@ -2046,12 +1836,12 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .D(s_dataOut[30]),
         .Q(m00_axis_tdata[30]),
         .R(\s_dataOut[30]_i_1_n_0 ));
-  CARRY4 \s_dataOut_reg[30]_i_6 
+  CARRY4 \s_dataOut_reg[30]_i_5 
        (.CI(\s_dataOut_reg[28]_i_4_n_0 ),
-        .CO({\NLW_s_dataOut_reg[30]_i_6_CO_UNCONNECTED [3:1],\s_dataOut_reg[30]_i_6_n_3 }),
+        .CO({\NLW_s_dataOut_reg[30]_i_5_CO_UNCONNECTED [3:1],\s_dataOut_reg[30]_i_5_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,Q[29]}),
-        .O({\NLW_s_dataOut_reg[30]_i_6_O_UNCONNECTED [3:2],data0[30:29]}),
+        .O({\NLW_s_dataOut_reg[30]_i_5_O_UNCONNECTED [3:2],data0[30:29]}),
         .S({1'b0,1'b0,\s_nonce_reg[30] }));
   FDRE #(
     .INIT(1'b0)) 
@@ -2083,7 +1873,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .CYINIT(Q[0]),
         .DI(Q[4:1]),
         .O(data0[4:1]),
-        .S(\s_nonce_reg[4] ));
+        .S(S));
   FDRE #(
     .INIT(1'b0)) 
     \s_dataOut_reg[5] 
@@ -2134,17 +1924,19 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h8F)) 
     \s_hashOriginalInputWord[255]_i_1 
-       (.I0(allWordsSent),
-        .I1(s_POFready_reg_0),
+       (.I0(s_allWordsSent),
+        .I1(s_validData),
         .I2(s00_axis_aresetn),
         .O(\s_hashOriginalInputWord_reg[0] ));
-  LUT4 #(
-    .INIT(16'h00EA)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'hFF7F8808)) 
     s_valid_i_1
-       (.I0(m00_axis_tvalid),
-        .I1(s_POFready_reg_0),
-        .I2(m00_axis_tready),
-        .I3(s_allSent_i_1_n_0),
+       (.I0(m00_axis_tready),
+        .I1(s_validData),
+        .I2(\s_counter_reg[4]_0 ),
+        .I3(\s_dataOut[30]_i_4_n_0 ),
+        .I4(m00_axis_tvalid),
         .O(s_valid_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -2158,47 +1950,44 @@ endmodule
 
 (* ORIG_REF_NAME = "MinerCoprocessor_v1_0_S00_AXIS" *) 
 module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
-   (mEnable,
-    \s_dataOut_reg[16] ,
-    hashOut,
-    \s_dataOut_reg[17] ,
-    \s_dataOut_reg[18] ,
-    \s_dataOut_reg[19] ,
-    \s_dataOut_reg[20] ,
-    \s_dataOut_reg[21] ,
-    \s_dataOut_reg[22] ,
-    \s_dataOut_reg[23] ,
-    \s_dataOut_reg[24] ,
-    \s_dataOut_reg[25] ,
-    \s_dataOut_reg[26] ,
-    \s_dataOut_reg[27] ,
-    \s_dataOut_reg[28] ,
-    \s_dataOut_reg[29] ,
+   (s_validData,
+    nonce,
+    \s_counter_reg[0]_0 ,
     \s_dataOut_reg[30] ,
     \s_dataOut_reg[31] ,
-    tempHash,
-    validData,
-    nonce,
-    update,
-    readEnable,
     \s_dataOut_reg[30]_0 ,
-    \s_dataOut_reg[28]_0 ,
-    \s_dataOut_reg[24]_0 ,
-    \s_dataOut_reg[20]_0 ,
-    \s_dataOut_reg[16]_0 ,
+    \s_dataOut_reg[28] ,
+    \s_dataOut_reg[24] ,
+    \s_dataOut_reg[20] ,
+    \s_dataOut_reg[16] ,
     \s_dataOut_reg[12] ,
     \s_dataOut_reg[8] ,
-    \s_dataOut_reg[4] ,
+    S,
     \s_dataOut_reg[0] ,
+    hash_output,
     \s_dataOut_reg[0]_0 ,
+    \s_dataOut_reg[9] ,
+    \s_dataOut_reg[9]_0 ,
+    \s_dataOut_reg[11] ,
+    \s_dataOut_reg[11]_0 ,
+    \s_dataOut_reg[16]_0 ,
+    \s_dataOut_reg[16]_1 ,
+    \s_dataOut_reg[17] ,
+    \s_dataOut_reg[17]_0 ,
+    \s_dataOut_reg[24]_0 ,
+    \s_dataOut_reg[24]_1 ,
+    \s_dataOut_reg[27] ,
+    \s_dataOut_reg[27]_0 ,
+    \s_dataOut_reg[30]_1 ,
+    \s_dataOut_reg[30]_2 ,
     \s_dataOut_reg[1] ,
     \s_dataOut_reg[1]_0 ,
     \s_dataOut_reg[2] ,
     \s_dataOut_reg[2]_0 ,
     \s_dataOut_reg[3] ,
     \s_dataOut_reg[3]_0 ,
+    \s_dataOut_reg[4] ,
     \s_dataOut_reg[4]_0 ,
-    \s_dataOut_reg[4]_1 ,
     \s_dataOut_reg[5] ,
     \s_dataOut_reg[5]_0 ,
     \s_dataOut_reg[6] ,
@@ -2207,12 +1996,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \s_dataOut_reg[7]_0 ,
     \s_dataOut_reg[8]_0 ,
     \s_dataOut_reg[8]_1 ,
-    \s_dataOut_reg[9] ,
-    \s_dataOut_reg[9]_0 ,
     \s_dataOut_reg[10] ,
     \s_dataOut_reg[10]_0 ,
-    \s_dataOut_reg[11] ,
-    \s_dataOut_reg[11]_0 ,
     \s_dataOut_reg[12]_0 ,
     \s_dataOut_reg[12]_1 ,
     \s_dataOut_reg[13] ,
@@ -2221,76 +2006,77 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \s_dataOut_reg[14]_0 ,
     \s_dataOut_reg[15] ,
     \s_dataOut_reg[15]_0 ,
-    \s_dataOut_reg[16]_1 ,
-    \s_dataOut_reg[17]_0 ,
+    \s_dataOut_reg[18] ,
     \s_dataOut_reg[18]_0 ,
+    \s_dataOut_reg[19] ,
     \s_dataOut_reg[19]_0 ,
+    \s_dataOut_reg[20]_0 ,
     \s_dataOut_reg[20]_1 ,
+    \s_dataOut_reg[21] ,
     \s_dataOut_reg[21]_0 ,
+    \s_dataOut_reg[22] ,
     \s_dataOut_reg[22]_0 ,
+    \s_dataOut_reg[23] ,
     \s_dataOut_reg[23]_0 ,
-    \s_dataOut_reg[24]_1 ,
+    \s_dataOut_reg[25] ,
     \s_dataOut_reg[25]_0 ,
+    \s_dataOut_reg[26] ,
     \s_dataOut_reg[26]_0 ,
-    \s_dataOut_reg[27]_0 ,
+    \s_dataOut_reg[28]_0 ,
     \s_dataOut_reg[28]_1 ,
+    \s_dataOut_reg[29] ,
     \s_dataOut_reg[29]_0 ,
-    \s_dataOut_reg[30]_1 ,
-    hashInputWord,
+    \s_dataOut_reg[31]_0 ,
     s00_axis_tready,
-    counterSlave,
     s00_axis_tvalid,
-    O,
-    \s_counter_reg[0]_0 ,
     s00_axis_aresetn,
-    s_allSent_reg,
+    s_allWordsSent,
     m00_axis_tready,
     \s_counter_reg[0]_1 ,
     \s_counter_reg[0]_2 ,
+    \s_counter_reg[0]_3 ,
+    O,
     s00_axis_aclk,
-    s_allSent_reg_0,
+    s_allSent_reg,
     s00_axis_tdata);
-  output mEnable;
-  output \s_dataOut_reg[16] ;
-  output [175:0]hashOut;
-  output \s_dataOut_reg[17] ;
-  output \s_dataOut_reg[18] ;
-  output \s_dataOut_reg[19] ;
-  output \s_dataOut_reg[20] ;
-  output \s_dataOut_reg[21] ;
-  output \s_dataOut_reg[22] ;
-  output \s_dataOut_reg[23] ;
-  output \s_dataOut_reg[24] ;
-  output \s_dataOut_reg[25] ;
-  output \s_dataOut_reg[26] ;
-  output \s_dataOut_reg[27] ;
-  output \s_dataOut_reg[28] ;
-  output \s_dataOut_reg[29] ;
+  output s_validData;
+  output [29:0]nonce;
+  output \s_counter_reg[0]_0 ;
   output \s_dataOut_reg[30] ;
   output \s_dataOut_reg[31] ;
-  output [191:0]tempHash;
-  output validData;
-  output [31:0]nonce;
-  output update;
-  output readEnable;
   output [1:0]\s_dataOut_reg[30]_0 ;
-  output [3:0]\s_dataOut_reg[28]_0 ;
-  output [3:0]\s_dataOut_reg[24]_0 ;
-  output [3:0]\s_dataOut_reg[20]_0 ;
-  output [3:0]\s_dataOut_reg[16]_0 ;
+  output [3:0]\s_dataOut_reg[28] ;
+  output [3:0]\s_dataOut_reg[24] ;
+  output [3:0]\s_dataOut_reg[20] ;
+  output [3:0]\s_dataOut_reg[16] ;
   output [3:0]\s_dataOut_reg[12] ;
   output [3:0]\s_dataOut_reg[8] ;
-  output [3:0]\s_dataOut_reg[4] ;
+  output [3:0]S;
   output \s_dataOut_reg[0] ;
+  output [2:0]hash_output;
   output \s_dataOut_reg[0]_0 ;
+  output \s_dataOut_reg[9] ;
+  output \s_dataOut_reg[9]_0 ;
+  output \s_dataOut_reg[11] ;
+  output \s_dataOut_reg[11]_0 ;
+  output \s_dataOut_reg[16]_0 ;
+  output \s_dataOut_reg[16]_1 ;
+  output \s_dataOut_reg[17] ;
+  output \s_dataOut_reg[17]_0 ;
+  output \s_dataOut_reg[24]_0 ;
+  output \s_dataOut_reg[24]_1 ;
+  output \s_dataOut_reg[27] ;
+  output \s_dataOut_reg[27]_0 ;
+  output \s_dataOut_reg[30]_1 ;
+  output \s_dataOut_reg[30]_2 ;
   output \s_dataOut_reg[1] ;
   output \s_dataOut_reg[1]_0 ;
   output \s_dataOut_reg[2] ;
   output \s_dataOut_reg[2]_0 ;
   output \s_dataOut_reg[3] ;
   output \s_dataOut_reg[3]_0 ;
+  output \s_dataOut_reg[4] ;
   output \s_dataOut_reg[4]_0 ;
-  output \s_dataOut_reg[4]_1 ;
   output \s_dataOut_reg[5] ;
   output \s_dataOut_reg[5]_0 ;
   output \s_dataOut_reg[6] ;
@@ -2299,12 +2085,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   output \s_dataOut_reg[7]_0 ;
   output \s_dataOut_reg[8]_0 ;
   output \s_dataOut_reg[8]_1 ;
-  output \s_dataOut_reg[9] ;
-  output \s_dataOut_reg[9]_0 ;
   output \s_dataOut_reg[10] ;
   output \s_dataOut_reg[10]_0 ;
-  output \s_dataOut_reg[11] ;
-  output \s_dataOut_reg[11]_0 ;
   output \s_dataOut_reg[12]_0 ;
   output \s_dataOut_reg[12]_1 ;
   output \s_dataOut_reg[13] ;
@@ -2313,34 +2095,38 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   output \s_dataOut_reg[14]_0 ;
   output \s_dataOut_reg[15] ;
   output \s_dataOut_reg[15]_0 ;
-  output \s_dataOut_reg[16]_1 ;
-  output \s_dataOut_reg[17]_0 ;
+  output \s_dataOut_reg[18] ;
   output \s_dataOut_reg[18]_0 ;
+  output \s_dataOut_reg[19] ;
   output \s_dataOut_reg[19]_0 ;
+  output \s_dataOut_reg[20]_0 ;
   output \s_dataOut_reg[20]_1 ;
+  output \s_dataOut_reg[21] ;
   output \s_dataOut_reg[21]_0 ;
+  output \s_dataOut_reg[22] ;
   output \s_dataOut_reg[22]_0 ;
+  output \s_dataOut_reg[23] ;
   output \s_dataOut_reg[23]_0 ;
-  output \s_dataOut_reg[24]_1 ;
+  output \s_dataOut_reg[25] ;
   output \s_dataOut_reg[25]_0 ;
+  output \s_dataOut_reg[26] ;
   output \s_dataOut_reg[26]_0 ;
-  output \s_dataOut_reg[27]_0 ;
+  output \s_dataOut_reg[28]_0 ;
   output \s_dataOut_reg[28]_1 ;
+  output \s_dataOut_reg[29] ;
   output \s_dataOut_reg[29]_0 ;
-  output \s_dataOut_reg[30]_1 ;
-  output [287:0]hashInputWord;
+  output \s_dataOut_reg[31]_0 ;
   output s00_axis_tready;
-  output [3:0]counterSlave;
   input s00_axis_tvalid;
-  input [1:0]O;
-  input \s_counter_reg[0]_0 ;
   input s00_axis_aresetn;
-  input s_allSent_reg;
+  input s_allWordsSent;
   input m00_axis_tready;
-  input \s_counter_reg[0]_1 ;
+  input [0:0]\s_counter_reg[0]_1 ;
   input \s_counter_reg[0]_2 ;
+  input \s_counter_reg[0]_3 ;
+  input [1:0]O;
   input s00_axis_aclk;
-  input s_allSent_reg_0;
+  input s_allSent_reg;
   input [31:0]s00_axis_tdata;
 
   wire [95:64]H_out;
@@ -2364,6 +2150,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \Hashes[119]_i_3_n_0 ;
   wire \Hashes[119]_i_4_n_0 ;
   wire \Hashes[119]_i_5_n_0 ;
+  wire \Hashes[119]_i_6_n_0 ;
   wire \Hashes[11]_i_2_n_0 ;
   wire \Hashes[11]_i_3_n_0 ;
   wire \Hashes[11]_i_4_n_0 ;
@@ -2480,6 +2267,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \Hashes[223]_i_3_n_0 ;
   wire \Hashes[223]_i_4_n_0 ;
   wire \Hashes[223]_i_5_n_0 ;
+  wire \Hashes[223]_i_6_n_0 ;
   wire \Hashes[227]_i_2_n_0 ;
   wire \Hashes[227]_i_3_n_0 ;
   wire \Hashes[227]_i_4_n_0 ;
@@ -2512,11 +2300,13 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \Hashes[251]_i_3_n_0 ;
   wire \Hashes[251]_i_4_n_0 ;
   wire \Hashes[251]_i_5_n_0 ;
+  wire \Hashes[254]_i_1_n_0 ;
   wire \Hashes[255]_i_1_n_0 ;
   wire \Hashes[255]_i_3_n_0 ;
   wire \Hashes[255]_i_4_n_0 ;
   wire \Hashes[255]_i_5_n_0 ;
   wire \Hashes[255]_i_6_n_0 ;
+  wire \Hashes[255]_i_7_n_0 ;
   wire \Hashes[27]_i_2_n_0 ;
   wire \Hashes[27]_i_3_n_0 ;
   wire \Hashes[27]_i_4_n_0 ;
@@ -3041,6 +2831,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \Hashes_reg_n_0_[7] ;
   wire \Hashes_reg_n_0_[8] ;
   wire \Hashes_reg_n_0_[9] ;
+  wire \M[0][254]_i_1_n_0 ;
+  wire \M[0][256]_i_1_n_0 ;
   wire \M[0][471]_i_1_n_0 ;
   wire \M[0][510]_i_1_n_0 ;
   wire \M[0][511]_i_1_n_0 ;
@@ -3050,6 +2842,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire N1;
   wire \N[0]_i_1_n_0 ;
   wire [1:0]O;
+  wire [3:0]S;
   wire W_reg_0_63_0_0_i_100_n_0;
   wire W_reg_0_63_0_0_i_101_n_0;
   wire W_reg_0_63_0_0_i_102_n_0;
@@ -3860,7 +3653,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \c[8]_i_1_n_0 ;
   wire \c[9]_i_1_n_0 ;
   wire [31:0]c_out;
-  wire [3:0]counterSlave;
   wire [31:0]d;
   wire \d[0]_i_1_n_0 ;
   wire \d[10]_i_1_n_0 ;
@@ -4407,7 +4199,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \h[8]_i_1_n_0 ;
   wire \h[9]_i_1_n_0 ;
   wire [31:0]h_reg__0;
-  wire [287:0]hashInputWord;
   wire [31:6]hashIt;
   wire \hashIt[0]_i_1_n_0 ;
   wire \hashIt[1]_i_1_n_0 ;
@@ -4506,7 +4297,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \hashIt_reg[8]_i_2_n_6 ;
   wire \hashIt_reg[8]_i_2_n_7 ;
   wire [5:0]hashIt_reg_rep;
-  wire [175:0]hashOut;
+  wire [2:0]hash_output;
   wire hashed_i_1_n_0;
   wire hashed_reg_n_0;
   wire [31:0]i;
@@ -4606,8 +4397,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \i_reg[8]_i_2_n_6 ;
   wire \i_reg[8]_i_2_n_7 ;
   wire m00_axis_tready;
-  wire mEnable;
-  wire [31:0]nonce;
+  wire [29:0]nonce;
   wire [31:1]p_0_in;
   wire p_0_out;
   wire [31:0]p_0_out__0;
@@ -4637,7 +4427,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire [4:4]p_8_in;
   wire [31:0]p_9_out15_in;
   wire padded;
-  wire readEnable;
   wire ready_i_1_n_0;
   wire ready_reg_n_0;
   wire s00_axis_aclk;
@@ -4646,26 +4435,23 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire s00_axis_tready;
   wire s00_axis_tvalid;
   wire s_POFready_i_1_n_0;
-  wire s_POFready_i_2_n_0;
-  wire s_POFready_i_3_n_0;
-  wire s_POFready_i_4_n_0;
-  wire s_POFready_i_5_n_0;
   wire s_allSent_reg;
-  wire s_allSent_reg_0;
+  wire s_allWordsSent;
   wire [31:0]s_counter;
-  wire \s_counter[3]_i_10_n_0 ;
-  wire \s_counter[3]_i_11_n_0 ;
-  wire \s_counter[3]_i_12_n_0 ;
-  wire \s_counter[3]_i_1_n_0 ;
-  wire \s_counter[3]_i_2_n_0 ;
-  wire \s_counter[3]_i_4_n_0 ;
-  wire \s_counter[3]_i_5_n_0 ;
-  wire \s_counter[3]_i_6_n_0 ;
-  wire \s_counter[3]_i_7_n_0 ;
-  wire \s_counter[3]_i_9_n_0 ;
+  wire \s_counter[31]_i_10_n_0 ;
+  wire \s_counter[31]_i_11_n_0 ;
+  wire \s_counter[31]_i_12_n_0 ;
+  wire \s_counter[31]_i_1_n_0 ;
+  wire \s_counter[31]_i_2_n_0 ;
+  wire \s_counter[31]_i_4_n_0 ;
+  wire \s_counter[31]_i_5_n_0 ;
+  wire \s_counter[31]_i_6_n_0 ;
+  wire \s_counter[31]_i_7_n_0 ;
+  wire \s_counter[31]_i_9_n_0 ;
   wire \s_counter_reg[0]_0 ;
-  wire \s_counter_reg[0]_1 ;
+  wire [0:0]\s_counter_reg[0]_1 ;
   wire \s_counter_reg[0]_2 ;
+  wire \s_counter_reg[0]_3 ;
   wire \s_counter_reg[12]_i_2_n_0 ;
   wire \s_counter_reg[12]_i_2_n_1 ;
   wire \s_counter_reg[12]_i_2_n_2 ;
@@ -4686,16 +4472,17 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_counter_reg[28]_i_2_n_1 ;
   wire \s_counter_reg[28]_i_2_n_2 ;
   wire \s_counter_reg[28]_i_2_n_3 ;
-  wire \s_counter_reg[31]_i_2_n_2 ;
-  wire \s_counter_reg[31]_i_2_n_3 ;
-  wire \s_counter_reg[3]_i_8_n_0 ;
-  wire \s_counter_reg[3]_i_8_n_1 ;
-  wire \s_counter_reg[3]_i_8_n_2 ;
-  wire \s_counter_reg[3]_i_8_n_3 ;
+  wire \s_counter_reg[31]_i_8_n_2 ;
+  wire \s_counter_reg[31]_i_8_n_3 ;
+  wire \s_counter_reg[4]_i_2_n_0 ;
+  wire \s_counter_reg[4]_i_2_n_1 ;
+  wire \s_counter_reg[4]_i_2_n_2 ;
+  wire \s_counter_reg[4]_i_2_n_3 ;
   wire \s_counter_reg[8]_i_2_n_0 ;
   wire \s_counter_reg[8]_i_2_n_1 ;
   wire \s_counter_reg[8]_i_2_n_2 ;
   wire \s_counter_reg[8]_i_2_n_3 ;
+  wire \s_counter_reg_n_0_[0] ;
   wire \s_counter_reg_n_0_[10] ;
   wire \s_counter_reg_n_0_[11] ;
   wire \s_counter_reg_n_0_[12] ;
@@ -4706,6 +4493,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_counter_reg_n_0_[17] ;
   wire \s_counter_reg_n_0_[18] ;
   wire \s_counter_reg_n_0_[19] ;
+  wire \s_counter_reg_n_0_[1] ;
   wire \s_counter_reg_n_0_[20] ;
   wire \s_counter_reg_n_0_[21] ;
   wire \s_counter_reg_n_0_[22] ;
@@ -4716,8 +4504,10 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_counter_reg_n_0_[27] ;
   wire \s_counter_reg_n_0_[28] ;
   wire \s_counter_reg_n_0_[29] ;
+  wire \s_counter_reg_n_0_[2] ;
   wire \s_counter_reg_n_0_[30] ;
   wire \s_counter_reg_n_0_[31] ;
+  wire \s_counter_reg_n_0_[3] ;
   wire \s_counter_reg_n_0_[4] ;
   wire \s_counter_reg_n_0_[5] ;
   wire \s_counter_reg_n_0_[6] ;
@@ -4838,6 +4628,9 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_dataOut[239]_i_1_n_0 ;
   wire \s_dataOut[239]_i_2_n_0 ;
   wire \s_dataOut[239]_i_3_n_0 ;
+  wire \s_dataOut[239]_i_4_n_0 ;
+  wire \s_dataOut[239]_i_5_n_0 ;
+  wire \s_dataOut[239]_i_6_n_0 ;
   wire \s_dataOut[32]_i_1_n_0 ;
   wire \s_dataOut[33]_i_1_n_0 ;
   wire \s_dataOut[34]_i_1_n_0 ;
@@ -4917,8 +4710,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_dataOut_reg[14]_0 ;
   wire \s_dataOut_reg[15] ;
   wire \s_dataOut_reg[15]_0 ;
-  wire \s_dataOut_reg[16] ;
-  wire [3:0]\s_dataOut_reg[16]_0 ;
+  wire [3:0]\s_dataOut_reg[16] ;
+  wire \s_dataOut_reg[16]_0 ;
   wire \s_dataOut_reg[16]_1 ;
   wire \s_dataOut_reg[17] ;
   wire \s_dataOut_reg[17]_0 ;
@@ -4928,8 +4721,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_dataOut_reg[19]_0 ;
   wire \s_dataOut_reg[1] ;
   wire \s_dataOut_reg[1]_0 ;
-  wire \s_dataOut_reg[20] ;
-  wire [3:0]\s_dataOut_reg[20]_0 ;
+  wire [3:0]\s_dataOut_reg[20] ;
+  wire \s_dataOut_reg[20]_0 ;
   wire \s_dataOut_reg[20]_1 ;
   wire \s_dataOut_reg[21] ;
   wire \s_dataOut_reg[21]_0 ;
@@ -4937,8 +4730,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_dataOut_reg[22]_0 ;
   wire \s_dataOut_reg[23] ;
   wire \s_dataOut_reg[23]_0 ;
-  wire \s_dataOut_reg[24] ;
-  wire [3:0]\s_dataOut_reg[24]_0 ;
+  wire [3:0]\s_dataOut_reg[24] ;
+  wire \s_dataOut_reg[24]_0 ;
   wire \s_dataOut_reg[24]_1 ;
   wire \s_dataOut_reg[25] ;
   wire \s_dataOut_reg[25]_0 ;
@@ -4946,8 +4739,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_dataOut_reg[26]_0 ;
   wire \s_dataOut_reg[27] ;
   wire \s_dataOut_reg[27]_0 ;
-  wire \s_dataOut_reg[28] ;
-  wire [3:0]\s_dataOut_reg[28]_0 ;
+  wire [3:0]\s_dataOut_reg[28] ;
+  wire \s_dataOut_reg[28]_0 ;
   wire \s_dataOut_reg[28]_1 ;
   wire \s_dataOut_reg[29] ;
   wire \s_dataOut_reg[29]_0 ;
@@ -4956,12 +4749,13 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_dataOut_reg[30] ;
   wire [1:0]\s_dataOut_reg[30]_0 ;
   wire \s_dataOut_reg[30]_1 ;
+  wire \s_dataOut_reg[30]_2 ;
   wire \s_dataOut_reg[31] ;
+  wire \s_dataOut_reg[31]_0 ;
   wire \s_dataOut_reg[3] ;
   wire \s_dataOut_reg[3]_0 ;
-  wire [3:0]\s_dataOut_reg[4] ;
+  wire \s_dataOut_reg[4] ;
   wire \s_dataOut_reg[4]_0 ;
-  wire \s_dataOut_reg[4]_1 ;
   wire \s_dataOut_reg[5] ;
   wire \s_dataOut_reg[5]_0 ;
   wire \s_dataOut_reg[6] ;
@@ -4974,6 +4768,18 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_dataOut_reg[9] ;
   wire \s_dataOut_reg[9]_0 ;
   wire s_enable_i_1_n_0;
+  wire s_enable_reg_n_0;
+  wire [287:0]s_hashInputWord;
+  wire \s_hashInputWord[287]_i_10_n_0 ;
+  wire \s_hashInputWord[287]_i_1_n_0 ;
+  wire \s_hashInputWord[287]_i_2_n_0 ;
+  wire \s_hashInputWord[287]_i_3_n_0 ;
+  wire \s_hashInputWord[287]_i_4_n_0 ;
+  wire \s_hashInputWord[287]_i_5_n_0 ;
+  wire \s_hashInputWord[287]_i_6_n_0 ;
+  wire \s_hashInputWord[287]_i_7_n_0 ;
+  wire \s_hashInputWord[287]_i_8_n_0 ;
+  wire \s_hashInputWord[287]_i_9_n_0 ;
   wire [255:31]s_hashOriginalInputWord;
   wire \s_hashOriginalInputWord[255]_i_10_n_0 ;
   wire \s_hashOriginalInputWord[255]_i_11_n_0 ;
@@ -5319,12 +5125,185 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_hashOriginalInputWord_reg_n_0_[98] ;
   wire \s_hashOriginalInputWord_reg_n_0_[99] ;
   wire \s_hashOriginalInputWord_reg_n_0_[9] ;
-  wire \s_hash[175]_i_1_n_0 ;
-  wire \s_hash[177]_i_1_n_0 ;
-  wire \s_hash[247]_i_1_n_0 ;
-  wire \s_hash[252]_i_1_n_0 ;
+  wire [239:32]s_hashOut;
   wire \s_hash[255]_i_1_n_0 ;
-  wire \s_hash[255]_i_2_n_0 ;
+  wire \s_hash_reg_n_0_[128] ;
+  wire \s_hash_reg_n_0_[129] ;
+  wire \s_hash_reg_n_0_[130] ;
+  wire \s_hash_reg_n_0_[131] ;
+  wire \s_hash_reg_n_0_[132] ;
+  wire \s_hash_reg_n_0_[133] ;
+  wire \s_hash_reg_n_0_[134] ;
+  wire \s_hash_reg_n_0_[135] ;
+  wire \s_hash_reg_n_0_[136] ;
+  wire \s_hash_reg_n_0_[137] ;
+  wire \s_hash_reg_n_0_[138] ;
+  wire \s_hash_reg_n_0_[139] ;
+  wire \s_hash_reg_n_0_[140] ;
+  wire \s_hash_reg_n_0_[141] ;
+  wire \s_hash_reg_n_0_[142] ;
+  wire \s_hash_reg_n_0_[143] ;
+  wire \s_hash_reg_n_0_[144] ;
+  wire \s_hash_reg_n_0_[145] ;
+  wire \s_hash_reg_n_0_[146] ;
+  wire \s_hash_reg_n_0_[147] ;
+  wire \s_hash_reg_n_0_[148] ;
+  wire \s_hash_reg_n_0_[149] ;
+  wire \s_hash_reg_n_0_[150] ;
+  wire \s_hash_reg_n_0_[151] ;
+  wire \s_hash_reg_n_0_[152] ;
+  wire \s_hash_reg_n_0_[153] ;
+  wire \s_hash_reg_n_0_[154] ;
+  wire \s_hash_reg_n_0_[155] ;
+  wire \s_hash_reg_n_0_[156] ;
+  wire \s_hash_reg_n_0_[157] ;
+  wire \s_hash_reg_n_0_[158] ;
+  wire \s_hash_reg_n_0_[159] ;
+  wire \s_hash_reg_n_0_[160] ;
+  wire \s_hash_reg_n_0_[161] ;
+  wire \s_hash_reg_n_0_[162] ;
+  wire \s_hash_reg_n_0_[163] ;
+  wire \s_hash_reg_n_0_[164] ;
+  wire \s_hash_reg_n_0_[165] ;
+  wire \s_hash_reg_n_0_[166] ;
+  wire \s_hash_reg_n_0_[167] ;
+  wire \s_hash_reg_n_0_[168] ;
+  wire \s_hash_reg_n_0_[169] ;
+  wire \s_hash_reg_n_0_[170] ;
+  wire \s_hash_reg_n_0_[171] ;
+  wire \s_hash_reg_n_0_[172] ;
+  wire \s_hash_reg_n_0_[173] ;
+  wire \s_hash_reg_n_0_[174] ;
+  wire \s_hash_reg_n_0_[175] ;
+  wire \s_hash_reg_n_0_[176] ;
+  wire \s_hash_reg_n_0_[177] ;
+  wire \s_hash_reg_n_0_[178] ;
+  wire \s_hash_reg_n_0_[179] ;
+  wire \s_hash_reg_n_0_[180] ;
+  wire \s_hash_reg_n_0_[181] ;
+  wire \s_hash_reg_n_0_[182] ;
+  wire \s_hash_reg_n_0_[183] ;
+  wire \s_hash_reg_n_0_[184] ;
+  wire \s_hash_reg_n_0_[185] ;
+  wire \s_hash_reg_n_0_[186] ;
+  wire \s_hash_reg_n_0_[187] ;
+  wire \s_hash_reg_n_0_[188] ;
+  wire \s_hash_reg_n_0_[189] ;
+  wire \s_hash_reg_n_0_[190] ;
+  wire \s_hash_reg_n_0_[191] ;
+  wire \s_hash_reg_n_0_[192] ;
+  wire \s_hash_reg_n_0_[193] ;
+  wire \s_hash_reg_n_0_[194] ;
+  wire \s_hash_reg_n_0_[195] ;
+  wire \s_hash_reg_n_0_[196] ;
+  wire \s_hash_reg_n_0_[197] ;
+  wire \s_hash_reg_n_0_[198] ;
+  wire \s_hash_reg_n_0_[199] ;
+  wire \s_hash_reg_n_0_[200] ;
+  wire \s_hash_reg_n_0_[201] ;
+  wire \s_hash_reg_n_0_[202] ;
+  wire \s_hash_reg_n_0_[203] ;
+  wire \s_hash_reg_n_0_[204] ;
+  wire \s_hash_reg_n_0_[205] ;
+  wire \s_hash_reg_n_0_[206] ;
+  wire \s_hash_reg_n_0_[207] ;
+  wire \s_hash_reg_n_0_[208] ;
+  wire \s_hash_reg_n_0_[209] ;
+  wire \s_hash_reg_n_0_[210] ;
+  wire \s_hash_reg_n_0_[211] ;
+  wire \s_hash_reg_n_0_[212] ;
+  wire \s_hash_reg_n_0_[213] ;
+  wire \s_hash_reg_n_0_[214] ;
+  wire \s_hash_reg_n_0_[215] ;
+  wire \s_hash_reg_n_0_[216] ;
+  wire \s_hash_reg_n_0_[217] ;
+  wire \s_hash_reg_n_0_[218] ;
+  wire \s_hash_reg_n_0_[219] ;
+  wire \s_hash_reg_n_0_[220] ;
+  wire \s_hash_reg_n_0_[221] ;
+  wire \s_hash_reg_n_0_[222] ;
+  wire \s_hash_reg_n_0_[223] ;
+  wire \s_hash_reg_n_0_[224] ;
+  wire \s_hash_reg_n_0_[225] ;
+  wire \s_hash_reg_n_0_[226] ;
+  wire \s_hash_reg_n_0_[227] ;
+  wire \s_hash_reg_n_0_[228] ;
+  wire \s_hash_reg_n_0_[229] ;
+  wire \s_hash_reg_n_0_[230] ;
+  wire \s_hash_reg_n_0_[231] ;
+  wire \s_hash_reg_n_0_[232] ;
+  wire \s_hash_reg_n_0_[233] ;
+  wire \s_hash_reg_n_0_[234] ;
+  wire \s_hash_reg_n_0_[235] ;
+  wire \s_hash_reg_n_0_[236] ;
+  wire \s_hash_reg_n_0_[237] ;
+  wire \s_hash_reg_n_0_[238] ;
+  wire \s_hash_reg_n_0_[239] ;
+  wire \s_hash_reg_n_0_[32] ;
+  wire \s_hash_reg_n_0_[33] ;
+  wire \s_hash_reg_n_0_[34] ;
+  wire \s_hash_reg_n_0_[35] ;
+  wire \s_hash_reg_n_0_[36] ;
+  wire \s_hash_reg_n_0_[37] ;
+  wire \s_hash_reg_n_0_[38] ;
+  wire \s_hash_reg_n_0_[39] ;
+  wire \s_hash_reg_n_0_[40] ;
+  wire \s_hash_reg_n_0_[41] ;
+  wire \s_hash_reg_n_0_[42] ;
+  wire \s_hash_reg_n_0_[43] ;
+  wire \s_hash_reg_n_0_[44] ;
+  wire \s_hash_reg_n_0_[45] ;
+  wire \s_hash_reg_n_0_[46] ;
+  wire \s_hash_reg_n_0_[47] ;
+  wire \s_hash_reg_n_0_[48] ;
+  wire \s_hash_reg_n_0_[49] ;
+  wire \s_hash_reg_n_0_[50] ;
+  wire \s_hash_reg_n_0_[51] ;
+  wire \s_hash_reg_n_0_[52] ;
+  wire \s_hash_reg_n_0_[53] ;
+  wire \s_hash_reg_n_0_[54] ;
+  wire \s_hash_reg_n_0_[55] ;
+  wire \s_hash_reg_n_0_[56] ;
+  wire \s_hash_reg_n_0_[57] ;
+  wire \s_hash_reg_n_0_[58] ;
+  wire \s_hash_reg_n_0_[59] ;
+  wire \s_hash_reg_n_0_[60] ;
+  wire \s_hash_reg_n_0_[61] ;
+  wire \s_hash_reg_n_0_[62] ;
+  wire \s_hash_reg_n_0_[63] ;
+  wire \s_hash_reg_n_0_[64] ;
+  wire \s_hash_reg_n_0_[65] ;
+  wire \s_hash_reg_n_0_[66] ;
+  wire \s_hash_reg_n_0_[67] ;
+  wire \s_hash_reg_n_0_[68] ;
+  wire \s_hash_reg_n_0_[69] ;
+  wire \s_hash_reg_n_0_[70] ;
+  wire \s_hash_reg_n_0_[71] ;
+  wire \s_hash_reg_n_0_[72] ;
+  wire \s_hash_reg_n_0_[73] ;
+  wire \s_hash_reg_n_0_[74] ;
+  wire \s_hash_reg_n_0_[75] ;
+  wire \s_hash_reg_n_0_[76] ;
+  wire \s_hash_reg_n_0_[77] ;
+  wire \s_hash_reg_n_0_[78] ;
+  wire \s_hash_reg_n_0_[79] ;
+  wire \s_hash_reg_n_0_[80] ;
+  wire \s_hash_reg_n_0_[81] ;
+  wire \s_hash_reg_n_0_[82] ;
+  wire \s_hash_reg_n_0_[83] ;
+  wire \s_hash_reg_n_0_[84] ;
+  wire \s_hash_reg_n_0_[85] ;
+  wire \s_hash_reg_n_0_[86] ;
+  wire \s_hash_reg_n_0_[87] ;
+  wire \s_hash_reg_n_0_[88] ;
+  wire \s_hash_reg_n_0_[89] ;
+  wire \s_hash_reg_n_0_[90] ;
+  wire \s_hash_reg_n_0_[91] ;
+  wire \s_hash_reg_n_0_[92] ;
+  wire \s_hash_reg_n_0_[93] ;
+  wire \s_hash_reg_n_0_[94] ;
+  wire \s_hash_reg_n_0_[95] ;
+  wire [31:30]s_nonce;
   wire \s_nonce[0]_i_1_n_0 ;
   wire \s_nonce[10]_i_1_n_0 ;
   wire \s_nonce[11]_i_1_n_0 ;
@@ -5349,17 +5328,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_nonce[29]_i_1_n_0 ;
   wire \s_nonce[2]_i_1_n_0 ;
   wire \s_nonce[30]_i_1_n_0 ;
-  wire \s_nonce[31]_i_10_n_0 ;
-  wire \s_nonce[31]_i_11_n_0 ;
-  wire \s_nonce[31]_i_12_n_0 ;
   wire \s_nonce[31]_i_1_n_0 ;
-  wire \s_nonce[31]_i_2_n_0 ;
-  wire \s_nonce[31]_i_3_n_0 ;
-  wire \s_nonce[31]_i_5_n_0 ;
-  wire \s_nonce[31]_i_6_n_0 ;
-  wire \s_nonce[31]_i_7_n_0 ;
-  wire \s_nonce[31]_i_8_n_0 ;
-  wire \s_nonce[31]_i_9_n_0 ;
   wire \s_nonce[3]_i_1_n_0 ;
   wire \s_nonce[4]_i_1_n_0 ;
   wire \s_nonce[5]_i_1_n_0 ;
@@ -5387,8 +5356,8 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_nonce_reg[28]_i_2_n_1 ;
   wire \s_nonce_reg[28]_i_2_n_2 ;
   wire \s_nonce_reg[28]_i_2_n_3 ;
-  wire \s_nonce_reg[31]_i_4_n_2 ;
-  wire \s_nonce_reg[31]_i_4_n_3 ;
+  wire \s_nonce_reg[31]_i_2_n_2 ;
+  wire \s_nonce_reg[31]_i_2_n_3 ;
   wire \s_nonce_reg[4]_i_2_n_0 ;
   wire \s_nonce_reg[4]_i_2_n_1 ;
   wire \s_nonce_reg[4]_i_2_n_2 ;
@@ -5398,12 +5367,16 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \s_nonce_reg[8]_i_2_n_2 ;
   wire \s_nonce_reg[8]_i_2_n_3 ;
   wire s_ready;
+  wire s_ready_reg_rep__0_n_0;
   wire s_ready_reg_rep_n_0;
   wire s_update_i_1_n_0;
+  wire s_update_reg_n_0;
+  wire s_validData;
   wire schedulled_i_1_n_0;
   wire schedulled_i_2_n_0;
   wire schedulled_i_3_n_0;
   wire schedulled_reg_n_0;
+  wire [15:0]sel0;
   wire [30:1]sigma0;
   wire [30:30]sigma1__0;
   wire [31:6]t;
@@ -5483,9 +5456,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire \t_reg_n_0_[3] ;
   wire \t_reg_n_0_[4] ;
   wire [5:5]t_reg_rep;
-  wire [191:0]tempHash;
-  wire update;
-  wire validData;
   wire [31:0]x;
   wire [31:0]x7_out;
   wire [3:3]\NLW_Hashes_reg[127]_i_1_CO_UNCONNECTED ;
@@ -5562,12 +5532,12 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   wire [3:0]\NLW_hashIt_reg[31]_i_8_O_UNCONNECTED ;
   wire [3:2]\NLW_i_reg[31]_i_3_CO_UNCONNECTED ;
   wire [3:3]\NLW_i_reg[31]_i_3_O_UNCONNECTED ;
-  wire [3:2]\NLW_s_counter_reg[31]_i_2_CO_UNCONNECTED ;
-  wire [3:3]\NLW_s_counter_reg[31]_i_2_O_UNCONNECTED ;
+  wire [3:2]\NLW_s_counter_reg[31]_i_8_CO_UNCONNECTED ;
+  wire [3:3]\NLW_s_counter_reg[31]_i_8_O_UNCONNECTED ;
   wire [3:3]\NLW_s_hashOriginalInputWord_reg[255]_i_17_CO_UNCONNECTED ;
   wire [0:0]\NLW_s_hashOriginalInputWord_reg[255]_i_3_O_UNCONNECTED ;
-  wire [3:2]\NLW_s_nonce_reg[31]_i_4_CO_UNCONNECTED ;
-  wire [3:3]\NLW_s_nonce_reg[31]_i_4_O_UNCONNECTED ;
+  wire [3:2]\NLW_s_nonce_reg[31]_i_2_CO_UNCONNECTED ;
+  wire [3:3]\NLW_s_nonce_reg[31]_i_2_O_UNCONNECTED ;
   wire [3:0]\NLW_t_reg[31]_i_11_O_UNCONNECTED ;
   wire [3:0]\NLW_t_reg[31]_i_16_O_UNCONNECTED ;
   wire [3:0]\NLW_t_reg[31]_i_3_O_UNCONNECTED ;
@@ -5672,29 +5642,35 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(d[16]),
         .O(\Hashes[115]_i_5_n_0 ));
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'hB)) 
     \Hashes[119]_i_2 
-       (.I0(d_out[23]),
-        .I1(d[23]),
+       (.I0(s_update_reg_n_0),
+        .I1(s00_axis_aresetn),
         .O(\Hashes[119]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[119]_i_3 
-       (.I0(d_out[22]),
-        .I1(d[22]),
+       (.I0(d_out[23]),
+        .I1(d[23]),
         .O(\Hashes[119]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[119]_i_4 
-       (.I0(d_out[21]),
-        .I1(d[21]),
+       (.I0(d_out[22]),
+        .I1(d[22]),
         .O(\Hashes[119]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[119]_i_5 
+       (.I0(d_out[21]),
+        .I1(d[21]),
+        .O(\Hashes[119]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \Hashes[119]_i_6 
        (.I0(d_out[20]),
         .I1(d[20]),
-        .O(\Hashes[119]_i_5_n_0 ));
+        .O(\Hashes[119]_i_6_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[11]_i_2 
@@ -6368,29 +6344,35 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(g[24]),
         .O(\Hashes[219]_i_5_n_0 ));
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'hB)) 
     \Hashes[223]_i_2 
-       (.I0(g[31]),
-        .I1(\Hashes_reg_n_0_[223] ),
+       (.I0(s_update_reg_n_0),
+        .I1(s00_axis_aresetn),
         .O(\Hashes[223]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[223]_i_3 
-       (.I0(\Hashes_reg_n_0_[222] ),
-        .I1(g[30]),
+       (.I0(g[31]),
+        .I1(\Hashes_reg_n_0_[223] ),
         .O(\Hashes[223]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[223]_i_4 
-       (.I0(\Hashes_reg_n_0_[221] ),
-        .I1(g[29]),
+       (.I0(\Hashes_reg_n_0_[222] ),
+        .I1(g[30]),
         .O(\Hashes[223]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[223]_i_5 
+       (.I0(\Hashes_reg_n_0_[221] ),
+        .I1(g[29]),
+        .O(\Hashes[223]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \Hashes[223]_i_6 
        (.I0(\Hashes_reg_n_0_[220] ),
         .I1(g[28]),
-        .O(\Hashes[223]_i_5_n_0 ));
+        .O(\Hashes[223]_i_6_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[227]_i_2 
@@ -6583,39 +6565,51 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(\Hashes_reg_n_0_[248] ),
         .I1(h_reg__0[24]),
         .O(\Hashes[251]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \Hashes[254]_i_1 
+       (.I0(s_update_reg_n_0),
+        .I1(s00_axis_aresetn),
+        .O(\Hashes[254]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h00800000)) 
     \Hashes[255]_i_1 
        (.I0(schedulled_reg_n_0),
         .I1(hashed_reg_n_0),
-        .I2(mEnable),
+        .I2(s_enable_reg_n_0),
         .I3(ready_reg_n_0),
         .I4(padded),
         .O(\Hashes[255]_i_1_n_0 ));
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'hB)) 
     \Hashes[255]_i_3 
-       (.I0(h_reg__0[31]),
-        .I1(\Hashes_reg_n_0_[255] ),
+       (.I0(s_update_reg_n_0),
+        .I1(s00_axis_aresetn),
         .O(\Hashes[255]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[255]_i_4 
-       (.I0(\Hashes_reg_n_0_[254] ),
-        .I1(h_reg__0[30]),
+       (.I0(h_reg__0[31]),
+        .I1(\Hashes_reg_n_0_[255] ),
         .O(\Hashes[255]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[255]_i_5 
-       (.I0(\Hashes_reg_n_0_[253] ),
-        .I1(h_reg__0[29]),
+       (.I0(\Hashes_reg_n_0_[254] ),
+        .I1(h_reg__0[30]),
         .O(\Hashes[255]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[255]_i_6 
+       (.I0(\Hashes_reg_n_0_[253] ),
+        .I1(h_reg__0[29]),
+        .O(\Hashes[255]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \Hashes[255]_i_7 
        (.I0(\Hashes_reg_n_0_[252] ),
         .I1(h_reg__0[28]),
-        .O(\Hashes[255]_i_6_n_0 ));
+        .O(\Hashes[255]_i_7_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \Hashes[27]_i_2 
@@ -7126,7 +7120,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[0]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[0] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7134,7 +7128,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[4]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[4]));
   FDPE #(
     .INIT(1'b0)) 
@@ -7142,14 +7136,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[5]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[5]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[102] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_3_out[6]),
         .Q(d_out[6]));
   FDCE #(
@@ -7157,7 +7151,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[103] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_3_out[7]),
         .Q(d_out[7]));
   CARRY4 \Hashes_reg[103]_i_1 
@@ -7173,14 +7167,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[8]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[8]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[105] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_3_out[9]),
         .Q(d_out[9]));
   FDPE #(
@@ -7189,14 +7183,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[10]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[10]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[107] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_3_out[11]),
         .Q(d_out[11]));
   CARRY4 \Hashes_reg[107]_i_1 
@@ -7212,7 +7206,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[12]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[12]));
   FDPE #(
     .INIT(1'b0)) 
@@ -7220,7 +7214,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[13]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[13]));
   FDPE #(
     .INIT(1'b0)) 
@@ -7228,7 +7222,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[10]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[10] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7236,7 +7230,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[14]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[14]));
   FDPE #(
     .INIT(1'b0)) 
@@ -7244,7 +7238,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[15]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[15]));
   CARRY4 \Hashes_reg[111]_i_1 
        (.CI(\Hashes_reg[107]_i_1_n_0 ),
@@ -7259,7 +7253,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[16]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[16]));
   FDPE #(
     .INIT(1'b0)) 
@@ -7267,7 +7261,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[17]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[17]));
   FDPE #(
     .INIT(1'b0)) 
@@ -7275,7 +7269,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[18]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[18]));
   FDPE #(
     .INIT(1'b0)) 
@@ -7283,7 +7277,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[19]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[19]));
   CARRY4 \Hashes_reg[115]_i_1 
        (.CI(\Hashes_reg[111]_i_1_n_0 ),
@@ -7297,7 +7291,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[116] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_3_out[20]),
         .Q(d_out[20]));
   FDCE #(
@@ -7305,7 +7299,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[117] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_3_out[21]),
         .Q(d_out[21]));
   FDPE #(
@@ -7314,14 +7308,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[22]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[22]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[119] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_3_out[23]),
         .Q(d_out[23]));
   CARRY4 \Hashes_reg[119]_i_1 
@@ -7330,13 +7324,13 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CYINIT(1'b0),
         .DI(d_out[23:20]),
         .O(p_3_out[23:20]),
-        .S({\Hashes[119]_i_2_n_0 ,\Hashes[119]_i_3_n_0 ,\Hashes[119]_i_4_n_0 ,\Hashes[119]_i_5_n_0 }));
+        .S({\Hashes[119]_i_3_n_0 ,\Hashes[119]_i_4_n_0 ,\Hashes[119]_i_5_n_0 ,\Hashes[119]_i_6_n_0 }));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[11] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[11]),
         .Q(\Hashes_reg_n_0_[11] ));
   CARRY4 \Hashes_reg[11]_i_1 
@@ -7352,14 +7346,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[24]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[24]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[121] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_3_out[25]),
         .Q(d_out[25]));
   FDPE #(
@@ -7368,14 +7362,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[26]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[26]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[123] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_3_out[27]),
         .Q(d_out[27]));
   CARRY4 \Hashes_reg[123]_i_1 
@@ -7390,7 +7384,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[124] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_3_out[28]),
         .Q(d_out[28]));
   FDPE #(
@@ -7399,14 +7393,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[29]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[29]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[126] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_3_out[30]),
         .Q(d_out[30]));
   FDPE #(
@@ -7415,7 +7409,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[31]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(d_out[31]));
   CARRY4 \Hashes_reg[127]_i_1 
        (.CI(\Hashes_reg[123]_i_1_n_0 ),
@@ -7430,7 +7424,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[0]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[128] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7438,14 +7432,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[1]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[129] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[12] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_0_out__0[12]),
         .Q(\Hashes_reg_n_0_[12] ));
   FDPE #(
@@ -7454,7 +7448,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[2]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[130] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7462,7 +7456,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[3]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[131] ));
   CARRY4 \Hashes_reg[131]_i_1 
        (.CI(1'b0),
@@ -7477,7 +7471,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[4]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[132] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7485,7 +7479,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[5]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[133] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7493,14 +7487,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[6]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[134] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[135] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_4_out[7]),
         .Q(\Hashes_reg_n_0_[135] ));
   CARRY4 \Hashes_reg[135]_i_1 
@@ -7515,7 +7509,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[136] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[8]),
         .Q(\Hashes_reg_n_0_[136] ));
   FDPE #(
@@ -7524,14 +7518,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[9]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[137] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[138] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[10]),
         .Q(\Hashes_reg_n_0_[138] ));
   FDCE #(
@@ -7539,7 +7533,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[139] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[11]),
         .Q(\Hashes_reg_n_0_[139] ));
   CARRY4 \Hashes_reg[139]_i_1 
@@ -7555,7 +7549,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[13]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[13] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7563,14 +7557,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[12]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[140] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[141] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_4_out[13]),
         .Q(\Hashes_reg_n_0_[141] ));
   FDPE #(
@@ -7579,14 +7573,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[14]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[142] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[143] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_4_out[15]),
         .Q(\Hashes_reg_n_0_[143] ));
   CARRY4 \Hashes_reg[143]_i_1 
@@ -7601,7 +7595,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[144] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[16]),
         .Q(\Hashes_reg_n_0_[144] ));
   FDPE #(
@@ -7610,7 +7604,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[17]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[145] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7618,7 +7612,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[18]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[146] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7626,7 +7620,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[19]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[147] ));
   CARRY4 \Hashes_reg[147]_i_1 
        (.CI(\Hashes_reg[143]_i_1_n_0 ),
@@ -7640,7 +7634,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[148] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_4_out[20]),
         .Q(\Hashes_reg_n_0_[148] ));
   FDCE #(
@@ -7648,7 +7642,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[149] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_4_out[21]),
         .Q(\Hashes_reg_n_0_[149] ));
   FDPE #(
@@ -7657,14 +7651,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[14]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[14] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[150] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_4_out[22]),
         .Q(\Hashes_reg_n_0_[150] ));
   FDCE #(
@@ -7672,7 +7666,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[151] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_4_out[23]),
         .Q(\Hashes_reg_n_0_[151] ));
   CARRY4 \Hashes_reg[151]_i_1 
@@ -7688,14 +7682,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[24]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[152] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[153] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[25]),
         .Q(\Hashes_reg_n_0_[153] ));
   FDCE #(
@@ -7703,7 +7697,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[154] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[26]),
         .Q(\Hashes_reg_n_0_[154] ));
   FDCE #(
@@ -7711,7 +7705,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[155] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[27]),
         .Q(\Hashes_reg_n_0_[155] ));
   CARRY4 \Hashes_reg[155]_i_1 
@@ -7727,14 +7721,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[28]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[156] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[157] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_4_out[29]),
         .Q(\Hashes_reg_n_0_[157] ));
   FDPE #(
@@ -7743,14 +7737,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_4_out[30]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[158] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[159] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_4_out[31]),
         .Q(\Hashes_reg_n_0_[159] ));
   CARRY4 \Hashes_reg[159]_i_1 
@@ -7766,7 +7760,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[15]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[15] ));
   CARRY4 \Hashes_reg[15]_i_1 
        (.CI(\Hashes_reg[11]_i_1_n_0 ),
@@ -7780,7 +7774,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[160] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[0]),
         .Q(\Hashes_reg_n_0_[160] ));
   FDCE #(
@@ -7788,7 +7782,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[161] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[1]),
         .Q(\Hashes_reg_n_0_[161] ));
   FDPE #(
@@ -7797,7 +7791,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[2]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[162] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7805,7 +7799,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[3]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[163] ));
   CARRY4 \Hashes_reg[163]_i_1 
        (.CI(1'b0),
@@ -7819,7 +7813,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[164] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[4]),
         .Q(\Hashes_reg_n_0_[164] ));
   FDCE #(
@@ -7827,7 +7821,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[165] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[5]),
         .Q(\Hashes_reg_n_0_[165] ));
   FDCE #(
@@ -7835,7 +7829,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[166] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[6]),
         .Q(\Hashes_reg_n_0_[166] ));
   FDPE #(
@@ -7844,7 +7838,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[7]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[167] ));
   CARRY4 \Hashes_reg[167]_i_1 
        (.CI(\Hashes_reg[163]_i_1_n_0 ),
@@ -7858,7 +7852,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[168] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[8]),
         .Q(\Hashes_reg_n_0_[168] ));
   FDCE #(
@@ -7866,7 +7860,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[169] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[9]),
         .Q(\Hashes_reg_n_0_[169] ));
   FDPE #(
@@ -7875,14 +7869,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[16]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[16] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[170] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[10]),
         .Q(\Hashes_reg_n_0_[170] ));
   FDPE #(
@@ -7891,7 +7885,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[11]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[171] ));
   CARRY4 \Hashes_reg[171]_i_1 
        (.CI(\Hashes_reg[167]_i_1_n_0 ),
@@ -7905,7 +7899,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[172] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[12]),
         .Q(\Hashes_reg_n_0_[172] ));
   FDPE #(
@@ -7914,7 +7908,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[13]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[173] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -7922,14 +7916,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[14]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[174] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[175] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[15]),
         .Q(\Hashes_reg_n_0_[175] ));
   CARRY4 \Hashes_reg[175]_i_1 
@@ -7945,14 +7939,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[16]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[176] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[177] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[17]),
         .Q(\Hashes_reg_n_0_[177] ));
   FDPE #(
@@ -7961,14 +7955,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[18]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[178] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[179] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[19]),
         .Q(\Hashes_reg_n_0_[179] ));
   CARRY4 \Hashes_reg[179]_i_1 
@@ -7983,7 +7977,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[17] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[17]),
         .Q(\Hashes_reg_n_0_[17] ));
   FDCE #(
@@ -7991,7 +7985,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[180] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[20]),
         .Q(\Hashes_reg_n_0_[180] ));
   FDCE #(
@@ -7999,7 +7993,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[181] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[21]),
         .Q(\Hashes_reg_n_0_[181] ));
   FDCE #(
@@ -8007,7 +8001,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[182] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[22]),
         .Q(\Hashes_reg_n_0_[182] ));
   FDCE #(
@@ -8015,7 +8009,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[183] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[23]),
         .Q(\Hashes_reg_n_0_[183] ));
   CARRY4 \Hashes_reg[183]_i_1 
@@ -8031,7 +8025,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[24]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[184] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8039,14 +8033,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[25]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[185] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[186] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_5_out[26]),
         .Q(\Hashes_reg_n_0_[186] ));
   FDPE #(
@@ -8055,7 +8049,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[27]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[187] ));
   CARRY4 \Hashes_reg[187]_i_1 
        (.CI(\Hashes_reg[183]_i_1_n_0 ),
@@ -8070,14 +8064,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[28]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[188] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[189] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[29]),
         .Q(\Hashes_reg_n_0_[189] ));
   FDCE #(
@@ -8085,7 +8079,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[18] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[18]),
         .Q(\Hashes_reg_n_0_[18] ));
   FDCE #(
@@ -8093,7 +8087,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[190] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_5_out[30]),
         .Q(\Hashes_reg_n_0_[190] ));
   FDPE #(
@@ -8102,7 +8096,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_5_out[31]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[191] ));
   CARRY4 \Hashes_reg[191]_i_1 
        (.CI(\Hashes_reg[187]_i_1_n_0 ),
@@ -8117,7 +8111,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[0]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[192] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8125,14 +8119,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[1]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[193] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[194] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[2]),
         .Q(\Hashes_reg_n_0_[194] ));
   FDPE #(
@@ -8141,7 +8135,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[3]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[195] ));
   CARRY4 \Hashes_reg[195]_i_1 
        (.CI(1'b0),
@@ -8155,7 +8149,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[196] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[4]),
         .Q(\Hashes_reg_n_0_[196] ));
   FDPE #(
@@ -8164,14 +8158,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[5]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[197] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[198] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[6]),
         .Q(\Hashes_reg_n_0_[198] ));
   FDPE #(
@@ -8180,7 +8174,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[7]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[199] ));
   CARRY4 \Hashes_reg[199]_i_1 
        (.CI(\Hashes_reg[195]_i_1_n_0 ),
@@ -8195,7 +8189,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[19]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[19] ));
   CARRY4 \Hashes_reg[19]_i_1 
        (.CI(\Hashes_reg[15]_i_1_n_0 ),
@@ -8210,7 +8204,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[1]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[1] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8218,14 +8212,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[8]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[200] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[201] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[9]),
         .Q(\Hashes_reg_n_0_[201] ));
   FDCE #(
@@ -8233,7 +8227,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[202] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[10]),
         .Q(\Hashes_reg_n_0_[202] ));
   FDPE #(
@@ -8242,7 +8236,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[11]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[203] ));
   CARRY4 \Hashes_reg[203]_i_1 
        (.CI(\Hashes_reg[199]_i_1_n_0 ),
@@ -8257,14 +8251,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[12]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[204] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[205] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[13]),
         .Q(\Hashes_reg_n_0_[205] ));
   FDPE #(
@@ -8273,7 +8267,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[14]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[206] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8281,7 +8275,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[15]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[207] ));
   CARRY4 \Hashes_reg[207]_i_1 
        (.CI(\Hashes_reg[203]_i_1_n_0 ),
@@ -8296,7 +8290,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[16]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[208] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8304,14 +8298,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[17]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[209] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[20] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[20]),
         .Q(\Hashes_reg_n_0_[20] ));
   FDCE #(
@@ -8319,7 +8313,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[210] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[18]),
         .Q(\Hashes_reg_n_0_[210] ));
   FDCE #(
@@ -8327,7 +8321,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[211] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[19]),
         .Q(\Hashes_reg_n_0_[211] ));
   CARRY4 \Hashes_reg[211]_i_1 
@@ -8342,7 +8336,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[212] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[20]),
         .Q(\Hashes_reg_n_0_[212] ));
   FDCE #(
@@ -8350,7 +8344,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[213] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[21]),
         .Q(\Hashes_reg_n_0_[213] ));
   FDCE #(
@@ -8358,7 +8352,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[214] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[22]),
         .Q(\Hashes_reg_n_0_[214] ));
   FDPE #(
@@ -8367,7 +8361,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[23]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[215] ));
   CARRY4 \Hashes_reg[215]_i_1 
        (.CI(\Hashes_reg[211]_i_1_n_0 ),
@@ -8382,7 +8376,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[24]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[216] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8390,7 +8384,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[25]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[217] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8398,7 +8392,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[26]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[218] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8406,7 +8400,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[27]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[219] ));
   CARRY4 \Hashes_reg[219]_i_1 
        (.CI(\Hashes_reg[215]_i_1_n_0 ),
@@ -8420,7 +8414,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[21] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[21]),
         .Q(\Hashes_reg_n_0_[21] ));
   FDPE #(
@@ -8429,14 +8423,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_6_out[28]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[223]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[220] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[221] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[29]),
         .Q(\Hashes_reg_n_0_[221] ));
   FDCE #(
@@ -8444,7 +8438,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[222] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[30]),
         .Q(\Hashes_reg_n_0_[222] ));
   FDCE #(
@@ -8452,7 +8446,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[223] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(p_6_out[31]),
         .Q(\Hashes_reg_n_0_[223] ));
   CARRY4 \Hashes_reg[223]_i_1 
@@ -8461,21 +8455,21 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CYINIT(1'b0),
         .DI({1'b0,\Hashes_reg_n_0_[222] ,\Hashes_reg_n_0_[221] ,\Hashes_reg_n_0_[220] }),
         .O(p_6_out[31:28]),
-        .S({\Hashes[223]_i_2_n_0 ,\Hashes[223]_i_3_n_0 ,\Hashes[223]_i_4_n_0 ,\Hashes[223]_i_5_n_0 }));
+        .S({\Hashes[223]_i_3_n_0 ,\Hashes[223]_i_4_n_0 ,\Hashes[223]_i_5_n_0 ,\Hashes[223]_i_6_n_0 }));
   FDPE #(
     .INIT(1'b0)) 
     \Hashes_reg[224] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[0]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[224] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[225] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[1]),
         .Q(\Hashes_reg_n_0_[225] ));
   FDCE #(
@@ -8483,7 +8477,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[226] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[2]),
         .Q(\Hashes_reg_n_0_[226] ));
   FDPE #(
@@ -8492,7 +8486,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[3]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[227] ));
   CARRY4 \Hashes_reg[227]_i_1 
        (.CI(1'b0),
@@ -8507,14 +8501,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[4]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[228] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[229] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_7_out[5]),
         .Q(\Hashes_reg_n_0_[229] ));
   FDCE #(
@@ -8522,7 +8516,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[22] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[22]),
         .Q(\Hashes_reg_n_0_[22] ));
   FDCE #(
@@ -8530,7 +8524,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[230] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_7_out[6]),
         .Q(\Hashes_reg_n_0_[230] ));
   FDCE #(
@@ -8538,7 +8532,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[231] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_7_out[7]),
         .Q(\Hashes_reg_n_0_[231] ));
   CARRY4 \Hashes_reg[231]_i_1 
@@ -8554,14 +8548,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[8]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[232] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[233] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[9]),
         .Q(\Hashes_reg_n_0_[233] ));
   FDPE #(
@@ -8570,7 +8564,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[10]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[234] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8578,7 +8572,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[11]),
-        .PRE(\s_hash[177]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[235] ));
   CARRY4 \Hashes_reg[235]_i_1 
        (.CI(\Hashes_reg[231]_i_1_n_0 ),
@@ -8592,7 +8586,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[236] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_7_out[12]),
         .Q(\Hashes_reg_n_0_[236] ));
   FDCE #(
@@ -8600,7 +8594,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[237] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_7_out[13]),
         .Q(\Hashes_reg_n_0_[237] ));
   FDPE #(
@@ -8609,7 +8603,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[14]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[238] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8617,7 +8611,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[15]),
-        .PRE(\s_hash[175]_i_1_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[239] ));
   CARRY4 \Hashes_reg[239]_i_1 
        (.CI(\Hashes_reg[235]_i_1_n_0 ),
@@ -8631,7 +8625,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[23] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[23]),
         .Q(\Hashes_reg_n_0_[23] ));
   CARRY4 \Hashes_reg[23]_i_1 
@@ -8646,7 +8640,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[240] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[16]),
         .Q(\Hashes_reg_n_0_[240] ));
   FDCE #(
@@ -8654,7 +8648,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[241] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[17]),
         .Q(\Hashes_reg_n_0_[241] ));
   FDCE #(
@@ -8662,7 +8656,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[242] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[18]),
         .Q(\Hashes_reg_n_0_[242] ));
   FDCE #(
@@ -8670,7 +8664,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[243] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[19]),
         .Q(\Hashes_reg_n_0_[243] ));
   CARRY4 \Hashes_reg[243]_i_1 
@@ -8685,7 +8679,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[244] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_7_out[20]),
         .Q(\Hashes_reg_n_0_[244] ));
   FDPE #(
@@ -8694,7 +8688,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[21]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[245] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8702,7 +8696,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[22]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[246] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8710,7 +8704,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[23]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[247] ));
   CARRY4 \Hashes_reg[247]_i_1 
        (.CI(\Hashes_reg[243]_i_1_n_0 ),
@@ -8725,7 +8719,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[24]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[248] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8733,14 +8727,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[25]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[249] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[24] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[24]),
         .Q(\Hashes_reg_n_0_[24] ));
   FDCE #(
@@ -8748,7 +8742,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[250] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[26]),
         .Q(\Hashes_reg_n_0_[250] ));
   FDPE #(
@@ -8757,7 +8751,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[27]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[251] ));
   CARRY4 \Hashes_reg[251]_i_1 
        (.CI(\Hashes_reg[247]_i_1_n_0 ),
@@ -8772,14 +8766,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[28]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[252] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[253] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_7_out[29]),
         .Q(\Hashes_reg_n_0_[253] ));
   FDPE #(
@@ -8788,14 +8782,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_7_out[30]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[254] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[255] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_7_out[31]),
         .Q(\Hashes_reg_n_0_[255] ));
   CARRY4 \Hashes_reg[255]_i_2 
@@ -8804,21 +8798,21 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CYINIT(1'b0),
         .DI({1'b0,\Hashes_reg_n_0_[254] ,\Hashes_reg_n_0_[253] ,\Hashes_reg_n_0_[252] }),
         .O(p_7_out[31:28]),
-        .S({\Hashes[255]_i_3_n_0 ,\Hashes[255]_i_4_n_0 ,\Hashes[255]_i_5_n_0 ,\Hashes[255]_i_6_n_0 }));
+        .S({\Hashes[255]_i_4_n_0 ,\Hashes[255]_i_5_n_0 ,\Hashes[255]_i_6_n_0 ,\Hashes[255]_i_7_n_0 }));
   FDPE #(
     .INIT(1'b0)) 
     \Hashes_reg[25] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[25]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[25] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[26] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[26]),
         .Q(\Hashes_reg_n_0_[26] ));
   FDPE #(
@@ -8827,7 +8821,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[27]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[27] ));
   CARRY4 \Hashes_reg[27]_i_1 
        (.CI(\Hashes_reg[23]_i_1_n_0 ),
@@ -8841,7 +8835,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[28] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[28]),
         .Q(\Hashes_reg_n_0_[28] ));
   FDPE #(
@@ -8850,7 +8844,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[29]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[29] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8858,7 +8852,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[2]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[2] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8866,14 +8860,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[30]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[30] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[31] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[31]),
         .Q(\Hashes_reg_n_0_[31] ));
   CARRY4 \Hashes_reg[31]_i_1 
@@ -8889,14 +8883,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[0]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[32] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[33] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_1_out[1]),
         .Q(\Hashes_reg_n_0_[33] ));
   FDPE #(
@@ -8905,14 +8899,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[2]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[255]_i_3_n_0 ),
         .Q(\Hashes_reg_n_0_[34] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[35] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_1_out[3]),
         .Q(\Hashes_reg_n_0_[35] ));
   CARRY4 \Hashes_reg[35]_i_1 
@@ -8927,7 +8921,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[36] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[4]),
         .Q(\Hashes_reg_n_0_[36] ));
   FDCE #(
@@ -8935,7 +8929,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[37] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[5]),
         .Q(\Hashes_reg_n_0_[37] ));
   FDCE #(
@@ -8943,7 +8937,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[38] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[6]),
         .Q(\Hashes_reg_n_0_[38] ));
   FDPE #(
@@ -8952,7 +8946,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[7]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[39] ));
   CARRY4 \Hashes_reg[39]_i_1 
        (.CI(\Hashes_reg[35]_i_1_n_0 ),
@@ -8966,7 +8960,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[3] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[3]),
         .Q(\Hashes_reg_n_0_[3] ));
   CARRY4 \Hashes_reg[3]_i_1 
@@ -8981,7 +8975,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[40] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(p_1_out[8]),
         .Q(\Hashes_reg_n_0_[40] ));
   FDPE #(
@@ -8990,7 +8984,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[9]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[41] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -8998,7 +8992,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[10]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[42] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -9006,7 +9000,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[11]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[43] ));
   CARRY4 \Hashes_reg[43]_i_1 
        (.CI(\Hashes_reg[39]_i_1_n_0 ),
@@ -9020,7 +9014,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[44] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[12]),
         .Q(\Hashes_reg_n_0_[44] ));
   FDPE #(
@@ -9029,14 +9023,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[13]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[45] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[46] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[14]),
         .Q(\Hashes_reg_n_0_[46] ));
   FDPE #(
@@ -9045,7 +9039,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[15]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[47] ));
   CARRY4 \Hashes_reg[47]_i_1 
        (.CI(\Hashes_reg[43]_i_1_n_0 ),
@@ -9060,7 +9054,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[16]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[48] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -9068,14 +9062,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[17]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[49] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[4] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_0_out__0[4]),
         .Q(\Hashes_reg_n_0_[4] ));
   FDPE #(
@@ -9084,14 +9078,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[18]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[50] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[51] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_1_out[19]),
         .Q(\Hashes_reg_n_0_[51] ));
   CARRY4 \Hashes_reg[51]_i_1 
@@ -9106,7 +9100,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[52] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[20]),
         .Q(\Hashes_reg_n_0_[52] ));
   FDPE #(
@@ -9115,7 +9109,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[21]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[53] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -9123,14 +9117,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[22]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[54] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[55] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[23]),
         .Q(\Hashes_reg_n_0_[55] ));
   CARRY4 \Hashes_reg[55]_i_1 
@@ -9146,7 +9140,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[24]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[56] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -9154,14 +9148,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[25]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[57] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[58] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_1_out[26]),
         .Q(\Hashes_reg_n_0_[58] ));
   FDPE #(
@@ -9170,7 +9164,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[27]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[59] ));
   CARRY4 \Hashes_reg[59]_i_1 
        (.CI(\Hashes_reg[55]_i_1_n_0 ),
@@ -9185,7 +9179,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[5]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[5] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -9193,7 +9187,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[28]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[60] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -9201,14 +9195,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[29]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[61] ));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[62] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_1_out[30]),
         .Q(\Hashes_reg_n_0_[62] ));
   FDPE #(
@@ -9217,7 +9211,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_1_out[31]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[63] ));
   CARRY4 \Hashes_reg[63]_i_1 
        (.CI(\Hashes_reg[59]_i_1_n_0 ),
@@ -9231,7 +9225,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[64] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[64]),
         .Q(c_out[0]));
   FDPE #(
@@ -9240,14 +9234,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[65]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[1]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[66] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[66]),
         .Q(c_out[2]));
   FDCE #(
@@ -9255,7 +9249,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[67] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[67]),
         .Q(c_out[3]));
   CARRY4 \Hashes_reg[67]_i_1 
@@ -9271,7 +9265,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[68]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[4]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9279,7 +9273,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[69]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[5]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9287,7 +9281,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[6]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(\Hashes_reg_n_0_[6] ));
   FDPE #(
     .INIT(1'b0)) 
@@ -9295,14 +9289,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[70]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[6]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[71] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[71]),
         .Q(c_out[7]));
   CARRY4 \Hashes_reg[71]_i_1 
@@ -9318,7 +9312,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[72]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(c_out[8]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9326,14 +9320,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[73]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(c_out[9]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[74] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(H_out[74]),
         .Q(c_out[10]));
   FDCE #(
@@ -9341,7 +9335,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[75] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(H_out[75]),
         .Q(c_out[11]));
   CARRY4 \Hashes_reg[75]_i_1 
@@ -9357,7 +9351,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[76]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\M[0][256]_i_1_n_0 ),
         .Q(c_out[12]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9365,7 +9359,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[77]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\M[0][256]_i_1_n_0 ),
         .Q(c_out[13]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9373,7 +9367,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[78]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\M[0][256]_i_1_n_0 ),
         .Q(c_out[14]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9381,7 +9375,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[79]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[254]_i_1_n_0 ),
         .Q(c_out[15]));
   CARRY4 \Hashes_reg[79]_i_1 
        (.CI(\Hashes_reg[75]_i_1_n_0 ),
@@ -9395,7 +9389,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[7] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(p_0_out__0[7]),
         .Q(\Hashes_reg_n_0_[7] ));
   CARRY4 \Hashes_reg[7]_i_1 
@@ -9410,7 +9404,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[80] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[80]),
         .Q(c_out[16]));
   FDPE #(
@@ -9419,7 +9413,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[81]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[17]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9427,7 +9421,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[82]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[18]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9435,7 +9429,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[83]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[19]));
   CARRY4 \Hashes_reg[83]_i_1 
        (.CI(\Hashes_reg[79]_i_1_n_0 ),
@@ -9449,7 +9443,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[84] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[84]),
         .Q(c_out[20]));
   FDPE #(
@@ -9458,7 +9452,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[85]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[21]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9466,14 +9460,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[86]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[22]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[87] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[87]),
         .Q(c_out[23]));
   CARRY4 \Hashes_reg[87]_i_1 
@@ -9488,7 +9482,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[88] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[88]),
         .Q(c_out[24]));
   FDCE #(
@@ -9496,7 +9490,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[89] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[89]),
         .Q(c_out[25]));
   FDCE #(
@@ -9504,7 +9498,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[8] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_0_out__0[8]),
         .Q(\Hashes_reg_n_0_[8] ));
   FDPE #(
@@ -9513,7 +9507,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[90]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[26]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9521,7 +9515,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[91]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[27]));
   CARRY4 \Hashes_reg[91]_i_1 
        (.CI(\Hashes_reg[87]_i_1_n_0 ),
@@ -9536,7 +9530,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[92]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[28]));
   FDPE #(
     .INIT(1'b0)) 
@@ -9544,14 +9538,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(H_out[93]),
-        .PRE(\s_hash[255]_i_2_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(c_out[29]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[94] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[94]),
         .Q(c_out[30]));
   FDCE #(
@@ -9559,7 +9553,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[95] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(H_out[95]),
         .Q(c_out[31]));
   CARRY4 \Hashes_reg[95]_i_1 
@@ -9574,7 +9568,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \Hashes_reg[96] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_3_out[0]),
         .Q(d_out[0]));
   FDPE #(
@@ -9583,14 +9577,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[1]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[1]));
   FDCE #(
     .INIT(1'b0)) 
     \Hashes_reg[98] 
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(p_3_out[2]),
         .Q(d_out[2]));
   FDPE #(
@@ -9599,7 +9593,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_3_out[3]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(d_out[3]));
   CARRY4 \Hashes_reg[99]_i_1 
        (.CI(1'b0),
@@ -9614,18 +9608,30 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\Hashes[255]_i_1_n_0 ),
         .D(p_0_out__0[9]),
-        .PRE(\s_hash[247]_i_1_n_0 ),
+        .PRE(\Hashes[119]_i_2_n_0 ),
         .Q(\Hashes_reg_n_0_[9] ));
   LUT2 #(
     .INIT(4'hB)) 
+    \M[0][254]_i_1 
+       (.I0(s_update_reg_n_0),
+        .I1(s00_axis_aresetn),
+        .O(\M[0][254]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \M[0][256]_i_1 
+       (.I0(s_update_reg_n_0),
+        .I1(s00_axis_aresetn),
+        .O(\M[0][256]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
     \M[0][471]_i_1 
-       (.I0(update),
+       (.I0(s_update_reg_n_0),
         .I1(s00_axis_aresetn),
         .O(\M[0][471]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
     \M[0][510]_i_1 
-       (.I0(update),
+       (.I0(s_update_reg_n_0),
         .I1(s00_axis_aresetn),
         .O(\M[0][510]_i_1_n_0 ));
   LUT3 #(
@@ -9633,12 +9639,12 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \M[0][511]_i_1 
        (.I0(padded),
         .I1(ready_reg_n_0),
-        .I2(mEnable),
+        .I2(s_enable_reg_n_0),
         .O(\M[0][511]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
     \M[0][511]_i_2 
-       (.I0(update),
+       (.I0(s_update_reg_n_0),
         .I1(s00_axis_aresetn),
         .O(\M[0][511]_i_2_n_0 ));
   FDCE #(
@@ -9647,7 +9653,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[0]),
+        .D(s_hashInputWord[0]),
         .Q(\M_reg[0]__0 [224]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9655,15 +9661,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[1]),
+        .D(s_hashInputWord[1]),
         .Q(\M_reg[0]__0 [225]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][226] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[2]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[2]),
         .Q(\M_reg[0]__0 [226]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9671,7 +9677,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[3]),
+        .D(s_hashInputWord[3]),
         .Q(\M_reg[0]__0 [227]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9679,7 +9685,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[4]),
+        .D(s_hashInputWord[4]),
         .Q(\M_reg[0]__0 [228]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9687,15 +9693,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[5]),
+        .D(s_hashInputWord[5]),
         .Q(\M_reg[0]__0 [229]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][230] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[6]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[6]),
         .Q(\M_reg[0]__0 [230]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9703,7 +9709,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[7]),
+        .D(s_hashInputWord[7]),
         .Q(\M_reg[0]__0 [231]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9711,7 +9717,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[8]),
+        .D(s_hashInputWord[8]),
         .Q(\M_reg[0]__0 [232]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9719,15 +9725,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[9]),
+        .D(s_hashInputWord[9]),
         .Q(\M_reg[0]__0 [233]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][234] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[10]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[10]),
         .Q(\M_reg[0]__0 [234]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9735,15 +9741,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[11]),
+        .D(s_hashInputWord[11]),
         .Q(\M_reg[0]__0 [235]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][236] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[12]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[12]),
         .Q(\M_reg[0]__0 [236]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9751,15 +9757,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[13]),
+        .D(s_hashInputWord[13]),
         .Q(\M_reg[0]__0 [237]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][238] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[14]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[14]),
         .Q(\M_reg[0]__0 [238]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9767,7 +9773,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[15]),
+        .D(s_hashInputWord[15]),
         .Q(\M_reg[0]__0 [239]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9775,7 +9781,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[16]),
+        .D(s_hashInputWord[16]),
         .Q(\M_reg[0]__0 [240]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9783,15 +9789,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[17]),
+        .D(s_hashInputWord[17]),
         .Q(\M_reg[0]__0 [241]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][242] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[18]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[18]),
         .Q(\M_reg[0]__0 [242]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9799,7 +9805,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[19]),
+        .D(s_hashInputWord[19]),
         .Q(\M_reg[0]__0 [243]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9807,7 +9813,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[20]),
+        .D(s_hashInputWord[20]),
         .Q(\M_reg[0]__0 [244]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9815,15 +9821,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[21]),
+        .D(s_hashInputWord[21]),
         .Q(\M_reg[0]__0 [245]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][246] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[22]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[22]),
         .Q(\M_reg[0]__0 [246]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9831,7 +9837,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[23]),
+        .D(s_hashInputWord[23]),
         .Q(\M_reg[0]__0 [247]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9839,7 +9845,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[24]),
+        .D(s_hashInputWord[24]),
         .Q(\M_reg[0]__0 [248]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9847,15 +9853,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[25]),
+        .D(s_hashInputWord[25]),
         .Q(\M_reg[0]__0 [249]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][250] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[26]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[26]),
         .Q(\M_reg[0]__0 [250]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9863,15 +9869,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[27]),
+        .D(s_hashInputWord[27]),
         .Q(\M_reg[0]__0 [251]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][252] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[28]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[28]),
         .Q(\M_reg[0]__0 [252]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9879,15 +9885,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[29]),
+        .D(s_hashInputWord[29]),
         .Q(\M_reg[0]__0 [253]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][254] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[30]),
+        .CLR(\M[0][254]_i_1_n_0 ),
+        .D(s_hashInputWord[30]),
         .Q(\M_reg[0]__0 [254]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9895,15 +9901,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[31]),
+        .D(s_hashInputWord[31]),
         .Q(\M_reg[0]__0 [255]));
   FDCE #(
     .INIT(1'b0)) 
     \M_reg[0][256] 
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
-        .D(hashInputWord[32]),
+        .CLR(\M[0][256]_i_1_n_0 ),
+        .D(s_hashInputWord[32]),
         .Q(\M_reg[0]__0 [256]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9911,7 +9917,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[33]),
+        .D(s_hashInputWord[33]),
         .Q(\M_reg[0]__0 [257]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9919,7 +9925,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[34]),
+        .D(s_hashInputWord[34]),
         .Q(\M_reg[0]__0 [258]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9927,7 +9933,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[35]),
+        .D(s_hashInputWord[35]),
         .Q(\M_reg[0]__0 [259]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9935,7 +9941,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[36]),
+        .D(s_hashInputWord[36]),
         .Q(\M_reg[0]__0 [260]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9943,7 +9949,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[37]),
+        .D(s_hashInputWord[37]),
         .Q(\M_reg[0]__0 [261]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9951,7 +9957,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[38]),
+        .D(s_hashInputWord[38]),
         .Q(\M_reg[0]__0 [262]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9959,7 +9965,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[39]),
+        .D(s_hashInputWord[39]),
         .Q(\M_reg[0]__0 [263]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9967,7 +9973,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[40]),
+        .D(s_hashInputWord[40]),
         .Q(\M_reg[0]__0 [264]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9975,7 +9981,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[41]),
+        .D(s_hashInputWord[41]),
         .Q(\M_reg[0]__0 [265]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9983,7 +9989,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[42]),
+        .D(s_hashInputWord[42]),
         .Q(\M_reg[0]__0 [266]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9991,7 +9997,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[43]),
+        .D(s_hashInputWord[43]),
         .Q(\M_reg[0]__0 [267]));
   FDCE #(
     .INIT(1'b0)) 
@@ -9999,7 +10005,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[44]),
+        .D(s_hashInputWord[44]),
         .Q(\M_reg[0]__0 [268]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10007,7 +10013,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[45]),
+        .D(s_hashInputWord[45]),
         .Q(\M_reg[0]__0 [269]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10015,7 +10021,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[46]),
+        .D(s_hashInputWord[46]),
         .Q(\M_reg[0]__0 [270]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10023,7 +10029,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[47]),
+        .D(s_hashInputWord[47]),
         .Q(\M_reg[0]__0 [271]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10031,7 +10037,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[48]),
+        .D(s_hashInputWord[48]),
         .Q(\M_reg[0]__0 [272]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10039,7 +10045,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[49]),
+        .D(s_hashInputWord[49]),
         .Q(\M_reg[0]__0 [273]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10047,7 +10053,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[50]),
+        .D(s_hashInputWord[50]),
         .Q(\M_reg[0]__0 [274]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10055,7 +10061,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[51]),
+        .D(s_hashInputWord[51]),
         .Q(\M_reg[0]__0 [275]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10063,7 +10069,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[52]),
+        .D(s_hashInputWord[52]),
         .Q(\M_reg[0]__0 [276]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10071,7 +10077,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[53]),
+        .D(s_hashInputWord[53]),
         .Q(\M_reg[0]__0 [277]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10079,7 +10085,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[54]),
+        .D(s_hashInputWord[54]),
         .Q(\M_reg[0]__0 [278]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10087,7 +10093,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[55]),
+        .D(s_hashInputWord[55]),
         .Q(\M_reg[0]__0 [279]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10095,7 +10101,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[56]),
+        .D(s_hashInputWord[56]),
         .Q(\M_reg[0]__0 [280]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10103,7 +10109,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[57]),
+        .D(s_hashInputWord[57]),
         .Q(\M_reg[0]__0 [281]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10111,7 +10117,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[58]),
+        .D(s_hashInputWord[58]),
         .Q(\M_reg[0]__0 [282]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10119,7 +10125,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[59]),
+        .D(s_hashInputWord[59]),
         .Q(\M_reg[0]__0 [283]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10127,7 +10133,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[60]),
+        .D(s_hashInputWord[60]),
         .Q(\M_reg[0]__0 [284]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10135,7 +10141,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[61]),
+        .D(s_hashInputWord[61]),
         .Q(\M_reg[0]__0 [285]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10143,7 +10149,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[62]),
+        .D(s_hashInputWord[62]),
         .Q(\M_reg[0]__0 [286]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10151,7 +10157,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[63]),
+        .D(s_hashInputWord[63]),
         .Q(\M_reg[0]__0 [287]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10159,7 +10165,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[64]),
+        .D(s_hashInputWord[64]),
         .Q(\M_reg[0]__0 [288]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10167,7 +10173,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[65]),
+        .D(s_hashInputWord[65]),
         .Q(\M_reg[0]__0 [289]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10175,7 +10181,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[66]),
+        .D(s_hashInputWord[66]),
         .Q(\M_reg[0]__0 [290]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10183,7 +10189,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[67]),
+        .D(s_hashInputWord[67]),
         .Q(\M_reg[0]__0 [291]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10191,7 +10197,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[68]),
+        .D(s_hashInputWord[68]),
         .Q(\M_reg[0]__0 [292]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10199,7 +10205,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[69]),
+        .D(s_hashInputWord[69]),
         .Q(\M_reg[0]__0 [293]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10207,7 +10213,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[70]),
+        .D(s_hashInputWord[70]),
         .Q(\M_reg[0]__0 [294]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10215,7 +10221,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[71]),
+        .D(s_hashInputWord[71]),
         .Q(\M_reg[0]__0 [295]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10223,7 +10229,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[72]),
+        .D(s_hashInputWord[72]),
         .Q(\M_reg[0]__0 [296]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10231,7 +10237,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[73]),
+        .D(s_hashInputWord[73]),
         .Q(\M_reg[0]__0 [297]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10239,7 +10245,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[74]),
+        .D(s_hashInputWord[74]),
         .Q(\M_reg[0]__0 [298]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10247,7 +10253,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[75]),
+        .D(s_hashInputWord[75]),
         .Q(\M_reg[0]__0 [299]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10255,7 +10261,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[76]),
+        .D(s_hashInputWord[76]),
         .Q(\M_reg[0]__0 [300]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10263,7 +10269,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[77]),
+        .D(s_hashInputWord[77]),
         .Q(\M_reg[0]__0 [301]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10271,7 +10277,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[78]),
+        .D(s_hashInputWord[78]),
         .Q(\M_reg[0]__0 [302]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10279,7 +10285,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[79]),
+        .D(s_hashInputWord[79]),
         .Q(\M_reg[0]__0 [303]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10287,7 +10293,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[80]),
+        .D(s_hashInputWord[80]),
         .Q(\M_reg[0]__0 [304]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10295,7 +10301,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[81]),
+        .D(s_hashInputWord[81]),
         .Q(\M_reg[0]__0 [305]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10303,7 +10309,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[82]),
+        .D(s_hashInputWord[82]),
         .Q(\M_reg[0]__0 [306]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10311,7 +10317,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[83]),
+        .D(s_hashInputWord[83]),
         .Q(\M_reg[0]__0 [307]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10319,7 +10325,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[84]),
+        .D(s_hashInputWord[84]),
         .Q(\M_reg[0]__0 [308]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10327,7 +10333,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[85]),
+        .D(s_hashInputWord[85]),
         .Q(\M_reg[0]__0 [309]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10335,7 +10341,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[86]),
+        .D(s_hashInputWord[86]),
         .Q(\M_reg[0]__0 [310]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10343,7 +10349,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[87]),
+        .D(s_hashInputWord[87]),
         .Q(\M_reg[0]__0 [311]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10351,7 +10357,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[88]),
+        .D(s_hashInputWord[88]),
         .Q(\M_reg[0]__0 [312]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10359,7 +10365,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[89]),
+        .D(s_hashInputWord[89]),
         .Q(\M_reg[0]__0 [313]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10367,7 +10373,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[90]),
+        .D(s_hashInputWord[90]),
         .Q(\M_reg[0]__0 [314]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10375,7 +10381,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[91]),
+        .D(s_hashInputWord[91]),
         .Q(\M_reg[0]__0 [315]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10383,7 +10389,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[92]),
+        .D(s_hashInputWord[92]),
         .Q(\M_reg[0]__0 [316]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10391,7 +10397,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[93]),
+        .D(s_hashInputWord[93]),
         .Q(\M_reg[0]__0 [317]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10399,7 +10405,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[94]),
+        .D(s_hashInputWord[94]),
         .Q(\M_reg[0]__0 [318]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10407,7 +10413,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[95]),
+        .D(s_hashInputWord[95]),
         .Q(\M_reg[0]__0 [319]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10415,7 +10421,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[96]),
+        .D(s_hashInputWord[96]),
         .Q(\M_reg[0]__0 [320]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10423,7 +10429,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[97]),
+        .D(s_hashInputWord[97]),
         .Q(\M_reg[0]__0 [321]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10431,7 +10437,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[98]),
+        .D(s_hashInputWord[98]),
         .Q(\M_reg[0]__0 [322]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10439,7 +10445,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[99]),
+        .D(s_hashInputWord[99]),
         .Q(\M_reg[0]__0 [323]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10447,7 +10453,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[100]),
+        .D(s_hashInputWord[100]),
         .Q(\M_reg[0]__0 [324]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10455,7 +10461,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[101]),
+        .D(s_hashInputWord[101]),
         .Q(\M_reg[0]__0 [325]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10463,7 +10469,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[102]),
+        .D(s_hashInputWord[102]),
         .Q(\M_reg[0]__0 [326]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10471,7 +10477,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[103]),
+        .D(s_hashInputWord[103]),
         .Q(\M_reg[0]__0 [327]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10479,7 +10485,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[104]),
+        .D(s_hashInputWord[104]),
         .Q(\M_reg[0]__0 [328]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10487,7 +10493,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[105]),
+        .D(s_hashInputWord[105]),
         .Q(\M_reg[0]__0 [329]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10495,7 +10501,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[106]),
+        .D(s_hashInputWord[106]),
         .Q(\M_reg[0]__0 [330]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10503,7 +10509,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[107]),
+        .D(s_hashInputWord[107]),
         .Q(\M_reg[0]__0 [331]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10511,7 +10517,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[108]),
+        .D(s_hashInputWord[108]),
         .Q(\M_reg[0]__0 [332]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10519,7 +10525,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[109]),
+        .D(s_hashInputWord[109]),
         .Q(\M_reg[0]__0 [333]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10527,7 +10533,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[110]),
+        .D(s_hashInputWord[110]),
         .Q(\M_reg[0]__0 [334]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10535,7 +10541,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[111]),
+        .D(s_hashInputWord[111]),
         .Q(\M_reg[0]__0 [335]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10543,7 +10549,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[112]),
+        .D(s_hashInputWord[112]),
         .Q(\M_reg[0]__0 [336]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10551,7 +10557,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[113]),
+        .D(s_hashInputWord[113]),
         .Q(\M_reg[0]__0 [337]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10559,7 +10565,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[114]),
+        .D(s_hashInputWord[114]),
         .Q(\M_reg[0]__0 [338]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10567,7 +10573,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[115]),
+        .D(s_hashInputWord[115]),
         .Q(\M_reg[0]__0 [339]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10575,7 +10581,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[116]),
+        .D(s_hashInputWord[116]),
         .Q(\M_reg[0]__0 [340]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10583,7 +10589,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[117]),
+        .D(s_hashInputWord[117]),
         .Q(\M_reg[0]__0 [341]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10591,7 +10597,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[118]),
+        .D(s_hashInputWord[118]),
         .Q(\M_reg[0]__0 [342]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10599,7 +10605,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[119]),
+        .D(s_hashInputWord[119]),
         .Q(\M_reg[0]__0 [343]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10607,7 +10613,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[120]),
+        .D(s_hashInputWord[120]),
         .Q(\M_reg[0]__0 [344]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10615,7 +10621,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[121]),
+        .D(s_hashInputWord[121]),
         .Q(\M_reg[0]__0 [345]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10623,7 +10629,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[122]),
+        .D(s_hashInputWord[122]),
         .Q(\M_reg[0]__0 [346]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10631,7 +10637,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[123]),
+        .D(s_hashInputWord[123]),
         .Q(\M_reg[0]__0 [347]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10639,7 +10645,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[124]),
+        .D(s_hashInputWord[124]),
         .Q(\M_reg[0]__0 [348]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10647,7 +10653,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[125]),
+        .D(s_hashInputWord[125]),
         .Q(\M_reg[0]__0 [349]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10655,7 +10661,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[126]),
+        .D(s_hashInputWord[126]),
         .Q(\M_reg[0]__0 [350]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10663,7 +10669,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[127]),
+        .D(s_hashInputWord[127]),
         .Q(\M_reg[0]__0 [351]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10671,7 +10677,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[128]),
+        .D(s_hashInputWord[128]),
         .Q(\M_reg[0]__0 [352]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10679,7 +10685,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[129]),
+        .D(s_hashInputWord[129]),
         .Q(\M_reg[0]__0 [353]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10687,7 +10693,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[130]),
+        .D(s_hashInputWord[130]),
         .Q(\M_reg[0]__0 [354]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10695,7 +10701,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[131]),
+        .D(s_hashInputWord[131]),
         .Q(\M_reg[0]__0 [355]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10703,7 +10709,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[132]),
+        .D(s_hashInputWord[132]),
         .Q(\M_reg[0]__0 [356]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10711,7 +10717,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[133]),
+        .D(s_hashInputWord[133]),
         .Q(\M_reg[0]__0 [357]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10719,7 +10725,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[134]),
+        .D(s_hashInputWord[134]),
         .Q(\M_reg[0]__0 [358]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10727,7 +10733,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[135]),
+        .D(s_hashInputWord[135]),
         .Q(\M_reg[0]__0 [359]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10735,7 +10741,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[136]),
+        .D(s_hashInputWord[136]),
         .Q(\M_reg[0]__0 [360]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10743,7 +10749,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[137]),
+        .D(s_hashInputWord[137]),
         .Q(\M_reg[0]__0 [361]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10751,7 +10757,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[138]),
+        .D(s_hashInputWord[138]),
         .Q(\M_reg[0]__0 [362]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10759,7 +10765,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[139]),
+        .D(s_hashInputWord[139]),
         .Q(\M_reg[0]__0 [363]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10767,7 +10773,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[140]),
+        .D(s_hashInputWord[140]),
         .Q(\M_reg[0]__0 [364]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10775,7 +10781,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[141]),
+        .D(s_hashInputWord[141]),
         .Q(\M_reg[0]__0 [365]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10783,7 +10789,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[142]),
+        .D(s_hashInputWord[142]),
         .Q(\M_reg[0]__0 [366]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10791,7 +10797,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[143]),
+        .D(s_hashInputWord[143]),
         .Q(\M_reg[0]__0 [367]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10799,7 +10805,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[144]),
+        .D(s_hashInputWord[144]),
         .Q(\M_reg[0]__0 [368]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10807,7 +10813,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[145]),
+        .D(s_hashInputWord[145]),
         .Q(\M_reg[0]__0 [369]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10815,7 +10821,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[146]),
+        .D(s_hashInputWord[146]),
         .Q(\M_reg[0]__0 [370]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10823,7 +10829,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[147]),
+        .D(s_hashInputWord[147]),
         .Q(\M_reg[0]__0 [371]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10831,7 +10837,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[148]),
+        .D(s_hashInputWord[148]),
         .Q(\M_reg[0]__0 [372]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10839,7 +10845,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[149]),
+        .D(s_hashInputWord[149]),
         .Q(\M_reg[0]__0 [373]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10847,7 +10853,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[150]),
+        .D(s_hashInputWord[150]),
         .Q(\M_reg[0]__0 [374]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10855,7 +10861,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[151]),
+        .D(s_hashInputWord[151]),
         .Q(\M_reg[0]__0 [375]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10863,7 +10869,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[152]),
+        .D(s_hashInputWord[152]),
         .Q(\M_reg[0]__0 [376]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10871,7 +10877,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[153]),
+        .D(s_hashInputWord[153]),
         .Q(\M_reg[0]__0 [377]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10879,7 +10885,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[154]),
+        .D(s_hashInputWord[154]),
         .Q(\M_reg[0]__0 [378]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10887,7 +10893,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[155]),
+        .D(s_hashInputWord[155]),
         .Q(\M_reg[0]__0 [379]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10895,7 +10901,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[156]),
+        .D(s_hashInputWord[156]),
         .Q(\M_reg[0]__0 [380]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10903,7 +10909,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[157]),
+        .D(s_hashInputWord[157]),
         .Q(\M_reg[0]__0 [381]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10911,7 +10917,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[158]),
+        .D(s_hashInputWord[158]),
         .Q(\M_reg[0]__0 [382]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10919,7 +10925,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[159]),
+        .D(s_hashInputWord[159]),
         .Q(\M_reg[0]__0 [383]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10927,7 +10933,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[160]),
+        .D(s_hashInputWord[160]),
         .Q(\M_reg[0]__0 [384]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10935,7 +10941,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[161]),
+        .D(s_hashInputWord[161]),
         .Q(\M_reg[0]__0 [385]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10943,7 +10949,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[162]),
+        .D(s_hashInputWord[162]),
         .Q(\M_reg[0]__0 [386]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10951,7 +10957,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[163]),
+        .D(s_hashInputWord[163]),
         .Q(\M_reg[0]__0 [387]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10959,7 +10965,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[164]),
+        .D(s_hashInputWord[164]),
         .Q(\M_reg[0]__0 [388]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10967,7 +10973,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[165]),
+        .D(s_hashInputWord[165]),
         .Q(\M_reg[0]__0 [389]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10975,7 +10981,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[166]),
+        .D(s_hashInputWord[166]),
         .Q(\M_reg[0]__0 [390]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10983,7 +10989,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[167]),
+        .D(s_hashInputWord[167]),
         .Q(\M_reg[0]__0 [391]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10991,7 +10997,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[168]),
+        .D(s_hashInputWord[168]),
         .Q(\M_reg[0]__0 [392]));
   FDCE #(
     .INIT(1'b0)) 
@@ -10999,7 +11005,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[169]),
+        .D(s_hashInputWord[169]),
         .Q(\M_reg[0]__0 [393]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11007,7 +11013,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[170]),
+        .D(s_hashInputWord[170]),
         .Q(\M_reg[0]__0 [394]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11015,7 +11021,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[171]),
+        .D(s_hashInputWord[171]),
         .Q(\M_reg[0]__0 [395]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11023,7 +11029,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[172]),
+        .D(s_hashInputWord[172]),
         .Q(\M_reg[0]__0 [396]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11031,7 +11037,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[173]),
+        .D(s_hashInputWord[173]),
         .Q(\M_reg[0]__0 [397]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11039,7 +11045,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[174]),
+        .D(s_hashInputWord[174]),
         .Q(\M_reg[0]__0 [398]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11047,7 +11053,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[175]),
+        .D(s_hashInputWord[175]),
         .Q(\M_reg[0]__0 [399]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11055,7 +11061,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[176]),
+        .D(s_hashInputWord[176]),
         .Q(\M_reg[0]__0 [400]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11063,7 +11069,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[177]),
+        .D(s_hashInputWord[177]),
         .Q(\M_reg[0]__0 [401]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11071,7 +11077,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[178]),
+        .D(s_hashInputWord[178]),
         .Q(\M_reg[0]__0 [402]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11079,7 +11085,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[179]),
+        .D(s_hashInputWord[179]),
         .Q(\M_reg[0]__0 [403]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11087,7 +11093,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[180]),
+        .D(s_hashInputWord[180]),
         .Q(\M_reg[0]__0 [404]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11095,7 +11101,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[181]),
+        .D(s_hashInputWord[181]),
         .Q(\M_reg[0]__0 [405]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11103,7 +11109,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[182]),
+        .D(s_hashInputWord[182]),
         .Q(\M_reg[0]__0 [406]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11111,7 +11117,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[183]),
+        .D(s_hashInputWord[183]),
         .Q(\M_reg[0]__0 [407]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11119,7 +11125,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[184]),
+        .D(s_hashInputWord[184]),
         .Q(\M_reg[0]__0 [408]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11127,7 +11133,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[185]),
+        .D(s_hashInputWord[185]),
         .Q(\M_reg[0]__0 [409]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11135,7 +11141,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[186]),
+        .D(s_hashInputWord[186]),
         .Q(\M_reg[0]__0 [410]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11143,7 +11149,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[187]),
+        .D(s_hashInputWord[187]),
         .Q(\M_reg[0]__0 [411]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11151,7 +11157,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[188]),
+        .D(s_hashInputWord[188]),
         .Q(\M_reg[0]__0 [412]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11159,7 +11165,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[189]),
+        .D(s_hashInputWord[189]),
         .Q(\M_reg[0]__0 [413]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11167,7 +11173,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[190]),
+        .D(s_hashInputWord[190]),
         .Q(\M_reg[0]__0 [414]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11175,7 +11181,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[191]),
+        .D(s_hashInputWord[191]),
         .Q(\M_reg[0]__0 [415]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11183,7 +11189,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[192]),
+        .D(s_hashInputWord[192]),
         .Q(\M_reg[0]__0 [416]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11191,7 +11197,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[193]),
+        .D(s_hashInputWord[193]),
         .Q(\M_reg[0]__0 [417]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11199,7 +11205,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[194]),
+        .D(s_hashInputWord[194]),
         .Q(\M_reg[0]__0 [418]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11207,7 +11213,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[195]),
+        .D(s_hashInputWord[195]),
         .Q(\M_reg[0]__0 [419]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11215,7 +11221,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[196]),
+        .D(s_hashInputWord[196]),
         .Q(\M_reg[0]__0 [420]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11223,7 +11229,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[197]),
+        .D(s_hashInputWord[197]),
         .Q(\M_reg[0]__0 [421]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11231,7 +11237,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[198]),
+        .D(s_hashInputWord[198]),
         .Q(\M_reg[0]__0 [422]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11239,7 +11245,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[199]),
+        .D(s_hashInputWord[199]),
         .Q(\M_reg[0]__0 [423]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11247,7 +11253,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[200]),
+        .D(s_hashInputWord[200]),
         .Q(\M_reg[0]__0 [424]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11255,7 +11261,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[201]),
+        .D(s_hashInputWord[201]),
         .Q(\M_reg[0]__0 [425]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11263,7 +11269,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[202]),
+        .D(s_hashInputWord[202]),
         .Q(\M_reg[0]__0 [426]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11271,7 +11277,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[203]),
+        .D(s_hashInputWord[203]),
         .Q(\M_reg[0]__0 [427]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11279,7 +11285,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[204]),
+        .D(s_hashInputWord[204]),
         .Q(\M_reg[0]__0 [428]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11287,7 +11293,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[205]),
+        .D(s_hashInputWord[205]),
         .Q(\M_reg[0]__0 [429]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11295,7 +11301,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[206]),
+        .D(s_hashInputWord[206]),
         .Q(\M_reg[0]__0 [430]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11303,7 +11309,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[207]),
+        .D(s_hashInputWord[207]),
         .Q(\M_reg[0]__0 [431]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11311,7 +11317,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[208]),
+        .D(s_hashInputWord[208]),
         .Q(\M_reg[0]__0 [432]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11319,7 +11325,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[209]),
+        .D(s_hashInputWord[209]),
         .Q(\M_reg[0]__0 [433]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11327,7 +11333,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[210]),
+        .D(s_hashInputWord[210]),
         .Q(\M_reg[0]__0 [434]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11335,7 +11341,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[211]),
+        .D(s_hashInputWord[211]),
         .Q(\M_reg[0]__0 [435]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11343,7 +11349,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[212]),
+        .D(s_hashInputWord[212]),
         .Q(\M_reg[0]__0 [436]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11351,7 +11357,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[213]),
+        .D(s_hashInputWord[213]),
         .Q(\M_reg[0]__0 [437]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11359,7 +11365,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[214]),
+        .D(s_hashInputWord[214]),
         .Q(\M_reg[0]__0 [438]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11367,7 +11373,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[215]),
+        .D(s_hashInputWord[215]),
         .Q(\M_reg[0]__0 [439]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11375,7 +11381,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[216]),
+        .D(s_hashInputWord[216]),
         .Q(\M_reg[0]__0 [440]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11383,7 +11389,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[217]),
+        .D(s_hashInputWord[217]),
         .Q(\M_reg[0]__0 [441]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11391,7 +11397,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[218]),
+        .D(s_hashInputWord[218]),
         .Q(\M_reg[0]__0 [442]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11399,7 +11405,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[219]),
+        .D(s_hashInputWord[219]),
         .Q(\M_reg[0]__0 [443]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11407,7 +11413,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[220]),
+        .D(s_hashInputWord[220]),
         .Q(\M_reg[0]__0 [444]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11415,7 +11421,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[221]),
+        .D(s_hashInputWord[221]),
         .Q(\M_reg[0]__0 [445]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11423,7 +11429,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[222]),
+        .D(s_hashInputWord[222]),
         .Q(\M_reg[0]__0 [446]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11431,7 +11437,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[223]),
+        .D(s_hashInputWord[223]),
         .Q(\M_reg[0]__0 [447]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11439,7 +11445,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[224]),
+        .D(s_hashInputWord[224]),
         .Q(\M_reg[0]__0 [448]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11447,7 +11453,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[225]),
+        .D(s_hashInputWord[225]),
         .Q(\M_reg[0]__0 [449]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11455,7 +11461,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[226]),
+        .D(s_hashInputWord[226]),
         .Q(\M_reg[0]__0 [450]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11463,7 +11469,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[227]),
+        .D(s_hashInputWord[227]),
         .Q(\M_reg[0]__0 [451]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11471,7 +11477,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[228]),
+        .D(s_hashInputWord[228]),
         .Q(\M_reg[0]__0 [452]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11479,7 +11485,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[229]),
+        .D(s_hashInputWord[229]),
         .Q(\M_reg[0]__0 [453]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11487,7 +11493,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[230]),
+        .D(s_hashInputWord[230]),
         .Q(\M_reg[0]__0 [454]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11495,7 +11501,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[231]),
+        .D(s_hashInputWord[231]),
         .Q(\M_reg[0]__0 [455]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11503,7 +11509,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[232]),
+        .D(s_hashInputWord[232]),
         .Q(\M_reg[0]__0 [456]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11511,7 +11517,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[233]),
+        .D(s_hashInputWord[233]),
         .Q(\M_reg[0]__0 [457]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11519,7 +11525,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[234]),
+        .D(s_hashInputWord[234]),
         .Q(\M_reg[0]__0 [458]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11527,7 +11533,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[235]),
+        .D(s_hashInputWord[235]),
         .Q(\M_reg[0]__0 [459]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11535,7 +11541,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[236]),
+        .D(s_hashInputWord[236]),
         .Q(\M_reg[0]__0 [460]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11543,7 +11549,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[237]),
+        .D(s_hashInputWord[237]),
         .Q(\M_reg[0]__0 [461]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11551,7 +11557,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[238]),
+        .D(s_hashInputWord[238]),
         .Q(\M_reg[0]__0 [462]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11559,7 +11565,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[239]),
+        .D(s_hashInputWord[239]),
         .Q(\M_reg[0]__0 [463]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11567,7 +11573,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[240]),
+        .D(s_hashInputWord[240]),
         .Q(\M_reg[0]__0 [464]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11575,7 +11581,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[241]),
+        .D(s_hashInputWord[241]),
         .Q(\M_reg[0]__0 [465]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11583,7 +11589,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[242]),
+        .D(s_hashInputWord[242]),
         .Q(\M_reg[0]__0 [466]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11591,7 +11597,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[243]),
+        .D(s_hashInputWord[243]),
         .Q(\M_reg[0]__0 [467]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11599,7 +11605,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[244]),
+        .D(s_hashInputWord[244]),
         .Q(\M_reg[0]__0 [468]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11607,7 +11613,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[245]),
+        .D(s_hashInputWord[245]),
         .Q(\M_reg[0]__0 [469]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11615,7 +11621,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[246]),
+        .D(s_hashInputWord[246]),
         .Q(\M_reg[0]__0 [470]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11623,7 +11629,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][471]_i_1_n_0 ),
-        .D(hashInputWord[247]),
+        .D(s_hashInputWord[247]),
         .Q(\M_reg[0]__0 [471]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11631,7 +11637,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[248]),
+        .D(s_hashInputWord[248]),
         .Q(\M_reg[0]__0 [472]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11639,7 +11645,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[249]),
+        .D(s_hashInputWord[249]),
         .Q(\M_reg[0]__0 [473]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11647,7 +11653,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[250]),
+        .D(s_hashInputWord[250]),
         .Q(\M_reg[0]__0 [474]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11655,7 +11661,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[251]),
+        .D(s_hashInputWord[251]),
         .Q(\M_reg[0]__0 [475]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11663,7 +11669,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[252]),
+        .D(s_hashInputWord[252]),
         .Q(\M_reg[0]__0 [476]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11671,7 +11677,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[253]),
+        .D(s_hashInputWord[253]),
         .Q(\M_reg[0]__0 [477]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11679,7 +11685,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[254]),
+        .D(s_hashInputWord[254]),
         .Q(\M_reg[0]__0 [478]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11687,7 +11693,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[255]),
+        .D(s_hashInputWord[255]),
         .Q(\M_reg[0]__0 [479]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11695,7 +11701,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[256]),
+        .D(s_hashInputWord[256]),
         .Q(\M_reg[0]__0 [480]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11703,7 +11709,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[257]),
+        .D(s_hashInputWord[257]),
         .Q(\M_reg[0]__0 [481]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11711,7 +11717,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[258]),
+        .D(s_hashInputWord[258]),
         .Q(\M_reg[0]__0 [482]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11719,7 +11725,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[259]),
+        .D(s_hashInputWord[259]),
         .Q(\M_reg[0]__0 [483]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11727,7 +11733,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[260]),
+        .D(s_hashInputWord[260]),
         .Q(\M_reg[0]__0 [484]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11735,7 +11741,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[261]),
+        .D(s_hashInputWord[261]),
         .Q(\M_reg[0]__0 [485]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11743,7 +11749,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[262]),
+        .D(s_hashInputWord[262]),
         .Q(\M_reg[0]__0 [486]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11751,7 +11757,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[263]),
+        .D(s_hashInputWord[263]),
         .Q(\M_reg[0]__0 [487]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11759,7 +11765,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[264]),
+        .D(s_hashInputWord[264]),
         .Q(\M_reg[0]__0 [488]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11767,7 +11773,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[265]),
+        .D(s_hashInputWord[265]),
         .Q(\M_reg[0]__0 [489]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11775,7 +11781,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[266]),
+        .D(s_hashInputWord[266]),
         .Q(\M_reg[0]__0 [490]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11783,7 +11789,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[267]),
+        .D(s_hashInputWord[267]),
         .Q(\M_reg[0]__0 [491]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11791,7 +11797,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[268]),
+        .D(s_hashInputWord[268]),
         .Q(\M_reg[0]__0 [492]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11799,7 +11805,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[269]),
+        .D(s_hashInputWord[269]),
         .Q(\M_reg[0]__0 [493]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11807,7 +11813,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[270]),
+        .D(s_hashInputWord[270]),
         .Q(\M_reg[0]__0 [494]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11815,7 +11821,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[271]),
+        .D(s_hashInputWord[271]),
         .Q(\M_reg[0]__0 [495]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11823,7 +11829,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[272]),
+        .D(s_hashInputWord[272]),
         .Q(\M_reg[0]__0 [496]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11831,7 +11837,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[273]),
+        .D(s_hashInputWord[273]),
         .Q(\M_reg[0]__0 [497]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11839,7 +11845,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[274]),
+        .D(s_hashInputWord[274]),
         .Q(\M_reg[0]__0 [498]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11847,7 +11853,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[275]),
+        .D(s_hashInputWord[275]),
         .Q(\M_reg[0]__0 [499]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11855,7 +11861,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[276]),
+        .D(s_hashInputWord[276]),
         .Q(\M_reg[0]__0 [500]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11863,7 +11869,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[277]),
+        .D(s_hashInputWord[277]),
         .Q(\M_reg[0]__0 [501]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11871,7 +11877,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[278]),
+        .D(s_hashInputWord[278]),
         .Q(\M_reg[0]__0 [502]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11879,7 +11885,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[279]),
+        .D(s_hashInputWord[279]),
         .Q(\M_reg[0]__0 [503]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11887,7 +11893,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[280]),
+        .D(s_hashInputWord[280]),
         .Q(\M_reg[0]__0 [504]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11895,7 +11901,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[281]),
+        .D(s_hashInputWord[281]),
         .Q(\M_reg[0]__0 [505]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11903,7 +11909,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[282]),
+        .D(s_hashInputWord[282]),
         .Q(\M_reg[0]__0 [506]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11911,7 +11917,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[283]),
+        .D(s_hashInputWord[283]),
         .Q(\M_reg[0]__0 [507]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11919,7 +11925,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[284]),
+        .D(s_hashInputWord[284]),
         .Q(\M_reg[0]__0 [508]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11927,7 +11933,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[285]),
+        .D(s_hashInputWord[285]),
         .Q(\M_reg[0]__0 [509]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11935,7 +11941,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][510]_i_1_n_0 ),
-        .D(hashInputWord[286]),
+        .D(s_hashInputWord[286]),
         .Q(\M_reg[0]__0 [510]));
   FDCE #(
     .INIT(1'b0)) 
@@ -11943,15 +11949,15 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(\M[0][511]_i_1_n_0 ),
         .CLR(\M[0][511]_i_2_n_0 ),
-        .D(hashInputWord[287]),
+        .D(s_hashInputWord[287]),
         .Q(\M_reg[0]__0 [511]));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT4 #(
     .INIT(16'hFF10)) 
     \N[0]_i_1 
        (.I0(padded),
         .I1(ready_reg_n_0),
-        .I2(mEnable),
+        .I2(s_enable_reg_n_0),
         .I3(N),
         .O(\N[0]_i_1_n_0 ));
   FDCE #(
@@ -11959,7 +11965,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \N_reg[0] 
        (.C(s00_axis_aclk),
         .CE(1'b1),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\N[0]_i_1_n_0 ),
         .Q(N));
   (* METHODOLOGY_DRC_VIOS = "" *) 
@@ -11985,7 +11991,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_0_0_i_16_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[0]),
         .O(W_reg_0_63_0_0_i_1_n_0));
   LUT1 #(
@@ -12385,7 +12391,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(4'h2)) 
     W_reg_0_63_0_0_i_2
        (.I0(s00_axis_aresetn),
-        .I1(update),
+        .I1(s_update_reg_n_0),
         .O(p_0_out));
   LUT6 #(
     .INIT(64'hAEAAAEAEAEAAAAAA)) 
@@ -12818,7 +12824,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(t[17]),
         .I1(t[16]),
         .O(W_reg_0_63_0_0_i_76_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_0_0_i_77
@@ -12828,7 +12834,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[20]),
         .I4(x7_out[5]),
         .O(W_reg_0_63_0_0_i_77_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_0_0_i_78
@@ -12852,7 +12858,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\t_reg_n_0_[0] ),
         .I2(\t_reg_n_0_[1] ),
         .O(W_reg_0_63_0_0_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_0_0_i_80
@@ -12862,7 +12868,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[21]),
         .I4(x7_out[6]),
         .O(W_reg_0_63_0_0_i_80_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_0_0_i_81
@@ -12872,7 +12878,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[9]),
         .I4(p_9_out15_in[2]),
         .O(W_reg_0_63_0_0_i_81_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_0_0_i_82
@@ -13016,7 +13022,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_10_10_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[10]),
         .O(W_reg_0_63_10_10_i_1_n_0));
   LUT6 #(
@@ -13092,7 +13098,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_11_11_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[11]),
         .O(W_reg_0_63_11_11_i_1_n_0));
   LUT6 #(
@@ -13168,7 +13174,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_12_12_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[12]),
         .O(W_reg_0_63_12_12_i_1_n_0));
   LUT5 #(
@@ -13229,7 +13235,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(x[29]),
         .I5(W_reg_0_63_12_12_i_21_n_0),
         .O(W_reg_0_63_12_12_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_12_12_i_16
@@ -13239,7 +13245,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[0]),
         .I4(x7_out[17]),
         .O(W_reg_0_63_12_12_i_16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_12_12_i_17
@@ -13249,7 +13255,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[20]),
         .I4(p_9_out15_in[13]),
         .O(W_reg_0_63_12_12_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_12_12_i_18
@@ -13259,7 +13265,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[31]),
         .I4(x7_out[16]),
         .O(W_reg_0_63_12_12_i_18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_12_12_i_19
@@ -13279,7 +13285,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(p_33_in),
         .I5(p_10_out[12]),
         .O(W_reg_0_63_12_12_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_12_12_i_20
@@ -13289,7 +13295,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[30]),
         .I4(x7_out[15]),
         .O(W_reg_0_63_12_12_i_20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_12_12_i_21
@@ -13299,7 +13305,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[18]),
         .I4(p_9_out15_in[11]),
         .O(W_reg_0_63_12_12_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_12_12_i_22
@@ -13309,7 +13315,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[1]),
         .I4(x7_out[18]),
         .O(W_reg_0_63_12_12_i_22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_12_12_i_23
@@ -13407,7 +13413,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_13_13_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[13]),
         .O(W_reg_0_63_13_13_i_1_n_0));
   LUT6 #(
@@ -13483,7 +13489,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_14_14_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[14]),
         .O(W_reg_0_63_14_14_i_1_n_0));
   LUT6 #(
@@ -13559,7 +13565,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_15_15_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[15]),
         .O(W_reg_0_63_15_15_i_1_n_0));
   LUT6 #(
@@ -13635,7 +13641,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_16_16_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[16]),
         .O(W_reg_0_63_16_16_i_1_n_0));
   LUT5 #(
@@ -13696,7 +13702,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(x[1]),
         .I5(W_reg_0_63_16_16_i_21_n_0),
         .O(W_reg_0_63_16_16_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_16_16_i_16
@@ -13706,7 +13712,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[4]),
         .I4(x7_out[21]),
         .O(W_reg_0_63_16_16_i_16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_16_16_i_17
@@ -13716,7 +13722,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[24]),
         .I4(p_9_out15_in[17]),
         .O(W_reg_0_63_16_16_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_16_16_i_18
@@ -13726,7 +13732,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[3]),
         .I4(x7_out[20]),
         .O(W_reg_0_63_16_16_i_18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_16_16_i_19
@@ -13746,7 +13752,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(p_33_in),
         .I5(p_10_out[16]),
         .O(W_reg_0_63_16_16_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_16_16_i_20
@@ -13756,7 +13762,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[2]),
         .I4(x7_out[19]),
         .O(W_reg_0_63_16_16_i_20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_16_16_i_21
@@ -13766,7 +13772,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[22]),
         .I4(p_9_out15_in[15]),
         .O(W_reg_0_63_16_16_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_16_16_i_22
@@ -13776,7 +13782,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[5]),
         .I4(x7_out[22]),
         .O(W_reg_0_63_16_16_i_22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_16_16_i_23
@@ -13874,7 +13880,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_17_17_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[17]),
         .O(W_reg_0_63_17_17_i_1_n_0));
   LUT6 #(
@@ -13950,7 +13956,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_18_18_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[18]),
         .O(W_reg_0_63_18_18_i_1_n_0));
   LUT6 #(
@@ -14026,7 +14032,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_19_19_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[19]),
         .O(W_reg_0_63_19_19_i_1_n_0));
   LUT6 #(
@@ -14102,7 +14108,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_1_1_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[1]),
         .O(W_reg_0_63_1_1_i_1_n_0));
   LUT6 #(
@@ -14178,7 +14184,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_20_20_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[20]),
         .O(W_reg_0_63_20_20_i_1_n_0));
   LUT5 #(
@@ -14239,7 +14245,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(x[5]),
         .I5(W_reg_0_63_20_20_i_21_n_0),
         .O(W_reg_0_63_20_20_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_20_20_i_16
@@ -14249,7 +14255,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[8]),
         .I4(x7_out[25]),
         .O(W_reg_0_63_20_20_i_16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_20_20_i_17
@@ -14259,7 +14265,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[28]),
         .I4(p_9_out15_in[21]),
         .O(W_reg_0_63_20_20_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_20_20_i_18
@@ -14269,7 +14275,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[7]),
         .I4(x7_out[24]),
         .O(W_reg_0_63_20_20_i_18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_20_20_i_19
@@ -14289,7 +14295,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(p_33_in),
         .I5(p_10_out[20]),
         .O(W_reg_0_63_20_20_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_20_20_i_20
@@ -14299,7 +14305,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[6]),
         .I4(x7_out[23]),
         .O(W_reg_0_63_20_20_i_20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_20_20_i_21
@@ -14309,7 +14315,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[26]),
         .I4(p_9_out15_in[19]),
         .O(W_reg_0_63_20_20_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_20_20_i_22
@@ -14319,7 +14325,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[9]),
         .I4(x7_out[26]),
         .O(W_reg_0_63_20_20_i_22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_20_20_i_23
@@ -14417,7 +14423,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_21_21_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[21]),
         .O(W_reg_0_63_21_21_i_1_n_0));
   LUT6 #(
@@ -14493,7 +14499,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_22_22_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[22]),
         .O(W_reg_0_63_22_22_i_1_n_0));
   LUT6 #(
@@ -14569,7 +14575,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_23_23_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[23]),
         .O(W_reg_0_63_23_23_i_1_n_0));
   LUT6 #(
@@ -14645,7 +14651,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_24_24_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[24]),
         .O(W_reg_0_63_24_24_i_1_n_0));
   (* HLUTNM = "lutpair2" *) 
@@ -14706,7 +14712,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(W_reg_0_63_24_24_i_21_n_0),
         .I4(W_reg_0_63_24_24_i_11_n_0),
         .O(W_reg_0_63_24_24_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_24_24_i_16
@@ -14716,7 +14722,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[12]),
         .I4(x7_out[29]),
         .O(W_reg_0_63_24_24_i_16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_24_24_i_17
@@ -14726,7 +14732,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[0]),
         .I4(p_9_out15_in[25]),
         .O(W_reg_0_63_24_24_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_24_24_i_18
@@ -14736,7 +14742,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[11]),
         .I4(x7_out[28]),
         .O(W_reg_0_63_24_24_i_18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_24_24_i_19
@@ -14756,7 +14762,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(p_33_in),
         .I5(p_10_out[24]),
         .O(W_reg_0_63_24_24_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_24_24_i_20
@@ -14766,7 +14772,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[10]),
         .I4(x7_out[27]),
         .O(W_reg_0_63_24_24_i_20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_24_24_i_21
@@ -14776,7 +14782,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[30]),
         .I4(p_9_out15_in[23]),
         .O(W_reg_0_63_24_24_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_24_24_i_22
@@ -14786,7 +14792,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[13]),
         .I4(x7_out[30]),
         .O(W_reg_0_63_24_24_i_22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_24_24_i_23
@@ -14884,7 +14890,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_25_25_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[25]),
         .O(W_reg_0_63_25_25_i_1_n_0));
   LUT6 #(
@@ -14960,7 +14966,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_26_26_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[26]),
         .O(W_reg_0_63_26_26_i_1_n_0));
   LUT6 #(
@@ -15036,7 +15042,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_27_27_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[27]),
         .O(W_reg_0_63_27_27_i_1_n_0));
   LUT6 #(
@@ -15112,7 +15118,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_28_28_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[28]),
         .O(W_reg_0_63_28_28_i_1_n_0));
   (* HLUTNM = "lutpair5" *) 
@@ -15163,7 +15169,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(W_reg_0_63_28_28_i_18_n_0),
         .I4(W_reg_0_63_28_28_i_10_n_0),
         .O(W_reg_0_63_28_28_i_14_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     W_reg_0_63_28_28_i_15
@@ -15172,7 +15178,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I2(x7_out[4]),
         .I3(x7_out[15]),
         .O(W_reg_0_63_28_28_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_28_28_i_16
@@ -15182,7 +15188,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[3]),
         .I4(p_9_out15_in[28]),
         .O(W_reg_0_63_28_28_i_16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_28_28_i_17
@@ -15192,7 +15198,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[14]),
         .I4(x7_out[31]),
         .O(W_reg_0_63_28_28_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_28_28_i_18
@@ -15202,7 +15208,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[2]),
         .I4(p_9_out15_in[27]),
         .O(W_reg_0_63_28_28_i_18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT4 #(
     .INIT(16'hBE28)) 
     W_reg_0_63_28_28_i_19
@@ -15237,14 +15243,14 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(x[18]),
         .I5(x[16]),
         .O(W_reg_0_63_28_28_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT2 #(
     .INIT(4'h6)) 
     W_reg_0_63_28_28_i_22
        (.I0(x7_out[5]),
         .I1(x7_out[16]),
         .O(sigma0[30]));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     W_reg_0_63_28_28_i_23
@@ -15341,7 +15347,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_29_29_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[29]),
         .O(W_reg_0_63_29_29_i_1_n_0));
   LUT6 #(
@@ -15417,7 +15423,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_2_2_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[2]),
         .O(W_reg_0_63_2_2_i_1_n_0));
   LUT6 #(
@@ -15493,7 +15499,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_30_30_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[30]),
         .O(W_reg_0_63_30_30_i_1_n_0));
   LUT6 #(
@@ -15569,7 +15575,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_31_31_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[31]),
         .O(W_reg_0_63_31_31_i_1_n_0));
   LUT6 #(
@@ -15644,7 +15650,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_3_3_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[3]),
         .O(W_reg_0_63_3_3_i_1_n_0));
   LUT6 #(
@@ -15720,7 +15726,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_4_4_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[4]),
         .O(W_reg_0_63_4_4_i_1_n_0));
   LUT5 #(
@@ -15781,7 +15787,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(x[21]),
         .I5(W_reg_0_63_4_4_i_21_n_0),
         .O(W_reg_0_63_4_4_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_4_4_i_16
@@ -15791,7 +15797,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[24]),
         .I4(x7_out[9]),
         .O(W_reg_0_63_4_4_i_16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_4_4_i_17
@@ -15801,7 +15807,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[12]),
         .I4(p_9_out15_in[5]),
         .O(W_reg_0_63_4_4_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_4_4_i_18
@@ -15811,7 +15817,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[23]),
         .I4(x7_out[8]),
         .O(W_reg_0_63_4_4_i_18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_4_4_i_19
@@ -15831,7 +15837,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(p_33_in),
         .I5(p_10_out[4]),
         .O(W_reg_0_63_4_4_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_4_4_i_20
@@ -15841,7 +15847,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[22]),
         .I4(x7_out[7]),
         .O(W_reg_0_63_4_4_i_20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_4_4_i_21
@@ -15851,7 +15857,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[10]),
         .I4(p_9_out15_in[3]),
         .O(W_reg_0_63_4_4_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_4_4_i_22
@@ -15861,7 +15867,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[25]),
         .I4(x7_out[10]),
         .O(W_reg_0_63_4_4_i_22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_4_4_i_23
@@ -15959,7 +15965,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_5_5_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[5]),
         .O(W_reg_0_63_5_5_i_1_n_0));
   LUT6 #(
@@ -16034,7 +16040,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_6_6_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[6]),
         .O(W_reg_0_63_6_6_i_1_n_0));
   LUT6 #(
@@ -16110,7 +16116,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_7_7_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[7]),
         .O(W_reg_0_63_7_7_i_1_n_0));
   LUT6 #(
@@ -16186,7 +16192,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_8_8_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[8]),
         .O(W_reg_0_63_8_8_i_1_n_0));
   LUT5 #(
@@ -16247,7 +16253,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(x[25]),
         .I5(W_reg_0_63_8_8_i_21_n_0),
         .O(W_reg_0_63_8_8_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_8_8_i_16
@@ -16257,7 +16263,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[28]),
         .I4(x7_out[13]),
         .O(W_reg_0_63_8_8_i_16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_8_8_i_17
@@ -16267,7 +16273,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[16]),
         .I4(p_9_out15_in[9]),
         .O(W_reg_0_63_8_8_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_8_8_i_18
@@ -16277,7 +16283,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[27]),
         .I4(x7_out[12]),
         .O(W_reg_0_63_8_8_i_18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_8_8_i_19
@@ -16297,7 +16303,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(p_33_in),
         .I5(p_10_out[8]),
         .O(W_reg_0_63_8_8_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_8_8_i_20
@@ -16307,7 +16313,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[26]),
         .I4(x7_out[11]),
         .O(W_reg_0_63_8_8_i_20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_8_8_i_21
@@ -16317,7 +16323,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[14]),
         .I4(p_9_out15_in[7]),
         .O(W_reg_0_63_8_8_i_21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     W_reg_0_63_8_8_i_22
@@ -16327,7 +16333,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(x7_out[29]),
         .I4(x7_out[14]),
         .O(W_reg_0_63_8_8_i_22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'hEBBE8228)) 
     W_reg_0_63_8_8_i_23
@@ -16424,7 +16430,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(W_reg_0_63_9_9_i_2_n_0),
         .I3(W_reg_0_63_0_0_i_17_n_0),
-        .I4(mEnable),
+        .I4(s_enable_reg_n_0),
         .I5(p_2_out[9]),
         .O(W_reg_0_63_9_9_i_1_n_0));
   LUT6 #(
@@ -17067,7 +17073,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .DOD(NLW_W_reg_r6_0_63_9_11_DOD_UNCONNECTED),
         .WCLK(s00_axis_aclk),
         .WE(p_0_out));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[0]_i_1 
@@ -17075,7 +17081,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[0]),
         .O(\a[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[10]_i_1 
@@ -17083,7 +17089,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[10]),
         .O(\a[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[11]_i_1 
@@ -17101,7 +17107,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[11]_i_18_n_0 ),
         .I5(p_11_in[8]),
         .O(\a[11]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[11]_i_11 
@@ -17109,7 +17115,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[12] ),
         .I2(\a_reg_n_0_[0] ),
         .O(\a[11]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[11]_i_12 
@@ -17117,7 +17123,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[11] ),
         .I2(\a_reg_n_0_[22] ),
         .O(\a[11]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[11]_i_13 
@@ -17125,7 +17131,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[10] ),
         .I2(\a_reg_n_0_[30] ),
         .O(\a[11]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[11]_i_14 
@@ -17227,7 +17233,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[11]_i_17_n_0 ),
         .I5(p_11_in[9]),
         .O(\a[11]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[12]_i_1 
@@ -17235,7 +17241,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[12]),
         .O(\a[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[13]_i_1 
@@ -17243,7 +17249,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[13]),
         .O(\a[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[14]_i_1 
@@ -17251,7 +17257,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[14]),
         .O(\a[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[15]_i_1 
@@ -17269,7 +17275,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[15]_i_18_n_0 ),
         .I5(p_11_in[12]),
         .O(\a[15]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[15]_i_11 
@@ -17277,7 +17283,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[27] ),
         .I2(\a_reg_n_0_[16] ),
         .O(\a[15]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[15]_i_12 
@@ -17285,7 +17291,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[26] ),
         .I2(\a_reg_n_0_[15] ),
         .O(\a[15]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[15]_i_13 
@@ -17293,7 +17299,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[25] ),
         .I2(\a_reg_n_0_[14] ),
         .O(\a[15]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[15]_i_14 
@@ -17301,7 +17307,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[1] ),
         .I2(\a_reg_n_0_[24] ),
         .O(\a[15]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT3 #(
     .INIT(8'hE8)) 
     \a[15]_i_15 
@@ -17309,6 +17314,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(b[15]),
         .I2(\a_reg_n_0_[15] ),
         .O(\a[15]_i_15_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'hE8)) 
     \a[15]_i_16 
@@ -17396,7 +17402,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[15]_i_17_n_0 ),
         .I5(p_11_in[13]),
         .O(\a[15]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[16]_i_1 
@@ -17404,7 +17410,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[16]),
         .O(\a[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[17]_i_1 
@@ -17412,7 +17418,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[17]),
         .O(\a[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[18]_i_1 
@@ -17420,7 +17426,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[18]),
         .O(\a[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[19]_i_1 
@@ -17438,7 +17444,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[19]_i_18_n_0 ),
         .I5(p_11_in[16]),
         .O(\a[19]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[19]_i_11 
@@ -17446,7 +17452,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[20] ),
         .I2(\a_reg_n_0_[8] ),
         .O(\a[19]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[19]_i_12 
@@ -17454,7 +17460,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[30] ),
         .I2(\a_reg_n_0_[19] ),
         .O(\a[19]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[19]_i_13 
@@ -17462,7 +17468,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[29] ),
         .I2(\a_reg_n_0_[18] ),
         .O(\a[19]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[19]_i_14 
@@ -17477,7 +17483,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(b[19]),
         .I2(\a_reg_n_0_[19] ),
         .O(\a[19]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT3 #(
     .INIT(8'hE8)) 
     \a[19]_i_16 
@@ -17492,7 +17498,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(b[17]),
         .I2(\a_reg_n_0_[17] ),
         .O(\a[19]_i_17_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT3 #(
     .INIT(8'hE8)) 
     \a[19]_i_18 
@@ -17566,7 +17572,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[19]_i_17_n_0 ),
         .I5(p_11_in[17]),
         .O(\a[19]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[1]_i_1 
@@ -17574,7 +17580,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[1]),
         .O(\a[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[20]_i_1 
@@ -17582,7 +17588,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[20]),
         .O(\a[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[21]_i_1 
@@ -17590,7 +17596,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[21]),
         .O(\a[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[22]_i_1 
@@ -17598,7 +17604,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[22]),
         .O(\a[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[23]_i_1 
@@ -17616,7 +17622,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[23]_i_18_n_0 ),
         .I5(p_11_in[20]),
         .O(\a[23]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[23]_i_11 
@@ -17624,7 +17630,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[12] ),
         .I2(\a_reg_n_0_[24] ),
         .O(\a[23]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[23]_i_12 
@@ -17632,7 +17638,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[11] ),
         .I2(\a_reg_n_0_[23] ),
         .O(\a[23]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[23]_i_13 
@@ -17640,7 +17646,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[1] ),
         .I2(\a_reg_n_0_[10] ),
         .O(\a[23]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[23]_i_14 
@@ -17742,7 +17748,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[23]_i_17_n_0 ),
         .I5(p_11_in[21]),
         .O(\a[23]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[24]_i_1 
@@ -17750,7 +17756,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[24]),
         .O(\a[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[25]_i_1 
@@ -17758,7 +17764,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[25]),
         .O(\a[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[26]_i_1 
@@ -17766,7 +17772,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[26]),
         .O(\a[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[27]_i_1 
@@ -17784,7 +17790,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[27]_i_18_n_0 ),
         .I5(p_11_in[24]),
         .O(\a[27]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[27]_i_11 
@@ -17792,7 +17798,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[28] ),
         .I2(\a_reg_n_0_[7] ),
         .O(\a[27]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[27]_i_12 
@@ -17800,7 +17806,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[27] ),
         .I2(\a_reg_n_0_[6] ),
         .O(\a[27]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[27]_i_13 
@@ -17808,7 +17814,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[26] ),
         .I2(\a_reg_n_0_[5] ),
         .O(\a[27]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[27]_i_14 
@@ -17910,7 +17916,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[27]_i_17_n_0 ),
         .I5(p_11_in[25]),
         .O(\a[27]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[28]_i_1 
@@ -17918,7 +17924,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[28]),
         .O(\a[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[29]_i_1 
@@ -17926,7 +17932,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[29]),
         .O(\a[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[2]_i_1 
@@ -17934,7 +17940,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[2]),
         .O(\a[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[30]_i_1 
@@ -17942,7 +17948,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[30]),
         .O(\a[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[31]_i_1 
@@ -17950,7 +17956,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[31]),
         .O(\a[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[31]_i_10 
@@ -17958,7 +17964,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[10] ),
         .I2(\a_reg_n_0_[19] ),
         .O(\a[31]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[31]_i_11 
@@ -17966,7 +17972,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[30] ),
         .I2(\a_reg_n_0_[9] ),
         .O(\a[31]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[31]_i_12 
@@ -17974,7 +17980,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[29] ),
         .I2(\a_reg_n_0_[8] ),
         .O(\a[31]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hE8FF00E8)) 
     \a[31]_i_13 
@@ -17992,7 +17998,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I2(\a_reg_n_0_[21] ),
         .I3(p_11_in[31]),
         .O(\a[31]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hE8)) 
     \a[31]_i_15 
@@ -18014,7 +18020,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(c[28]),
         .I2(b[28]),
         .O(\a[31]_i_17_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[31]_i_18 
@@ -18088,7 +18094,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[31]_i_17_n_0 ),
         .I5(p_11_in[28]),
         .O(\a[31]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[3]_i_1 
@@ -18096,7 +18102,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[3]),
         .O(\a[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[3]_i_10 
@@ -18104,7 +18110,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[4] ),
         .I2(\a_reg_n_0_[24] ),
         .O(\a[3]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[3]_i_11 
@@ -18208,7 +18214,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(\a_reg_n_0_[13] ),
         .I4(\a[3]_i_12_n_0 ),
         .O(\a[3]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[4]_i_1 
@@ -18216,7 +18222,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[4]),
         .O(\a[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[5]_i_1 
@@ -18224,7 +18230,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[5]),
         .O(\a[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[6]_i_1 
@@ -18232,7 +18238,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[6]),
         .O(\a[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[7]_i_1 
@@ -18250,7 +18256,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[7]_i_18_n_0 ),
         .I5(p_11_in[4]),
         .O(\a[7]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[7]_i_11 
@@ -18258,7 +18264,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[8] ),
         .I2(\a_reg_n_0_[28] ),
         .O(\a[7]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[7]_i_12 
@@ -18266,7 +18272,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[7] ),
         .I2(\a_reg_n_0_[27] ),
         .O(\a[7]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[7]_i_13 
@@ -18274,7 +18280,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\a_reg_n_0_[6] ),
         .I2(\a_reg_n_0_[26] ),
         .O(\a[7]_i_13_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \a[7]_i_14 
@@ -18376,7 +18382,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(\a[7]_i_17_n_0 ),
         .I5(p_11_in[5]),
         .O(\a[7]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[8]_i_1 
@@ -18384,7 +18390,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(p_12_out13_out[8]),
         .O(\a[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \a[9]_i_1 
@@ -18640,7 +18646,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .D(\a[9]_i_1_n_0 ),
         .Q(\a_reg_n_0_[9] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[0]_i_1 
@@ -18655,7 +18661,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(ready_reg_n_0),
         .O(\b[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[10]_i_1 
@@ -18663,7 +18669,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[10] ),
         .O(\b[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[11]_i_1 
@@ -18671,7 +18677,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[11] ),
         .O(\b[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[12]_i_1 
@@ -18679,7 +18685,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[12] ),
         .O(\b[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[13]_i_1 
@@ -18687,7 +18693,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[13] ),
         .O(\b[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[14]_i_1 
@@ -18695,7 +18701,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[14] ),
         .O(\b[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[15]_i_1 
@@ -18703,7 +18709,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[15] ),
         .O(\b[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[16]_i_1 
@@ -18711,7 +18717,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[16] ),
         .O(\b[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[17]_i_1 
@@ -18719,7 +18725,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[17] ),
         .O(\b[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[18]_i_1 
@@ -18727,7 +18733,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[18] ),
         .O(\b[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[19]_i_1 
@@ -18735,7 +18741,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[19] ),
         .O(\b[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[1]_i_1 
@@ -18743,7 +18749,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[1] ),
         .O(\b[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[20]_i_1 
@@ -18751,7 +18757,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[20] ),
         .O(\b[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[21]_i_1 
@@ -18759,7 +18765,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[21] ),
         .O(\b[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[22]_i_1 
@@ -18767,7 +18773,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[22] ),
         .O(\b[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[23]_i_1 
@@ -18775,7 +18781,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[23] ),
         .O(\b[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[24]_i_1 
@@ -18783,7 +18789,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[24] ),
         .O(\b[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[25]_i_1 
@@ -18791,7 +18797,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[25] ),
         .O(\b[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[26]_i_1 
@@ -18799,7 +18805,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[26] ),
         .O(\b[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[27]_i_1 
@@ -18807,7 +18813,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[27] ),
         .O(\b[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[28]_i_1 
@@ -18815,7 +18821,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[28] ),
         .O(\b[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[29]_i_1 
@@ -18823,7 +18829,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[29] ),
         .O(\b[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[2]_i_1 
@@ -18831,7 +18837,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[2] ),
         .O(\b[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[30]_i_1 
@@ -18842,11 +18848,11 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   LUT3 #(
     .INIT(8'h40)) 
     \b[31]_i_1 
-       (.I0(update),
+       (.I0(s_update_reg_n_0),
         .I1(s00_axis_aresetn),
         .I2(\hashIt[31]_i_1_n_0 ),
         .O(\b[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[31]_i_2 
@@ -18861,7 +18867,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(ready_reg_n_0),
         .O(\b[31]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[3]_i_1 
@@ -18869,7 +18875,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[3] ),
         .O(\b[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[4]_i_1 
@@ -18877,7 +18883,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[4] ),
         .O(\b[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[5]_i_1 
@@ -18885,7 +18891,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[5] ),
         .O(\b[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[6]_i_1 
@@ -18893,7 +18899,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[6] ),
         .O(\b[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[7]_i_1 
@@ -18901,7 +18907,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[7] ),
         .O(\b[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[8]_i_1 
@@ -18909,7 +18915,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(\a_reg_n_0_[8] ),
         .O(\b[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \b[9]_i_1 
@@ -19109,7 +19115,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .D(\b[9]_i_1_n_0 ),
         .Q(b[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[0]_i_1 
@@ -19117,7 +19123,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(b[0]),
         .O(\c[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[10]_i_1 
@@ -19125,7 +19131,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[10]),
         .O(\c[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[11]_i_1 
@@ -19133,7 +19139,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[11]),
         .O(\c[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[12]_i_1 
@@ -19141,7 +19147,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[12]),
         .O(\c[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[13]_i_1 
@@ -19149,7 +19155,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[13]),
         .O(\c[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[14]_i_1 
@@ -19157,7 +19163,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[14]),
         .O(\c[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[15]_i_1 
@@ -19165,7 +19171,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[15]),
         .O(\c[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[16]_i_1 
@@ -19173,7 +19179,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[16]),
         .O(\c[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[17]_i_1 
@@ -19181,7 +19187,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[17]),
         .O(\c[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[18]_i_1 
@@ -19189,7 +19195,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[18]),
         .O(\c[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[19]_i_1 
@@ -19197,7 +19203,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[19]),
         .O(\c[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[1]_i_1 
@@ -19205,7 +19211,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[1]),
         .O(\c[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[20]_i_1 
@@ -19213,7 +19219,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[20]),
         .O(\c[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[21]_i_1 
@@ -19221,7 +19227,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[21]),
         .O(\c[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[22]_i_1 
@@ -19229,7 +19235,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[22]),
         .O(\c[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[23]_i_1 
@@ -19237,7 +19243,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[23]),
         .O(\c[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[24]_i_1 
@@ -19245,7 +19251,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[24]),
         .O(\c[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[25]_i_1 
@@ -19253,7 +19259,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[25]),
         .O(\c[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[26]_i_1 
@@ -19261,7 +19267,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[26]),
         .O(\c[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[27]_i_1 
@@ -19269,7 +19275,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[27]),
         .O(\c[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[28]_i_1 
@@ -19277,7 +19283,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[28]),
         .O(\c[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[29]_i_1 
@@ -19285,7 +19291,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[29]),
         .O(\c[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[2]_i_1 
@@ -19293,7 +19299,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[2]),
         .O(\c[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[30]_i_1 
@@ -19301,7 +19307,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[30]),
         .O(\c[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[31]_i_1 
@@ -19309,7 +19315,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[31]),
         .O(\c[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[3]_i_1 
@@ -19317,7 +19323,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[3]),
         .O(\c[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[4]_i_1 
@@ -19325,7 +19331,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[4]),
         .O(\c[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[5]_i_1 
@@ -19333,7 +19339,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[5]),
         .O(\c[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[6]_i_1 
@@ -19341,7 +19347,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[6]),
         .O(\c[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[7]_i_1 
@@ -19349,7 +19355,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[7]),
         .O(\c[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[8]_i_1 
@@ -19357,7 +19363,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(b[8]),
         .O(\c[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \c[9]_i_1 
@@ -19557,7 +19563,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .D(\c[9]_i_1_n_0 ),
         .Q(c[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[0]_i_1 
@@ -19565,7 +19571,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[0]),
         .O(\d[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[10]_i_1 
@@ -19573,7 +19579,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[10]),
         .O(\d[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[11]_i_1 
@@ -19581,7 +19587,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[11]),
         .O(\d[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[12]_i_1 
@@ -19589,7 +19595,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[12]),
         .O(\d[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[13]_i_1 
@@ -19597,7 +19603,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[13]),
         .O(\d[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[14]_i_1 
@@ -19605,7 +19611,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[14]),
         .O(\d[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[15]_i_1 
@@ -19613,7 +19619,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[15]),
         .O(\d[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[16]_i_1 
@@ -19621,7 +19627,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[16]),
         .O(\d[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[17]_i_1 
@@ -19629,7 +19635,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[17]),
         .O(\d[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[18]_i_1 
@@ -19637,7 +19643,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[18]),
         .O(\d[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[19]_i_1 
@@ -19645,7 +19651,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[19]),
         .O(\d[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[1]_i_1 
@@ -19653,7 +19659,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[1]),
         .O(\d[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[20]_i_1 
@@ -19661,7 +19667,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[20]),
         .O(\d[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[21]_i_1 
@@ -19669,7 +19675,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[21]),
         .O(\d[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[22]_i_1 
@@ -19677,7 +19683,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[22]),
         .O(\d[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[23]_i_1 
@@ -19685,7 +19691,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[23]),
         .O(\d[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[24]_i_1 
@@ -19693,7 +19699,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[24]),
         .O(\d[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[25]_i_1 
@@ -19701,7 +19707,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[25]),
         .O(\d[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[26]_i_1 
@@ -19709,7 +19715,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[26]),
         .O(\d[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[27]_i_1 
@@ -19717,7 +19723,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[27]),
         .O(\d[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[28]_i_1 
@@ -19725,7 +19731,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[28]),
         .O(\d[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[29]_i_1 
@@ -19733,7 +19739,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[29]),
         .O(\d[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[2]_i_1 
@@ -19741,7 +19747,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[2]),
         .O(\d[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[30]_i_1 
@@ -19749,7 +19755,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[30]),
         .O(\d[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[31]_i_1 
@@ -19757,7 +19763,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[31]),
         .O(\d[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[3]_i_1 
@@ -19765,7 +19771,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[3]),
         .O(\d[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[4]_i_1 
@@ -19773,7 +19779,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[4]),
         .O(\d[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[5]_i_1 
@@ -19781,7 +19787,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[5]),
         .O(\d[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[6]_i_1 
@@ -19789,7 +19795,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[6]),
         .O(\d[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[7]_i_1 
@@ -19797,7 +19803,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[7]),
         .O(\d[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[8]_i_1 
@@ -19805,7 +19811,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[0]_i_2_n_0 ),
         .I2(c[8]),
         .O(\d[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \d[9]_i_1 
@@ -20328,7 +20334,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(e[12]),
         .I2(g[12]),
         .O(\e[15]_i_21_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \e[15]_i_23 
@@ -20978,7 +20984,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(p_11_in[27]),
         .I1(\b[0]_i_2_n_0 ),
         .O(\e[27]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \e[27]_i_20 
@@ -21495,7 +21501,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(p_11_in[3]),
         .I1(\b[0]_i_2_n_0 ),
         .O(\e[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \e[3]_i_20 
@@ -22125,7 +22131,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .D(\e_reg[11]_i_1_n_6 ),
         .Q(e[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[0]_i_1 
@@ -22133,7 +22139,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[0]),
         .O(\f[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[10]_i_1 
@@ -22141,7 +22147,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[10]),
         .O(\f[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[11]_i_1 
@@ -22149,7 +22155,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[11]),
         .O(\f[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[12]_i_1 
@@ -22157,7 +22163,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[12]),
         .O(\f[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[13]_i_1 
@@ -22165,7 +22171,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[13]),
         .O(\f[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[14]_i_1 
@@ -22173,7 +22179,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[14]),
         .O(\f[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[15]_i_1 
@@ -22181,7 +22187,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[15]),
         .O(\f[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[16]_i_1 
@@ -22189,7 +22195,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[16]),
         .O(\f[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[17]_i_1 
@@ -22197,7 +22203,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[17]),
         .O(\f[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[18]_i_1 
@@ -22205,7 +22211,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[18]),
         .O(\f[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[19]_i_1 
@@ -22213,7 +22219,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[19]),
         .O(\f[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[1]_i_1 
@@ -22221,7 +22227,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[1]),
         .O(\f[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[20]_i_1 
@@ -22229,7 +22235,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[20]),
         .O(\f[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[21]_i_1 
@@ -22237,7 +22243,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[21]),
         .O(\f[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[22]_i_1 
@@ -22245,7 +22251,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[22]),
         .O(\f[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[23]_i_1 
@@ -22253,7 +22259,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[23]),
         .O(\f[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[24]_i_1 
@@ -22261,7 +22267,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[24]),
         .O(\f[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[25]_i_1 
@@ -22269,7 +22275,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[25]),
         .O(\f[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[26]_i_1 
@@ -22277,7 +22283,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[26]),
         .O(\f[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[27]_i_1 
@@ -22285,7 +22291,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[27]),
         .O(\f[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[28]_i_1 
@@ -22293,7 +22299,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[28]),
         .O(\f[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[29]_i_1 
@@ -22301,7 +22307,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[29]),
         .O(\f[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[2]_i_1 
@@ -22309,7 +22315,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[2]),
         .O(\f[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[30]_i_1 
@@ -22317,7 +22323,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[30]),
         .O(\f[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[31]_i_1 
@@ -22332,7 +22338,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(padded),
         .I2(ready_reg_n_0),
         .O(\f[31]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[3]_i_1 
@@ -22340,7 +22346,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[3]),
         .O(\f[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[4]_i_1 
@@ -22348,7 +22354,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[4]),
         .O(\f[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[5]_i_1 
@@ -22356,7 +22362,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[5]),
         .O(\f[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[6]_i_1 
@@ -22364,7 +22370,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[6]),
         .O(\f[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[7]_i_1 
@@ -22372,7 +22378,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[7]),
         .O(\f[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[8]_i_1 
@@ -22380,7 +22386,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(e[8]),
         .O(\f[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \f[9]_i_1 
@@ -22900,7 +22906,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I4(hashIt_reg_rep[4]),
         .I5(hashIt_reg_rep[5]),
         .O(g0_b9_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[0]_i_1 
@@ -22908,7 +22914,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[0]),
         .O(\g[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[10]_i_1 
@@ -22916,7 +22922,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[10]),
         .O(\g[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[11]_i_1 
@@ -22924,7 +22930,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[11]),
         .O(\g[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[12]_i_1 
@@ -22932,7 +22938,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[12]),
         .O(\g[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[13]_i_1 
@@ -22940,7 +22946,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[13]),
         .O(\g[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[14]_i_1 
@@ -22948,7 +22954,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[14]),
         .O(\g[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[15]_i_1 
@@ -22956,7 +22962,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[15]),
         .O(\g[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[16]_i_1 
@@ -22964,7 +22970,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[16]),
         .O(\g[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[17]_i_1 
@@ -22972,7 +22978,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[17]),
         .O(\g[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[18]_i_1 
@@ -22980,7 +22986,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[18]),
         .O(\g[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[19]_i_1 
@@ -22988,7 +22994,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[19]),
         .O(\g[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[1]_i_1 
@@ -22996,7 +23002,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[1]),
         .O(\g[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[20]_i_1 
@@ -23004,7 +23010,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[20]),
         .O(\g[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[21]_i_1 
@@ -23012,7 +23018,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[21]),
         .O(\g[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[22]_i_1 
@@ -23020,7 +23026,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[22]),
         .O(\g[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[23]_i_1 
@@ -23028,7 +23034,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[23]),
         .O(\g[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[24]_i_1 
@@ -23036,7 +23042,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[24]),
         .O(\g[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[25]_i_1 
@@ -23044,7 +23050,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[25]),
         .O(\g[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[26]_i_1 
@@ -23052,7 +23058,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[26]),
         .O(\g[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[27]_i_1 
@@ -23060,7 +23066,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[27]),
         .O(\g[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[28]_i_1 
@@ -23068,7 +23074,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[28]),
         .O(\g[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[29]_i_1 
@@ -23076,7 +23082,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[29]),
         .O(\g[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[2]_i_1 
@@ -23084,7 +23090,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[2]),
         .O(\g[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[30]_i_1 
@@ -23092,7 +23098,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[30]),
         .O(\g[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[31]_i_1 
@@ -23100,7 +23106,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[31]),
         .O(\g[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[3]_i_1 
@@ -23108,7 +23114,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[3]),
         .O(\g[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[4]_i_1 
@@ -23116,7 +23122,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[4]),
         .O(\g[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[5]_i_1 
@@ -23124,7 +23130,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[5]),
         .O(\g[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[6]_i_1 
@@ -23132,7 +23138,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[6]),
         .O(\g[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[7]_i_1 
@@ -23140,7 +23146,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[7]),
         .O(\g[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[8]_i_1 
@@ -23148,7 +23154,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(f[8]),
         .O(\g[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \g[9]_i_1 
@@ -23348,7 +23354,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .D(\g[9]_i_1_n_0 ),
         .Q(g[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[0]_i_1 
@@ -23356,7 +23362,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[0]),
         .O(\h[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[10]_i_1 
@@ -23364,7 +23370,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[10]),
         .O(\h[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[11]_i_1 
@@ -23372,7 +23378,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[11]),
         .O(\h[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[12]_i_1 
@@ -23380,7 +23386,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[12]),
         .O(\h[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[13]_i_1 
@@ -23388,7 +23394,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[13]),
         .O(\h[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[14]_i_1 
@@ -23396,7 +23402,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[14]),
         .O(\h[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[15]_i_1 
@@ -23404,7 +23410,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[15]),
         .O(\h[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[16]_i_1 
@@ -23412,7 +23418,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[16]),
         .O(\h[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[17]_i_1 
@@ -23420,7 +23426,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[17]),
         .O(\h[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[18]_i_1 
@@ -23428,7 +23434,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[18]),
         .O(\h[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[19]_i_1 
@@ -23436,7 +23442,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[19]),
         .O(\h[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[1]_i_1 
@@ -23444,7 +23450,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[1]),
         .O(\h[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[20]_i_1 
@@ -23452,7 +23458,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[20]),
         .O(\h[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[21]_i_1 
@@ -23460,7 +23466,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[21]),
         .O(\h[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[22]_i_1 
@@ -23468,7 +23474,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[22]),
         .O(\h[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[23]_i_1 
@@ -23476,7 +23482,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[23]),
         .O(\h[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[24]_i_1 
@@ -23484,7 +23490,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[24]),
         .O(\h[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[25]_i_1 
@@ -23492,7 +23498,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[25]),
         .O(\h[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[26]_i_1 
@@ -23500,7 +23506,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[26]),
         .O(\h[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[27]_i_1 
@@ -23508,7 +23514,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[27]),
         .O(\h[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[28]_i_1 
@@ -23516,7 +23522,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[28]),
         .O(\h[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[29]_i_1 
@@ -23524,7 +23530,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[29]),
         .O(\h[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[2]_i_1 
@@ -23532,7 +23538,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[2]),
         .O(\h[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[30]_i_1 
@@ -23540,7 +23546,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[30]),
         .O(\h[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[31]_i_1 
@@ -23548,7 +23554,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\b[31]_i_3_n_0 ),
         .I2(g[31]),
         .O(\h[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[3]_i_1 
@@ -23556,7 +23562,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[3]),
         .O(\h[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[4]_i_1 
@@ -23564,7 +23570,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[4]),
         .O(\h[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[5]_i_1 
@@ -23572,7 +23578,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[5]),
         .O(\h[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[6]_i_1 
@@ -23580,7 +23586,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[6]),
         .O(\h[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[7]_i_1 
@@ -23588,7 +23594,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[7]),
         .O(\h[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[8]_i_1 
@@ -23596,7 +23602,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\f[31]_i_2_n_0 ),
         .I2(g[8]),
         .O(\h[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \h[9]_i_1 
@@ -23796,168 +23802,168 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .D(\h[9]_i_1_n_0 ),
         .Q(h_reg__0[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair281" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \hashIt[0]_i_1 
        (.I0(hashIt_reg_rep[0]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\hashIt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[10]_i_1 
        (.I0(\hashIt_reg[12]_i_2_n_6 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[10]));
-  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[11]_i_1 
        (.I0(\hashIt_reg[12]_i_2_n_5 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[11]));
-  (* SOFT_HLUTNM = "soft_lutpair287" *) 
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[12]_i_1 
        (.I0(\hashIt_reg[12]_i_2_n_4 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[12]));
-  (* SOFT_HLUTNM = "soft_lutpair287" *) 
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[13]_i_1 
        (.I0(\hashIt_reg[16]_i_2_n_7 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[13]));
-  (* SOFT_HLUTNM = "soft_lutpair288" *) 
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[14]_i_1 
        (.I0(\hashIt_reg[16]_i_2_n_6 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[14]));
-  (* SOFT_HLUTNM = "soft_lutpair288" *) 
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[15]_i_1 
        (.I0(\hashIt_reg[16]_i_2_n_5 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[15]));
-  (* SOFT_HLUTNM = "soft_lutpair289" *) 
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[16]_i_1 
        (.I0(\hashIt_reg[16]_i_2_n_4 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[16]));
-  (* SOFT_HLUTNM = "soft_lutpair289" *) 
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[17]_i_1 
        (.I0(\hashIt_reg[20]_i_2_n_7 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[17]));
-  (* SOFT_HLUTNM = "soft_lutpair298" *) 
+  (* SOFT_HLUTNM = "soft_lutpair295" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[18]_i_1 
        (.I0(\hashIt_reg[20]_i_2_n_6 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[18]));
-  (* SOFT_HLUTNM = "soft_lutpair299" *) 
+  (* SOFT_HLUTNM = "soft_lutpair295" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[19]_i_1 
        (.I0(\hashIt_reg[20]_i_2_n_5 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[19]));
-  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[1]_i_1 
        (.I0(\hashIt_reg[1]_i_2_n_7 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\hashIt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair306" *) 
+  (* SOFT_HLUTNM = "soft_lutpair300" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[20]_i_1 
        (.I0(\hashIt_reg[20]_i_2_n_4 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[20]));
-  (* SOFT_HLUTNM = "soft_lutpair307" *) 
+  (* SOFT_HLUTNM = "soft_lutpair301" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[21]_i_1 
        (.I0(\hashIt_reg[24]_i_2_n_7 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[21]));
-  (* SOFT_HLUTNM = "soft_lutpair308" *) 
+  (* SOFT_HLUTNM = "soft_lutpair302" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[22]_i_1 
        (.I0(\hashIt_reg[24]_i_2_n_6 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[22]));
-  (* SOFT_HLUTNM = "soft_lutpair298" *) 
+  (* SOFT_HLUTNM = "soft_lutpair303" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[23]_i_1 
        (.I0(\hashIt_reg[24]_i_2_n_5 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[23]));
-  (* SOFT_HLUTNM = "soft_lutpair299" *) 
+  (* SOFT_HLUTNM = "soft_lutpair304" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[24]_i_1 
        (.I0(\hashIt_reg[24]_i_2_n_4 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[24]));
-  (* SOFT_HLUTNM = "soft_lutpair309" *) 
+  (* SOFT_HLUTNM = "soft_lutpair305" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[25]_i_1 
        (.I0(\hashIt_reg[28]_i_2_n_7 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[25]));
-  (* SOFT_HLUTNM = "soft_lutpair310" *) 
+  (* SOFT_HLUTNM = "soft_lutpair305" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[26]_i_1 
        (.I0(\hashIt_reg[28]_i_2_n_6 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[26]));
-  (* SOFT_HLUTNM = "soft_lutpair310" *) 
+  (* SOFT_HLUTNM = "soft_lutpair304" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[27]_i_1 
        (.I0(\hashIt_reg[28]_i_2_n_5 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[27]));
-  (* SOFT_HLUTNM = "soft_lutpair309" *) 
+  (* SOFT_HLUTNM = "soft_lutpair303" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[28]_i_1 
        (.I0(\hashIt_reg[28]_i_2_n_4 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[28]));
-  (* SOFT_HLUTNM = "soft_lutpair308" *) 
+  (* SOFT_HLUTNM = "soft_lutpair302" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[29]_i_1 
        (.I0(\hashIt_reg[31]_i_7_n_7 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[29]));
-  (* SOFT_HLUTNM = "soft_lutpair283" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[2]_i_1 
        (.I0(\hashIt_reg[1]_i_2_n_6 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\hashIt[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair307" *) 
+  (* SOFT_HLUTNM = "soft_lutpair301" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[30]_i_1 
@@ -23967,7 +23973,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   LUT6 #(
     .INIT(64'h080808080808AA08)) 
     \hashIt[31]_i_1 
-       (.I0(mEnable),
+       (.I0(s_enable_reg_n_0),
         .I1(\hashIt_reg[31]_i_3_n_3 ),
         .I2(\hashIt[31]_i_4_n_0 ),
         .I3(W_reg_0_63_0_0_i_17_n_0),
@@ -24022,7 +24028,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(hashIt[15]),
         .I1(hashIt[14]),
         .O(\hashIt[31]_i_19_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair306" *) 
+  (* SOFT_HLUTNM = "soft_lutpair300" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[31]_i_2 
@@ -24059,7 +24065,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(hashIt[6]),
         .I1(hashIt[7]),
         .O(\hashIt[31]_i_24_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT4 #(
     .INIT(16'hFBFF)) 
     \hashIt[31]_i_4 
@@ -24068,7 +24074,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I2(ready_reg_n_0),
         .I3(padded),
         .O(\hashIt[31]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \hashIt[31]_i_5 
@@ -24087,49 +24093,49 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(hashIt[31]),
         .I1(hashIt[30]),
         .O(\hashIt[31]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair281" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[3]_i_1 
        (.I0(\hashIt_reg[1]_i_2_n_5 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\hashIt[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[4]_i_1 
        (.I0(\hashIt_reg[1]_i_2_n_4 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\hashIt[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair283" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[5]_i_1 
        (.I0(\hashIt_reg[8]_i_2_n_7 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\hashIt[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair284" *) 
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[6]_i_1 
        (.I0(\hashIt_reg[8]_i_2_n_6 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair284" *) 
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[7]_i_1 
        (.I0(\hashIt_reg[8]_i_2_n_5 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair285" *) 
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[8]_i_1 
        (.I0(\hashIt_reg[8]_i_2_n_4 ),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in__0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair285" *) 
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \hashIt[9]_i_1 
@@ -24149,7 +24155,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[10] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[10]),
         .Q(hashIt[10]));
   FDCE #(
@@ -24157,7 +24163,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[11] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[11]),
         .Q(hashIt[11]));
   FDCE #(
@@ -24165,7 +24171,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[12] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[12]),
         .Q(hashIt[12]));
   CARRY4 \hashIt_reg[12]_i_2 
@@ -24180,7 +24186,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[13] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[13]),
         .Q(hashIt[13]));
   FDCE #(
@@ -24188,7 +24194,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[14] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[14]),
         .Q(hashIt[14]));
   FDCE #(
@@ -24196,7 +24202,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[15] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[15]),
         .Q(hashIt[15]));
   FDCE #(
@@ -24204,7 +24210,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[16] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[16]),
         .Q(hashIt[16]));
   CARRY4 \hashIt_reg[16]_i_2 
@@ -24219,7 +24225,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[17] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[17]),
         .Q(hashIt[17]));
   FDCE #(
@@ -24227,7 +24233,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[18] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[18]),
         .Q(hashIt[18]));
   FDCE #(
@@ -24235,7 +24241,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[19] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[19]),
         .Q(hashIt[19]));
   FDCE #(
@@ -24258,7 +24264,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[20] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[20]),
         .Q(hashIt[20]));
   CARRY4 \hashIt_reg[20]_i_2 
@@ -24273,7 +24279,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[21] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[21]),
         .Q(hashIt[21]));
   FDCE #(
@@ -24281,7 +24287,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[22] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[22]),
         .Q(hashIt[22]));
   FDCE #(
@@ -24289,7 +24295,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[23] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[23]),
         .Q(hashIt[23]));
   FDCE #(
@@ -24297,7 +24303,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[24] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[24]),
         .Q(hashIt[24]));
   CARRY4 \hashIt_reg[24]_i_2 
@@ -24312,7 +24318,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[25] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[25]),
         .Q(hashIt[25]));
   FDCE #(
@@ -24320,7 +24326,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[26] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[26]),
         .Q(hashIt[26]));
   FDCE #(
@@ -24328,7 +24334,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[27] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[27]),
         .Q(hashIt[27]));
   FDCE #(
@@ -24336,7 +24342,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[28] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[28]),
         .Q(hashIt[28]));
   CARRY4 \hashIt_reg[28]_i_2 
@@ -24351,7 +24357,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[29] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[29]),
         .Q(hashIt[29]));
   FDCE #(
@@ -24367,7 +24373,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[30] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[30]),
         .Q(hashIt[30]));
   FDCE #(
@@ -24375,7 +24381,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[31] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[31]),
         .Q(hashIt[31]));
   CARRY4 \hashIt_reg[31]_i_10 
@@ -24442,7 +24448,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[6] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[6]),
         .Q(hashIt[6]));
   FDCE #(
@@ -24450,7 +24456,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[7] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[7]),
         .Q(hashIt[7]));
   FDCE #(
@@ -24458,7 +24464,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[8] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[8]),
         .Q(hashIt[8]));
   CARRY4 \hashIt_reg[8]_i_2 
@@ -24473,13 +24479,13 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \hashIt_reg[9] 
        (.C(s00_axis_aclk),
         .CE(\hashIt[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in__0[9]),
         .Q(hashIt[9]));
   LUT6 #(
     .INIT(64'hFFFFDDFF00020022)) 
     hashed_i_1
-       (.I0(mEnable),
+       (.I0(s_enable_reg_n_0),
         .I1(N1),
         .I2(\hashIt_reg[31]_i_3_n_3 ),
         .I3(\hashIt[31]_i_4_n_0 ),
@@ -24500,161 +24506,161 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(i[0]),
         .I1(padded),
         .O(\i[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair321" *) 
+  (* SOFT_HLUTNM = "soft_lutpair316" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[10]_i_1 
        (.I0(\i_reg[12]_i_2_n_6 ),
         .I1(padded),
         .O(\i[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair320" *) 
+  (* SOFT_HLUTNM = "soft_lutpair315" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[11]_i_1 
        (.I0(\i_reg[12]_i_2_n_5 ),
         .I1(padded),
         .O(\i[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair320" *) 
+  (* SOFT_HLUTNM = "soft_lutpair315" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[12]_i_1 
        (.I0(\i_reg[12]_i_2_n_4 ),
         .I1(padded),
         .O(\i[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair319" *) 
+  (* SOFT_HLUTNM = "soft_lutpair314" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[13]_i_1 
        (.I0(\i_reg[16]_i_2_n_7 ),
         .I1(padded),
         .O(\i[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair319" *) 
+  (* SOFT_HLUTNM = "soft_lutpair314" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[14]_i_1 
        (.I0(\i_reg[16]_i_2_n_6 ),
         .I1(padded),
         .O(\i[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair318" *) 
+  (* SOFT_HLUTNM = "soft_lutpair313" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[15]_i_1 
        (.I0(\i_reg[16]_i_2_n_5 ),
         .I1(padded),
         .O(\i[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair318" *) 
+  (* SOFT_HLUTNM = "soft_lutpair313" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[16]_i_1 
        (.I0(\i_reg[16]_i_2_n_4 ),
         .I1(padded),
         .O(\i[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair317" *) 
+  (* SOFT_HLUTNM = "soft_lutpair312" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[17]_i_1 
        (.I0(\i_reg[20]_i_2_n_7 ),
         .I1(padded),
         .O(\i[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair317" *) 
+  (* SOFT_HLUTNM = "soft_lutpair312" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[18]_i_1 
        (.I0(\i_reg[20]_i_2_n_6 ),
         .I1(padded),
         .O(\i[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair316" *) 
+  (* SOFT_HLUTNM = "soft_lutpair311" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[19]_i_1 
        (.I0(\i_reg[20]_i_2_n_5 ),
         .I1(padded),
         .O(\i[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair325" *) 
+  (* SOFT_HLUTNM = "soft_lutpair320" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[1]_i_1 
        (.I0(\i_reg[4]_i_2_n_7 ),
         .I1(padded),
         .O(\i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair316" *) 
+  (* SOFT_HLUTNM = "soft_lutpair311" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[20]_i_1 
        (.I0(\i_reg[20]_i_2_n_4 ),
         .I1(padded),
         .O(\i[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair315" *) 
+  (* SOFT_HLUTNM = "soft_lutpair310" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[21]_i_1 
        (.I0(\i_reg[24]_i_2_n_7 ),
         .I1(padded),
         .O(\i[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair315" *) 
+  (* SOFT_HLUTNM = "soft_lutpair310" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[22]_i_1 
        (.I0(\i_reg[24]_i_2_n_6 ),
         .I1(padded),
         .O(\i[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair314" *) 
+  (* SOFT_HLUTNM = "soft_lutpair309" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[23]_i_1 
        (.I0(\i_reg[24]_i_2_n_5 ),
         .I1(padded),
         .O(\i[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair314" *) 
+  (* SOFT_HLUTNM = "soft_lutpair309" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[24]_i_1 
        (.I0(\i_reg[24]_i_2_n_4 ),
         .I1(padded),
         .O(\i[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair313" *) 
+  (* SOFT_HLUTNM = "soft_lutpair308" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[25]_i_1 
        (.I0(\i_reg[28]_i_2_n_7 ),
         .I1(padded),
         .O(\i[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair313" *) 
+  (* SOFT_HLUTNM = "soft_lutpair308" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[26]_i_1 
        (.I0(\i_reg[28]_i_2_n_6 ),
         .I1(padded),
         .O(\i[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair312" *) 
+  (* SOFT_HLUTNM = "soft_lutpair307" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[27]_i_1 
        (.I0(\i_reg[28]_i_2_n_5 ),
         .I1(padded),
         .O(\i[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair312" *) 
+  (* SOFT_HLUTNM = "soft_lutpair307" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[28]_i_1 
        (.I0(\i_reg[28]_i_2_n_4 ),
         .I1(padded),
         .O(\i[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair311" *) 
+  (* SOFT_HLUTNM = "soft_lutpair306" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[29]_i_1 
        (.I0(\i_reg[31]_i_3_n_7 ),
         .I1(padded),
         .O(\i[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair325" *) 
+  (* SOFT_HLUTNM = "soft_lutpair320" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[2]_i_1 
        (.I0(\i_reg[4]_i_2_n_6 ),
         .I1(padded),
         .O(\i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair311" *) 
+  (* SOFT_HLUTNM = "soft_lutpair306" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[30]_i_1 
@@ -24664,63 +24670,63 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   LUT6 #(
     .INIT(64'h008A000A000A000A)) 
     \i[31]_i_1 
-       (.I0(mEnable),
+       (.I0(s_enable_reg_n_0),
         .I1(\t_reg[31]_i_3_n_0 ),
         .I2(padded),
         .I3(ready_reg_n_0),
         .I4(schedulled_reg_n_0),
         .I5(hashed_reg_n_0),
         .O(i0));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[31]_i_2 
        (.I0(\i_reg[31]_i_3_n_5 ),
         .I1(padded),
         .O(\i[31]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair324" *) 
+  (* SOFT_HLUTNM = "soft_lutpair319" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[3]_i_1 
        (.I0(\i_reg[4]_i_2_n_5 ),
         .I1(padded),
         .O(\i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair324" *) 
+  (* SOFT_HLUTNM = "soft_lutpair319" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[4]_i_1 
        (.I0(\i_reg[4]_i_2_n_4 ),
         .I1(padded),
         .O(\i[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair323" *) 
+  (* SOFT_HLUTNM = "soft_lutpair318" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[5]_i_1 
        (.I0(\i_reg[8]_i_2_n_7 ),
         .I1(padded),
         .O(\i[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair323" *) 
+  (* SOFT_HLUTNM = "soft_lutpair318" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[6]_i_1 
        (.I0(\i_reg[8]_i_2_n_6 ),
         .I1(padded),
         .O(\i[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair322" *) 
+  (* SOFT_HLUTNM = "soft_lutpair317" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[7]_i_1 
        (.I0(\i_reg[8]_i_2_n_5 ),
         .I1(padded),
         .O(\i[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair322" *) 
+  (* SOFT_HLUTNM = "soft_lutpair317" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[8]_i_1 
        (.I0(\i_reg[8]_i_2_n_4 ),
         .I1(padded),
         .O(\i[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair321" *) 
+  (* SOFT_HLUTNM = "soft_lutpair316" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \i[9]_i_1 
@@ -24740,7 +24746,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[10] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[10]_i_1_n_0 ),
         .Q(i[10]));
   FDCE #(
@@ -24748,7 +24754,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[11] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[11]_i_1_n_0 ),
         .Q(i[11]));
   FDCE #(
@@ -24756,7 +24762,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[12] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[12]_i_1_n_0 ),
         .Q(i[12]));
   CARRY4 \i_reg[12]_i_2 
@@ -24771,7 +24777,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[13] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[13]_i_1_n_0 ),
         .Q(i[13]));
   FDCE #(
@@ -24779,7 +24785,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[14] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[14]_i_1_n_0 ),
         .Q(i[14]));
   FDCE #(
@@ -24787,7 +24793,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[15] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[15]_i_1_n_0 ),
         .Q(i[15]));
   FDCE #(
@@ -24795,7 +24801,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[16] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[16]_i_1_n_0 ),
         .Q(i[16]));
   CARRY4 \i_reg[16]_i_2 
@@ -24810,7 +24816,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[17] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[17]_i_1_n_0 ),
         .Q(i[17]));
   FDCE #(
@@ -24818,7 +24824,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[18] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[18]_i_1_n_0 ),
         .Q(i[18]));
   FDCE #(
@@ -24826,7 +24832,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[19] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[19]_i_1_n_0 ),
         .Q(i[19]));
   FDCE #(
@@ -24842,7 +24848,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[20] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[20]_i_1_n_0 ),
         .Q(i[20]));
   CARRY4 \i_reg[20]_i_2 
@@ -24857,7 +24863,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[21] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[21]_i_1_n_0 ),
         .Q(i[21]));
   FDCE #(
@@ -24865,7 +24871,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[22] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[22]_i_1_n_0 ),
         .Q(i[22]));
   FDCE #(
@@ -24873,7 +24879,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[23] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[23]_i_1_n_0 ),
         .Q(i[23]));
   FDCE #(
@@ -24881,7 +24887,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[24] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[24]_i_1_n_0 ),
         .Q(i[24]));
   CARRY4 \i_reg[24]_i_2 
@@ -24896,7 +24902,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[25] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[25]_i_1_n_0 ),
         .Q(i[25]));
   FDCE #(
@@ -24904,7 +24910,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[26] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[26]_i_1_n_0 ),
         .Q(i[26]));
   FDCE #(
@@ -24912,7 +24918,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[27] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[27]_i_1_n_0 ),
         .Q(i[27]));
   FDCE #(
@@ -24920,7 +24926,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[28] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[28]_i_1_n_0 ),
         .Q(i[28]));
   CARRY4 \i_reg[28]_i_2 
@@ -24935,7 +24941,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[29] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[29]_i_1_n_0 ),
         .Q(i[29]));
   FDCE #(
@@ -24951,7 +24957,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[30] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[30]_i_1_n_0 ),
         .Q(i[30]));
   FDCE #(
@@ -24959,7 +24965,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[31] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[31]_i_2_n_0 ),
         .Q(i[31]));
   CARRY4 \i_reg[31]_i_3 
@@ -24997,7 +25003,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[5] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[5]_i_1_n_0 ),
         .Q(i[5]));
   FDCE #(
@@ -25005,7 +25011,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[6] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[6]_i_1_n_0 ),
         .Q(i[6]));
   FDCE #(
@@ -25013,7 +25019,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[7] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[7]_i_1_n_0 ),
         .Q(i[7]));
   FDCE #(
@@ -25021,7 +25027,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[8] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[8]_i_1_n_0 ),
         .Q(i[8]));
   CARRY4 \i_reg[8]_i_2 
@@ -25036,7 +25042,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \i_reg[9] 
        (.C(s00_axis_aclk),
         .CE(i0),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\i[9]_i_1_n_0 ),
         .Q(i[9]));
   FDCE #(
@@ -25047,12 +25053,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CLR(\M[0][510]_i_1_n_0 ),
         .D(1'b1),
         .Q(padded));
-  LUT2 #(
-    .INIT(4'h8)) 
-    readEnable_INST_0
-       (.I0(validData),
-        .I1(m00_axis_tready),
-        .O(readEnable));
   LUT5 #(
     .INIT(32'hFFFB0008)) 
     ready_i_1
@@ -25067,453 +25067,425 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     ready_reg
        (.C(s00_axis_aclk),
         .CE(1'b1),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(ready_i_1_n_0),
         .Q(ready_reg_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     s00_axis_tready_INST_0
-       (.I0(mEnable),
+       (.I0(s_enable_reg_n_0),
         .O(s00_axis_tready));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h00D88888)) 
     s_POFready_i_1
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(s00_axis_aresetn),
-        .I3(s_allSent_reg),
-        .I4(validData),
+        .I3(s_allWordsSent),
+        .I4(s_validData),
         .O(s_POFready_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    s_POFready_i_2
-       (.I0(s_POFready_i_3_n_0),
-        .I1(tempHash[178]),
-        .I2(tempHash[177]),
-        .I3(tempHash[179]),
-        .I4(tempHash[176]),
-        .I5(s_POFready_i_4_n_0),
-        .O(s_POFready_i_2_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    s_POFready_i_3
-       (.I0(tempHash[183]),
-        .I1(tempHash[182]),
-        .I2(tempHash[181]),
-        .I3(tempHash[180]),
-        .O(s_POFready_i_3_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    s_POFready_i_4
-       (.I0(tempHash[184]),
-        .I1(tempHash[187]),
-        .I2(tempHash[185]),
-        .I3(tempHash[186]),
-        .I4(s_POFready_i_5_n_0),
-        .O(s_POFready_i_4_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    s_POFready_i_5
-       (.I0(tempHash[189]),
-        .I1(tempHash[188]),
-        .I2(tempHash[191]),
-        .I3(tempHash[190]),
-        .O(s_POFready_i_5_n_0));
   FDRE s_POFready_reg
        (.C(s00_axis_aclk),
         .CE(1'b1),
         .D(s_POFready_i_1_n_0),
-        .Q(validData),
+        .Q(s_validData),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \s_counter[0]_i_1 
-       (.I0(counterSlave[0]),
+       (.I0(\s_counter_reg_n_0_[0] ),
         .O(s_counter[0]));
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \s_counter[0]_i_1__0 
+       (.I0(m00_axis_tready),
+        .I1(s_validData),
+        .I2(\s_counter_reg[0]_1 ),
+        .O(\s_counter_reg[0]_0 ));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[10]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[10]),
         .O(s_counter[10]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[11]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[11]),
         .O(s_counter[11]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[12]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[12]),
         .O(s_counter[12]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[13]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[13]),
         .O(s_counter[13]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[14]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[14]),
         .O(s_counter[14]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[15]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[15]),
         .O(s_counter[15]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[16]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[16]),
         .O(s_counter[16]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[17]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[17]),
         .O(s_counter[17]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[18]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[18]),
         .O(s_counter[18]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[19]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[19]),
         .O(s_counter[19]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[1]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[1]),
         .O(s_counter[1]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[20]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[20]),
         .O(s_counter[20]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[21]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[21]),
         .O(s_counter[21]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[22]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[22]),
         .O(s_counter[22]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[23]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[23]),
         .O(s_counter[23]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[24]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[24]),
         .O(s_counter[24]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[25]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[25]),
         .O(s_counter[25]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[26]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[26]),
         .O(s_counter[26]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[27]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[27]),
         .O(s_counter[27]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[28]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[28]),
         .O(s_counter[28]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[29]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[29]),
         .O(s_counter[29]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[2]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[2]),
         .O(s_counter[2]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[30]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[30]),
         .O(s_counter[30]));
-  LUT5 #(
-    .INIT(32'hFFFB0000)) 
-    \s_counter[31]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
-        .I4(data0[31]),
-        .O(s_counter[31]));
   LUT1 #(
     .INIT(2'h1)) 
-    \s_counter[3]_i_1 
+    \s_counter[31]_i_1 
        (.I0(s00_axis_aresetn),
-        .O(\s_counter[3]_i_1_n_0 ));
+        .O(\s_counter[31]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \s_counter[3]_i_10 
+    \s_counter[31]_i_10 
        (.I0(\s_counter_reg_n_0_[13] ),
         .I1(\s_counter_reg_n_0_[12] ),
         .I2(\s_counter_reg_n_0_[15] ),
         .I3(\s_counter_reg_n_0_[14] ),
-        .O(\s_counter[3]_i_10_n_0 ));
+        .O(\s_counter[31]_i_10_n_0 ));
   LUT4 #(
     .INIT(16'hDFFF)) 
-    \s_counter[3]_i_11 
-       (.I0(counterSlave[1]),
+    \s_counter[31]_i_11 
+       (.I0(\s_counter_reg_n_0_[1] ),
         .I1(\s_counter_reg_n_0_[30] ),
-        .I2(counterSlave[2]),
-        .I3(counterSlave[0]),
-        .O(\s_counter[3]_i_11_n_0 ));
+        .I2(\s_counter_reg_n_0_[2] ),
+        .I3(\s_counter_reg_n_0_[0] ),
+        .O(\s_counter[31]_i_11_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \s_counter[3]_i_12 
+    \s_counter[31]_i_12 
        (.I0(\s_counter_reg_n_0_[21] ),
         .I1(\s_counter_reg_n_0_[20] ),
         .I2(\s_counter_reg_n_0_[23] ),
         .I3(\s_counter_reg_n_0_[22] ),
-        .O(\s_counter[3]_i_12_n_0 ));
+        .O(\s_counter[31]_i_12_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
-    \s_counter[3]_i_2 
+    \s_counter[31]_i_2 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
-        .O(\s_counter[3]_i_2_n_0 ));
+        .I1(s_enable_reg_n_0),
+        .O(\s_counter[31]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
-    \s_counter[3]_i_3__0 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
-        .I4(data0[3]),
-        .O(s_counter[3]));
+    \s_counter[31]_i_3 
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
+        .I4(data0[31]),
+        .O(s_counter[31]));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \s_counter[3]_i_4 
+    \s_counter[31]_i_4 
        (.I0(\s_counter_reg_n_0_[6] ),
         .I1(\s_counter_reg_n_0_[7] ),
         .I2(\s_counter_reg_n_0_[4] ),
         .I3(\s_counter_reg_n_0_[5] ),
-        .I4(\s_counter[3]_i_9_n_0 ),
-        .O(\s_counter[3]_i_4_n_0 ));
+        .I4(\s_counter[31]_i_9_n_0 ),
+        .O(\s_counter[31]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'h00000001)) 
-    \s_counter[3]_i_5 
+    \s_counter[31]_i_5 
        (.I0(\s_counter_reg_n_0_[10] ),
         .I1(\s_counter_reg_n_0_[11] ),
         .I2(\s_counter_reg_n_0_[8] ),
         .I3(\s_counter_reg_n_0_[9] ),
-        .I4(\s_counter[3]_i_10_n_0 ),
-        .O(\s_counter[3]_i_5_n_0 ));
+        .I4(\s_counter[31]_i_10_n_0 ),
+        .O(\s_counter[31]_i_5_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \s_counter[3]_i_6 
+    \s_counter[31]_i_6 
        (.I0(\s_counter_reg_n_0_[26] ),
         .I1(\s_counter_reg_n_0_[27] ),
         .I2(\s_counter_reg_n_0_[24] ),
         .I3(\s_counter_reg_n_0_[25] ),
-        .I4(\s_counter[3]_i_11_n_0 ),
-        .O(\s_counter[3]_i_6_n_0 ));
+        .I4(\s_counter[31]_i_11_n_0 ),
+        .O(\s_counter[31]_i_6_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \s_counter[3]_i_7 
+    \s_counter[31]_i_7 
        (.I0(\s_counter_reg_n_0_[18] ),
         .I1(\s_counter_reg_n_0_[19] ),
         .I2(\s_counter_reg_n_0_[16] ),
         .I3(\s_counter_reg_n_0_[17] ),
-        .I4(\s_counter[3]_i_12_n_0 ),
-        .O(\s_counter[3]_i_7_n_0 ));
+        .I4(\s_counter[31]_i_12_n_0 ),
+        .O(\s_counter[31]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \s_counter[3]_i_9 
+    \s_counter[31]_i_9 
        (.I0(\s_counter_reg_n_0_[28] ),
-        .I1(counterSlave[3]),
+        .I1(\s_counter_reg_n_0_[3] ),
         .I2(\s_counter_reg_n_0_[31] ),
         .I3(\s_counter_reg_n_0_[29] ),
-        .O(\s_counter[3]_i_9_n_0 ));
+        .O(\s_counter[31]_i_9_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \s_counter[3]_i_1 
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
+        .I4(data0[3]),
+        .O(s_counter[3]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[4]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[4]),
         .O(s_counter[4]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[5]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[5]),
         .O(s_counter[5]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[6]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[6]),
         .O(s_counter[6]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[7]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[7]),
         .O(s_counter[7]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[8]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[8]),
         .O(s_counter[8]));
   LUT5 #(
     .INIT(32'hFFFB0000)) 
     \s_counter[9]_i_1 
-       (.I0(\s_counter[3]_i_4_n_0 ),
-        .I1(\s_counter[3]_i_5_n_0 ),
-        .I2(\s_counter[3]_i_6_n_0 ),
-        .I3(\s_counter[3]_i_7_n_0 ),
+       (.I0(\s_counter[31]_i_4_n_0 ),
+        .I1(\s_counter[31]_i_5_n_0 ),
+        .I2(\s_counter[31]_i_6_n_0 ),
+        .I3(\s_counter[31]_i_7_n_0 ),
         .I4(data0[9]),
         .O(s_counter[9]));
   FDRE \s_counter_reg[0] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[0]),
-        .Q(counterSlave[0]),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .Q(\s_counter_reg_n_0_[0] ),
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[10] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[10]),
         .Q(\s_counter_reg_n_0_[10] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[11] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[11]),
         .Q(\s_counter_reg_n_0_[11] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[12] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[12]),
         .Q(\s_counter_reg_n_0_[12] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   CARRY4 \s_counter_reg[12]_i_2 
        (.CI(\s_counter_reg[8]_i_2_n_0 ),
         .CO({\s_counter_reg[12]_i_2_n_0 ,\s_counter_reg[12]_i_2_n_1 ,\s_counter_reg[12]_i_2_n_2 ,\s_counter_reg[12]_i_2_n_3 }),
@@ -25523,28 +25495,28 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .S({\s_counter_reg_n_0_[12] ,\s_counter_reg_n_0_[11] ,\s_counter_reg_n_0_[10] ,\s_counter_reg_n_0_[9] }));
   FDRE \s_counter_reg[13] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[13]),
         .Q(\s_counter_reg_n_0_[13] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[14] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[14]),
         .Q(\s_counter_reg_n_0_[14] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[15] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[15]),
         .Q(\s_counter_reg_n_0_[15] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[16] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[16]),
         .Q(\s_counter_reg_n_0_[16] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   CARRY4 \s_counter_reg[16]_i_2 
        (.CI(\s_counter_reg[12]_i_2_n_0 ),
         .CO({\s_counter_reg[16]_i_2_n_0 ,\s_counter_reg[16]_i_2_n_1 ,\s_counter_reg[16]_i_2_n_2 ,\s_counter_reg[16]_i_2_n_3 }),
@@ -25554,34 +25526,34 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .S({\s_counter_reg_n_0_[16] ,\s_counter_reg_n_0_[15] ,\s_counter_reg_n_0_[14] ,\s_counter_reg_n_0_[13] }));
   FDRE \s_counter_reg[17] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[17]),
         .Q(\s_counter_reg_n_0_[17] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[18] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[18]),
         .Q(\s_counter_reg_n_0_[18] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[19] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[19]),
         .Q(\s_counter_reg_n_0_[19] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[1] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[1]),
-        .Q(counterSlave[1]),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .Q(\s_counter_reg_n_0_[1] ),
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[20] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[20]),
         .Q(\s_counter_reg_n_0_[20] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   CARRY4 \s_counter_reg[20]_i_2 
        (.CI(\s_counter_reg[16]_i_2_n_0 ),
         .CO({\s_counter_reg[20]_i_2_n_0 ,\s_counter_reg[20]_i_2_n_1 ,\s_counter_reg[20]_i_2_n_2 ,\s_counter_reg[20]_i_2_n_3 }),
@@ -25591,28 +25563,28 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .S({\s_counter_reg_n_0_[20] ,\s_counter_reg_n_0_[19] ,\s_counter_reg_n_0_[18] ,\s_counter_reg_n_0_[17] }));
   FDRE \s_counter_reg[21] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[21]),
         .Q(\s_counter_reg_n_0_[21] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[22] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[22]),
         .Q(\s_counter_reg_n_0_[22] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[23] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[23]),
         .Q(\s_counter_reg_n_0_[23] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[24] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[24]),
         .Q(\s_counter_reg_n_0_[24] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   CARRY4 \s_counter_reg[24]_i_2 
        (.CI(\s_counter_reg[20]_i_2_n_0 ),
         .CO({\s_counter_reg[24]_i_2_n_0 ,\s_counter_reg[24]_i_2_n_1 ,\s_counter_reg[24]_i_2_n_2 ,\s_counter_reg[24]_i_2_n_3 }),
@@ -25622,28 +25594,28 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .S({\s_counter_reg_n_0_[24] ,\s_counter_reg_n_0_[23] ,\s_counter_reg_n_0_[22] ,\s_counter_reg_n_0_[21] }));
   FDRE \s_counter_reg[25] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[25]),
         .Q(\s_counter_reg_n_0_[25] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[26] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[26]),
         .Q(\s_counter_reg_n_0_[26] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[27] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[27]),
         .Q(\s_counter_reg_n_0_[27] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[28] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[28]),
         .Q(\s_counter_reg_n_0_[28] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   CARRY4 \s_counter_reg[28]_i_2 
        (.CI(\s_counter_reg[24]_i_2_n_0 ),
         .CO({\s_counter_reg[28]_i_2_n_0 ,\s_counter_reg[28]_i_2_n_1 ,\s_counter_reg[28]_i_2_n_2 ,\s_counter_reg[28]_i_2_n_3 }),
@@ -25653,80 +25625,80 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .S({\s_counter_reg_n_0_[28] ,\s_counter_reg_n_0_[27] ,\s_counter_reg_n_0_[26] ,\s_counter_reg_n_0_[25] }));
   FDRE \s_counter_reg[29] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[29]),
         .Q(\s_counter_reg_n_0_[29] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[2] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[2]),
-        .Q(counterSlave[2]),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .Q(\s_counter_reg_n_0_[2] ),
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[30] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[30]),
         .Q(\s_counter_reg_n_0_[30] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[31] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[31]),
         .Q(\s_counter_reg_n_0_[31] ),
-        .R(\s_counter[3]_i_1_n_0 ));
-  CARRY4 \s_counter_reg[31]_i_2 
+        .R(\s_counter[31]_i_1_n_0 ));
+  CARRY4 \s_counter_reg[31]_i_8 
        (.CI(\s_counter_reg[28]_i_2_n_0 ),
-        .CO({\NLW_s_counter_reg[31]_i_2_CO_UNCONNECTED [3:2],\s_counter_reg[31]_i_2_n_2 ,\s_counter_reg[31]_i_2_n_3 }),
+        .CO({\NLW_s_counter_reg[31]_i_8_CO_UNCONNECTED [3:2],\s_counter_reg[31]_i_8_n_2 ,\s_counter_reg[31]_i_8_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_s_counter_reg[31]_i_2_O_UNCONNECTED [3],data0[31:29]}),
+        .O({\NLW_s_counter_reg[31]_i_8_O_UNCONNECTED [3],data0[31:29]}),
         .S({1'b0,\s_counter_reg_n_0_[31] ,\s_counter_reg_n_0_[30] ,\s_counter_reg_n_0_[29] }));
   FDRE \s_counter_reg[3] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[3]),
-        .Q(counterSlave[3]),
-        .R(\s_counter[3]_i_1_n_0 ));
-  CARRY4 \s_counter_reg[3]_i_8 
-       (.CI(1'b0),
-        .CO({\s_counter_reg[3]_i_8_n_0 ,\s_counter_reg[3]_i_8_n_1 ,\s_counter_reg[3]_i_8_n_2 ,\s_counter_reg[3]_i_8_n_3 }),
-        .CYINIT(counterSlave[0]),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[4:1]),
-        .S({\s_counter_reg_n_0_[4] ,counterSlave[3:1]}));
+        .Q(\s_counter_reg_n_0_[3] ),
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[4] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[4]),
         .Q(\s_counter_reg_n_0_[4] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
+  CARRY4 \s_counter_reg[4]_i_2 
+       (.CI(1'b0),
+        .CO({\s_counter_reg[4]_i_2_n_0 ,\s_counter_reg[4]_i_2_n_1 ,\s_counter_reg[4]_i_2_n_2 ,\s_counter_reg[4]_i_2_n_3 }),
+        .CYINIT(\s_counter_reg_n_0_[0] ),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[4:1]),
+        .S({\s_counter_reg_n_0_[4] ,\s_counter_reg_n_0_[3] ,\s_counter_reg_n_0_[2] ,\s_counter_reg_n_0_[1] }));
   FDRE \s_counter_reg[5] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[5]),
         .Q(\s_counter_reg_n_0_[5] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[6] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[6]),
         .Q(\s_counter_reg_n_0_[6] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[7] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[7]),
         .Q(\s_counter_reg_n_0_[7] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   FDRE \s_counter_reg[8] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[8]),
         .Q(\s_counter_reg_n_0_[8] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   CARRY4 \s_counter_reg[8]_i_2 
-       (.CI(\s_counter_reg[3]_i_8_n_0 ),
+       (.CI(\s_counter_reg[4]_i_2_n_0 ),
         .CO({\s_counter_reg[8]_i_2_n_0 ,\s_counter_reg[8]_i_2_n_1 ,\s_counter_reg[8]_i_2_n_2 ,\s_counter_reg[8]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
@@ -25734,108 +25706,108 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .S({\s_counter_reg_n_0_[8] ,\s_counter_reg_n_0_[7] ,\s_counter_reg_n_0_[6] ,\s_counter_reg_n_0_[5] }));
   FDRE \s_counter_reg[9] 
        (.C(s00_axis_aclk),
-        .CE(\s_counter[3]_i_2_n_0 ),
+        .CE(\s_counter[31]_i_2_n_0 ),
         .D(s_counter[9]),
         .Q(\s_counter_reg_n_0_[9] ),
-        .R(\s_counter[3]_i_1_n_0 ));
+        .R(\s_counter[31]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h04C407C734F437F7)) 
     \s_dataOut[0]_i_2 
-       (.I0(hashOut[128]),
-        .I1(hashOut[32]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[64]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[96]),
+       (.I0(s_hashOut[224]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[128]),
+        .I4(s_hashOut[160]),
+        .I5(s_hashOut[32]),
         .O(\s_dataOut_reg[0] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h04C407C734F437F7)) 
     \s_dataOut[0]_i_3 
-       (.I0(hashOut[160]),
-        .I1(hashOut[64]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[96]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[0]),
+       (.I0(s_hashOut[192]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[64]),
+        .I4(s_hashOut[128]),
+        .I5(s_hashOut[160]),
         .O(\s_dataOut_reg[0]_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h0503F50305F3F5F3)) 
     \s_dataOut[10]_i_2 
-       (.I0(hashOut[138]),
-        .I1(hashOut[42]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[74]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[106]),
-        .O(\s_dataOut_reg[10] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[10]_i_3 
-       (.I0(hashOut[170]),
-        .I1(hashOut[74]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[106]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[10]),
+       (.I0(s_hashOut[202]),
+        .I1(s_hashOut[138]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[74]),
+        .I5(s_hashOut[170]),
         .O(\s_dataOut_reg[10]_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h0503F50305F3F5F3)) 
+    \s_dataOut[10]_i_3 
+       (.I0(s_hashOut[234]),
+        .I1(s_hashOut[170]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[138]),
+        .I5(s_hashOut[42]),
+        .O(\s_dataOut_reg[10] ));
+  LUT6 #(
+    .INIT(64'h04C407C734F437F7)) 
     \s_dataOut[11]_i_2 
-       (.I0(hashOut[139]),
-        .I1(hashOut[43]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[75]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[107]),
+       (.I0(s_hashOut[235]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[139]),
+        .I4(s_hashOut[171]),
+        .I5(s_hashOut[43]),
         .O(\s_dataOut_reg[11] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h04C407C734F437F7)) 
     \s_dataOut[11]_i_3 
-       (.I0(hashOut[171]),
-        .I1(hashOut[75]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[107]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[11]),
+       (.I0(s_hashOut[203]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[75]),
+        .I4(s_hashOut[139]),
+        .I5(s_hashOut[171]),
         .O(\s_dataOut_reg[11]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[128]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[64]),
+        .I2(\s_hash_reg_n_0_[128] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[128]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[129]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[65]),
+        .I2(\s_hash_reg_n_0_[129] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[129]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[12]_i_2 
-       (.I0(hashOut[140]),
-        .I1(hashOut[44]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[76]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[108]),
-        .O(\s_dataOut_reg[12]_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[12]_i_3 
-       (.I0(hashOut[172]),
-        .I1(hashOut[76]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[108]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[12]),
+       (.I0(s_hashOut[204]),
+        .I1(s_hashOut[140]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[76]),
+        .I5(s_hashOut[172]),
         .O(\s_dataOut_reg[12]_1 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[12]_i_3 
+       (.I0(s_hashOut[236]),
+        .I1(s_hashOut[172]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[140]),
+        .I5(s_hashOut[44]),
+        .O(\s_dataOut_reg[12]_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[12]_i_5 
@@ -25856,1245 +25828,1244 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \s_dataOut[12]_i_8 
        (.I0(nonce[9]),
         .O(\s_dataOut_reg[12] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[130]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[66]),
+        .I2(\s_hash_reg_n_0_[130] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[130]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[131]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[67]),
+        .I2(\s_hash_reg_n_0_[131] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[131]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[132]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[68]),
+        .I2(\s_hash_reg_n_0_[132] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[132]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[133]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[69]),
+        .I2(\s_hash_reg_n_0_[133] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[133]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[134]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[70]),
+        .I2(\s_hash_reg_n_0_[134] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[134]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[135]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[71]),
+        .I2(\s_hash_reg_n_0_[135] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[135]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[136]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[72]),
+        .I2(\s_hash_reg_n_0_[136] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[136]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[137]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[73]),
+        .I2(\s_hash_reg_n_0_[137] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[137]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[138]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[74]),
+        .I2(\s_hash_reg_n_0_[138] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[138]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[139]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[75]),
+        .I2(\s_hash_reg_n_0_[139] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[139]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h0503F50305F3F5F3)) 
     \s_dataOut[13]_i_2 
-       (.I0(hashOut[141]),
-        .I1(hashOut[45]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[77]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[109]),
-        .O(\s_dataOut_reg[13] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[13]_i_3 
-       (.I0(hashOut[173]),
-        .I1(hashOut[77]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[109]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[13]),
+       (.I0(s_hashOut[205]),
+        .I1(s_hashOut[141]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[77]),
+        .I5(s_hashOut[173]),
         .O(\s_dataOut_reg[13]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  LUT6 #(
+    .INIT(64'h0503F50305F3F5F3)) 
+    \s_dataOut[13]_i_3 
+       (.I0(s_hashOut[237]),
+        .I1(s_hashOut[173]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[141]),
+        .I5(s_hashOut[45]),
+        .O(\s_dataOut_reg[13] ));
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[140]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[76]),
+        .I2(\s_hash_reg_n_0_[140] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[140]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[141]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[77]),
+        .I2(\s_hash_reg_n_0_[141] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[141]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[142]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[78]),
+        .I2(\s_hash_reg_n_0_[142] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[142]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[143]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[79]),
+        .I2(\s_hash_reg_n_0_[143] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[143]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[144]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[80]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[144] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[144]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[145]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[81]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[145] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[145]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[146]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[82]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[146] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[146]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[147]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[83]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[147] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[147]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[148]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[84]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[148] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[148]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[149]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[85]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[149] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[149]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h0503F50305F3F5F3)) 
     \s_dataOut[14]_i_2 
-       (.I0(hashOut[142]),
-        .I1(hashOut[46]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[78]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[110]),
-        .O(\s_dataOut_reg[14] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[14]_i_3 
-       (.I0(hashOut[174]),
-        .I1(hashOut[78]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[110]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[14]),
+       (.I0(s_hashOut[206]),
+        .I1(s_hashOut[142]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[78]),
+        .I5(s_hashOut[174]),
         .O(\s_dataOut_reg[14]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  LUT6 #(
+    .INIT(64'h0503F50305F3F5F3)) 
+    \s_dataOut[14]_i_3 
+       (.I0(s_hashOut[238]),
+        .I1(s_hashOut[174]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[142]),
+        .I5(s_hashOut[46]),
+        .O(\s_dataOut_reg[14] ));
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[150]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[86]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[150] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[150]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[151]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[87]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[151] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[151]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[152]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[88]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[152] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[152]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[153]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[89]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[153] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[153]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[154]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[90]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[154] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[154]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[155]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[91]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[155] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[155]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[156]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[92]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[156] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[156]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[157]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[93]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[157] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[157]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[158]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[94]),
+        .I2(\s_hash_reg_n_0_[158] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[158]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[159]_i_1 
        (.I0(s_ready),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[95]),
+        .I2(\s_hash_reg_n_0_[159] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[159]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[15]_i_2 
-       (.I0(hashOut[143]),
-        .I1(hashOut[47]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[79]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[111]),
-        .O(\s_dataOut_reg[15] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[15]_i_3 
-       (.I0(hashOut[175]),
-        .I1(hashOut[79]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[111]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[15]),
+       (.I0(s_hashOut[207]),
+        .I1(s_hashOut[143]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[79]),
+        .I5(s_hashOut[175]),
         .O(\s_dataOut_reg[15]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[15]_i_3 
+       (.I0(s_hashOut[239]),
+        .I1(s_hashOut[175]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[143]),
+        .I5(s_hashOut[47]),
+        .O(\s_dataOut_reg[15] ));
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[160]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[96]),
+        .I2(\s_hash_reg_n_0_[160] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[160]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[161]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[97]),
+        .I2(\s_hash_reg_n_0_[161] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[161]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[162]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[98]),
+        .I2(\s_hash_reg_n_0_[162] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[162]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[163]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[99]),
+        .I2(\s_hash_reg_n_0_[163] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[163]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[164]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[100]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[164]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[165]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[101]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[165]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[166]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[102]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[166]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[167]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[164]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[103]),
+        .I2(\s_hash_reg_n_0_[164] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[167]_i_1_n_0 ));
+        .O(\s_dataOut[164]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[168]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[165]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[104]),
+        .I2(\s_hash_reg_n_0_[165] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[168]_i_1_n_0 ));
+        .O(\s_dataOut[165]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[169]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[166]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[105]),
+        .I2(\s_hash_reg_n_0_[166] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[166]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[167]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[167] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[167]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[168]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[168] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[168]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[169]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[169] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[169]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[16]_i_2 
-       (.I0(hashOut[144]),
-        .I1(hashOut[48]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[80]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[112]),
-        .O(\s_dataOut_reg[16]_1 ));
-  LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'h5305F03F53F5FF3F)) 
     \s_dataOut[16]_i_3 
-       (.I0(hashOut[16]),
-        .I1(O[1]),
-        .I2(hashOut[112]),
+       (.I0(s_hashOut[144]),
+        .I1(s_hashOut[48]),
+        .I2(\s_counter_reg[0]_1 ),
         .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[80]),
-        .O(\s_dataOut_reg[16] ));
+        .I4(O[1]),
+        .I5(s_hashOut[176]),
+        .O(\s_dataOut_reg[16]_0 ));
+  LUT6 #(
+    .INIT(64'h04C407C734F437F7)) 
+    \s_dataOut[16]_i_4 
+       (.I0(s_hashOut[208]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[80]),
+        .I4(s_hashOut[144]),
+        .I5(s_hashOut[176]),
+        .O(\s_dataOut_reg[16]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[16]_i_5 
        (.I0(nonce[16]),
-        .O(\s_dataOut_reg[16]_0 [3]));
+        .O(\s_dataOut_reg[16] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[16]_i_6 
        (.I0(nonce[15]),
-        .O(\s_dataOut_reg[16]_0 [2]));
+        .O(\s_dataOut_reg[16] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[16]_i_7 
        (.I0(nonce[14]),
-        .O(\s_dataOut_reg[16]_0 [1]));
+        .O(\s_dataOut_reg[16] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[16]_i_8 
        (.I0(nonce[13]),
-        .O(\s_dataOut_reg[16]_0 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[170]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[106]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[170]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[171]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[107]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[171]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[172]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[108]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[172]_i_1_n_0 ));
+        .O(\s_dataOut_reg[16] [0]));
   (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[173]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[170]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[109]),
+        .I2(\s_hash_reg_n_0_[170] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[173]_i_1_n_0 ));
+        .O(\s_dataOut[170]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[174]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[171]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[110]),
+        .I2(\s_hash_reg_n_0_[171] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[174]_i_1_n_0 ));
+        .O(\s_dataOut[171]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[175]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[172]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[111]),
+        .I2(\s_hash_reg_n_0_[172] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[172]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[173]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[173] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[173]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[174]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[174] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[174]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[175]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[175] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[175]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[176]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[112]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[176] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[176]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[177]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[113]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[177] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[177]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[178]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[114]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[178]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[179]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[115]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[179]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[17]_i_2 
-       (.I0(hashOut[145]),
-        .I1(hashOut[49]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[81]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[113]),
-        .O(\s_dataOut_reg[17]_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[17]_i_3 
-       (.I0(hashOut[17]),
-        .I1(O[1]),
-        .I2(hashOut[113]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[81]),
-        .O(\s_dataOut_reg[17] ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[180]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[116]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[180]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[181]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[117]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[181]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[182]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[118]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[182]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[183]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[119]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[183]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[184]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[120]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[184]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[185]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[121]),
+    \s_dataOut[178]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[178] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[185]_i_1_n_0 ));
+        .O(\s_dataOut[178]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[186]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[122]),
+    \s_dataOut[179]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[179] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[186]_i_1_n_0 ));
+        .O(\s_dataOut[179]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h5305F03F53F5FF3F)) 
+    \s_dataOut[17]_i_2 
+       (.I0(s_hashOut[145]),
+        .I1(s_hashOut[49]),
+        .I2(\s_counter_reg[0]_1 ),
+        .I3(O[0]),
+        .I4(O[1]),
+        .I5(s_hashOut[177]),
+        .O(\s_dataOut_reg[17] ));
+  LUT6 #(
+    .INIT(64'h04C407C734F437F7)) 
+    \s_dataOut[17]_i_3 
+       (.I0(s_hashOut[209]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[81]),
+        .I4(s_hashOut[145]),
+        .I5(s_hashOut[177]),
+        .O(\s_dataOut_reg[17]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[187]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[123]),
+    \s_dataOut[180]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[180] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[187]_i_1_n_0 ));
+        .O(\s_dataOut[180]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT4 #(
     .INIT(16'hF780)) 
+    \s_dataOut[181]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[181] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[181]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[182]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[182] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[182]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[183]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[183] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[183]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[184]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[184] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[184]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[185]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[185] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[185]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[186]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[186] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[186]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[187]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[187] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[187]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
     \s_dataOut[188]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[124]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[188] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[188]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[189]_i_1 
        (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[125]),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[189] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[189]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[18]_i_2 
-       (.I0(hashOut[146]),
-        .I1(hashOut[50]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[82]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[114]),
+       (.I0(s_hashOut[210]),
+        .I1(s_hashOut[146]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[82]),
+        .I5(s_hashOut[178]),
         .O(\s_dataOut_reg[18]_0 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'hF0AACCF000CCAA00)) 
     \s_dataOut[18]_i_3 
-       (.I0(hashOut[18]),
-        .I1(O[1]),
-        .I2(hashOut[114]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[82]),
+       (.I0(s_hashOut[50]),
+        .I1(s_hashOut[178]),
+        .I2(s_hashOut[146]),
+        .I3(\s_counter_reg[0]_1 ),
+        .I4(O[0]),
+        .I5(O[1]),
         .O(\s_dataOut_reg[18] ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[190]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[126]),
+        .I2(\s_hash_reg_n_0_[190] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[190]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[191]_i_1 
        (.I0(s_ready),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[127]),
+        .I2(\s_hash_reg_n_0_[191] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[191]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[192]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[128]),
+        .I2(\s_hash_reg_n_0_[192] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[192]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[193]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[129]),
+        .I2(\s_hash_reg_n_0_[193] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[193]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[194]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[130]),
+        .I2(\s_hash_reg_n_0_[194] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[194]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[195]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[131]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[195]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[196]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[195]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[132]),
+        .I2(\s_hash_reg_n_0_[195] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[196]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[197]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[133]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[197]_i_1_n_0 ));
+        .O(\s_dataOut[195]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[198]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[196]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[134]),
+        .I2(\s_hash_reg_n_0_[196] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[198]_i_1_n_0 ));
+        .O(\s_dataOut[196]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[199]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[197]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[135]),
+        .I2(\s_hash_reg_n_0_[197] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[199]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[19]_i_2 
-       (.I0(hashOut[147]),
-        .I1(hashOut[51]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[83]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[115]),
-        .O(\s_dataOut_reg[19]_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[19]_i_3 
-       (.I0(hashOut[19]),
-        .I1(O[1]),
-        .I2(hashOut[115]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[83]),
-        .O(\s_dataOut_reg[19] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[1]_i_2 
-       (.I0(hashOut[129]),
-        .I1(hashOut[33]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[65]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[97]),
-        .O(\s_dataOut_reg[1] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[1]_i_3 
-       (.I0(hashOut[161]),
-        .I1(hashOut[65]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[97]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[1]),
-        .O(\s_dataOut_reg[1]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[200]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[136]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[200]_i_1_n_0 ));
+        .O(\s_dataOut[197]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[201]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[198]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[137]),
+        .I2(\s_hash_reg_n_0_[198] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[201]_i_1_n_0 ));
+        .O(\s_dataOut[198]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[202]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[199]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[138]),
+        .I2(\s_hash_reg_n_0_[199] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[202]_i_1_n_0 ));
+        .O(\s_dataOut[199]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0503F50305F3F5F3)) 
+    \s_dataOut[19]_i_2 
+       (.I0(s_hashOut[211]),
+        .I1(s_hashOut[147]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[83]),
+        .I5(s_hashOut[179]),
+        .O(\s_dataOut_reg[19]_0 ));
+  LUT6 #(
+    .INIT(64'h0530F35FF53FF35F)) 
+    \s_dataOut[19]_i_3 
+       (.I0(s_hashOut[51]),
+        .I1(s_hashOut[179]),
+        .I2(\s_counter_reg[0]_1 ),
+        .I3(O[0]),
+        .I4(O[1]),
+        .I5(s_hashOut[147]),
+        .O(\s_dataOut_reg[19] ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[1]_i_2 
+       (.I0(s_hashOut[193]),
+        .I1(s_hashOut[129]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[65]),
+        .I5(s_hashOut[161]),
+        .O(\s_dataOut_reg[1]_0 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[1]_i_3 
+       (.I0(s_hashOut[225]),
+        .I1(s_hashOut[161]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[129]),
+        .I5(s_hashOut[33]),
+        .O(\s_dataOut_reg[1] ));
   (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[203]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[200]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[139]),
+        .I2(\s_hash_reg_n_0_[200] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[203]_i_1_n_0 ));
+        .O(\s_dataOut[200]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[204]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[201]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[140]),
+        .I2(\s_hash_reg_n_0_[201] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[204]_i_1_n_0 ));
+        .O(\s_dataOut[201]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[205]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[202]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[141]),
+        .I2(\s_hash_reg_n_0_[202] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[205]_i_1_n_0 ));
+        .O(\s_dataOut[202]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[206]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[203]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[142]),
+        .I2(\s_hash_reg_n_0_[203] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[206]_i_1_n_0 ));
+        .O(\s_dataOut[203]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[207]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[204]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[143]),
+        .I2(\s_hash_reg_n_0_[204] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[204]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[205]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[205] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[205]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[206]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[206] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[206]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[207]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[207] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[207]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[208]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[144]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[208] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[208]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[209]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[145]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[209] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[209]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h0503F50305F3F5F3)) 
     \s_dataOut[20]_i_2 
-       (.I0(hashOut[148]),
-        .I1(hashOut[52]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[84]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[116]),
+       (.I0(s_hashOut[212]),
+        .I1(s_hashOut[148]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[84]),
+        .I5(s_hashOut[180]),
         .O(\s_dataOut_reg[20]_1 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'h0530F35FF53FF35F)) 
     \s_dataOut[20]_i_3 
-       (.I0(hashOut[20]),
-        .I1(O[1]),
-        .I2(hashOut[116]),
+       (.I0(s_hashOut[52]),
+        .I1(s_hashOut[180]),
+        .I2(\s_counter_reg[0]_1 ),
         .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[84]),
-        .O(\s_dataOut_reg[20] ));
+        .I4(O[1]),
+        .I5(s_hashOut[148]),
+        .O(\s_dataOut_reg[20]_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[20]_i_5 
        (.I0(nonce[20]),
-        .O(\s_dataOut_reg[20]_0 [3]));
+        .O(\s_dataOut_reg[20] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[20]_i_6 
        (.I0(nonce[19]),
-        .O(\s_dataOut_reg[20]_0 [2]));
+        .O(\s_dataOut_reg[20] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[20]_i_7 
        (.I0(nonce[18]),
-        .O(\s_dataOut_reg[20]_0 [1]));
+        .O(\s_dataOut_reg[20] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[20]_i_8 
        (.I0(nonce[17]),
-        .O(\s_dataOut_reg[20]_0 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[210]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[146]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[210]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[211]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[147]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[211]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[212]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[148]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[212]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[213]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[149]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[213]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[214]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[150]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[214]_i_1_n_0 ));
+        .O(\s_dataOut_reg[20] [0]));
   (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[215]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[151]),
+    \s_dataOut[210]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[210] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[215]_i_1_n_0 ));
+        .O(\s_dataOut[210]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[216]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[152]),
+    \s_dataOut[211]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[211] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[216]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[217]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[153]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[217]_i_1_n_0 ));
+        .O(\s_dataOut[211]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[218]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[154]),
+    \s_dataOut[212]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[212] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[218]_i_1_n_0 ));
+        .O(\s_dataOut[212]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[219]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[155]),
+    \s_dataOut[213]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[213] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[219]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[21]_i_2 
-       (.I0(hashOut[149]),
-        .I1(hashOut[53]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[85]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[117]),
-        .O(\s_dataOut_reg[21]_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[21]_i_3 
-       (.I0(hashOut[21]),
-        .I1(O[1]),
-        .I2(hashOut[117]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[85]),
-        .O(\s_dataOut_reg[21] ));
+        .O(\s_dataOut[213]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT4 #(
     .INIT(16'hF780)) 
+    \s_dataOut[214]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[214] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[214]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[215]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[215] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[215]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[216]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[216] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[216]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[217]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[217] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[217]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[218]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[218] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[218]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[219]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[219] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[219]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[21]_i_2 
+       (.I0(s_hashOut[213]),
+        .I1(s_hashOut[149]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[85]),
+        .I5(s_hashOut[181]),
+        .O(\s_dataOut_reg[21]_0 ));
+  LUT6 #(
+    .INIT(64'hF0AACCF000CCAA00)) 
+    \s_dataOut[21]_i_3 
+       (.I0(s_hashOut[53]),
+        .I1(s_hashOut[181]),
+        .I2(s_hashOut[149]),
+        .I3(\s_counter_reg[0]_1 ),
+        .I4(O[0]),
+        .I5(O[1]),
+        .O(\s_dataOut_reg[21] ));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
     \s_dataOut[220]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[156]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[220] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[220]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[221]_i_1 
        (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[157]),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[221] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[221]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[222]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[158]),
+        .I2(\s_hash_reg_n_0_[222] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[222]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[223]_i_1 
        (.I0(s_ready),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[159]),
+        .I2(\s_hash_reg_n_0_[223] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[223]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[224]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[160]),
+        .I2(\s_hash_reg_n_0_[224] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[224]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[225]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[161]),
+        .I2(\s_hash_reg_n_0_[225] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[225]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[226]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[162]),
+        .I2(\s_hash_reg_n_0_[226] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[226]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[227]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[163]),
+        .I2(\s_hash_reg_n_0_[227] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[227]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[228]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[164]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[228]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[229]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[165]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[229]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[22]_i_2 
-       (.I0(hashOut[150]),
-        .I1(hashOut[54]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[86]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[118]),
-        .O(\s_dataOut_reg[22]_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[22]_i_3 
-       (.I0(hashOut[22]),
-        .I1(O[1]),
-        .I2(hashOut[118]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[86]),
-        .O(\s_dataOut_reg[22] ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[230]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[166]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[230]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[231]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[167]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[231]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[232]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[168]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[232]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[233]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[169]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[233]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[234]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[228]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[170]),
+        .I2(\s_hash_reg_n_0_[228] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[234]_i_1_n_0 ));
+        .O(\s_dataOut[228]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[235]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[229]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[171]),
+        .I2(\s_hash_reg_n_0_[229] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[235]_i_1_n_0 ));
+        .O(\s_dataOut[229]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0503F50305F3F5F3)) 
+    \s_dataOut[22]_i_2 
+       (.I0(s_hashOut[214]),
+        .I1(s_hashOut[150]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[86]),
+        .I5(s_hashOut[182]),
+        .O(\s_dataOut_reg[22]_0 ));
+  LUT6 #(
+    .INIT(64'h0530F35FF53FF35F)) 
+    \s_dataOut[22]_i_3 
+       (.I0(s_hashOut[54]),
+        .I1(s_hashOut[182]),
+        .I2(\s_counter_reg[0]_1 ),
+        .I3(O[0]),
+        .I4(O[1]),
+        .I5(s_hashOut[150]),
+        .O(\s_dataOut_reg[22] ));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[230]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[230] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[230]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[231]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[231] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[231]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[236]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[232]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[172]),
+        .I2(\s_hash_reg_n_0_[232] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[236]_i_1_n_0 ));
+        .O(\s_dataOut[232]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[237]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[233]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[173]),
+        .I2(\s_hash_reg_n_0_[233] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[237]_i_1_n_0 ));
+        .O(\s_dataOut[233]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[238]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[234]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[174]),
+        .I2(\s_hash_reg_n_0_[234] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[234]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[235]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[235] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[235]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[236]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[236] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[236]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[237]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[237] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[237]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[238]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[238] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[238]_i_1_n_0 ));
   LUT3 #(
@@ -27104,927 +27075,965 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(s00_axis_aresetn),
         .O(\s_dataOut[239]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[239]_i_2 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[175]),
+        .I2(\s_hash_reg_n_0_[239] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[239]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
     \s_dataOut[239]_i_3 
-       (.I0(s_POFready_i_3_n_0),
-        .I1(tempHash[178]),
-        .I2(tempHash[177]),
-        .I3(tempHash[179]),
-        .I4(tempHash[176]),
-        .I5(s_POFready_i_4_n_0),
+       (.I0(\s_dataOut[239]_i_4_n_0 ),
+        .I1(sel0[2]),
+        .I2(sel0[1]),
+        .I3(sel0[3]),
+        .I4(sel0[0]),
+        .I5(\s_dataOut[239]_i_5_n_0 ),
         .O(\s_dataOut[239]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \s_dataOut[239]_i_4 
+       (.I0(sel0[7]),
+        .I1(sel0[6]),
+        .I2(sel0[5]),
+        .I3(sel0[4]),
+        .O(\s_dataOut[239]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \s_dataOut[239]_i_5 
+       (.I0(sel0[8]),
+        .I1(sel0[11]),
+        .I2(sel0[9]),
+        .I3(sel0[10]),
+        .I4(\s_dataOut[239]_i_6_n_0 ),
+        .O(\s_dataOut[239]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \s_dataOut[239]_i_6 
+       (.I0(sel0[13]),
+        .I1(sel0[12]),
+        .I2(sel0[15]),
+        .I3(sel0[14]),
+        .O(\s_dataOut[239]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[23]_i_2 
-       (.I0(hashOut[151]),
-        .I1(hashOut[55]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[87]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[119]),
+       (.I0(s_hashOut[215]),
+        .I1(s_hashOut[151]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[87]),
+        .I5(s_hashOut[183]),
         .O(\s_dataOut_reg[23]_0 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'hF0AACCF000CCAA00)) 
     \s_dataOut[23]_i_3 
-       (.I0(hashOut[23]),
-        .I1(O[1]),
-        .I2(hashOut[119]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[87]),
+       (.I0(s_hashOut[55]),
+        .I1(s_hashOut[183]),
+        .I2(s_hashOut[151]),
+        .I3(\s_counter_reg[0]_1 ),
+        .I4(O[0]),
+        .I5(O[1]),
         .O(\s_dataOut_reg[23] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[24]_i_2 
-       (.I0(hashOut[152]),
-        .I1(hashOut[56]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[88]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[120]),
-        .O(\s_dataOut_reg[24]_1 ));
-  LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'h5305F03F53F5FF3F)) 
     \s_dataOut[24]_i_3 
-       (.I0(hashOut[24]),
-        .I1(O[1]),
-        .I2(hashOut[120]),
+       (.I0(s_hashOut[152]),
+        .I1(s_hashOut[56]),
+        .I2(\s_counter_reg[0]_1 ),
         .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[88]),
-        .O(\s_dataOut_reg[24] ));
+        .I4(O[1]),
+        .I5(s_hashOut[184]),
+        .O(\s_dataOut_reg[24]_0 ));
+  LUT6 #(
+    .INIT(64'h04C407C734F437F7)) 
+    \s_dataOut[24]_i_4 
+       (.I0(s_hashOut[216]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[88]),
+        .I4(s_hashOut[152]),
+        .I5(s_hashOut[184]),
+        .O(\s_dataOut_reg[24]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[24]_i_5 
        (.I0(nonce[24]),
-        .O(\s_dataOut_reg[24]_0 [3]));
+        .O(\s_dataOut_reg[24] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[24]_i_6 
        (.I0(nonce[23]),
-        .O(\s_dataOut_reg[24]_0 [2]));
+        .O(\s_dataOut_reg[24] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[24]_i_7 
        (.I0(nonce[22]),
-        .O(\s_dataOut_reg[24]_0 [1]));
+        .O(\s_dataOut_reg[24] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[24]_i_8 
        (.I0(nonce[21]),
-        .O(\s_dataOut_reg[24]_0 [0]));
+        .O(\s_dataOut_reg[24] [0]));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h0503F50305F3F5F3)) 
     \s_dataOut[25]_i_2 
-       (.I0(hashOut[153]),
-        .I1(hashOut[57]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[89]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[121]),
+       (.I0(s_hashOut[217]),
+        .I1(s_hashOut[153]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[89]),
+        .I5(s_hashOut[185]),
         .O(\s_dataOut_reg[25]_0 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'h0530F35FF53FF35F)) 
     \s_dataOut[25]_i_3 
-       (.I0(hashOut[25]),
-        .I1(O[1]),
-        .I2(hashOut[121]),
+       (.I0(s_hashOut[57]),
+        .I1(s_hashOut[185]),
+        .I2(\s_counter_reg[0]_1 ),
         .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[89]),
+        .I4(O[1]),
+        .I5(s_hashOut[153]),
         .O(\s_dataOut_reg[25] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[26]_i_2 
-       (.I0(hashOut[154]),
-        .I1(hashOut[58]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[90]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[122]),
+       (.I0(s_hashOut[218]),
+        .I1(s_hashOut[154]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[90]),
+        .I5(s_hashOut[186]),
         .O(\s_dataOut_reg[26]_0 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'hF0AACCF000CCAA00)) 
     \s_dataOut[26]_i_3 
-       (.I0(hashOut[26]),
-        .I1(O[1]),
-        .I2(hashOut[122]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[90]),
+       (.I0(s_hashOut[58]),
+        .I1(s_hashOut[186]),
+        .I2(s_hashOut[154]),
+        .I3(\s_counter_reg[0]_1 ),
+        .I4(O[0]),
+        .I5(O[1]),
         .O(\s_dataOut_reg[26] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h5305F03F53F5FF3F)) 
     \s_dataOut[27]_i_2 
-       (.I0(hashOut[155]),
-        .I1(hashOut[59]),
+       (.I0(s_hashOut[155]),
+        .I1(s_hashOut[59]),
         .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[91]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[123]),
-        .O(\s_dataOut_reg[27]_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[27]_i_3 
-       (.I0(hashOut[27]),
-        .I1(O[1]),
-        .I2(hashOut[123]),
         .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[91]),
+        .I4(O[1]),
+        .I5(s_hashOut[187]),
         .O(\s_dataOut_reg[27] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h04C407C734F437F7)) 
+    \s_dataOut[27]_i_3 
+       (.I0(s_hashOut[219]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[91]),
+        .I4(s_hashOut[155]),
+        .I5(s_hashOut[187]),
+        .O(\s_dataOut_reg[27]_0 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[28]_i_2 
-       (.I0(hashOut[156]),
-        .I1(hashOut[60]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[92]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[124]),
+       (.I0(s_hashOut[220]),
+        .I1(s_hashOut[156]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[92]),
+        .I5(s_hashOut[188]),
         .O(\s_dataOut_reg[28]_1 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
+    .INIT(64'hF0AACCF000CCAA00)) 
     \s_dataOut[28]_i_3 
-       (.I0(hashOut[28]),
-        .I1(O[1]),
-        .I2(hashOut[124]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[92]),
-        .O(\s_dataOut_reg[28] ));
+       (.I0(s_hashOut[60]),
+        .I1(s_hashOut[188]),
+        .I2(s_hashOut[156]),
+        .I3(\s_counter_reg[0]_1 ),
+        .I4(O[0]),
+        .I5(O[1]),
+        .O(\s_dataOut_reg[28]_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[28]_i_5 
        (.I0(nonce[28]),
-        .O(\s_dataOut_reg[28]_0 [3]));
+        .O(\s_dataOut_reg[28] [3]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[28]_i_6 
        (.I0(nonce[27]),
-        .O(\s_dataOut_reg[28]_0 [2]));
+        .O(\s_dataOut_reg[28] [2]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[28]_i_7 
        (.I0(nonce[26]),
-        .O(\s_dataOut_reg[28]_0 [1]));
+        .O(\s_dataOut_reg[28] [1]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[28]_i_8 
        (.I0(nonce[25]),
-        .O(\s_dataOut_reg[28]_0 [0]));
+        .O(\s_dataOut_reg[28] [0]));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[29]_i_2 
-       (.I0(hashOut[157]),
-        .I1(hashOut[61]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[93]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[125]),
+       (.I0(s_hashOut[221]),
+        .I1(s_hashOut[157]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[93]),
+        .I5(s_hashOut[189]),
         .O(\s_dataOut_reg[29]_0 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[29]_i_3 
-       (.I0(hashOut[29]),
-        .I1(O[1]),
-        .I2(hashOut[125]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[93]),
+    .INIT(64'hF0AACCF000CCAA00)) 
+    \s_dataOut[29]_i_4 
+       (.I0(s_hashOut[61]),
+        .I1(s_hashOut[189]),
+        .I2(s_hashOut[157]),
+        .I3(\s_counter_reg[0]_1 ),
+        .I4(O[0]),
+        .I5(O[1]),
         .O(\s_dataOut_reg[29] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[2]_i_2 
-       (.I0(hashOut[130]),
-        .I1(hashOut[34]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[66]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[98]),
-        .O(\s_dataOut_reg[2] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[2]_i_3 
-       (.I0(hashOut[162]),
-        .I1(hashOut[66]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[98]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[2]),
+       (.I0(s_hashOut[194]),
+        .I1(s_hashOut[130]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[66]),
+        .I5(s_hashOut[162]),
         .O(\s_dataOut_reg[2]_0 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[2]_i_3 
+       (.I0(s_hashOut[226]),
+        .I1(s_hashOut[162]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[130]),
+        .I5(s_hashOut[34]),
+        .O(\s_dataOut_reg[2] ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[30]_i_10 
        (.I0(nonce[29]),
         .O(\s_dataOut_reg[30]_0 [0]));
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \s_dataOut[30]_i_2 
+       (.I0(s_validData),
+        .I1(m00_axis_tready),
+        .O(\s_dataOut_reg[30] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[30]_i_4 
-       (.I0(hashOut[158]),
-        .I1(hashOut[62]),
+    .INIT(64'h5305F03F53F5FF3F)) 
+    \s_dataOut[30]_i_6 
+       (.I0(s_hashOut[158]),
+        .I1(s_hashOut[62]),
         .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[94]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[126]),
+        .I3(O[0]),
+        .I4(O[1]),
+        .I5(s_hashOut[190]),
         .O(\s_dataOut_reg[30]_1 ));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[30]_i_5 
-       (.I0(hashOut[30]),
-        .I1(O[1]),
-        .I2(hashOut[126]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[94]),
-        .O(\s_dataOut_reg[30] ));
+    .INIT(64'h04C407C734F437F7)) 
+    \s_dataOut[30]_i_7 
+       (.I0(s_hashOut[222]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[94]),
+        .I4(s_hashOut[158]),
+        .I5(s_hashOut[190]),
+        .O(\s_dataOut_reg[30]_2 ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[30]_i_9 
-       (.I0(nonce[30]),
+       (.I0(s_nonce[30]),
         .O(\s_dataOut_reg[30]_0 [1]));
   LUT6 #(
-    .INIT(64'hFFFF4733FFFF47FF)) 
-    \s_dataOut[31]_i_9 
-       (.I0(hashOut[31]),
-        .I1(O[1]),
-        .I2(hashOut[127]),
-        .I3(O[0]),
-        .I4(\s_counter_reg[0]_0 ),
-        .I5(hashOut[95]),
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[31]_i_3 
+       (.I0(s_hashOut[223]),
+        .I1(hash_output[1]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[95]),
+        .I5(hash_output[2]),
+        .O(\s_dataOut_reg[31]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \s_dataOut[31]_i_5 
+       (.I0(m00_axis_tready),
+        .I1(s_validData),
         .O(\s_dataOut_reg[31] ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[32]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[0]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[32]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[33]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[1]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[33]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[34]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[2]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[34]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[35]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[3]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[35]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[36]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[4]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[36]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT4 #(
-    .INIT(16'hF780)) 
-    \s_dataOut[37]_i_1 
-       (.I0(s_ready),
-        .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[5]),
-        .I3(s00_axis_aresetn),
-        .O(\s_dataOut[37]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[38]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[32]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[6]),
+        .I2(\s_hash_reg_n_0_[32] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[38]_i_1_n_0 ));
+        .O(\s_dataOut[32]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[39]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[33]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[7]),
+        .I2(\s_hash_reg_n_0_[33] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[39]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[3]_i_2 
-       (.I0(hashOut[131]),
-        .I1(hashOut[35]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[67]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[99]),
-        .O(\s_dataOut_reg[3] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[3]_i_3 
-       (.I0(hashOut[163]),
-        .I1(hashOut[67]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[99]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[3]),
-        .O(\s_dataOut_reg[3]_0 ));
+        .O(\s_dataOut[33]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[34]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[34] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[34]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[35]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[35] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[35]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[40]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[36]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[8]),
+        .I2(\s_hash_reg_n_0_[36] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[40]_i_1_n_0 ));
+        .O(\s_dataOut[36]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[41]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[37]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[9]),
+        .I2(\s_hash_reg_n_0_[37] ),
         .I3(s00_axis_aresetn),
-        .O(\s_dataOut[41]_i_1_n_0 ));
+        .O(\s_dataOut[37]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT4 #(
     .INIT(16'hF780)) 
-    \s_dataOut[42]_i_1 
-       (.I0(s_ready),
+    \s_dataOut[38]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[10]),
+        .I2(\s_hash_reg_n_0_[38] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[38]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[39]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[39] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[39]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[3]_i_2 
+       (.I0(s_hashOut[195]),
+        .I1(s_hashOut[131]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[67]),
+        .I5(s_hashOut[163]),
+        .O(\s_dataOut_reg[3]_0 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[3]_i_3 
+       (.I0(s_hashOut[227]),
+        .I1(s_hashOut[163]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[131]),
+        .I5(s_hashOut[35]),
+        .O(\s_dataOut_reg[3] ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[40]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[40] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[40]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[41]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[41] ),
+        .I3(s00_axis_aresetn),
+        .O(\s_dataOut[41]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT4 #(
+    .INIT(16'hF780)) 
+    \s_dataOut[42]_i_1 
+       (.I0(s_ready_reg_rep_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[42] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[42]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[43]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[11]),
+        .I2(\s_hash_reg_n_0_[43] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[43]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[44]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[12]),
+        .I2(\s_hash_reg_n_0_[44] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[44]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[45]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[13]),
+        .I2(\s_hash_reg_n_0_[45] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[45]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[46]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[14]),
+        .I2(\s_hash_reg_n_0_[46] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[46]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[47]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[15]),
+        .I2(\s_hash_reg_n_0_[47] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[47]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[48]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[16]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[48] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[48]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[49]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[17]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[49] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[49]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[4]_i_2 
-       (.I0(hashOut[132]),
-        .I1(hashOut[36]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[68]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[100]),
+       (.I0(s_hashOut[196]),
+        .I1(s_hashOut[132]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[68]),
+        .I5(s_hashOut[164]),
         .O(\s_dataOut_reg[4]_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[4]_i_3 
-       (.I0(hashOut[164]),
-        .I1(hashOut[68]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[100]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[4]),
-        .O(\s_dataOut_reg[4]_1 ));
+       (.I0(s_hashOut[228]),
+        .I1(s_hashOut[164]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[132]),
+        .I5(s_hashOut[36]),
+        .O(\s_dataOut_reg[4] ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[4]_i_5 
        (.I0(nonce[4]),
-        .O(\s_dataOut_reg[4] [3]));
+        .O(S[3]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[4]_i_6 
        (.I0(nonce[3]),
-        .O(\s_dataOut_reg[4] [2]));
+        .O(S[2]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[4]_i_7 
        (.I0(nonce[2]),
-        .O(\s_dataOut_reg[4] [1]));
+        .O(S[1]));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[4]_i_8 
        (.I0(nonce[1]),
-        .O(\s_dataOut_reg[4] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+        .O(S[0]));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[50]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[18]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[50] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[50]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[51]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[19]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[51] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[51]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[52]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[20]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[52] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[52]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[53]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[21]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[53] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[53]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[54]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[22]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[54] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[54]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[55]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[23]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[55] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[55]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[56]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[24]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[56] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[56]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[57]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[25]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[57] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[57]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[58]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[26]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[58] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[58]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[59]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[27]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[59] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[59]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[5]_i_2 
-       (.I0(hashOut[133]),
-        .I1(hashOut[37]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[69]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[101]),
-        .O(\s_dataOut_reg[5] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[5]_i_3 
-       (.I0(hashOut[165]),
-        .I1(hashOut[69]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[101]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[5]),
+       (.I0(s_hashOut[197]),
+        .I1(s_hashOut[133]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[69]),
+        .I5(s_hashOut[165]),
         .O(\s_dataOut_reg[5]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[5]_i_3 
+       (.I0(s_hashOut[229]),
+        .I1(s_hashOut[165]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[133]),
+        .I5(s_hashOut[37]),
+        .O(\s_dataOut_reg[5] ));
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[60]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[28]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[60] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[60]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[61]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[29]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[61] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[61]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[62]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[30]),
+        .I2(\s_hash_reg_n_0_[62] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[62]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[63]_i_1 
        (.I0(s_ready),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[31]),
+        .I2(\s_hash_reg_n_0_[63] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[63]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[64]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[32]),
+        .I2(\s_hash_reg_n_0_[64] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[64]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[65]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[33]),
+        .I2(\s_hash_reg_n_0_[65] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[65]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[66]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[34]),
+        .I2(\s_hash_reg_n_0_[66] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[66]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[67]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[35]),
+        .I2(\s_hash_reg_n_0_[67] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[67]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[68]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[36]),
+        .I2(\s_hash_reg_n_0_[68] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[68]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[69]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[37]),
+        .I2(\s_hash_reg_n_0_[69] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[69]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h0503F50305F3F5F3)) 
     \s_dataOut[6]_i_2 
-       (.I0(hashOut[134]),
-        .I1(hashOut[38]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[70]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[102]),
-        .O(\s_dataOut_reg[6] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[6]_i_3 
-       (.I0(hashOut[166]),
-        .I1(hashOut[70]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[102]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[6]),
+       (.I0(s_hashOut[198]),
+        .I1(s_hashOut[134]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[70]),
+        .I5(s_hashOut[166]),
         .O(\s_dataOut_reg[6]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  LUT6 #(
+    .INIT(64'h0503F50305F3F5F3)) 
+    \s_dataOut[6]_i_3 
+       (.I0(s_hashOut[230]),
+        .I1(s_hashOut[166]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[134]),
+        .I5(s_hashOut[38]),
+        .O(\s_dataOut_reg[6] ));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[70]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[38]),
+        .I2(\s_hash_reg_n_0_[70] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[70]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[71]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[39]),
+        .I2(\s_hash_reg_n_0_[71] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[71]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[72]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[40]),
+        .I2(\s_hash_reg_n_0_[72] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[72]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[73]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[41]),
+        .I2(\s_hash_reg_n_0_[73] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[73]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[74]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[42]),
+        .I2(\s_hash_reg_n_0_[74] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[74]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[75]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[43]),
+        .I2(\s_hash_reg_n_0_[75] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[75]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[76]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[44]),
+        .I2(\s_hash_reg_n_0_[76] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[76]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[77]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[45]),
+        .I2(\s_hash_reg_n_0_[77] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[77]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[78]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[46]),
+        .I2(\s_hash_reg_n_0_[78] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[78]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[79]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[47]),
+        .I2(\s_hash_reg_n_0_[79] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[79]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[7]_i_2 
-       (.I0(hashOut[135]),
-        .I1(hashOut[39]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[71]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[103]),
-        .O(\s_dataOut_reg[7] ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[7]_i_3 
-       (.I0(hashOut[167]),
-        .I1(hashOut[71]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[103]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[7]),
+       (.I0(s_hashOut[199]),
+        .I1(s_hashOut[135]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[71]),
+        .I5(s_hashOut[167]),
         .O(\s_dataOut_reg[7]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[7]_i_3 
+       (.I0(s_hashOut[231]),
+        .I1(s_hashOut[167]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[135]),
+        .I5(s_hashOut[39]),
+        .O(\s_dataOut_reg[7] ));
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[80]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[48]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[80] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[80]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[81]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[49]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[81] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[81]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[82]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[50]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[82] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[82]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[83]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[51]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[83] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[83]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[84]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[52]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[84] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[84]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[85]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[53]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[85] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[85]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[86]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[54]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[86] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[86]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[87]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[55]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[87] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[87]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[88]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[56]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[88] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[88]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[89]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[57]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[89] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[89]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
     \s_dataOut[8]_i_2 
-       (.I0(hashOut[136]),
-        .I1(hashOut[40]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[72]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[104]),
-        .O(\s_dataOut_reg[8]_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \s_dataOut[8]_i_3 
-       (.I0(hashOut[168]),
-        .I1(hashOut[72]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[104]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[8]),
+       (.I0(s_hashOut[200]),
+        .I1(s_hashOut[136]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[72]),
+        .I5(s_hashOut[168]),
         .O(\s_dataOut_reg[8]_1 ));
+  LUT6 #(
+    .INIT(64'hFAFC0AFCFA0C0A0C)) 
+    \s_dataOut[8]_i_3 
+       (.I0(s_hashOut[232]),
+        .I1(s_hashOut[168]),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(\s_counter_reg[0]_2 ),
+        .I4(s_hashOut[136]),
+        .I5(s_hashOut[40]),
+        .O(\s_dataOut_reg[8]_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \s_dataOut[8]_i_5 
@@ -28045,1144 +28054,1144 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \s_dataOut[8]_i_8 
        (.I0(nonce[5]),
         .O(\s_dataOut_reg[8] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[90]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[58]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[90] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[90]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[91]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[59]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[91] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[91]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[92]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[60]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[92] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[92]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[93]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(tempHash[61]),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(\s_hash_reg_n_0_[93] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[93]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[94]_i_1 
-       (.I0(s_ready),
+       (.I0(s_ready_reg_rep_n_0),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[62]),
+        .I2(\s_hash_reg_n_0_[94] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[94]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT4 #(
     .INIT(16'hF780)) 
     \s_dataOut[95]_i_1 
        (.I0(s_ready),
         .I1(\s_dataOut[239]_i_3_n_0 ),
-        .I2(tempHash[63]),
+        .I2(\s_hash_reg_n_0_[95] ),
         .I3(s00_axis_aresetn),
         .O(\s_dataOut[95]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h04C407C734F437F7)) 
     \s_dataOut[9]_i_2 
-       (.I0(hashOut[137]),
-        .I1(hashOut[41]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[73]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[105]),
+       (.I0(s_hashOut[233]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[137]),
+        .I4(s_hashOut[169]),
+        .I5(s_hashOut[41]),
         .O(\s_dataOut_reg[9] ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h04C407C734F437F7)) 
     \s_dataOut[9]_i_3 
-       (.I0(hashOut[169]),
-        .I1(hashOut[73]),
-        .I2(\s_counter_reg[0]_1 ),
-        .I3(hashOut[105]),
-        .I4(\s_counter_reg[0]_2 ),
-        .I5(hashOut[9]),
+       (.I0(s_hashOut[201]),
+        .I1(\s_counter_reg[0]_2 ),
+        .I2(\s_counter_reg[0]_3 ),
+        .I3(s_hashOut[73]),
+        .I4(s_hashOut[137]),
+        .I5(s_hashOut[169]),
         .O(\s_dataOut_reg[9]_0 ));
   FDRE \s_dataOut_reg[128] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[128]_i_1_n_0 ),
-        .Q(hashOut[64]),
+        .Q(s_hashOut[128]),
         .R(1'b0));
   FDRE \s_dataOut_reg[129] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[129]_i_1_n_0 ),
-        .Q(hashOut[65]),
+        .Q(s_hashOut[129]),
         .R(1'b0));
   FDRE \s_dataOut_reg[130] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[130]_i_1_n_0 ),
-        .Q(hashOut[66]),
+        .Q(s_hashOut[130]),
         .R(1'b0));
   FDRE \s_dataOut_reg[131] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[131]_i_1_n_0 ),
-        .Q(hashOut[67]),
+        .Q(s_hashOut[131]),
         .R(1'b0));
   FDRE \s_dataOut_reg[132] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[132]_i_1_n_0 ),
-        .Q(hashOut[68]),
+        .Q(s_hashOut[132]),
         .R(1'b0));
   FDRE \s_dataOut_reg[133] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[133]_i_1_n_0 ),
-        .Q(hashOut[69]),
+        .Q(s_hashOut[133]),
         .R(1'b0));
   FDRE \s_dataOut_reg[134] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[134]_i_1_n_0 ),
-        .Q(hashOut[70]),
+        .Q(s_hashOut[134]),
         .R(1'b0));
   FDRE \s_dataOut_reg[135] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[135]_i_1_n_0 ),
-        .Q(hashOut[71]),
+        .Q(s_hashOut[135]),
         .R(1'b0));
   FDRE \s_dataOut_reg[136] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[136]_i_1_n_0 ),
-        .Q(hashOut[72]),
+        .Q(s_hashOut[136]),
         .R(1'b0));
   FDRE \s_dataOut_reg[137] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[137]_i_1_n_0 ),
-        .Q(hashOut[73]),
+        .Q(s_hashOut[137]),
         .R(1'b0));
   FDRE \s_dataOut_reg[138] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[138]_i_1_n_0 ),
-        .Q(hashOut[74]),
+        .Q(s_hashOut[138]),
         .R(1'b0));
   FDRE \s_dataOut_reg[139] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[139]_i_1_n_0 ),
-        .Q(hashOut[75]),
+        .Q(s_hashOut[139]),
         .R(1'b0));
   FDRE \s_dataOut_reg[140] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[140]_i_1_n_0 ),
-        .Q(hashOut[76]),
+        .Q(s_hashOut[140]),
         .R(1'b0));
   FDRE \s_dataOut_reg[141] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[141]_i_1_n_0 ),
-        .Q(hashOut[77]),
+        .Q(s_hashOut[141]),
         .R(1'b0));
   FDRE \s_dataOut_reg[142] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[142]_i_1_n_0 ),
-        .Q(hashOut[78]),
+        .Q(s_hashOut[142]),
         .R(1'b0));
   FDRE \s_dataOut_reg[143] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[143]_i_1_n_0 ),
-        .Q(hashOut[79]),
+        .Q(s_hashOut[143]),
         .R(1'b0));
   FDRE \s_dataOut_reg[144] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[144]_i_1_n_0 ),
-        .Q(hashOut[80]),
+        .Q(s_hashOut[144]),
         .R(1'b0));
   FDRE \s_dataOut_reg[145] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[145]_i_1_n_0 ),
-        .Q(hashOut[81]),
+        .Q(s_hashOut[145]),
         .R(1'b0));
   FDRE \s_dataOut_reg[146] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[146]_i_1_n_0 ),
-        .Q(hashOut[82]),
+        .Q(s_hashOut[146]),
         .R(1'b0));
   FDRE \s_dataOut_reg[147] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[147]_i_1_n_0 ),
-        .Q(hashOut[83]),
+        .Q(s_hashOut[147]),
         .R(1'b0));
   FDRE \s_dataOut_reg[148] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[148]_i_1_n_0 ),
-        .Q(hashOut[84]),
+        .Q(s_hashOut[148]),
         .R(1'b0));
   FDRE \s_dataOut_reg[149] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[149]_i_1_n_0 ),
-        .Q(hashOut[85]),
+        .Q(s_hashOut[149]),
         .R(1'b0));
   FDRE \s_dataOut_reg[150] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[150]_i_1_n_0 ),
-        .Q(hashOut[86]),
+        .Q(s_hashOut[150]),
         .R(1'b0));
   FDRE \s_dataOut_reg[151] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[151]_i_1_n_0 ),
-        .Q(hashOut[87]),
+        .Q(s_hashOut[151]),
         .R(1'b0));
   FDRE \s_dataOut_reg[152] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[152]_i_1_n_0 ),
-        .Q(hashOut[88]),
+        .Q(s_hashOut[152]),
         .R(1'b0));
   FDRE \s_dataOut_reg[153] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[153]_i_1_n_0 ),
-        .Q(hashOut[89]),
+        .Q(s_hashOut[153]),
         .R(1'b0));
   FDRE \s_dataOut_reg[154] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[154]_i_1_n_0 ),
-        .Q(hashOut[90]),
+        .Q(s_hashOut[154]),
         .R(1'b0));
   FDRE \s_dataOut_reg[155] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[155]_i_1_n_0 ),
-        .Q(hashOut[91]),
+        .Q(s_hashOut[155]),
         .R(1'b0));
   FDRE \s_dataOut_reg[156] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[156]_i_1_n_0 ),
-        .Q(hashOut[92]),
+        .Q(s_hashOut[156]),
         .R(1'b0));
   FDRE \s_dataOut_reg[157] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[157]_i_1_n_0 ),
-        .Q(hashOut[93]),
+        .Q(s_hashOut[157]),
         .R(1'b0));
   FDRE \s_dataOut_reg[158] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[158]_i_1_n_0 ),
-        .Q(hashOut[94]),
+        .Q(s_hashOut[158]),
         .R(1'b0));
   FDRE \s_dataOut_reg[159] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[159]_i_1_n_0 ),
-        .Q(hashOut[95]),
+        .Q(hash_output[1]),
         .R(1'b0));
   FDRE \s_dataOut_reg[160] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[160]_i_1_n_0 ),
-        .Q(hashOut[96]),
+        .Q(s_hashOut[160]),
         .R(1'b0));
   FDRE \s_dataOut_reg[161] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[161]_i_1_n_0 ),
-        .Q(hashOut[97]),
+        .Q(s_hashOut[161]),
         .R(1'b0));
   FDRE \s_dataOut_reg[162] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[162]_i_1_n_0 ),
-        .Q(hashOut[98]),
+        .Q(s_hashOut[162]),
         .R(1'b0));
   FDRE \s_dataOut_reg[163] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[163]_i_1_n_0 ),
-        .Q(hashOut[99]),
+        .Q(s_hashOut[163]),
         .R(1'b0));
   FDRE \s_dataOut_reg[164] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[164]_i_1_n_0 ),
-        .Q(hashOut[100]),
+        .Q(s_hashOut[164]),
         .R(1'b0));
   FDRE \s_dataOut_reg[165] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[165]_i_1_n_0 ),
-        .Q(hashOut[101]),
+        .Q(s_hashOut[165]),
         .R(1'b0));
   FDRE \s_dataOut_reg[166] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[166]_i_1_n_0 ),
-        .Q(hashOut[102]),
+        .Q(s_hashOut[166]),
         .R(1'b0));
   FDRE \s_dataOut_reg[167] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[167]_i_1_n_0 ),
-        .Q(hashOut[103]),
+        .Q(s_hashOut[167]),
         .R(1'b0));
   FDRE \s_dataOut_reg[168] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[168]_i_1_n_0 ),
-        .Q(hashOut[104]),
+        .Q(s_hashOut[168]),
         .R(1'b0));
   FDRE \s_dataOut_reg[169] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[169]_i_1_n_0 ),
-        .Q(hashOut[105]),
+        .Q(s_hashOut[169]),
         .R(1'b0));
   FDRE \s_dataOut_reg[170] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[170]_i_1_n_0 ),
-        .Q(hashOut[106]),
+        .Q(s_hashOut[170]),
         .R(1'b0));
   FDRE \s_dataOut_reg[171] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[171]_i_1_n_0 ),
-        .Q(hashOut[107]),
+        .Q(s_hashOut[171]),
         .R(1'b0));
   FDRE \s_dataOut_reg[172] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[172]_i_1_n_0 ),
-        .Q(hashOut[108]),
+        .Q(s_hashOut[172]),
         .R(1'b0));
   FDRE \s_dataOut_reg[173] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[173]_i_1_n_0 ),
-        .Q(hashOut[109]),
+        .Q(s_hashOut[173]),
         .R(1'b0));
   FDRE \s_dataOut_reg[174] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[174]_i_1_n_0 ),
-        .Q(hashOut[110]),
+        .Q(s_hashOut[174]),
         .R(1'b0));
   FDRE \s_dataOut_reg[175] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[175]_i_1_n_0 ),
-        .Q(hashOut[111]),
+        .Q(s_hashOut[175]),
         .R(1'b0));
   FDRE \s_dataOut_reg[176] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[176]_i_1_n_0 ),
-        .Q(hashOut[112]),
+        .Q(s_hashOut[176]),
         .R(1'b0));
   FDRE \s_dataOut_reg[177] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[177]_i_1_n_0 ),
-        .Q(hashOut[113]),
+        .Q(s_hashOut[177]),
         .R(1'b0));
   FDRE \s_dataOut_reg[178] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[178]_i_1_n_0 ),
-        .Q(hashOut[114]),
+        .Q(s_hashOut[178]),
         .R(1'b0));
   FDRE \s_dataOut_reg[179] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[179]_i_1_n_0 ),
-        .Q(hashOut[115]),
+        .Q(s_hashOut[179]),
         .R(1'b0));
   FDRE \s_dataOut_reg[180] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[180]_i_1_n_0 ),
-        .Q(hashOut[116]),
+        .Q(s_hashOut[180]),
         .R(1'b0));
   FDRE \s_dataOut_reg[181] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[181]_i_1_n_0 ),
-        .Q(hashOut[117]),
+        .Q(s_hashOut[181]),
         .R(1'b0));
   FDRE \s_dataOut_reg[182] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[182]_i_1_n_0 ),
-        .Q(hashOut[118]),
+        .Q(s_hashOut[182]),
         .R(1'b0));
   FDRE \s_dataOut_reg[183] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[183]_i_1_n_0 ),
-        .Q(hashOut[119]),
+        .Q(s_hashOut[183]),
         .R(1'b0));
   FDRE \s_dataOut_reg[184] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[184]_i_1_n_0 ),
-        .Q(hashOut[120]),
+        .Q(s_hashOut[184]),
         .R(1'b0));
   FDRE \s_dataOut_reg[185] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[185]_i_1_n_0 ),
-        .Q(hashOut[121]),
+        .Q(s_hashOut[185]),
         .R(1'b0));
   FDRE \s_dataOut_reg[186] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[186]_i_1_n_0 ),
-        .Q(hashOut[122]),
+        .Q(s_hashOut[186]),
         .R(1'b0));
   FDRE \s_dataOut_reg[187] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[187]_i_1_n_0 ),
-        .Q(hashOut[123]),
+        .Q(s_hashOut[187]),
         .R(1'b0));
   FDRE \s_dataOut_reg[188] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[188]_i_1_n_0 ),
-        .Q(hashOut[124]),
+        .Q(s_hashOut[188]),
         .R(1'b0));
   FDRE \s_dataOut_reg[189] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[189]_i_1_n_0 ),
-        .Q(hashOut[125]),
+        .Q(s_hashOut[189]),
         .R(1'b0));
   FDRE \s_dataOut_reg[190] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[190]_i_1_n_0 ),
-        .Q(hashOut[126]),
+        .Q(s_hashOut[190]),
         .R(1'b0));
   FDRE \s_dataOut_reg[191] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[191]_i_1_n_0 ),
-        .Q(hashOut[127]),
+        .Q(hash_output[2]),
         .R(1'b0));
   FDRE \s_dataOut_reg[192] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[192]_i_1_n_0 ),
-        .Q(hashOut[128]),
+        .Q(s_hashOut[192]),
         .R(1'b0));
   FDRE \s_dataOut_reg[193] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[193]_i_1_n_0 ),
-        .Q(hashOut[129]),
+        .Q(s_hashOut[193]),
         .R(1'b0));
   FDRE \s_dataOut_reg[194] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[194]_i_1_n_0 ),
-        .Q(hashOut[130]),
+        .Q(s_hashOut[194]),
         .R(1'b0));
   FDRE \s_dataOut_reg[195] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[195]_i_1_n_0 ),
-        .Q(hashOut[131]),
+        .Q(s_hashOut[195]),
         .R(1'b0));
   FDRE \s_dataOut_reg[196] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[196]_i_1_n_0 ),
-        .Q(hashOut[132]),
+        .Q(s_hashOut[196]),
         .R(1'b0));
   FDRE \s_dataOut_reg[197] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[197]_i_1_n_0 ),
-        .Q(hashOut[133]),
+        .Q(s_hashOut[197]),
         .R(1'b0));
   FDRE \s_dataOut_reg[198] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[198]_i_1_n_0 ),
-        .Q(hashOut[134]),
+        .Q(s_hashOut[198]),
         .R(1'b0));
   FDRE \s_dataOut_reg[199] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[199]_i_1_n_0 ),
-        .Q(hashOut[135]),
+        .Q(s_hashOut[199]),
         .R(1'b0));
   FDRE \s_dataOut_reg[200] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[200]_i_1_n_0 ),
-        .Q(hashOut[136]),
+        .Q(s_hashOut[200]),
         .R(1'b0));
   FDRE \s_dataOut_reg[201] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[201]_i_1_n_0 ),
-        .Q(hashOut[137]),
+        .Q(s_hashOut[201]),
         .R(1'b0));
   FDRE \s_dataOut_reg[202] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[202]_i_1_n_0 ),
-        .Q(hashOut[138]),
+        .Q(s_hashOut[202]),
         .R(1'b0));
   FDRE \s_dataOut_reg[203] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[203]_i_1_n_0 ),
-        .Q(hashOut[139]),
+        .Q(s_hashOut[203]),
         .R(1'b0));
   FDRE \s_dataOut_reg[204] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[204]_i_1_n_0 ),
-        .Q(hashOut[140]),
+        .Q(s_hashOut[204]),
         .R(1'b0));
   FDRE \s_dataOut_reg[205] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[205]_i_1_n_0 ),
-        .Q(hashOut[141]),
+        .Q(s_hashOut[205]),
         .R(1'b0));
   FDRE \s_dataOut_reg[206] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[206]_i_1_n_0 ),
-        .Q(hashOut[142]),
+        .Q(s_hashOut[206]),
         .R(1'b0));
   FDRE \s_dataOut_reg[207] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[207]_i_1_n_0 ),
-        .Q(hashOut[143]),
+        .Q(s_hashOut[207]),
         .R(1'b0));
   FDRE \s_dataOut_reg[208] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[208]_i_1_n_0 ),
-        .Q(hashOut[144]),
+        .Q(s_hashOut[208]),
         .R(1'b0));
   FDRE \s_dataOut_reg[209] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[209]_i_1_n_0 ),
-        .Q(hashOut[145]),
+        .Q(s_hashOut[209]),
         .R(1'b0));
   FDRE \s_dataOut_reg[210] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[210]_i_1_n_0 ),
-        .Q(hashOut[146]),
+        .Q(s_hashOut[210]),
         .R(1'b0));
   FDRE \s_dataOut_reg[211] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[211]_i_1_n_0 ),
-        .Q(hashOut[147]),
+        .Q(s_hashOut[211]),
         .R(1'b0));
   FDRE \s_dataOut_reg[212] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[212]_i_1_n_0 ),
-        .Q(hashOut[148]),
+        .Q(s_hashOut[212]),
         .R(1'b0));
   FDRE \s_dataOut_reg[213] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[213]_i_1_n_0 ),
-        .Q(hashOut[149]),
+        .Q(s_hashOut[213]),
         .R(1'b0));
   FDRE \s_dataOut_reg[214] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[214]_i_1_n_0 ),
-        .Q(hashOut[150]),
+        .Q(s_hashOut[214]),
         .R(1'b0));
   FDRE \s_dataOut_reg[215] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[215]_i_1_n_0 ),
-        .Q(hashOut[151]),
+        .Q(s_hashOut[215]),
         .R(1'b0));
   FDRE \s_dataOut_reg[216] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[216]_i_1_n_0 ),
-        .Q(hashOut[152]),
+        .Q(s_hashOut[216]),
         .R(1'b0));
   FDRE \s_dataOut_reg[217] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[217]_i_1_n_0 ),
-        .Q(hashOut[153]),
+        .Q(s_hashOut[217]),
         .R(1'b0));
   FDRE \s_dataOut_reg[218] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[218]_i_1_n_0 ),
-        .Q(hashOut[154]),
+        .Q(s_hashOut[218]),
         .R(1'b0));
   FDRE \s_dataOut_reg[219] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[219]_i_1_n_0 ),
-        .Q(hashOut[155]),
+        .Q(s_hashOut[219]),
         .R(1'b0));
   FDRE \s_dataOut_reg[220] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[220]_i_1_n_0 ),
-        .Q(hashOut[156]),
+        .Q(s_hashOut[220]),
         .R(1'b0));
   FDRE \s_dataOut_reg[221] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[221]_i_1_n_0 ),
-        .Q(hashOut[157]),
+        .Q(s_hashOut[221]),
         .R(1'b0));
   FDRE \s_dataOut_reg[222] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[222]_i_1_n_0 ),
-        .Q(hashOut[158]),
+        .Q(s_hashOut[222]),
         .R(1'b0));
   FDRE \s_dataOut_reg[223] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[223]_i_1_n_0 ),
-        .Q(hashOut[159]),
+        .Q(s_hashOut[223]),
         .R(1'b0));
   FDRE \s_dataOut_reg[224] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[224]_i_1_n_0 ),
-        .Q(hashOut[160]),
+        .Q(s_hashOut[224]),
         .R(1'b0));
   FDRE \s_dataOut_reg[225] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[225]_i_1_n_0 ),
-        .Q(hashOut[161]),
+        .Q(s_hashOut[225]),
         .R(1'b0));
   FDRE \s_dataOut_reg[226] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[226]_i_1_n_0 ),
-        .Q(hashOut[162]),
+        .Q(s_hashOut[226]),
         .R(1'b0));
   FDRE \s_dataOut_reg[227] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[227]_i_1_n_0 ),
-        .Q(hashOut[163]),
+        .Q(s_hashOut[227]),
         .R(1'b0));
   FDRE \s_dataOut_reg[228] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[228]_i_1_n_0 ),
-        .Q(hashOut[164]),
+        .Q(s_hashOut[228]),
         .R(1'b0));
   FDRE \s_dataOut_reg[229] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[229]_i_1_n_0 ),
-        .Q(hashOut[165]),
+        .Q(s_hashOut[229]),
         .R(1'b0));
   FDRE \s_dataOut_reg[230] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[230]_i_1_n_0 ),
-        .Q(hashOut[166]),
+        .Q(s_hashOut[230]),
         .R(1'b0));
   FDRE \s_dataOut_reg[231] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[231]_i_1_n_0 ),
-        .Q(hashOut[167]),
+        .Q(s_hashOut[231]),
         .R(1'b0));
   FDRE \s_dataOut_reg[232] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[232]_i_1_n_0 ),
-        .Q(hashOut[168]),
+        .Q(s_hashOut[232]),
         .R(1'b0));
   FDRE \s_dataOut_reg[233] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[233]_i_1_n_0 ),
-        .Q(hashOut[169]),
+        .Q(s_hashOut[233]),
         .R(1'b0));
   FDRE \s_dataOut_reg[234] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[234]_i_1_n_0 ),
-        .Q(hashOut[170]),
+        .Q(s_hashOut[234]),
         .R(1'b0));
   FDRE \s_dataOut_reg[235] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[235]_i_1_n_0 ),
-        .Q(hashOut[171]),
+        .Q(s_hashOut[235]),
         .R(1'b0));
   FDRE \s_dataOut_reg[236] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[236]_i_1_n_0 ),
-        .Q(hashOut[172]),
+        .Q(s_hashOut[236]),
         .R(1'b0));
   FDRE \s_dataOut_reg[237] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[237]_i_1_n_0 ),
-        .Q(hashOut[173]),
+        .Q(s_hashOut[237]),
         .R(1'b0));
   FDRE \s_dataOut_reg[238] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[238]_i_1_n_0 ),
-        .Q(hashOut[174]),
+        .Q(s_hashOut[238]),
         .R(1'b0));
   FDRE \s_dataOut_reg[239] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[239]_i_2_n_0 ),
-        .Q(hashOut[175]),
+        .Q(s_hashOut[239]),
         .R(1'b0));
   FDRE \s_dataOut_reg[32] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[32]_i_1_n_0 ),
-        .Q(hashOut[0]),
+        .Q(s_hashOut[32]),
         .R(1'b0));
   FDRE \s_dataOut_reg[33] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[33]_i_1_n_0 ),
-        .Q(hashOut[1]),
+        .Q(s_hashOut[33]),
         .R(1'b0));
   FDRE \s_dataOut_reg[34] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[34]_i_1_n_0 ),
-        .Q(hashOut[2]),
+        .Q(s_hashOut[34]),
         .R(1'b0));
   FDRE \s_dataOut_reg[35] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[35]_i_1_n_0 ),
-        .Q(hashOut[3]),
+        .Q(s_hashOut[35]),
         .R(1'b0));
   FDRE \s_dataOut_reg[36] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[36]_i_1_n_0 ),
-        .Q(hashOut[4]),
+        .Q(s_hashOut[36]),
         .R(1'b0));
   FDRE \s_dataOut_reg[37] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[37]_i_1_n_0 ),
-        .Q(hashOut[5]),
+        .Q(s_hashOut[37]),
         .R(1'b0));
   FDRE \s_dataOut_reg[38] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[38]_i_1_n_0 ),
-        .Q(hashOut[6]),
+        .Q(s_hashOut[38]),
         .R(1'b0));
   FDRE \s_dataOut_reg[39] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[39]_i_1_n_0 ),
-        .Q(hashOut[7]),
+        .Q(s_hashOut[39]),
         .R(1'b0));
   FDRE \s_dataOut_reg[40] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[40]_i_1_n_0 ),
-        .Q(hashOut[8]),
+        .Q(s_hashOut[40]),
         .R(1'b0));
   FDRE \s_dataOut_reg[41] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[41]_i_1_n_0 ),
-        .Q(hashOut[9]),
+        .Q(s_hashOut[41]),
         .R(1'b0));
   FDRE \s_dataOut_reg[42] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[42]_i_1_n_0 ),
-        .Q(hashOut[10]),
+        .Q(s_hashOut[42]),
         .R(1'b0));
   FDRE \s_dataOut_reg[43] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[43]_i_1_n_0 ),
-        .Q(hashOut[11]),
+        .Q(s_hashOut[43]),
         .R(1'b0));
   FDRE \s_dataOut_reg[44] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[44]_i_1_n_0 ),
-        .Q(hashOut[12]),
+        .Q(s_hashOut[44]),
         .R(1'b0));
   FDRE \s_dataOut_reg[45] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[45]_i_1_n_0 ),
-        .Q(hashOut[13]),
+        .Q(s_hashOut[45]),
         .R(1'b0));
   FDRE \s_dataOut_reg[46] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[46]_i_1_n_0 ),
-        .Q(hashOut[14]),
+        .Q(s_hashOut[46]),
         .R(1'b0));
   FDRE \s_dataOut_reg[47] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[47]_i_1_n_0 ),
-        .Q(hashOut[15]),
+        .Q(s_hashOut[47]),
         .R(1'b0));
   FDRE \s_dataOut_reg[48] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[48]_i_1_n_0 ),
-        .Q(hashOut[16]),
+        .Q(s_hashOut[48]),
         .R(1'b0));
   FDRE \s_dataOut_reg[49] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[49]_i_1_n_0 ),
-        .Q(hashOut[17]),
+        .Q(s_hashOut[49]),
         .R(1'b0));
   FDRE \s_dataOut_reg[50] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[50]_i_1_n_0 ),
-        .Q(hashOut[18]),
+        .Q(s_hashOut[50]),
         .R(1'b0));
   FDRE \s_dataOut_reg[51] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[51]_i_1_n_0 ),
-        .Q(hashOut[19]),
+        .Q(s_hashOut[51]),
         .R(1'b0));
   FDRE \s_dataOut_reg[52] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[52]_i_1_n_0 ),
-        .Q(hashOut[20]),
+        .Q(s_hashOut[52]),
         .R(1'b0));
   FDRE \s_dataOut_reg[53] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[53]_i_1_n_0 ),
-        .Q(hashOut[21]),
+        .Q(s_hashOut[53]),
         .R(1'b0));
   FDRE \s_dataOut_reg[54] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[54]_i_1_n_0 ),
-        .Q(hashOut[22]),
+        .Q(s_hashOut[54]),
         .R(1'b0));
   FDRE \s_dataOut_reg[55] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[55]_i_1_n_0 ),
-        .Q(hashOut[23]),
+        .Q(s_hashOut[55]),
         .R(1'b0));
   FDRE \s_dataOut_reg[56] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[56]_i_1_n_0 ),
-        .Q(hashOut[24]),
+        .Q(s_hashOut[56]),
         .R(1'b0));
   FDRE \s_dataOut_reg[57] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[57]_i_1_n_0 ),
-        .Q(hashOut[25]),
+        .Q(s_hashOut[57]),
         .R(1'b0));
   FDRE \s_dataOut_reg[58] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[58]_i_1_n_0 ),
-        .Q(hashOut[26]),
+        .Q(s_hashOut[58]),
         .R(1'b0));
   FDRE \s_dataOut_reg[59] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[59]_i_1_n_0 ),
-        .Q(hashOut[27]),
+        .Q(s_hashOut[59]),
         .R(1'b0));
   FDRE \s_dataOut_reg[60] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[60]_i_1_n_0 ),
-        .Q(hashOut[28]),
+        .Q(s_hashOut[60]),
         .R(1'b0));
   FDRE \s_dataOut_reg[61] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[61]_i_1_n_0 ),
-        .Q(hashOut[29]),
+        .Q(s_hashOut[61]),
         .R(1'b0));
   FDRE \s_dataOut_reg[62] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[62]_i_1_n_0 ),
-        .Q(hashOut[30]),
+        .Q(s_hashOut[62]),
         .R(1'b0));
   FDRE \s_dataOut_reg[63] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[63]_i_1_n_0 ),
-        .Q(hashOut[31]),
+        .Q(hash_output[0]),
         .R(1'b0));
   FDRE \s_dataOut_reg[64] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[64]_i_1_n_0 ),
-        .Q(hashOut[32]),
+        .Q(s_hashOut[64]),
         .R(1'b0));
   FDRE \s_dataOut_reg[65] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[65]_i_1_n_0 ),
-        .Q(hashOut[33]),
+        .Q(s_hashOut[65]),
         .R(1'b0));
   FDRE \s_dataOut_reg[66] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[66]_i_1_n_0 ),
-        .Q(hashOut[34]),
+        .Q(s_hashOut[66]),
         .R(1'b0));
   FDRE \s_dataOut_reg[67] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[67]_i_1_n_0 ),
-        .Q(hashOut[35]),
+        .Q(s_hashOut[67]),
         .R(1'b0));
   FDRE \s_dataOut_reg[68] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[68]_i_1_n_0 ),
-        .Q(hashOut[36]),
+        .Q(s_hashOut[68]),
         .R(1'b0));
   FDRE \s_dataOut_reg[69] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[69]_i_1_n_0 ),
-        .Q(hashOut[37]),
+        .Q(s_hashOut[69]),
         .R(1'b0));
   FDRE \s_dataOut_reg[70] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[70]_i_1_n_0 ),
-        .Q(hashOut[38]),
+        .Q(s_hashOut[70]),
         .R(1'b0));
   FDRE \s_dataOut_reg[71] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[71]_i_1_n_0 ),
-        .Q(hashOut[39]),
+        .Q(s_hashOut[71]),
         .R(1'b0));
   FDRE \s_dataOut_reg[72] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[72]_i_1_n_0 ),
-        .Q(hashOut[40]),
+        .Q(s_hashOut[72]),
         .R(1'b0));
   FDRE \s_dataOut_reg[73] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[73]_i_1_n_0 ),
-        .Q(hashOut[41]),
+        .Q(s_hashOut[73]),
         .R(1'b0));
   FDRE \s_dataOut_reg[74] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[74]_i_1_n_0 ),
-        .Q(hashOut[42]),
+        .Q(s_hashOut[74]),
         .R(1'b0));
   FDRE \s_dataOut_reg[75] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[75]_i_1_n_0 ),
-        .Q(hashOut[43]),
+        .Q(s_hashOut[75]),
         .R(1'b0));
   FDRE \s_dataOut_reg[76] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[76]_i_1_n_0 ),
-        .Q(hashOut[44]),
+        .Q(s_hashOut[76]),
         .R(1'b0));
   FDRE \s_dataOut_reg[77] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[77]_i_1_n_0 ),
-        .Q(hashOut[45]),
+        .Q(s_hashOut[77]),
         .R(1'b0));
   FDRE \s_dataOut_reg[78] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[78]_i_1_n_0 ),
-        .Q(hashOut[46]),
+        .Q(s_hashOut[78]),
         .R(1'b0));
   FDRE \s_dataOut_reg[79] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[79]_i_1_n_0 ),
-        .Q(hashOut[47]),
+        .Q(s_hashOut[79]),
         .R(1'b0));
   FDRE \s_dataOut_reg[80] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[80]_i_1_n_0 ),
-        .Q(hashOut[48]),
+        .Q(s_hashOut[80]),
         .R(1'b0));
   FDRE \s_dataOut_reg[81] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[81]_i_1_n_0 ),
-        .Q(hashOut[49]),
+        .Q(s_hashOut[81]),
         .R(1'b0));
   FDRE \s_dataOut_reg[82] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[82]_i_1_n_0 ),
-        .Q(hashOut[50]),
+        .Q(s_hashOut[82]),
         .R(1'b0));
   FDRE \s_dataOut_reg[83] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[83]_i_1_n_0 ),
-        .Q(hashOut[51]),
+        .Q(s_hashOut[83]),
         .R(1'b0));
   FDRE \s_dataOut_reg[84] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[84]_i_1_n_0 ),
-        .Q(hashOut[52]),
+        .Q(s_hashOut[84]),
         .R(1'b0));
   FDRE \s_dataOut_reg[85] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[85]_i_1_n_0 ),
-        .Q(hashOut[53]),
+        .Q(s_hashOut[85]),
         .R(1'b0));
   FDRE \s_dataOut_reg[86] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[86]_i_1_n_0 ),
-        .Q(hashOut[54]),
+        .Q(s_hashOut[86]),
         .R(1'b0));
   FDRE \s_dataOut_reg[87] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[87]_i_1_n_0 ),
-        .Q(hashOut[55]),
+        .Q(s_hashOut[87]),
         .R(1'b0));
   FDRE \s_dataOut_reg[88] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[88]_i_1_n_0 ),
-        .Q(hashOut[56]),
+        .Q(s_hashOut[88]),
         .R(1'b0));
   FDRE \s_dataOut_reg[89] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[89]_i_1_n_0 ),
-        .Q(hashOut[57]),
+        .Q(s_hashOut[89]),
         .R(1'b0));
   FDRE \s_dataOut_reg[90] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[90]_i_1_n_0 ),
-        .Q(hashOut[58]),
+        .Q(s_hashOut[90]),
         .R(1'b0));
   FDRE \s_dataOut_reg[91] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[91]_i_1_n_0 ),
-        .Q(hashOut[59]),
+        .Q(s_hashOut[91]),
         .R(1'b0));
   FDRE \s_dataOut_reg[92] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[92]_i_1_n_0 ),
-        .Q(hashOut[60]),
+        .Q(s_hashOut[92]),
         .R(1'b0));
   FDRE \s_dataOut_reg[93] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[93]_i_1_n_0 ),
-        .Q(hashOut[61]),
+        .Q(s_hashOut[93]),
         .R(1'b0));
   FDRE \s_dataOut_reg[94] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[94]_i_1_n_0 ),
-        .Q(hashOut[62]),
+        .Q(s_hashOut[94]),
         .R(1'b0));
   FDRE \s_dataOut_reg[95] 
        (.C(s00_axis_aclk),
         .CE(\s_dataOut[239]_i_1_n_0 ),
         .D(\s_dataOut[95]_i_1_n_0 ),
-        .Q(hashOut[63]),
+        .Q(s_hashOut[95]),
         .R(1'b0));
   LUT6 #(
     .INIT(64'h7700700000007000)) 
     s_enable_i_1
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(mEnable),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(s_enable_reg_n_0),
         .I3(s00_axis_aresetn),
-        .I4(\s_nonce[31]_i_3_n_0 ),
+        .I4(\s_hashInputWord[287]_i_2_n_0 ),
         .I5(s00_axis_tvalid),
         .O(s_enable_i_1_n_0));
   FDRE #(
@@ -29191,1741 +29200,1828 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.C(s00_axis_aclk),
         .CE(1'b1),
         .D(s_enable_i_1_n_0),
-        .Q(mEnable),
+        .Q(s_enable_reg_n_0),
         .R(1'b0));
+  LUT4 #(
+    .INIT(16'hF222)) 
+    \s_hashInputWord[287]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(s00_axis_aresetn),
+        .I3(\s_hashInputWord[287]_i_2_n_0 ),
+        .O(\s_hashInputWord[287]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \s_hashInputWord[287]_i_10 
+       (.I0(\s_counter_reg_n_0_[21] ),
+        .I1(\s_counter_reg_n_0_[19] ),
+        .I2(\s_counter_reg_n_0_[31] ),
+        .I3(\s_counter_reg_n_0_[26] ),
+        .O(\s_hashInputWord[287]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000002)) 
+    \s_hashInputWord[287]_i_2 
+       (.I0(s00_axis_tvalid),
+        .I1(s_enable_reg_n_0),
+        .I2(\s_hashInputWord[287]_i_3_n_0 ),
+        .I3(\s_hashInputWord[287]_i_4_n_0 ),
+        .I4(\s_hashInputWord[287]_i_5_n_0 ),
+        .I5(\s_hashInputWord[287]_i_6_n_0 ),
+        .O(\s_hashInputWord[287]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \s_hashInputWord[287]_i_3 
+       (.I0(\s_counter_reg_n_0_[7] ),
+        .I1(\s_counter_reg_n_0_[13] ),
+        .I2(\s_counter_reg_n_0_[4] ),
+        .I3(\s_counter_reg_n_0_[11] ),
+        .I4(\s_hashInputWord[287]_i_7_n_0 ),
+        .O(\s_hashInputWord[287]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \s_hashInputWord[287]_i_4 
+       (.I0(\s_counter_reg_n_0_[17] ),
+        .I1(\s_counter_reg_n_0_[23] ),
+        .I2(\s_counter_reg_n_0_[6] ),
+        .I3(\s_counter_reg_n_0_[10] ),
+        .I4(\s_hashInputWord[287]_i_8_n_0 ),
+        .O(\s_hashInputWord[287]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \s_hashInputWord[287]_i_5 
+       (.I0(\s_counter_reg_n_0_[5] ),
+        .I1(\s_counter_reg_n_0_[9] ),
+        .I2(\s_counter_reg_n_0_[16] ),
+        .I3(\s_counter_reg_n_0_[22] ),
+        .I4(\s_hashInputWord[287]_i_9_n_0 ),
+        .O(\s_hashInputWord[287]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFB)) 
+    \s_hashInputWord[287]_i_6 
+       (.I0(\s_counter_reg_n_0_[3] ),
+        .I1(\s_counter_reg_n_0_[0] ),
+        .I2(\s_counter_reg_n_0_[25] ),
+        .I3(\s_counter_reg_n_0_[28] ),
+        .I4(\s_hashInputWord[287]_i_10_n_0 ),
+        .O(\s_hashInputWord[287]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \s_hashInputWord[287]_i_7 
+       (.I0(\s_counter_reg_n_0_[27] ),
+        .I1(\s_counter_reg_n_0_[15] ),
+        .I2(\s_counter_reg_n_0_[14] ),
+        .I3(\s_counter_reg_n_0_[8] ),
+        .O(\s_hashInputWord[287]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFD)) 
+    \s_hashInputWord[287]_i_8 
+       (.I0(\s_counter_reg_n_0_[1] ),
+        .I1(\s_counter_reg_n_0_[20] ),
+        .I2(\s_counter_reg_n_0_[30] ),
+        .I3(\s_counter_reg_n_0_[29] ),
+        .O(\s_hashInputWord[287]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFD)) 
+    \s_hashInputWord[287]_i_9 
+       (.I0(\s_counter_reg_n_0_[2] ),
+        .I1(\s_counter_reg_n_0_[18] ),
+        .I2(\s_counter_reg_n_0_[24] ),
+        .I3(\s_counter_reg_n_0_[12] ),
+        .O(\s_hashInputWord[287]_i_9_n_0 ));
   FDRE \s_hashInputWord_reg[0] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[0]),
-        .Q(hashInputWord[0]),
+        .Q(s_hashInputWord[0]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[100] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[68] ),
-        .Q(hashInputWord[100]),
+        .Q(s_hashInputWord[100]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[101] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[69] ),
-        .Q(hashInputWord[101]),
+        .Q(s_hashInputWord[101]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[102] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[70] ),
-        .Q(hashInputWord[102]),
+        .Q(s_hashInputWord[102]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[103] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[71] ),
-        .Q(hashInputWord[103]),
+        .Q(s_hashInputWord[103]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[104] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[72] ),
-        .Q(hashInputWord[104]),
+        .Q(s_hashInputWord[104]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[105] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[73] ),
-        .Q(hashInputWord[105]),
+        .Q(s_hashInputWord[105]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[106] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[74] ),
-        .Q(hashInputWord[106]),
+        .Q(s_hashInputWord[106]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[107] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[75] ),
-        .Q(hashInputWord[107]),
+        .Q(s_hashInputWord[107]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[108] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[76] ),
-        .Q(hashInputWord[108]),
+        .Q(s_hashInputWord[108]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[109] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[77] ),
-        .Q(hashInputWord[109]),
+        .Q(s_hashInputWord[109]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[10] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[10]),
-        .Q(hashInputWord[10]),
+        .Q(s_hashInputWord[10]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[110] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[78] ),
-        .Q(hashInputWord[110]),
+        .Q(s_hashInputWord[110]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[111] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[79] ),
-        .Q(hashInputWord[111]),
+        .Q(s_hashInputWord[111]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[112] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[80] ),
-        .Q(hashInputWord[112]),
+        .Q(s_hashInputWord[112]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[113] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[81] ),
-        .Q(hashInputWord[113]),
+        .Q(s_hashInputWord[113]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[114] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[82] ),
-        .Q(hashInputWord[114]),
+        .Q(s_hashInputWord[114]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[115] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[83] ),
-        .Q(hashInputWord[115]),
+        .Q(s_hashInputWord[115]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[116] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[84] ),
-        .Q(hashInputWord[116]),
+        .Q(s_hashInputWord[116]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[117] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[85] ),
-        .Q(hashInputWord[117]),
+        .Q(s_hashInputWord[117]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[118] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[86] ),
-        .Q(hashInputWord[118]),
+        .Q(s_hashInputWord[118]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[119] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[87] ),
-        .Q(hashInputWord[119]),
+        .Q(s_hashInputWord[119]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[11] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[11]),
-        .Q(hashInputWord[11]),
+        .Q(s_hashInputWord[11]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[120] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[88] ),
-        .Q(hashInputWord[120]),
+        .Q(s_hashInputWord[120]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[121] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[89] ),
-        .Q(hashInputWord[121]),
+        .Q(s_hashInputWord[121]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[122] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[90] ),
-        .Q(hashInputWord[122]),
+        .Q(s_hashInputWord[122]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[123] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[91] ),
-        .Q(hashInputWord[123]),
+        .Q(s_hashInputWord[123]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[124] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[92] ),
-        .Q(hashInputWord[124]),
+        .Q(s_hashInputWord[124]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[125] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[93] ),
-        .Q(hashInputWord[125]),
+        .Q(s_hashInputWord[125]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[126] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[94] ),
-        .Q(hashInputWord[126]),
+        .Q(s_hashInputWord[126]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[127] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[95] ),
-        .Q(hashInputWord[127]),
+        .Q(s_hashInputWord[127]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[128] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[96] ),
-        .Q(hashInputWord[128]),
+        .Q(s_hashInputWord[128]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[129] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[97] ),
-        .Q(hashInputWord[129]),
+        .Q(s_hashInputWord[129]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[12] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[12]),
-        .Q(hashInputWord[12]),
+        .Q(s_hashInputWord[12]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[130] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[98] ),
-        .Q(hashInputWord[130]),
+        .Q(s_hashInputWord[130]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[131] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[99] ),
-        .Q(hashInputWord[131]),
+        .Q(s_hashInputWord[131]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[132] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[100] ),
-        .Q(hashInputWord[132]),
+        .Q(s_hashInputWord[132]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[133] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[101] ),
-        .Q(hashInputWord[133]),
+        .Q(s_hashInputWord[133]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[134] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[102] ),
-        .Q(hashInputWord[134]),
+        .Q(s_hashInputWord[134]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[135] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[103] ),
-        .Q(hashInputWord[135]),
+        .Q(s_hashInputWord[135]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[136] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[104] ),
-        .Q(hashInputWord[136]),
+        .Q(s_hashInputWord[136]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[137] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[105] ),
-        .Q(hashInputWord[137]),
+        .Q(s_hashInputWord[137]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[138] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[106] ),
-        .Q(hashInputWord[138]),
+        .Q(s_hashInputWord[138]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[139] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[107] ),
-        .Q(hashInputWord[139]),
+        .Q(s_hashInputWord[139]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[13] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[13]),
-        .Q(hashInputWord[13]),
+        .Q(s_hashInputWord[13]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[140] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[108] ),
-        .Q(hashInputWord[140]),
+        .Q(s_hashInputWord[140]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[141] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[109] ),
-        .Q(hashInputWord[141]),
+        .Q(s_hashInputWord[141]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[142] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[110] ),
-        .Q(hashInputWord[142]),
+        .Q(s_hashInputWord[142]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[143] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[111] ),
-        .Q(hashInputWord[143]),
+        .Q(s_hashInputWord[143]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[144] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[112] ),
-        .Q(hashInputWord[144]),
+        .Q(s_hashInputWord[144]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[145] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[113] ),
-        .Q(hashInputWord[145]),
+        .Q(s_hashInputWord[145]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[146] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[114] ),
-        .Q(hashInputWord[146]),
+        .Q(s_hashInputWord[146]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[147] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[115] ),
-        .Q(hashInputWord[147]),
+        .Q(s_hashInputWord[147]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[148] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[116] ),
-        .Q(hashInputWord[148]),
+        .Q(s_hashInputWord[148]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[149] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[117] ),
-        .Q(hashInputWord[149]),
+        .Q(s_hashInputWord[149]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[14] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[14]),
-        .Q(hashInputWord[14]),
+        .Q(s_hashInputWord[14]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[150] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[118] ),
-        .Q(hashInputWord[150]),
+        .Q(s_hashInputWord[150]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[151] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[119] ),
-        .Q(hashInputWord[151]),
+        .Q(s_hashInputWord[151]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[152] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[120] ),
-        .Q(hashInputWord[152]),
+        .Q(s_hashInputWord[152]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[153] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[121] ),
-        .Q(hashInputWord[153]),
+        .Q(s_hashInputWord[153]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[154] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[122] ),
-        .Q(hashInputWord[154]),
+        .Q(s_hashInputWord[154]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[155] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[123] ),
-        .Q(hashInputWord[155]),
+        .Q(s_hashInputWord[155]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[156] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[124] ),
-        .Q(hashInputWord[156]),
+        .Q(s_hashInputWord[156]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[157] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[125] ),
-        .Q(hashInputWord[157]),
+        .Q(s_hashInputWord[157]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[158] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[126] ),
-        .Q(hashInputWord[158]),
+        .Q(s_hashInputWord[158]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[159] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[127] ),
-        .Q(hashInputWord[159]),
+        .Q(s_hashInputWord[159]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[15] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[15]),
-        .Q(hashInputWord[15]),
+        .Q(s_hashInputWord[15]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[160] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[128] ),
-        .Q(hashInputWord[160]),
+        .Q(s_hashInputWord[160]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[161] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[129] ),
-        .Q(hashInputWord[161]),
+        .Q(s_hashInputWord[161]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[162] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[130] ),
-        .Q(hashInputWord[162]),
+        .Q(s_hashInputWord[162]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[163] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[131] ),
-        .Q(hashInputWord[163]),
+        .Q(s_hashInputWord[163]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[164] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[132] ),
-        .Q(hashInputWord[164]),
+        .Q(s_hashInputWord[164]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[165] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[133] ),
-        .Q(hashInputWord[165]),
+        .Q(s_hashInputWord[165]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[166] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[134] ),
-        .Q(hashInputWord[166]),
+        .Q(s_hashInputWord[166]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[167] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[135] ),
-        .Q(hashInputWord[167]),
+        .Q(s_hashInputWord[167]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[168] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[136] ),
-        .Q(hashInputWord[168]),
+        .Q(s_hashInputWord[168]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[169] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[137] ),
-        .Q(hashInputWord[169]),
+        .Q(s_hashInputWord[169]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[16] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[16]),
-        .Q(hashInputWord[16]),
+        .Q(s_hashInputWord[16]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[170] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[138] ),
-        .Q(hashInputWord[170]),
+        .Q(s_hashInputWord[170]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[171] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[139] ),
-        .Q(hashInputWord[171]),
+        .Q(s_hashInputWord[171]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[172] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[140] ),
-        .Q(hashInputWord[172]),
+        .Q(s_hashInputWord[172]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[173] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[141] ),
-        .Q(hashInputWord[173]),
+        .Q(s_hashInputWord[173]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[174] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[142] ),
-        .Q(hashInputWord[174]),
+        .Q(s_hashInputWord[174]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[175] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[143] ),
-        .Q(hashInputWord[175]),
+        .Q(s_hashInputWord[175]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[176] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[144] ),
-        .Q(hashInputWord[176]),
+        .Q(s_hashInputWord[176]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[177] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[145] ),
-        .Q(hashInputWord[177]),
+        .Q(s_hashInputWord[177]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[178] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[146] ),
-        .Q(hashInputWord[178]),
+        .Q(s_hashInputWord[178]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[179] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[147] ),
-        .Q(hashInputWord[179]),
+        .Q(s_hashInputWord[179]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[17] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[17]),
-        .Q(hashInputWord[17]),
+        .Q(s_hashInputWord[17]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[180] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[148] ),
-        .Q(hashInputWord[180]),
+        .Q(s_hashInputWord[180]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[181] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[149] ),
-        .Q(hashInputWord[181]),
+        .Q(s_hashInputWord[181]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[182] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[150] ),
-        .Q(hashInputWord[182]),
+        .Q(s_hashInputWord[182]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[183] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[151] ),
-        .Q(hashInputWord[183]),
+        .Q(s_hashInputWord[183]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[184] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[152] ),
-        .Q(hashInputWord[184]),
+        .Q(s_hashInputWord[184]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[185] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[153] ),
-        .Q(hashInputWord[185]),
+        .Q(s_hashInputWord[185]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[186] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[154] ),
-        .Q(hashInputWord[186]),
+        .Q(s_hashInputWord[186]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[187] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[155] ),
-        .Q(hashInputWord[187]),
+        .Q(s_hashInputWord[187]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[188] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[156] ),
-        .Q(hashInputWord[188]),
+        .Q(s_hashInputWord[188]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[189] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[157] ),
-        .Q(hashInputWord[189]),
+        .Q(s_hashInputWord[189]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[18] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[18]),
-        .Q(hashInputWord[18]),
+        .Q(s_hashInputWord[18]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[190] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[158] ),
-        .Q(hashInputWord[190]),
+        .Q(s_hashInputWord[190]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[191] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[159] ),
-        .Q(hashInputWord[191]),
+        .Q(s_hashInputWord[191]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[192] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[160] ),
-        .Q(hashInputWord[192]),
+        .Q(s_hashInputWord[192]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[193] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[161] ),
-        .Q(hashInputWord[193]),
+        .Q(s_hashInputWord[193]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[194] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[162] ),
-        .Q(hashInputWord[194]),
+        .Q(s_hashInputWord[194]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[195] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[163] ),
-        .Q(hashInputWord[195]),
+        .Q(s_hashInputWord[195]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[196] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[164] ),
-        .Q(hashInputWord[196]),
+        .Q(s_hashInputWord[196]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[197] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[165] ),
-        .Q(hashInputWord[197]),
+        .Q(s_hashInputWord[197]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[198] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[166] ),
-        .Q(hashInputWord[198]),
+        .Q(s_hashInputWord[198]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[199] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[167] ),
-        .Q(hashInputWord[199]),
+        .Q(s_hashInputWord[199]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[19] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[19]),
-        .Q(hashInputWord[19]),
+        .Q(s_hashInputWord[19]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[1] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[1]),
-        .Q(hashInputWord[1]),
+        .Q(s_hashInputWord[1]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[200] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[168] ),
-        .Q(hashInputWord[200]),
+        .Q(s_hashInputWord[200]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[201] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[169] ),
-        .Q(hashInputWord[201]),
+        .Q(s_hashInputWord[201]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[202] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[170] ),
-        .Q(hashInputWord[202]),
+        .Q(s_hashInputWord[202]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[203] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[171] ),
-        .Q(hashInputWord[203]),
+        .Q(s_hashInputWord[203]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[204] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[172] ),
-        .Q(hashInputWord[204]),
+        .Q(s_hashInputWord[204]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[205] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[173] ),
-        .Q(hashInputWord[205]),
+        .Q(s_hashInputWord[205]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[206] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[174] ),
-        .Q(hashInputWord[206]),
+        .Q(s_hashInputWord[206]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[207] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[175] ),
-        .Q(hashInputWord[207]),
+        .Q(s_hashInputWord[207]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[208] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[176] ),
-        .Q(hashInputWord[208]),
+        .Q(s_hashInputWord[208]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[209] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[177] ),
-        .Q(hashInputWord[209]),
+        .Q(s_hashInputWord[209]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[20] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[20]),
-        .Q(hashInputWord[20]),
+        .Q(s_hashInputWord[20]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[210] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[178] ),
-        .Q(hashInputWord[210]),
+        .Q(s_hashInputWord[210]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[211] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[179] ),
-        .Q(hashInputWord[211]),
+        .Q(s_hashInputWord[211]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[212] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[180] ),
-        .Q(hashInputWord[212]),
+        .Q(s_hashInputWord[212]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[213] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[181] ),
-        .Q(hashInputWord[213]),
+        .Q(s_hashInputWord[213]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[214] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[182] ),
-        .Q(hashInputWord[214]),
+        .Q(s_hashInputWord[214]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[215] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[183] ),
-        .Q(hashInputWord[215]),
+        .Q(s_hashInputWord[215]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[216] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[184] ),
-        .Q(hashInputWord[216]),
+        .Q(s_hashInputWord[216]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[217] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[185] ),
-        .Q(hashInputWord[217]),
+        .Q(s_hashInputWord[217]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[218] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[186] ),
-        .Q(hashInputWord[218]),
+        .Q(s_hashInputWord[218]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[219] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[187] ),
-        .Q(hashInputWord[219]),
+        .Q(s_hashInputWord[219]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[21] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[21]),
-        .Q(hashInputWord[21]),
+        .Q(s_hashInputWord[21]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[220] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[188] ),
-        .Q(hashInputWord[220]),
+        .Q(s_hashInputWord[220]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[221] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[189] ),
-        .Q(hashInputWord[221]),
+        .Q(s_hashInputWord[221]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[222] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[190] ),
-        .Q(hashInputWord[222]),
+        .Q(s_hashInputWord[222]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[223] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[191] ),
-        .Q(hashInputWord[223]),
+        .Q(s_hashInputWord[223]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[224] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[192] ),
-        .Q(hashInputWord[224]),
+        .Q(s_hashInputWord[224]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[225] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[193] ),
-        .Q(hashInputWord[225]),
+        .Q(s_hashInputWord[225]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[226] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[194] ),
-        .Q(hashInputWord[226]),
+        .Q(s_hashInputWord[226]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[227] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[195] ),
-        .Q(hashInputWord[227]),
+        .Q(s_hashInputWord[227]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[228] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[196] ),
-        .Q(hashInputWord[228]),
+        .Q(s_hashInputWord[228]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[229] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[197] ),
-        .Q(hashInputWord[229]),
+        .Q(s_hashInputWord[229]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[22] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[22]),
-        .Q(hashInputWord[22]),
+        .Q(s_hashInputWord[22]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[230] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[198] ),
-        .Q(hashInputWord[230]),
+        .Q(s_hashInputWord[230]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[231] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[199] ),
-        .Q(hashInputWord[231]),
+        .Q(s_hashInputWord[231]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[232] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[200] ),
-        .Q(hashInputWord[232]),
+        .Q(s_hashInputWord[232]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[233] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[201] ),
-        .Q(hashInputWord[233]),
+        .Q(s_hashInputWord[233]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[234] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[202] ),
-        .Q(hashInputWord[234]),
+        .Q(s_hashInputWord[234]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[235] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[203] ),
-        .Q(hashInputWord[235]),
+        .Q(s_hashInputWord[235]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[236] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[204] ),
-        .Q(hashInputWord[236]),
+        .Q(s_hashInputWord[236]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[237] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[205] ),
-        .Q(hashInputWord[237]),
+        .Q(s_hashInputWord[237]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[238] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[206] ),
-        .Q(hashInputWord[238]),
+        .Q(s_hashInputWord[238]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[239] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[207] ),
-        .Q(hashInputWord[239]),
+        .Q(s_hashInputWord[239]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[23] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[23]),
-        .Q(hashInputWord[23]),
+        .Q(s_hashInputWord[23]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[240] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[208] ),
-        .Q(hashInputWord[240]),
+        .Q(s_hashInputWord[240]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[241] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[209] ),
-        .Q(hashInputWord[241]),
+        .Q(s_hashInputWord[241]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[242] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[210] ),
-        .Q(hashInputWord[242]),
+        .Q(s_hashInputWord[242]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[243] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[211] ),
-        .Q(hashInputWord[243]),
+        .Q(s_hashInputWord[243]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[244] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[212] ),
-        .Q(hashInputWord[244]),
+        .Q(s_hashInputWord[244]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[245] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[213] ),
-        .Q(hashInputWord[245]),
+        .Q(s_hashInputWord[245]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[246] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[214] ),
-        .Q(hashInputWord[246]),
+        .Q(s_hashInputWord[246]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[247] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[215] ),
-        .Q(hashInputWord[247]),
+        .Q(s_hashInputWord[247]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[248] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[216] ),
-        .Q(hashInputWord[248]),
+        .Q(s_hashInputWord[248]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[249] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[217] ),
-        .Q(hashInputWord[249]),
+        .Q(s_hashInputWord[249]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[24] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[24]),
-        .Q(hashInputWord[24]),
+        .Q(s_hashInputWord[24]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[250] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[218] ),
-        .Q(hashInputWord[250]),
+        .Q(s_hashInputWord[250]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[251] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[219] ),
-        .Q(hashInputWord[251]),
+        .Q(s_hashInputWord[251]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[252] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[220] ),
-        .Q(hashInputWord[252]),
+        .Q(s_hashInputWord[252]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[253] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[221] ),
-        .Q(hashInputWord[253]),
+        .Q(s_hashInputWord[253]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[254] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[222] ),
-        .Q(hashInputWord[254]),
+        .Q(s_hashInputWord[254]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[255] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[223] ),
-        .Q(hashInputWord[255]),
+        .Q(s_hashInputWord[255]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[256] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[224] ),
-        .Q(hashInputWord[256]),
+        .Q(s_hashInputWord[256]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[257] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[225] ),
-        .Q(hashInputWord[257]),
+        .Q(s_hashInputWord[257]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[258] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[226] ),
-        .Q(hashInputWord[258]),
+        .Q(s_hashInputWord[258]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[259] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[227] ),
-        .Q(hashInputWord[259]),
+        .Q(s_hashInputWord[259]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[25] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[25]),
-        .Q(hashInputWord[25]),
+        .Q(s_hashInputWord[25]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[260] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[228] ),
-        .Q(hashInputWord[260]),
+        .Q(s_hashInputWord[260]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[261] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[229] ),
-        .Q(hashInputWord[261]),
+        .Q(s_hashInputWord[261]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[262] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[230] ),
-        .Q(hashInputWord[262]),
+        .Q(s_hashInputWord[262]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[263] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[231] ),
-        .Q(hashInputWord[263]),
+        .Q(s_hashInputWord[263]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[264] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[232] ),
-        .Q(hashInputWord[264]),
+        .Q(s_hashInputWord[264]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[265] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[233] ),
-        .Q(hashInputWord[265]),
+        .Q(s_hashInputWord[265]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[266] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[234] ),
-        .Q(hashInputWord[266]),
+        .Q(s_hashInputWord[266]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[267] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[235] ),
-        .Q(hashInputWord[267]),
+        .Q(s_hashInputWord[267]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[268] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[236] ),
-        .Q(hashInputWord[268]),
+        .Q(s_hashInputWord[268]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[269] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[237] ),
-        .Q(hashInputWord[269]),
+        .Q(s_hashInputWord[269]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[26] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[26]),
-        .Q(hashInputWord[26]),
+        .Q(s_hashInputWord[26]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[270] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[238] ),
-        .Q(hashInputWord[270]),
+        .Q(s_hashInputWord[270]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[271] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[239] ),
-        .Q(hashInputWord[271]),
+        .Q(s_hashInputWord[271]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[272] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[240] ),
-        .Q(hashInputWord[272]),
+        .Q(s_hashInputWord[272]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[273] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[241] ),
-        .Q(hashInputWord[273]),
+        .Q(s_hashInputWord[273]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[274] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[242] ),
-        .Q(hashInputWord[274]),
+        .Q(s_hashInputWord[274]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[275] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[243] ),
-        .Q(hashInputWord[275]),
+        .Q(s_hashInputWord[275]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[276] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[244] ),
-        .Q(hashInputWord[276]),
+        .Q(s_hashInputWord[276]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[277] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[245] ),
-        .Q(hashInputWord[277]),
+        .Q(s_hashInputWord[277]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[278] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[246] ),
-        .Q(hashInputWord[278]),
+        .Q(s_hashInputWord[278]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[279] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[247] ),
-        .Q(hashInputWord[279]),
+        .Q(s_hashInputWord[279]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[27] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[27]),
-        .Q(hashInputWord[27]),
+        .Q(s_hashInputWord[27]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[280] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[248] ),
-        .Q(hashInputWord[280]),
+        .Q(s_hashInputWord[280]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[281] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[249] ),
-        .Q(hashInputWord[281]),
+        .Q(s_hashInputWord[281]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[282] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[250] ),
-        .Q(hashInputWord[282]),
+        .Q(s_hashInputWord[282]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[283] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[251] ),
-        .Q(hashInputWord[283]),
+        .Q(s_hashInputWord[283]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[284] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[252] ),
-        .Q(hashInputWord[284]),
+        .Q(s_hashInputWord[284]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[285] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[253] ),
-        .Q(hashInputWord[285]),
+        .Q(s_hashInputWord[285]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[286] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[254] ),
-        .Q(hashInputWord[286]),
+        .Q(s_hashInputWord[286]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[287] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[255] ),
-        .Q(hashInputWord[287]),
+        .Q(s_hashInputWord[287]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[28] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[28]),
-        .Q(hashInputWord[28]),
+        .Q(s_hashInputWord[28]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[29] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[29]),
-        .Q(hashInputWord[29]),
+        .Q(s_hashInputWord[29]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[2] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[2]),
-        .Q(hashInputWord[2]),
+        .Q(s_hashInputWord[2]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[30] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
-        .D(nonce[30]),
-        .Q(hashInputWord[30]),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
+        .D(s_nonce[30]),
+        .Q(s_hashInputWord[30]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[31] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
-        .D(nonce[31]),
-        .Q(hashInputWord[31]),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
+        .D(s_nonce[31]),
+        .Q(s_hashInputWord[31]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[32] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[0] ),
-        .Q(hashInputWord[32]),
+        .Q(s_hashInputWord[32]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[33] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[1] ),
-        .Q(hashInputWord[33]),
+        .Q(s_hashInputWord[33]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[34] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[2] ),
-        .Q(hashInputWord[34]),
+        .Q(s_hashInputWord[34]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[35] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[3] ),
-        .Q(hashInputWord[35]),
+        .Q(s_hashInputWord[35]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[36] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[4] ),
-        .Q(hashInputWord[36]),
+        .Q(s_hashInputWord[36]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[37] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[5] ),
-        .Q(hashInputWord[37]),
+        .Q(s_hashInputWord[37]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[38] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[6] ),
-        .Q(hashInputWord[38]),
+        .Q(s_hashInputWord[38]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[39] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[7] ),
-        .Q(hashInputWord[39]),
+        .Q(s_hashInputWord[39]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[3] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[3]),
-        .Q(hashInputWord[3]),
+        .Q(s_hashInputWord[3]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[40] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[8] ),
-        .Q(hashInputWord[40]),
+        .Q(s_hashInputWord[40]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[41] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[9] ),
-        .Q(hashInputWord[41]),
+        .Q(s_hashInputWord[41]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[42] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[10] ),
-        .Q(hashInputWord[42]),
+        .Q(s_hashInputWord[42]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[43] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[11] ),
-        .Q(hashInputWord[43]),
+        .Q(s_hashInputWord[43]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[44] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[12] ),
-        .Q(hashInputWord[44]),
+        .Q(s_hashInputWord[44]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[45] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[13] ),
-        .Q(hashInputWord[45]),
+        .Q(s_hashInputWord[45]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[46] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[14] ),
-        .Q(hashInputWord[46]),
+        .Q(s_hashInputWord[46]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[47] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[15] ),
-        .Q(hashInputWord[47]),
+        .Q(s_hashInputWord[47]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[48] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[16] ),
-        .Q(hashInputWord[48]),
+        .Q(s_hashInputWord[48]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[49] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[17] ),
-        .Q(hashInputWord[49]),
+        .Q(s_hashInputWord[49]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[4] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[4]),
-        .Q(hashInputWord[4]),
+        .Q(s_hashInputWord[4]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[50] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[18] ),
-        .Q(hashInputWord[50]),
+        .Q(s_hashInputWord[50]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[51] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[19] ),
-        .Q(hashInputWord[51]),
+        .Q(s_hashInputWord[51]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[52] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[20] ),
-        .Q(hashInputWord[52]),
+        .Q(s_hashInputWord[52]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[53] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[21] ),
-        .Q(hashInputWord[53]),
+        .Q(s_hashInputWord[53]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[54] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[22] ),
-        .Q(hashInputWord[54]),
+        .Q(s_hashInputWord[54]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[55] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[23] ),
-        .Q(hashInputWord[55]),
+        .Q(s_hashInputWord[55]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[56] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[24] ),
-        .Q(hashInputWord[56]),
+        .Q(s_hashInputWord[56]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[57] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[25] ),
-        .Q(hashInputWord[57]),
+        .Q(s_hashInputWord[57]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[58] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[26] ),
-        .Q(hashInputWord[58]),
+        .Q(s_hashInputWord[58]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[59] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[27] ),
-        .Q(hashInputWord[59]),
+        .Q(s_hashInputWord[59]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[5] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[5]),
-        .Q(hashInputWord[5]),
+        .Q(s_hashInputWord[5]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[60] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[28] ),
-        .Q(hashInputWord[60]),
+        .Q(s_hashInputWord[60]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[61] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[29] ),
-        .Q(hashInputWord[61]),
+        .Q(s_hashInputWord[61]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[62] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[30] ),
-        .Q(hashInputWord[62]),
+        .Q(s_hashInputWord[62]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[63] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[31] ),
-        .Q(hashInputWord[63]),
+        .Q(s_hashInputWord[63]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[64] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[32] ),
-        .Q(hashInputWord[64]),
+        .Q(s_hashInputWord[64]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[65] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[33] ),
-        .Q(hashInputWord[65]),
+        .Q(s_hashInputWord[65]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[66] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[34] ),
-        .Q(hashInputWord[66]),
+        .Q(s_hashInputWord[66]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[67] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[35] ),
-        .Q(hashInputWord[67]),
+        .Q(s_hashInputWord[67]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[68] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[36] ),
-        .Q(hashInputWord[68]),
+        .Q(s_hashInputWord[68]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[69] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[37] ),
-        .Q(hashInputWord[69]),
+        .Q(s_hashInputWord[69]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[6] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[6]),
-        .Q(hashInputWord[6]),
+        .Q(s_hashInputWord[6]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[70] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[38] ),
-        .Q(hashInputWord[70]),
+        .Q(s_hashInputWord[70]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[71] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[39] ),
-        .Q(hashInputWord[71]),
+        .Q(s_hashInputWord[71]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[72] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[40] ),
-        .Q(hashInputWord[72]),
+        .Q(s_hashInputWord[72]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[73] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[41] ),
-        .Q(hashInputWord[73]),
+        .Q(s_hashInputWord[73]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[74] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[42] ),
-        .Q(hashInputWord[74]),
+        .Q(s_hashInputWord[74]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[75] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[43] ),
-        .Q(hashInputWord[75]),
+        .Q(s_hashInputWord[75]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[76] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[44] ),
-        .Q(hashInputWord[76]),
+        .Q(s_hashInputWord[76]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[77] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[45] ),
-        .Q(hashInputWord[77]),
+        .Q(s_hashInputWord[77]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[78] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[46] ),
-        .Q(hashInputWord[78]),
+        .Q(s_hashInputWord[78]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[79] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[47] ),
-        .Q(hashInputWord[79]),
+        .Q(s_hashInputWord[79]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[7] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[7]),
-        .Q(hashInputWord[7]),
+        .Q(s_hashInputWord[7]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[80] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[48] ),
-        .Q(hashInputWord[80]),
+        .Q(s_hashInputWord[80]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[81] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[49] ),
-        .Q(hashInputWord[81]),
+        .Q(s_hashInputWord[81]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[82] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[50] ),
-        .Q(hashInputWord[82]),
+        .Q(s_hashInputWord[82]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[83] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[51] ),
-        .Q(hashInputWord[83]),
+        .Q(s_hashInputWord[83]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[84] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[52] ),
-        .Q(hashInputWord[84]),
+        .Q(s_hashInputWord[84]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[85] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[53] ),
-        .Q(hashInputWord[85]),
+        .Q(s_hashInputWord[85]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[86] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[54] ),
-        .Q(hashInputWord[86]),
+        .Q(s_hashInputWord[86]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[87] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[55] ),
-        .Q(hashInputWord[87]),
+        .Q(s_hashInputWord[87]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[88] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[56] ),
-        .Q(hashInputWord[88]),
+        .Q(s_hashInputWord[88]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[89] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[57] ),
-        .Q(hashInputWord[89]),
+        .Q(s_hashInputWord[89]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[8] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[8]),
-        .Q(hashInputWord[8]),
+        .Q(s_hashInputWord[8]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[90] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[58] ),
-        .Q(hashInputWord[90]),
+        .Q(s_hashInputWord[90]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[91] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[59] ),
-        .Q(hashInputWord[91]),
+        .Q(s_hashInputWord[91]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[92] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[60] ),
-        .Q(hashInputWord[92]),
+        .Q(s_hashInputWord[92]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[93] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[61] ),
-        .Q(hashInputWord[93]),
+        .Q(s_hashInputWord[93]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[94] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[62] ),
-        .Q(hashInputWord[94]),
+        .Q(s_hashInputWord[94]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[95] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[63] ),
-        .Q(hashInputWord[95]),
+        .Q(s_hashInputWord[95]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[96] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[64] ),
-        .Q(hashInputWord[96]),
+        .Q(s_hashInputWord[96]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[97] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[65] ),
-        .Q(hashInputWord[97]),
+        .Q(s_hashInputWord[97]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[98] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[66] ),
-        .Q(hashInputWord[98]),
+        .Q(s_hashInputWord[98]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[99] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_hashOriginalInputWord_reg_n_0_[67] ),
-        .Q(hashInputWord[99]),
+        .Q(s_hashInputWord[99]),
         .R(1'b0));
   FDRE \s_hashInputWord_reg[9] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(nonce[9]),
-        .Q(hashInputWord[9]),
+        .Q(s_hashInputWord[9]),
         .R(1'b0));
   LUT6 #(
     .INIT(64'h0000000020000000)) 
     \s_hashOriginalInputWord[127]_i_1 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord_reg[255]_i_3_n_6 ),
         .I3(\s_hashOriginalInputWord[255]_i_4_n_0 ),
         .I4(\s_hashOriginalInputWord_reg[255]_i_3_n_5 ),
@@ -30935,7 +31031,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(64'h0000000000200000)) 
     \s_hashOriginalInputWord[159]_i_1 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord_reg[255]_i_3_n_4 ),
         .I3(\s_hashOriginalInputWord_reg[255]_i_3_n_5 ),
         .I4(\s_hashOriginalInputWord[255]_i_4_n_0 ),
@@ -30945,7 +31041,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(64'h0020000000000000)) 
     \s_hashOriginalInputWord[191]_i_1 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord_reg[255]_i_3_n_4 ),
         .I3(\s_hashOriginalInputWord_reg[255]_i_3_n_5 ),
         .I4(\s_hashOriginalInputWord_reg[255]_i_3_n_6 ),
@@ -30955,7 +31051,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(64'h0000200000000000)) 
     \s_hashOriginalInputWord[223]_i_1 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord_reg[255]_i_3_n_4 ),
         .I3(\s_hashOriginalInputWord[255]_i_4_n_0 ),
         .I4(\s_hashOriginalInputWord_reg[255]_i_3_n_6 ),
@@ -30997,7 +31093,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(64'h2000000000000000)) 
     \s_hashOriginalInputWord[255]_i_2 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord_reg[255]_i_3_n_4 ),
         .I3(\s_hashOriginalInputWord_reg[255]_i_3_n_6 ),
         .I4(\s_hashOriginalInputWord[255]_i_4_n_0 ),
@@ -31146,7 +31242,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   LUT1 #(
     .INIT(2'h1)) 
     \s_hashOriginalInputWord[255]_i_7 
-       (.I0(counterSlave[0]),
+       (.I0(\s_counter_reg_n_0_[0] ),
         .O(\s_hashOriginalInputWord[255]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
@@ -31168,7 +31264,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(64'h0000000000000200)) 
     \s_hashOriginalInputWord[31]_i_1 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord_reg[255]_i_3_n_5 ),
         .I3(\s_hashOriginalInputWord[255]_i_4_n_0 ),
         .I4(\s_hashOriginalInputWord_reg[255]_i_3_n_6 ),
@@ -31178,7 +31274,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(64'h0000000002000000)) 
     \s_hashOriginalInputWord[63]_i_1 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord_reg[255]_i_3_n_5 ),
         .I3(\s_hashOriginalInputWord_reg[255]_i_3_n_6 ),
         .I4(\s_hashOriginalInputWord[255]_i_4_n_0 ),
@@ -31188,7 +31284,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(64'h0000000000200000)) 
     \s_hashOriginalInputWord[95]_i_1 
        (.I0(s00_axis_tvalid),
-        .I1(mEnable),
+        .I1(s_enable_reg_n_0),
         .I2(\s_hashOriginalInputWord[255]_i_4_n_0 ),
         .I3(\s_hashOriginalInputWord_reg[255]_i_3_n_6 ),
         .I4(\s_hashOriginalInputWord_reg[255]_i_3_n_5 ),
@@ -31199,1039 +31295,1039 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[0] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[100] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[100] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[101] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[101] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[102] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[102] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[103] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[103] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[104] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[104] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[105] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[105] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[106] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[106] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[107] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[107] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[108] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[108] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[109] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[109] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[10] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[10] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[110] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[110] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[111] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[111] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[112] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[112] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[113] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[113] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[114] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[114] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[115] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[115] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[116] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[116] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[117] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[117] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[118] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[118] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[119] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[119] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[11] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[11] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[120] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[120] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[121] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[121] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[122] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[122] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[123] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[123] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[124] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[124] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[125] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[125] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[126] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[126] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[127] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[127] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[128] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[128] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[129] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[129] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[12] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[12] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[130] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[130] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[131] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[131] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[132] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[132] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[133] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[133] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[134] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[134] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[135] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[135] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[136] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[136] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[137] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[137] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[138] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[138] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[139] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[139] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[13] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[13] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[140] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[140] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[141] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[141] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[142] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[142] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[143] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[143] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[144] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[144] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[145] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[145] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[146] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[146] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[147] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[147] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[148] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[148] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[149] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[149] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[14] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[14] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[150] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[150] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[151] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[151] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[152] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[152] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[153] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[153] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[154] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[154] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[155] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[155] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[156] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[156] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[157] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[157] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[158] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[158] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[159] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[159]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[159] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[15] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[15] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[160] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[160] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[161] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[161] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[162] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[162] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[163] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[163] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[164] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[164] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[165] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[165] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[166] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[166] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[167] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[167] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[168] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[168] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[169] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[169] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[16] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[16] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[170] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[170] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[171] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[171] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[172] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[172] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[173] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[173] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[174] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[174] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[175] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[175] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[176] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[176] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[177] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[177] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[178] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[178] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[179] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[179] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[17] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[17] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[180] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[180] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[181] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[181] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[182] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[182] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[183] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[183] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[184] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[184] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[185] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[185] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[186] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[186] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[187] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[187] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[188] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[188] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[189] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[189] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[18] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[18] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[190] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[190] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[191] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[191]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[191] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[192] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[192] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[193] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[193] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[194] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[194] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[195] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[195] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[196] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[196] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[197] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[197] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[198] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[198] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[199] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[199] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[19] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[19] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[1] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[1] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[200] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[200] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[201] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[201] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[202] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[202] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[203] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[203] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[204] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[204] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[205] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[205] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[206] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[206] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[207] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[207] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[208] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[208] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[209] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[209] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[20] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[20] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[210] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[210] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[211] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[211] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[212] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[212] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[213] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[213] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[214] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[214] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[215] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[215] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[216] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[216] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[217] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[217] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[218] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[218] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[219] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[219] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[21] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[21] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[220] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[220] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[221] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[221] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[222] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[222] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[223] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[223]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[223] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[224] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[224] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[225] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[225] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[226] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[226] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[227] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[227] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[228] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[228] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[229] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[229] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[22] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[22] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[230] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[230] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[231] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[231] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[232] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[232] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[233] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[233] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[234] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[234] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[235] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[235] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[236] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[236] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[237] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[237] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[238] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[238] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[239] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[239] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[23] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[23] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[240] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[240] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[241] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[241] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[242] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[242] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[243] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[243] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[244] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[244] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[245] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[245] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[246] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[246] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[247] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[247] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[248] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[248] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[249] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[249] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[24] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[24] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[250] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[250] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[251] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[251] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[252] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[252] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[253] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[253] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[254] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[254] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[255] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[255]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[255] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   CARRY4 \s_hashOriginalInputWord_reg[255]_i_14 
        (.CI(\s_hashOriginalInputWord_reg[255]_i_15_n_0 ),
         .CO({\s_hashOriginalInputWord_reg[255]_i_14_n_0 ,\s_hashOriginalInputWord_reg[255]_i_14_n_1 ,\s_hashOriginalInputWord_reg[255]_i_14_n_2 ,\s_hashOriginalInputWord_reg[255]_i_14_n_3 }),
@@ -32278,7 +32374,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.CI(1'b0),
         .CO({\s_hashOriginalInputWord_reg[255]_i_3_n_0 ,\s_hashOriginalInputWord_reg[255]_i_3_n_1 ,\s_hashOriginalInputWord_reg[255]_i_3_n_2 ,\s_hashOriginalInputWord_reg[255]_i_3_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,counterSlave[0],1'b0}),
+        .DI({1'b0,1'b0,\s_counter_reg_n_0_[0] ,1'b0}),
         .O({\s_hashOriginalInputWord_reg[255]_i_3_n_4 ,\s_hashOriginalInputWord_reg[255]_i_3_n_5 ,\s_hashOriginalInputWord_reg[255]_i_3_n_6 ,\NLW_s_hashOriginalInputWord_reg[255]_i_3_O_UNCONNECTED [0]}),
         .S({\s_hashOriginalInputWord[255]_i_5_n_0 ,\s_hashOriginalInputWord[255]_i_6_n_0 ,\s_hashOriginalInputWord[255]_i_7_n_0 ,1'b0}));
   FDRE \s_hashOriginalInputWord_reg[25] 
@@ -32286,2067 +32382,1950 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[25] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[26] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[26] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[27] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[27] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[28] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[28] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[29] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[29] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[2] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[2] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[30] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[30] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[31] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[31] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[32] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[32] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[33] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[33] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[34] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[34] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[35] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[35] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[36] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[36] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[37] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[37] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[38] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[38] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[39] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[39] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[3] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[3] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[40] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[40] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[41] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[41] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[42] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[42] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[43] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[43] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[44] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[44] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[45] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[45] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[46] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[46] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[47] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[47] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[48] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[48] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[49] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[49] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[4] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[4] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[50] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[50] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[51] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[51] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[52] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[52] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[53] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[53] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[54] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[54] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[55] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[55] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[56] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[56] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[57] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[57] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[58] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[58] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[59] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[59] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[5] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[5] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[60] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[60] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[61] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[61] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[62] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[62] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[63] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[63]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[63] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[64] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[64] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[65] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[65] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[66] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[66] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[67] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[67] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[68] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[4]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[68] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[69] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[5]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[69] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[6] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[6] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[70] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[6]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[70] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[71] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[71] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[72] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[72] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[73] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[73] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[74] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[10]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[74] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[75] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[11]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[75] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[76] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[12]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[76] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[77] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[13]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[77] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[78] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[14]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[78] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[79] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[15]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[79] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[7] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[7]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[7] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[80] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[16]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[80] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[81] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[17]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[81] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[82] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[18]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[82] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[83] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[19]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[83] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[84] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[20]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[84] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[85] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[21]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[85] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[86] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[22]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[86] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[87] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[23]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[87] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[88] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[24]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[88] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[89] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[25]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[89] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[8] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[8]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[8] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[90] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[26]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[90] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[91] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[27]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[91] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[92] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[28]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[92] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[93] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[29]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[93] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[94] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[30]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[94] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[95] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[95]),
         .D(s00_axis_tdata[31]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[95] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[96] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[0]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[96] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[97] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[1]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[97] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[98] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[2]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[98] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[99] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[127]),
         .D(s00_axis_tdata[3]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[99] ),
-        .R(s_allSent_reg_0));
+        .R(s_allSent_reg));
   FDRE \s_hashOriginalInputWord_reg[9] 
        (.C(s00_axis_aclk),
         .CE(s_hashOriginalInputWord[31]),
         .D(s00_axis_tdata[9]),
         .Q(\s_hashOriginalInputWord_reg_n_0_[9] ),
-        .R(s_allSent_reg_0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \s_hash[175]_i_1 
-       (.I0(update),
-        .I1(s00_axis_aresetn),
-        .O(\s_hash[175]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \s_hash[177]_i_1 
-       (.I0(update),
-        .I1(s00_axis_aresetn),
-        .O(\s_hash[177]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \s_hash[247]_i_1 
-       (.I0(update),
-        .I1(s00_axis_aresetn),
-        .O(\s_hash[247]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \s_hash[252]_i_1 
-       (.I0(update),
-        .I1(s00_axis_aresetn),
-        .O(\s_hash[252]_i_1_n_0 ));
+        .R(s_allSent_reg));
   LUT2 #(
     .INIT(4'h8)) 
     \s_hash[255]_i_1 
-       (.I0(mEnable),
+       (.I0(s_enable_reg_n_0),
         .I1(ready_reg_n_0),
         .O(\s_hash[255]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \s_hash[255]_i_2 
-       (.I0(update),
-        .I1(s00_axis_aresetn),
-        .O(\s_hash[255]_i_2_n_0 ));
   FDCE \s_hash_reg[128] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[128] ),
-        .Q(tempHash[64]));
+        .Q(\s_hash_reg_n_0_[128] ));
   FDCE \s_hash_reg[129] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[129] ),
-        .Q(tempHash[65]));
+        .Q(\s_hash_reg_n_0_[129] ));
   FDCE \s_hash_reg[130] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[130] ),
-        .Q(tempHash[66]));
+        .Q(\s_hash_reg_n_0_[130] ));
   FDCE \s_hash_reg[131] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[131] ),
-        .Q(tempHash[67]));
+        .Q(\s_hash_reg_n_0_[131] ));
   FDCE \s_hash_reg[132] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[132] ),
-        .Q(tempHash[68]));
+        .Q(\s_hash_reg_n_0_[132] ));
   FDCE \s_hash_reg[133] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[133] ),
-        .Q(tempHash[69]));
+        .Q(\s_hash_reg_n_0_[133] ));
   FDCE \s_hash_reg[134] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[134] ),
-        .Q(tempHash[70]));
+        .Q(\s_hash_reg_n_0_[134] ));
   FDCE \s_hash_reg[135] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[135] ),
-        .Q(tempHash[71]));
+        .Q(\s_hash_reg_n_0_[135] ));
   FDCE \s_hash_reg[136] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[136] ),
-        .Q(tempHash[72]));
+        .Q(\s_hash_reg_n_0_[136] ));
   FDCE \s_hash_reg[137] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[137] ),
-        .Q(tempHash[73]));
+        .Q(\s_hash_reg_n_0_[137] ));
   FDCE \s_hash_reg[138] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[138] ),
-        .Q(tempHash[74]));
+        .Q(\s_hash_reg_n_0_[138] ));
   FDCE \s_hash_reg[139] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[139] ),
-        .Q(tempHash[75]));
+        .Q(\s_hash_reg_n_0_[139] ));
   FDCE \s_hash_reg[140] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[140] ),
-        .Q(tempHash[76]));
+        .Q(\s_hash_reg_n_0_[140] ));
   FDCE \s_hash_reg[141] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[141] ),
-        .Q(tempHash[77]));
+        .Q(\s_hash_reg_n_0_[141] ));
   FDCE \s_hash_reg[142] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[142] ),
-        .Q(tempHash[78]));
+        .Q(\s_hash_reg_n_0_[142] ));
   FDCE \s_hash_reg[143] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[143] ),
-        .Q(tempHash[79]));
+        .Q(\s_hash_reg_n_0_[143] ));
   FDCE \s_hash_reg[144] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[144] ),
-        .Q(tempHash[80]));
+        .Q(\s_hash_reg_n_0_[144] ));
   FDCE \s_hash_reg[145] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[145] ),
-        .Q(tempHash[81]));
+        .Q(\s_hash_reg_n_0_[145] ));
   FDCE \s_hash_reg[146] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[146] ),
-        .Q(tempHash[82]));
+        .Q(\s_hash_reg_n_0_[146] ));
   FDCE \s_hash_reg[147] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[147] ),
-        .Q(tempHash[83]));
+        .Q(\s_hash_reg_n_0_[147] ));
   FDCE \s_hash_reg[148] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[148] ),
-        .Q(tempHash[84]));
+        .Q(\s_hash_reg_n_0_[148] ));
   FDCE \s_hash_reg[149] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[149] ),
-        .Q(tempHash[85]));
+        .Q(\s_hash_reg_n_0_[149] ));
   FDCE \s_hash_reg[150] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[150] ),
-        .Q(tempHash[86]));
+        .Q(\s_hash_reg_n_0_[150] ));
   FDCE \s_hash_reg[151] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[151] ),
-        .Q(tempHash[87]));
+        .Q(\s_hash_reg_n_0_[151] ));
   FDCE \s_hash_reg[152] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[152] ),
-        .Q(tempHash[88]));
+        .Q(\s_hash_reg_n_0_[152] ));
   FDCE \s_hash_reg[153] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[153] ),
-        .Q(tempHash[89]));
+        .Q(\s_hash_reg_n_0_[153] ));
   FDCE \s_hash_reg[154] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[154] ),
-        .Q(tempHash[90]));
+        .Q(\s_hash_reg_n_0_[154] ));
   FDCE \s_hash_reg[155] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[155] ),
-        .Q(tempHash[91]));
+        .Q(\s_hash_reg_n_0_[155] ));
   FDCE \s_hash_reg[156] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[156] ),
-        .Q(tempHash[92]));
+        .Q(\s_hash_reg_n_0_[156] ));
   FDCE \s_hash_reg[157] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[157] ),
-        .Q(tempHash[93]));
+        .Q(\s_hash_reg_n_0_[157] ));
   FDCE \s_hash_reg[158] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[158] ),
-        .Q(tempHash[94]));
+        .Q(\s_hash_reg_n_0_[158] ));
   FDCE \s_hash_reg[159] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[159] ),
-        .Q(tempHash[95]));
+        .Q(\s_hash_reg_n_0_[159] ));
   FDCE \s_hash_reg[160] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[224] ),
-        .Q(tempHash[96]));
+        .Q(\s_hash_reg_n_0_[160] ));
   FDCE \s_hash_reg[161] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[225] ),
-        .Q(tempHash[97]));
+        .Q(\s_hash_reg_n_0_[161] ));
   FDCE \s_hash_reg[162] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[226] ),
-        .Q(tempHash[98]));
+        .Q(\s_hash_reg_n_0_[162] ));
   FDCE \s_hash_reg[163] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[227] ),
-        .Q(tempHash[99]));
+        .Q(\s_hash_reg_n_0_[163] ));
   FDCE \s_hash_reg[164] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[228] ),
-        .Q(tempHash[100]));
+        .Q(\s_hash_reg_n_0_[164] ));
   FDCE \s_hash_reg[165] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[229] ),
-        .Q(tempHash[101]));
+        .Q(\s_hash_reg_n_0_[165] ));
   FDCE \s_hash_reg[166] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[230] ),
-        .Q(tempHash[102]));
+        .Q(\s_hash_reg_n_0_[166] ));
   FDCE \s_hash_reg[167] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[231] ),
-        .Q(tempHash[103]));
+        .Q(\s_hash_reg_n_0_[167] ));
   FDCE \s_hash_reg[168] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[232] ),
-        .Q(tempHash[104]));
+        .Q(\s_hash_reg_n_0_[168] ));
   FDCE \s_hash_reg[169] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[233] ),
-        .Q(tempHash[105]));
+        .Q(\s_hash_reg_n_0_[169] ));
   FDCE \s_hash_reg[170] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[234] ),
-        .Q(tempHash[106]));
+        .Q(\s_hash_reg_n_0_[170] ));
   FDCE \s_hash_reg[171] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[235] ),
-        .Q(tempHash[107]));
+        .Q(\s_hash_reg_n_0_[171] ));
   FDCE \s_hash_reg[172] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[236] ),
-        .Q(tempHash[108]));
+        .Q(\s_hash_reg_n_0_[172] ));
   FDCE \s_hash_reg[173] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[237] ),
-        .Q(tempHash[109]));
+        .Q(\s_hash_reg_n_0_[173] ));
   FDCE \s_hash_reg[174] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[238] ),
-        .Q(tempHash[110]));
+        .Q(\s_hash_reg_n_0_[174] ));
   FDCE \s_hash_reg[175] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[239] ),
-        .Q(tempHash[111]));
+        .Q(\s_hash_reg_n_0_[175] ));
   FDCE \s_hash_reg[176] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[240] ),
-        .Q(tempHash[112]));
+        .Q(\s_hash_reg_n_0_[176] ));
   FDCE \s_hash_reg[177] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[241] ),
-        .Q(tempHash[113]));
+        .Q(\s_hash_reg_n_0_[177] ));
   FDCE \s_hash_reg[178] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[242] ),
-        .Q(tempHash[114]));
+        .Q(\s_hash_reg_n_0_[178] ));
   FDCE \s_hash_reg[179] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[243] ),
-        .Q(tempHash[115]));
+        .Q(\s_hash_reg_n_0_[179] ));
   FDCE \s_hash_reg[180] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[244] ),
-        .Q(tempHash[116]));
+        .Q(\s_hash_reg_n_0_[180] ));
   FDCE \s_hash_reg[181] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[245] ),
-        .Q(tempHash[117]));
+        .Q(\s_hash_reg_n_0_[181] ));
   FDCE \s_hash_reg[182] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[246] ),
-        .Q(tempHash[118]));
+        .Q(\s_hash_reg_n_0_[182] ));
   FDCE \s_hash_reg[183] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[247] ),
-        .Q(tempHash[119]));
+        .Q(\s_hash_reg_n_0_[183] ));
   FDCE \s_hash_reg[184] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[248] ),
-        .Q(tempHash[120]));
+        .Q(\s_hash_reg_n_0_[184] ));
   FDCE \s_hash_reg[185] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[249] ),
-        .Q(tempHash[121]));
+        .Q(\s_hash_reg_n_0_[185] ));
   FDCE \s_hash_reg[186] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[250] ),
-        .Q(tempHash[122]));
+        .Q(\s_hash_reg_n_0_[186] ));
   FDCE \s_hash_reg[187] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[251] ),
-        .Q(tempHash[123]));
+        .Q(\s_hash_reg_n_0_[187] ));
   FDCE \s_hash_reg[188] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[252] ),
-        .Q(tempHash[124]));
+        .Q(\s_hash_reg_n_0_[188] ));
   FDCE \s_hash_reg[189] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[253] ),
-        .Q(tempHash[125]));
+        .Q(\s_hash_reg_n_0_[189] ));
   FDCE \s_hash_reg[190] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[254] ),
-        .Q(tempHash[126]));
+        .Q(\s_hash_reg_n_0_[190] ));
   FDCE \s_hash_reg[191] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[255] ),
-        .Q(tempHash[127]));
+        .Q(\s_hash_reg_n_0_[191] ));
   FDCE \s_hash_reg[192] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[32] ),
-        .Q(tempHash[128]));
+        .Q(\s_hash_reg_n_0_[192] ));
   FDCE \s_hash_reg[193] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[33] ),
-        .Q(tempHash[129]));
+        .Q(\s_hash_reg_n_0_[193] ));
   FDCE \s_hash_reg[194] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[34] ),
-        .Q(tempHash[130]));
+        .Q(\s_hash_reg_n_0_[194] ));
   FDCE \s_hash_reg[195] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[35] ),
-        .Q(tempHash[131]));
+        .Q(\s_hash_reg_n_0_[195] ));
   FDCE \s_hash_reg[196] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[36] ),
-        .Q(tempHash[132]));
+        .Q(\s_hash_reg_n_0_[196] ));
   FDCE \s_hash_reg[197] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[37] ),
-        .Q(tempHash[133]));
+        .Q(\s_hash_reg_n_0_[197] ));
   FDCE \s_hash_reg[198] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[38] ),
-        .Q(tempHash[134]));
+        .Q(\s_hash_reg_n_0_[198] ));
   FDCE \s_hash_reg[199] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[39] ),
-        .Q(tempHash[135]));
+        .Q(\s_hash_reg_n_0_[199] ));
   FDCE \s_hash_reg[200] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[40] ),
-        .Q(tempHash[136]));
+        .Q(\s_hash_reg_n_0_[200] ));
   FDCE \s_hash_reg[201] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[41] ),
-        .Q(tempHash[137]));
+        .Q(\s_hash_reg_n_0_[201] ));
   FDCE \s_hash_reg[202] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[42] ),
-        .Q(tempHash[138]));
+        .Q(\s_hash_reg_n_0_[202] ));
   FDCE \s_hash_reg[203] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[43] ),
-        .Q(tempHash[139]));
+        .Q(\s_hash_reg_n_0_[203] ));
   FDCE \s_hash_reg[204] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[44] ),
-        .Q(tempHash[140]));
+        .Q(\s_hash_reg_n_0_[204] ));
   FDCE \s_hash_reg[205] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[45] ),
-        .Q(tempHash[141]));
+        .Q(\s_hash_reg_n_0_[205] ));
   FDCE \s_hash_reg[206] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[46] ),
-        .Q(tempHash[142]));
+        .Q(\s_hash_reg_n_0_[206] ));
   FDCE \s_hash_reg[207] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[47] ),
-        .Q(tempHash[143]));
+        .Q(\s_hash_reg_n_0_[207] ));
   FDCE \s_hash_reg[208] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[48] ),
-        .Q(tempHash[144]));
+        .Q(\s_hash_reg_n_0_[208] ));
   FDCE \s_hash_reg[209] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[49] ),
-        .Q(tempHash[145]));
+        .Q(\s_hash_reg_n_0_[209] ));
   FDCE \s_hash_reg[210] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[50] ),
-        .Q(tempHash[146]));
+        .Q(\s_hash_reg_n_0_[210] ));
   FDCE \s_hash_reg[211] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[51] ),
-        .Q(tempHash[147]));
+        .Q(\s_hash_reg_n_0_[211] ));
   FDCE \s_hash_reg[212] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[52] ),
-        .Q(tempHash[148]));
+        .Q(\s_hash_reg_n_0_[212] ));
   FDCE \s_hash_reg[213] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[53] ),
-        .Q(tempHash[149]));
+        .Q(\s_hash_reg_n_0_[213] ));
   FDCE \s_hash_reg[214] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[54] ),
-        .Q(tempHash[150]));
+        .Q(\s_hash_reg_n_0_[214] ));
   FDCE \s_hash_reg[215] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[55] ),
-        .Q(tempHash[151]));
+        .Q(\s_hash_reg_n_0_[215] ));
   FDCE \s_hash_reg[216] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[56] ),
-        .Q(tempHash[152]));
+        .Q(\s_hash_reg_n_0_[216] ));
   FDCE \s_hash_reg[217] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[57] ),
-        .Q(tempHash[153]));
+        .Q(\s_hash_reg_n_0_[217] ));
   FDCE \s_hash_reg[218] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[58] ),
-        .Q(tempHash[154]));
+        .Q(\s_hash_reg_n_0_[218] ));
   FDCE \s_hash_reg[219] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[59] ),
-        .Q(tempHash[155]));
+        .Q(\s_hash_reg_n_0_[219] ));
   FDCE \s_hash_reg[220] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[60] ),
-        .Q(tempHash[156]));
+        .Q(\s_hash_reg_n_0_[220] ));
   FDCE \s_hash_reg[221] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[61] ),
-        .Q(tempHash[157]));
+        .Q(\s_hash_reg_n_0_[221] ));
   FDCE \s_hash_reg[222] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[62] ),
-        .Q(tempHash[158]));
+        .Q(\s_hash_reg_n_0_[222] ));
   FDCE \s_hash_reg[223] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[63] ),
-        .Q(tempHash[159]));
+        .Q(\s_hash_reg_n_0_[223] ));
   FDCE \s_hash_reg[224] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[0] ),
-        .Q(tempHash[160]));
+        .Q(\s_hash_reg_n_0_[224] ));
   FDCE \s_hash_reg[225] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[1] ),
-        .Q(tempHash[161]));
+        .Q(\s_hash_reg_n_0_[225] ));
   FDCE \s_hash_reg[226] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[2] ),
-        .Q(tempHash[162]));
+        .Q(\s_hash_reg_n_0_[226] ));
   FDCE \s_hash_reg[227] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[3] ),
-        .Q(tempHash[163]));
+        .Q(\s_hash_reg_n_0_[227] ));
   FDCE \s_hash_reg[228] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[4] ),
-        .Q(tempHash[164]));
+        .Q(\s_hash_reg_n_0_[228] ));
   FDCE \s_hash_reg[229] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[5] ),
-        .Q(tempHash[165]));
+        .Q(\s_hash_reg_n_0_[229] ));
   FDCE \s_hash_reg[230] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[6] ),
-        .Q(tempHash[166]));
+        .Q(\s_hash_reg_n_0_[230] ));
   FDCE \s_hash_reg[231] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[7] ),
-        .Q(tempHash[167]));
+        .Q(\s_hash_reg_n_0_[231] ));
   FDCE \s_hash_reg[232] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[8] ),
-        .Q(tempHash[168]));
+        .Q(\s_hash_reg_n_0_[232] ));
   FDCE \s_hash_reg[233] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[9] ),
-        .Q(tempHash[169]));
+        .Q(\s_hash_reg_n_0_[233] ));
   FDCE \s_hash_reg[234] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[10] ),
-        .Q(tempHash[170]));
+        .Q(\s_hash_reg_n_0_[234] ));
   FDCE \s_hash_reg[235] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[11] ),
-        .Q(tempHash[171]));
+        .Q(\s_hash_reg_n_0_[235] ));
   FDCE \s_hash_reg[236] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[12] ),
-        .Q(tempHash[172]));
+        .Q(\s_hash_reg_n_0_[236] ));
   FDCE \s_hash_reg[237] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[13] ),
-        .Q(tempHash[173]));
+        .Q(\s_hash_reg_n_0_[237] ));
   FDCE \s_hash_reg[238] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[14] ),
-        .Q(tempHash[174]));
+        .Q(\s_hash_reg_n_0_[238] ));
   FDCE \s_hash_reg[239] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[254]_i_1_n_0 ),
         .D(\Hashes_reg_n_0_[15] ),
-        .Q(tempHash[175]));
+        .Q(\s_hash_reg_n_0_[239] ));
   FDCE \s_hash_reg[240] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[16] ),
-        .Q(tempHash[176]));
+        .Q(sel0[0]));
   FDCE \s_hash_reg[241] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[17] ),
-        .Q(tempHash[177]));
+        .Q(sel0[1]));
   FDCE \s_hash_reg[242] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[18] ),
-        .Q(tempHash[178]));
+        .Q(sel0[2]));
   FDCE \s_hash_reg[243] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[19] ),
-        .Q(tempHash[179]));
+        .Q(sel0[3]));
   FDCE \s_hash_reg[244] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[20] ),
-        .Q(tempHash[180]));
+        .Q(sel0[4]));
   FDCE \s_hash_reg[245] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[21] ),
-        .Q(tempHash[181]));
+        .Q(sel0[5]));
   FDCE \s_hash_reg[246] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[22] ),
-        .Q(tempHash[182]));
+        .Q(sel0[6]));
   FDCE \s_hash_reg[247] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[247]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[23] ),
-        .Q(tempHash[183]));
+        .Q(sel0[7]));
   FDCE \s_hash_reg[248] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[24] ),
-        .Q(tempHash[184]));
+        .Q(sel0[8]));
   FDCE \s_hash_reg[249] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[25] ),
-        .Q(tempHash[185]));
+        .Q(sel0[9]));
   FDCE \s_hash_reg[250] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[26] ),
-        .Q(tempHash[186]));
+        .Q(sel0[10]));
   FDCE \s_hash_reg[251] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[27] ),
-        .Q(tempHash[187]));
+        .Q(sel0[11]));
   FDCE \s_hash_reg[252] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[28] ),
-        .Q(tempHash[188]));
+        .Q(sel0[12]));
   FDCE \s_hash_reg[253] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[29] ),
-        .Q(tempHash[189]));
+        .Q(sel0[13]));
   FDCE \s_hash_reg[254] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[30] ),
-        .Q(tempHash[190]));
+        .Q(sel0[14]));
   FDCE \s_hash_reg[255] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[255]_i_2_n_0 ),
+        .CLR(\Hashes[119]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[31] ),
-        .Q(tempHash[191]));
+        .Q(sel0[15]));
   FDCE \s_hash_reg[32] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[192] ),
-        .Q(tempHash[0]));
+        .Q(\s_hash_reg_n_0_[32] ));
   FDCE \s_hash_reg[33] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[193] ),
-        .Q(tempHash[1]));
+        .Q(\s_hash_reg_n_0_[33] ));
   FDCE \s_hash_reg[34] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[194] ),
-        .Q(tempHash[2]));
+        .Q(\s_hash_reg_n_0_[34] ));
   FDCE \s_hash_reg[35] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[195] ),
-        .Q(tempHash[3]));
+        .Q(\s_hash_reg_n_0_[35] ));
   FDCE \s_hash_reg[36] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[196] ),
-        .Q(tempHash[4]));
+        .Q(\s_hash_reg_n_0_[36] ));
   FDCE \s_hash_reg[37] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[197] ),
-        .Q(tempHash[5]));
+        .Q(\s_hash_reg_n_0_[37] ));
   FDCE \s_hash_reg[38] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[198] ),
-        .Q(tempHash[6]));
+        .Q(\s_hash_reg_n_0_[38] ));
   FDCE \s_hash_reg[39] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[199] ),
-        .Q(tempHash[7]));
+        .Q(\s_hash_reg_n_0_[39] ));
   FDCE \s_hash_reg[40] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[200] ),
-        .Q(tempHash[8]));
+        .Q(\s_hash_reg_n_0_[40] ));
   FDCE \s_hash_reg[41] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[201] ),
-        .Q(tempHash[9]));
+        .Q(\s_hash_reg_n_0_[41] ));
   FDCE \s_hash_reg[42] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[202] ),
-        .Q(tempHash[10]));
+        .Q(\s_hash_reg_n_0_[42] ));
   FDCE \s_hash_reg[43] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[203] ),
-        .Q(tempHash[11]));
+        .Q(\s_hash_reg_n_0_[43] ));
   FDCE \s_hash_reg[44] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[204] ),
-        .Q(tempHash[12]));
+        .Q(\s_hash_reg_n_0_[44] ));
   FDCE \s_hash_reg[45] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[205] ),
-        .Q(tempHash[13]));
+        .Q(\s_hash_reg_n_0_[45] ));
   FDCE \s_hash_reg[46] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[206] ),
-        .Q(tempHash[14]));
+        .Q(\s_hash_reg_n_0_[46] ));
   FDCE \s_hash_reg[47] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[207] ),
-        .Q(tempHash[15]));
+        .Q(\s_hash_reg_n_0_[47] ));
   FDCE \s_hash_reg[48] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[208] ),
-        .Q(tempHash[16]));
+        .Q(\s_hash_reg_n_0_[48] ));
   FDCE \s_hash_reg[49] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[209] ),
-        .Q(tempHash[17]));
+        .Q(\s_hash_reg_n_0_[49] ));
   FDCE \s_hash_reg[50] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[210] ),
-        .Q(tempHash[18]));
+        .Q(\s_hash_reg_n_0_[50] ));
   FDCE \s_hash_reg[51] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[211] ),
-        .Q(tempHash[19]));
+        .Q(\s_hash_reg_n_0_[51] ));
   FDCE \s_hash_reg[52] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[212] ),
-        .Q(tempHash[20]));
+        .Q(\s_hash_reg_n_0_[52] ));
   FDCE \s_hash_reg[53] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[213] ),
-        .Q(tempHash[21]));
+        .Q(\s_hash_reg_n_0_[53] ));
   FDCE \s_hash_reg[54] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[214] ),
-        .Q(tempHash[22]));
+        .Q(\s_hash_reg_n_0_[54] ));
   FDCE \s_hash_reg[55] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[215] ),
-        .Q(tempHash[23]));
+        .Q(\s_hash_reg_n_0_[55] ));
   FDCE \s_hash_reg[56] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[216] ),
-        .Q(tempHash[24]));
+        .Q(\s_hash_reg_n_0_[56] ));
   FDCE \s_hash_reg[57] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[217] ),
-        .Q(tempHash[25]));
+        .Q(\s_hash_reg_n_0_[57] ));
   FDCE \s_hash_reg[58] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[218] ),
-        .Q(tempHash[26]));
+        .Q(\s_hash_reg_n_0_[58] ));
   FDCE \s_hash_reg[59] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[219] ),
-        .Q(tempHash[27]));
+        .Q(\s_hash_reg_n_0_[59] ));
   FDCE \s_hash_reg[60] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[220] ),
-        .Q(tempHash[28]));
+        .Q(\s_hash_reg_n_0_[60] ));
   FDCE \s_hash_reg[61] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[221] ),
-        .Q(tempHash[29]));
+        .Q(\s_hash_reg_n_0_[61] ));
   FDCE \s_hash_reg[62] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[222] ),
-        .Q(tempHash[30]));
+        .Q(\s_hash_reg_n_0_[62] ));
   FDCE \s_hash_reg[63] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[223] ),
-        .Q(tempHash[31]));
+        .Q(\s_hash_reg_n_0_[63] ));
   FDCE \s_hash_reg[64] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[160] ),
-        .Q(tempHash[32]));
+        .Q(\s_hash_reg_n_0_[64] ));
   FDCE \s_hash_reg[65] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[161] ),
-        .Q(tempHash[33]));
+        .Q(\s_hash_reg_n_0_[65] ));
   FDCE \s_hash_reg[66] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[162] ),
-        .Q(tempHash[34]));
+        .Q(\s_hash_reg_n_0_[66] ));
   FDCE \s_hash_reg[67] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[163] ),
-        .Q(tempHash[35]));
+        .Q(\s_hash_reg_n_0_[67] ));
   FDCE \s_hash_reg[68] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[164] ),
-        .Q(tempHash[36]));
+        .Q(\s_hash_reg_n_0_[68] ));
   FDCE \s_hash_reg[69] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[165] ),
-        .Q(tempHash[37]));
+        .Q(\s_hash_reg_n_0_[69] ));
   FDCE \s_hash_reg[70] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[166] ),
-        .Q(tempHash[38]));
+        .Q(\s_hash_reg_n_0_[70] ));
   FDCE \s_hash_reg[71] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[167] ),
-        .Q(tempHash[39]));
+        .Q(\s_hash_reg_n_0_[71] ));
   FDCE \s_hash_reg[72] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[168] ),
-        .Q(tempHash[40]));
+        .Q(\s_hash_reg_n_0_[72] ));
   FDCE \s_hash_reg[73] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[169] ),
-        .Q(tempHash[41]));
+        .Q(\s_hash_reg_n_0_[73] ));
   FDCE \s_hash_reg[74] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[170] ),
-        .Q(tempHash[42]));
+        .Q(\s_hash_reg_n_0_[74] ));
   FDCE \s_hash_reg[75] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[171] ),
-        .Q(tempHash[43]));
+        .Q(\s_hash_reg_n_0_[75] ));
   FDCE \s_hash_reg[76] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[172] ),
-        .Q(tempHash[44]));
+        .Q(\s_hash_reg_n_0_[76] ));
   FDCE \s_hash_reg[77] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[173] ),
-        .Q(tempHash[45]));
+        .Q(\s_hash_reg_n_0_[77] ));
   FDCE \s_hash_reg[78] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[174] ),
-        .Q(tempHash[46]));
+        .Q(\s_hash_reg_n_0_[78] ));
   FDCE \s_hash_reg[79] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[175] ),
-        .Q(tempHash[47]));
+        .Q(\s_hash_reg_n_0_[79] ));
   FDCE \s_hash_reg[80] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[176] ),
-        .Q(tempHash[48]));
+        .Q(\s_hash_reg_n_0_[80] ));
   FDCE \s_hash_reg[81] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[177] ),
-        .Q(tempHash[49]));
+        .Q(\s_hash_reg_n_0_[81] ));
   FDCE \s_hash_reg[82] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[178] ),
-        .Q(tempHash[50]));
+        .Q(\s_hash_reg_n_0_[82] ));
   FDCE \s_hash_reg[83] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[179] ),
-        .Q(tempHash[51]));
+        .Q(\s_hash_reg_n_0_[83] ));
   FDCE \s_hash_reg[84] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[180] ),
-        .Q(tempHash[52]));
+        .Q(\s_hash_reg_n_0_[84] ));
   FDCE \s_hash_reg[85] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[181] ),
-        .Q(tempHash[53]));
+        .Q(\s_hash_reg_n_0_[85] ));
   FDCE \s_hash_reg[86] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[182] ),
-        .Q(tempHash[54]));
+        .Q(\s_hash_reg_n_0_[86] ));
   FDCE \s_hash_reg[87] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[183] ),
-        .Q(tempHash[55]));
+        .Q(\s_hash_reg_n_0_[87] ));
   FDCE \s_hash_reg[88] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[184] ),
-        .Q(tempHash[56]));
+        .Q(\s_hash_reg_n_0_[88] ));
   FDCE \s_hash_reg[89] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[185] ),
-        .Q(tempHash[57]));
+        .Q(\s_hash_reg_n_0_[89] ));
   FDCE \s_hash_reg[90] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[186] ),
-        .Q(tempHash[58]));
+        .Q(\s_hash_reg_n_0_[90] ));
   FDCE \s_hash_reg[91] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[187] ),
-        .Q(tempHash[59]));
+        .Q(\s_hash_reg_n_0_[91] ));
   FDCE \s_hash_reg[92] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[188] ),
-        .Q(tempHash[60]));
+        .Q(\s_hash_reg_n_0_[92] ));
   FDCE \s_hash_reg[93] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[189] ),
-        .Q(tempHash[61]));
+        .Q(\s_hash_reg_n_0_[93] ));
   FDCE \s_hash_reg[94] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
         .D(\Hashes_reg_n_0_[190] ),
-        .Q(tempHash[62]));
+        .Q(\s_hash_reg_n_0_[94] ));
   FDCE \s_hash_reg[95] 
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[177]_i_1_n_0 ),
+        .CLR(\Hashes[255]_i_3_n_0 ),
         .D(\Hashes_reg_n_0_[191] ),
-        .Q(tempHash[63]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+        .Q(\s_hash_reg_n_0_[95] ));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
     .INIT(16'hD0F2)) 
     \s_nonce[0]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(mEnable),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(s_enable_reg_n_0),
         .I3(nonce[0]),
         .O(\s_nonce[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[10]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[10]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[11]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[11]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[12]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[12]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[13]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[13]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[14]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[14]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[15]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[15]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[16]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[16]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[17]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[17]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[18]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[18]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[18]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[19]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[19]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[1]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[1]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[20]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[20]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[21]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[21]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[22]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[22]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[23]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[23]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[24]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[24]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[25]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[25]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[26]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[26]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[27]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[27]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[28]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[28]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[29]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[29]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[2]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[2]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[30]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[30]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[30]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hF222)) 
-    \s_nonce[31]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(s00_axis_aresetn),
-        .I3(\s_nonce[31]_i_3_n_0 ),
-        .O(\s_nonce[31]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    \s_nonce[31]_i_10 
-       (.I0(counterSlave[1]),
-        .I1(\s_counter_reg_n_0_[20] ),
-        .I2(\s_counter_reg_n_0_[30] ),
-        .I3(\s_counter_reg_n_0_[29] ),
-        .O(\s_nonce[31]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    \s_nonce[31]_i_11 
-       (.I0(counterSlave[2]),
-        .I1(\s_counter_reg_n_0_[18] ),
-        .I2(\s_counter_reg_n_0_[24] ),
-        .I3(\s_counter_reg_n_0_[12] ),
-        .O(\s_nonce[31]_i_11_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \s_nonce[31]_i_12 
-       (.I0(\s_counter_reg_n_0_[21] ),
-        .I1(\s_counter_reg_n_0_[19] ),
-        .I2(\s_counter_reg_n_0_[31] ),
-        .I3(\s_counter_reg_n_0_[26] ),
-        .O(\s_nonce[31]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
-    \s_nonce[31]_i_2 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+    \s_nonce[31]_i_1 
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[31]),
-        .I3(mEnable),
-        .O(\s_nonce[31]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000002)) 
-    \s_nonce[31]_i_3 
-       (.I0(s00_axis_tvalid),
-        .I1(mEnable),
-        .I2(\s_nonce[31]_i_5_n_0 ),
-        .I3(\s_nonce[31]_i_6_n_0 ),
-        .I4(\s_nonce[31]_i_7_n_0 ),
-        .I5(\s_nonce[31]_i_8_n_0 ),
-        .O(\s_nonce[31]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \s_nonce[31]_i_5 
-       (.I0(\s_counter_reg_n_0_[7] ),
-        .I1(\s_counter_reg_n_0_[13] ),
-        .I2(\s_counter_reg_n_0_[4] ),
-        .I3(\s_counter_reg_n_0_[11] ),
-        .I4(\s_nonce[31]_i_9_n_0 ),
-        .O(\s_nonce[31]_i_5_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \s_nonce[31]_i_6 
-       (.I0(\s_counter_reg_n_0_[17] ),
-        .I1(\s_counter_reg_n_0_[23] ),
-        .I2(\s_counter_reg_n_0_[6] ),
-        .I3(\s_counter_reg_n_0_[10] ),
-        .I4(\s_nonce[31]_i_10_n_0 ),
-        .O(\s_nonce[31]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \s_nonce[31]_i_7 
-       (.I0(\s_counter_reg_n_0_[5] ),
-        .I1(\s_counter_reg_n_0_[9] ),
-        .I2(\s_counter_reg_n_0_[16] ),
-        .I3(\s_counter_reg_n_0_[22] ),
-        .I4(\s_nonce[31]_i_11_n_0 ),
-        .O(\s_nonce[31]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFB)) 
-    \s_nonce[31]_i_8 
-       (.I0(counterSlave[3]),
-        .I1(counterSlave[0]),
-        .I2(\s_counter_reg_n_0_[25] ),
-        .I3(\s_counter_reg_n_0_[28] ),
-        .I4(\s_nonce[31]_i_12_n_0 ),
-        .O(\s_nonce[31]_i_8_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \s_nonce[31]_i_9 
-       (.I0(\s_counter_reg_n_0_[27] ),
-        .I1(\s_counter_reg_n_0_[15] ),
-        .I2(\s_counter_reg_n_0_[14] ),
-        .I3(\s_counter_reg_n_0_[8] ),
-        .O(\s_nonce[31]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+        .I3(s_enable_reg_n_0),
+        .O(\s_nonce[31]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[3]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[3]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[4]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[4]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[5]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[5]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[6]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[6]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[7]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[7]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[8]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[8]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'hFD20)) 
     \s_nonce[9]_i_1 
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
+       (.I0(s_ready_reg_rep__0_n_0),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
         .I2(data1[9]),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .O(\s_nonce[9]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_nonce_reg[0] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[0]_i_1_n_0 ),
         .Q(nonce[0]),
         .R(1'b0));
@@ -34354,7 +34333,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[10] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[10]_i_1_n_0 ),
         .Q(nonce[10]),
         .R(1'b0));
@@ -34362,7 +34341,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[11] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[11]_i_1_n_0 ),
         .Q(nonce[11]),
         .R(1'b0));
@@ -34370,7 +34349,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[12] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[12]_i_1_n_0 ),
         .Q(nonce[12]),
         .R(1'b0));
@@ -34385,7 +34364,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[13] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[13]_i_1_n_0 ),
         .Q(nonce[13]),
         .R(1'b0));
@@ -34393,7 +34372,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[14] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[14]_i_1_n_0 ),
         .Q(nonce[14]),
         .R(1'b0));
@@ -34401,7 +34380,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[15] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[15]_i_1_n_0 ),
         .Q(nonce[15]),
         .R(1'b0));
@@ -34409,7 +34388,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[16] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[16]_i_1_n_0 ),
         .Q(nonce[16]),
         .R(1'b0));
@@ -34424,7 +34403,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[17] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[17]_i_1_n_0 ),
         .Q(nonce[17]),
         .R(1'b0));
@@ -34432,7 +34411,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[18] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[18]_i_1_n_0 ),
         .Q(nonce[18]),
         .R(1'b0));
@@ -34440,7 +34419,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[19] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[19]_i_1_n_0 ),
         .Q(nonce[19]),
         .R(1'b0));
@@ -34448,7 +34427,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[1] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[1]_i_1_n_0 ),
         .Q(nonce[1]),
         .R(1'b0));
@@ -34456,7 +34435,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[20] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[20]_i_1_n_0 ),
         .Q(nonce[20]),
         .R(1'b0));
@@ -34471,7 +34450,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[21] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[21]_i_1_n_0 ),
         .Q(nonce[21]),
         .R(1'b0));
@@ -34479,7 +34458,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[22] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[22]_i_1_n_0 ),
         .Q(nonce[22]),
         .R(1'b0));
@@ -34487,7 +34466,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[23] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[23]_i_1_n_0 ),
         .Q(nonce[23]),
         .R(1'b0));
@@ -34495,7 +34474,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[24] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[24]_i_1_n_0 ),
         .Q(nonce[24]),
         .R(1'b0));
@@ -34510,7 +34489,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[25] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[25]_i_1_n_0 ),
         .Q(nonce[25]),
         .R(1'b0));
@@ -34518,7 +34497,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[26] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[26]_i_1_n_0 ),
         .Q(nonce[26]),
         .R(1'b0));
@@ -34526,7 +34505,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[27] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[27]_i_1_n_0 ),
         .Q(nonce[27]),
         .R(1'b0));
@@ -34534,7 +34513,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[28] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[28]_i_1_n_0 ),
         .Q(nonce[28]),
         .R(1'b0));
@@ -34549,7 +34528,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[29] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[29]_i_1_n_0 ),
         .Q(nonce[29]),
         .R(1'b0));
@@ -34557,7 +34536,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[2] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[2]_i_1_n_0 ),
         .Q(nonce[2]),
         .R(1'b0));
@@ -34565,30 +34544,30 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[30] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[30]_i_1_n_0 ),
-        .Q(nonce[30]),
+        .Q(s_nonce[30]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \s_nonce_reg[31] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
-        .D(\s_nonce[31]_i_2_n_0 ),
-        .Q(nonce[31]),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
+        .D(\s_nonce[31]_i_1_n_0 ),
+        .Q(s_nonce[31]),
         .R(1'b0));
-  CARRY4 \s_nonce_reg[31]_i_4 
+  CARRY4 \s_nonce_reg[31]_i_2 
        (.CI(\s_nonce_reg[28]_i_2_n_0 ),
-        .CO({\NLW_s_nonce_reg[31]_i_4_CO_UNCONNECTED [3:2],\s_nonce_reg[31]_i_4_n_2 ,\s_nonce_reg[31]_i_4_n_3 }),
+        .CO({\NLW_s_nonce_reg[31]_i_2_CO_UNCONNECTED [3:2],\s_nonce_reg[31]_i_2_n_2 ,\s_nonce_reg[31]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_s_nonce_reg[31]_i_4_O_UNCONNECTED [3],data1[31:29]}),
-        .S({1'b0,nonce[31:29]}));
+        .O({\NLW_s_nonce_reg[31]_i_2_O_UNCONNECTED [3],data1[31:29]}),
+        .S({1'b0,s_nonce,nonce[29]}));
   FDRE #(
     .INIT(1'b0)) 
     \s_nonce_reg[3] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[3]_i_1_n_0 ),
         .Q(nonce[3]),
         .R(1'b0));
@@ -34596,7 +34575,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[4] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[4]_i_1_n_0 ),
         .Q(nonce[4]),
         .R(1'b0));
@@ -34611,7 +34590,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[5] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[5]_i_1_n_0 ),
         .Q(nonce[5]),
         .R(1'b0));
@@ -34619,7 +34598,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[6] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[6]_i_1_n_0 ),
         .Q(nonce[6]),
         .R(1'b0));
@@ -34627,7 +34606,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[7] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[7]_i_1_n_0 ),
         .Q(nonce[7]),
         .R(1'b0));
@@ -34635,7 +34614,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[8] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[8]_i_1_n_0 ),
         .Q(nonce[8]),
         .R(1'b0));
@@ -34650,7 +34629,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     .INIT(1'b0)) 
     \s_nonce_reg[9] 
        (.C(s00_axis_aclk),
-        .CE(\s_nonce[31]_i_1_n_0 ),
+        .CE(\s_hashInputWord[287]_i_1_n_0 ),
         .D(\s_nonce[9]_i_1_n_0 ),
         .Q(nonce[9]),
         .R(1'b0));
@@ -34658,30 +34637,37 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   FDCE s_ready_reg
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
-        .D(mEnable),
+        .CLR(\Hashes[223]_i_2_n_0 ),
+        .D(s_enable_reg_n_0),
         .Q(s_ready));
   (* ORIG_CELL_NAME = "s_ready_reg" *) 
   FDCE s_ready_reg_rep
        (.C(s00_axis_aclk),
         .CE(\s_hash[255]_i_1_n_0 ),
-        .CLR(\s_hash[175]_i_1_n_0 ),
-        .D(mEnable),
+        .CLR(\Hashes[223]_i_2_n_0 ),
+        .D(s_enable_reg_n_0),
         .Q(s_ready_reg_rep_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* ORIG_CELL_NAME = "s_ready_reg" *) 
+  FDCE s_ready_reg_rep__0
+       (.C(s00_axis_aclk),
+        .CE(\s_hash[255]_i_1_n_0 ),
+        .CLR(\Hashes[223]_i_2_n_0 ),
+        .D(s_enable_reg_n_0),
+        .Q(s_ready_reg_rep__0_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT4 #(
     .INIT(16'hF222)) 
     s_update_i_1
-       (.I0(s_ready_reg_rep_n_0),
-        .I1(s_POFready_i_2_n_0),
-        .I2(s_allSent_reg),
-        .I3(validData),
+       (.I0(s_ready),
+        .I1(\s_dataOut[239]_i_3_n_0 ),
+        .I2(s_allWordsSent),
+        .I3(s_validData),
         .O(s_update_i_1_n_0));
   FDRE s_update_reg
        (.C(s00_axis_aclk),
         .CE(1'b1),
         .D(s_update_i_1_n_0),
-        .Q(update),
+        .Q(s_update_reg_n_0),
         .R(1'b0));
   LUT6 #(
     .INIT(64'hFFFFAEFF0000A200)) 
@@ -34689,11 +34675,11 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(W_reg_0_63_0_0_i_17_n_0),
         .I1(schedulled_i_2_n_0),
         .I2(schedulled_i_3_n_0),
-        .I3(mEnable),
+        .I3(s_enable_reg_n_0),
         .I4(N1),
         .I5(schedulled_reg_n_0),
         .O(schedulled_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hFFD5D5D5)) 
     schedulled_i_2
@@ -34713,7 +34699,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .I3(schedulled_reg_n_0),
         .I4(hashed_reg_n_0),
         .O(schedulled_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT2 #(
     .INIT(4'h1)) 
     schedulled_i_4
@@ -34728,168 +34714,168 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CLR(\M[0][510]_i_1_n_0 ),
         .D(schedulled_i_1_n_0),
         .Q(schedulled_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair279" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \t[0]_i_1 
        (.I0(W_reg_0_63_0_0_i_17_n_0),
         .I1(\t_reg_n_0_[0] ),
         .O(\t[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair300" *) 
+  (* SOFT_HLUTNM = "soft_lutpair293" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[10]_i_1 
        (.I0(p_0_in[10]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair301" *) 
+  (* SOFT_HLUTNM = "soft_lutpair294" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[11]_i_1 
        (.I0(p_0_in[11]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair302" *) 
+  (* SOFT_HLUTNM = "soft_lutpair296" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[12]_i_1 
        (.I0(p_0_in[12]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair303" *) 
+  (* SOFT_HLUTNM = "soft_lutpair297" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[13]_i_1 
        (.I0(p_0_in[13]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[13]));
-  (* SOFT_HLUTNM = "soft_lutpair304" *) 
+  (* SOFT_HLUTNM = "soft_lutpair298" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[14]_i_1 
        (.I0(p_0_in[14]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[14]));
-  (* SOFT_HLUTNM = "soft_lutpair305" *) 
+  (* SOFT_HLUTNM = "soft_lutpair299" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[15]_i_1 
        (.I0(p_0_in[15]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[15]));
-  (* SOFT_HLUTNM = "soft_lutpair305" *) 
+  (* SOFT_HLUTNM = "soft_lutpair299" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[16]_i_1 
        (.I0(p_0_in[16]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[16]));
-  (* SOFT_HLUTNM = "soft_lutpair304" *) 
+  (* SOFT_HLUTNM = "soft_lutpair298" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[17]_i_1 
        (.I0(p_0_in[17]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[17]));
-  (* SOFT_HLUTNM = "soft_lutpair303" *) 
+  (* SOFT_HLUTNM = "soft_lutpair297" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[18]_i_1 
        (.I0(p_0_in[18]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[18]));
-  (* SOFT_HLUTNM = "soft_lutpair302" *) 
+  (* SOFT_HLUTNM = "soft_lutpair296" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[19]_i_1 
        (.I0(p_0_in[19]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[19]));
-  (* SOFT_HLUTNM = "soft_lutpair280" *) 
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[1]_i_1 
        (.I0(p_0_in[1]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\t[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair301" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[20]_i_1 
        (.I0(p_0_in[20]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[20]));
-  (* SOFT_HLUTNM = "soft_lutpair300" *) 
+  (* SOFT_HLUTNM = "soft_lutpair294" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[21]_i_1 
        (.I0(p_0_in[21]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[21]));
-  (* SOFT_HLUTNM = "soft_lutpair279" *) 
+  (* SOFT_HLUTNM = "soft_lutpair293" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[22]_i_1 
        (.I0(p_0_in[22]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[22]));
-  (* SOFT_HLUTNM = "soft_lutpair280" *) 
+  (* SOFT_HLUTNM = "soft_lutpair292" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[23]_i_1 
        (.I0(p_0_in[23]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[23]));
-  (* SOFT_HLUTNM = "soft_lutpair297" *) 
+  (* SOFT_HLUTNM = "soft_lutpair291" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[24]_i_1 
        (.I0(p_0_in[24]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[24]));
-  (* SOFT_HLUTNM = "soft_lutpair296" *) 
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[25]_i_1 
        (.I0(p_0_in[25]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[25]));
-  (* SOFT_HLUTNM = "soft_lutpair295" *) 
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[26]_i_1 
        (.I0(p_0_in[26]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[26]));
-  (* SOFT_HLUTNM = "soft_lutpair294" *) 
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[27]_i_1 
        (.I0(p_0_in[27]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[27]));
-  (* SOFT_HLUTNM = "soft_lutpair293" *) 
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[28]_i_1 
        (.I0(p_0_in[28]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[28]));
-  (* SOFT_HLUTNM = "soft_lutpair292" *) 
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[29]_i_1 
        (.I0(p_0_in[29]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[29]));
-  (* SOFT_HLUTNM = "soft_lutpair290" *) 
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[2]_i_1 
        (.I0(p_0_in[2]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\t[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair291" *) 
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[30]_i_1 
@@ -34899,7 +34885,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
   LUT4 #(
     .INIT(16'hAA80)) 
     \t[31]_i_1 
-       (.I0(mEnable),
+       (.I0(s_enable_reg_n_0),
         .I1(\t_reg[31]_i_3_n_0 ),
         .I2(i1),
         .I3(W_reg_0_63_0_0_i_17_n_0),
@@ -34952,7 +34938,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(\i_reg[12]_i_2_n_5 ),
         .I1(\i_reg[12]_i_2_n_6 ),
         .O(\t[31]_i_19_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair290" *) 
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[31]_i_2 
@@ -35024,49 +35010,49 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
        (.I0(\i_reg[28]_i_2_n_5 ),
         .I1(\i_reg[28]_i_2_n_6 ),
         .O(\t[31]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair291" *) 
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[3]_i_1 
        (.I0(p_0_in[3]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\t[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair292" *) 
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[4]_i_1 
        (.I0(p_0_in[4]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\t[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair293" *) 
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[5]_i_1 
        (.I0(p_0_in[5]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(\t[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair294" *) 
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[6]_i_1 
        (.I0(p_0_in[6]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair295" *) 
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[7]_i_1 
        (.I0(p_0_in[7]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair296" *) 
+  (* SOFT_HLUTNM = "soft_lutpair291" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[8]_i_1 
        (.I0(p_0_in[8]),
         .I1(W_reg_0_63_0_0_i_17_n_0),
         .O(p_2_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair297" *) 
+  (* SOFT_HLUTNM = "soft_lutpair292" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \t[9]_i_1 
@@ -35078,7 +35064,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[0] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\t[0]_i_1_n_0 ),
         .Q(\t_reg_n_0_[0] ));
   FDCE #(
@@ -35086,7 +35072,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[10] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[10]),
         .Q(t[10]));
   FDCE #(
@@ -35094,7 +35080,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[11] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[11]),
         .Q(t[11]));
   FDCE #(
@@ -35102,7 +35088,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[12] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[12]),
         .Q(t[12]));
   CARRY4 \t_reg[12]_i_2 
@@ -35117,7 +35103,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[13] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[13]),
         .Q(t[13]));
   FDCE #(
@@ -35125,7 +35111,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[14] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[14]),
         .Q(t[14]));
   FDCE #(
@@ -35133,7 +35119,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[15] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[15]),
         .Q(t[15]));
   FDCE #(
@@ -35141,7 +35127,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[16] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[16]),
         .Q(t[16]));
   CARRY4 \t_reg[16]_i_2 
@@ -35156,7 +35142,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[17] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[17]),
         .Q(t[17]));
   FDCE #(
@@ -35164,7 +35150,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[18] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[18]),
         .Q(t[18]));
   FDCE #(
@@ -35172,7 +35158,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[19] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[19]),
         .Q(t[19]));
   FDCE #(
@@ -35180,7 +35166,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[1] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\t[1]_i_1_n_0 ),
         .Q(\t_reg_n_0_[1] ));
   CARRY4 \t_reg[1]_i_2 
@@ -35195,7 +35181,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[20] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[20]),
         .Q(t[20]));
   CARRY4 \t_reg[20]_i_2 
@@ -35210,7 +35196,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[21] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[21]),
         .Q(t[21]));
   FDCE #(
@@ -35218,7 +35204,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[22] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[22]),
         .Q(t[22]));
   FDCE #(
@@ -35226,7 +35212,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[23] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[23]),
         .Q(t[23]));
   FDCE #(
@@ -35234,7 +35220,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[24] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[24]),
         .Q(t[24]));
   CARRY4 \t_reg[24]_i_2 
@@ -35249,7 +35235,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[25] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[25]),
         .Q(t[25]));
   FDCE #(
@@ -35257,7 +35243,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[26] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[26]),
         .Q(t[26]));
   FDCE #(
@@ -35265,7 +35251,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[27] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[27]),
         .Q(t[27]));
   FDCE #(
@@ -35273,7 +35259,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[28] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[28]),
         .Q(t[28]));
   CARRY4 \t_reg[28]_i_2 
@@ -35288,7 +35274,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[29] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[29]),
         .Q(t[29]));
   FDCE #(
@@ -35296,7 +35282,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[2] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\t[2]_i_1_n_0 ),
         .Q(\t_reg_n_0_[2] ));
   FDCE #(
@@ -35304,7 +35290,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[30] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[30]),
         .Q(t[30]));
   FDCE #(
@@ -35312,7 +35298,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[31] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[31]),
         .Q(t[31]));
   CARRY4 \t_reg[31]_i_11 
@@ -35355,7 +35341,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[3] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\t[3]_i_1_n_0 ),
         .Q(\t_reg_n_0_[3] ));
   FDCE #(
@@ -35363,7 +35349,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[4] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\t[4]_i_1_n_0 ),
         .Q(\t_reg_n_0_[4] ));
   FDCE #(
@@ -35371,7 +35357,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[5] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(\t[5]_i_1_n_0 ),
         .Q(t_reg_rep));
   FDCE #(
@@ -35379,7 +35365,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[6] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[6]),
         .Q(t[6]));
   FDCE #(
@@ -35387,7 +35373,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[7] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[7]),
         .Q(t[7]));
   FDCE #(
@@ -35395,7 +35381,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[8] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[8]),
         .Q(t[8]));
   CARRY4 \t_reg[8]_i_2 
@@ -35410,7 +35396,7 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
     \t_reg[9] 
        (.C(s00_axis_aclk),
         .CE(\t[31]_i_1_n_0 ),
-        .CLR(\s_hash[252]_i_1_n_0 ),
+        .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[9]),
         .Q(t[9]));
 endmodule

@@ -5,28 +5,27 @@ use ieee.numeric_std.all;
 entity MinerCoprocessor_v1_0_M00_AXIS is
 	generic (
 		-- Users to add parameters here
-        HASH_LENGTH : integer   := 256;
+        HASH_LENGTH             : integer   := 256;
 		-- User parameters ends
 		-- Do not modify the parameters beyond this line
 
 		-- Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.
 		C_M_AXIS_TDATA_WIDTH	: integer	:= 32;
 		-- Start count is the number of clock cycles the master will wait before initiating/issuing any transaction.
-		C_M_START_COUNT	: integer	:= 32
+		C_M_START_COUNT	        : integer	:= 32
 	);
 	port (
 		-- Users to add ports here
-        validData    : in std_logic;
-        hash         : in std_logic_vector(HASH_LENGTH-1 downto 0);
-        nonce        : in std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
-        allWordsSent : out std_logic;
-        readEnable   : out std_logic;
-        counterMaster: out std_logic_vector(3 downto 0);
+        validData       : in std_logic;
+        hash            : in std_logic_vector(HASH_LENGTH-1 downto 0);
+        nonce           : in std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
+        allWordsSent    : out std_logic;
+        readEnable      : out std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
 		-- Global ports
-		M_AXIS_ACLK	: in std_logic;
+		M_AXIS_ACLK	    : in std_logic;
 		-- 
 		M_AXIS_ARESETN	: in std_logic;
 		-- Master Stream Ports. TVALID indicates that the master is driving a valid transfer, A transfer takes place when both TVALID and TREADY are asserted. 
@@ -45,13 +44,12 @@ end MinerCoprocessor_v1_0_M00_AXIS;
 architecture Behavioral of MinerCoprocessor_v1_0_M00_AXIS is
 	signal s_allSent : std_logic := '0';
 	signal s_valid   : std_logic := '0';
-    signal s_counter : integer := 0;
+    signal s_counter : integer   :=  0;
     signal s_dataOut : std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0) := (others => '0');
 begin
     ------------------------------------------------
     -----         Output word builder         ------
     ------------------------------------------------
-    counterMaster <= std_logic_vector(to_unsigned(s_counter, 4)); 
     process(M_AXIS_ACLK)
     begin
         if (rising_edge(M_AXIS_ACLK)) then
@@ -81,6 +79,5 @@ begin
     M_AXIS_TDATA  <= s_dataOut;
     
     allWordsSent <= s_allSent;
-    readEnable <= validData and M_AXIS_TREADY;
-    
+    readEnable   <= validData and M_AXIS_TREADY;
 end Behavioral;

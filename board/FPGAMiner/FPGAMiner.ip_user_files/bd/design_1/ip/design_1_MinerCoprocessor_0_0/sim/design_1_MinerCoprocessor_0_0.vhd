@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:MinerCoprocessor:1.0
--- IP Revision: 43
+-- IP Revision: 45
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -55,17 +55,6 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_1_MinerCoprocessor_0_0 IS
   PORT (
-    readEnable : OUT STD_LOGIC;
-    validData : OUT STD_LOGIC;
-    allWordsSent : OUT STD_LOGIC;
-    counterSlave : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    counterMaster : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    hashOut : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
-    tempHash : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
-    nonce : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    mEnable : OUT STD_LOGIC;
-    update : OUT STD_LOGIC;
-    hashInputWord : OUT STD_LOGIC_VECTOR(287 DOWNTO 0);
     m00_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m00_axis_tstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     m00_axis_tlast : OUT STD_LOGIC;
@@ -94,17 +83,6 @@ ARCHITECTURE design_1_MinerCoprocessor_0_0_arch OF design_1_MinerCoprocessor_0_0
       HASH_LENGTH : INTEGER
     );
     PORT (
-      readEnable : OUT STD_LOGIC;
-      validData : OUT STD_LOGIC;
-      allWordsSent : OUT STD_LOGIC;
-      counterSlave : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      counterMaster : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      hashOut : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
-      tempHash : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
-      nonce : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      mEnable : OUT STD_LOGIC;
-      update : OUT STD_LOGIC;
-      hashInputWord : OUT STD_LOGIC_VECTOR(287 DOWNTO 0);
       m00_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       m00_axis_tstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       m00_axis_tlast : OUT STD_LOGIC;
@@ -152,17 +130,6 @@ BEGIN
       HASH_LENGTH => 256
     )
     PORT MAP (
-      readEnable => readEnable,
-      validData => validData,
-      allWordsSent => allWordsSent,
-      counterSlave => counterSlave,
-      counterMaster => counterMaster,
-      hashOut => hashOut,
-      tempHash => tempHash,
-      nonce => nonce,
-      mEnable => mEnable,
-      update => update,
-      hashInputWord => hashInputWord,
       m00_axis_tdata => m00_axis_tdata,
       m00_axis_tstrb => m00_axis_tstrb,
       m00_axis_tlast => m00_axis_tlast,

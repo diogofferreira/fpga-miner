@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sat Jun  2 04:24:12 2018
+// Date        : Sat Jun  2 23:23:14 2018
 // Host        : hp-laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/design_1_MinerCoprocessor_0_0_stub.v
@@ -14,23 +14,11 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "MinerCoprocessor_v1_0,Vivado 2017.4" *)
-module design_1_MinerCoprocessor_0_0(readEnable, validData, allWordsSent, 
-  counterSlave, counterMaster, hashOut, tempHash, nonce, mEnable, update, hashInputWord, 
-  m00_axis_tdata, m00_axis_tstrb, m00_axis_tlast, m00_axis_tvalid, m00_axis_tready, 
-  m00_axis_aclk, m00_axis_aresetn, s00_axis_tdata, s00_axis_tstrb, s00_axis_tlast, 
-  s00_axis_tvalid, s00_axis_tready, s00_axis_aclk, s00_axis_aresetn)
-/* synthesis syn_black_box black_box_pad_pin="readEnable,validData,allWordsSent,counterSlave[3:0],counterMaster[3:0],hashOut[255:0],tempHash[255:0],nonce[31:0],mEnable,update,hashInputWord[287:0],m00_axis_tdata[31:0],m00_axis_tstrb[3:0],m00_axis_tlast,m00_axis_tvalid,m00_axis_tready,m00_axis_aclk,m00_axis_aresetn,s00_axis_tdata[31:0],s00_axis_tstrb[3:0],s00_axis_tlast,s00_axis_tvalid,s00_axis_tready,s00_axis_aclk,s00_axis_aresetn" */;
-  output readEnable;
-  output validData;
-  output allWordsSent;
-  output [3:0]counterSlave;
-  output [3:0]counterMaster;
-  output [255:0]hashOut;
-  output [255:0]tempHash;
-  output [31:0]nonce;
-  output mEnable;
-  output update;
-  output [287:0]hashInputWord;
+module design_1_MinerCoprocessor_0_0(m00_axis_tdata, m00_axis_tstrb, 
+  m00_axis_tlast, m00_axis_tvalid, m00_axis_tready, m00_axis_aclk, m00_axis_aresetn, 
+  s00_axis_tdata, s00_axis_tstrb, s00_axis_tlast, s00_axis_tvalid, s00_axis_tready, 
+  s00_axis_aclk, s00_axis_aresetn)
+/* synthesis syn_black_box black_box_pad_pin="m00_axis_tdata[31:0],m00_axis_tstrb[3:0],m00_axis_tlast,m00_axis_tvalid,m00_axis_tready,m00_axis_aclk,m00_axis_aresetn,s00_axis_tdata[31:0],s00_axis_tstrb[3:0],s00_axis_tlast,s00_axis_tvalid,s00_axis_tready,s00_axis_aclk,s00_axis_aresetn" */;
   output [31:0]m00_axis_tdata;
   output [3:0]m00_axis_tstrb;
   output m00_axis_tlast;

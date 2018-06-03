@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -67,26 +68,14 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
-  create_project -in_memory -part xc7a100tcsg324-1
-  set_property board_part digilentinc.com:nexys4:part0:1.1 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper.dcp
   set_property webtalk.parent_dir C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/wt [current_project]
   set_property parent.project_path C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.xpr [current_project]
   set_property ip_repo_paths C:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0 [current_project]
   set_property ip_output_repo C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/synth_1/design_1_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/design_1.bd
-  set_param project.isImplRun false
-  read_xdc C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc
-  set_param project.isImplRun true
-  link_design -top design_1_wrapper -part xc7a100tcsg324-1
-  set_param project.isImplRun false
-  write_hwdef -force -file design_1_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -163,6 +152,9 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf
+  set_property SCOPED_TO_REF design_1 [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf]
+  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf]
   catch { write_mem_info -force design_1_wrapper.mmi }
   catch { write_bmm -force design_1_wrapper_bd.bmm }
   write_bitstream -force design_1_wrapper.bit 

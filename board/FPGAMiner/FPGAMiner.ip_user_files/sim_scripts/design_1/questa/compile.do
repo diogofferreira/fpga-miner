@@ -286,10 +286,10 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../FPGAMiner.srcs/sources_1/bd/d
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/sim/design_1.vhd" \
-"../../../bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd" \
-"../../../bd/design_1/ipshared/3944/src/sha256_functions.vhd" \
-"../../../bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd" \
-"../../../bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0.vhd" \
+"../../../bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd" \
+"../../../bd/design_1/ipshared/46e1/src/sha256_functions.vhd" \
+"../../../bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd" \
+"../../../bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_MinerCoprocessor_0_0/sim/design_1_MinerCoprocessor_0_0.vhd" \
 
 vlog -work xil_defaultlib \

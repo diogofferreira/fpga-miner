@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Sat Jun  2 04:19:12 2018
+--Date        : Sat Jun  2 23:25:14 2018
 --Host        : hp-laptop running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -629,10 +629,10 @@ architecture STRUCTURE of microblaze_0_local_memory_imp_1K0VQXK is
   signal NLW_ilmb_v10_LMB_Rst_UNCONNECTED : STD_LOGIC;
   signal NLW_lmb_bram_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_lmb_bram_rstb_busy_UNCONNECTED : STD_LOGIC;
-  attribute BMM_INFO_ADDRESS_SPACE : string;
-  attribute BMM_INFO_ADDRESS_SPACE of dlmb_bram_if_cntlr : label is "byte  0x00000000 32 > design_1 microblaze_0_local_memory/lmb_bram";
   attribute KEEP_HIERARCHY : string;
   attribute KEEP_HIERARCHY of dlmb_bram_if_cntlr : label is "yes";
+  attribute bmm_info_address_space : string;
+  attribute bmm_info_address_space of dlmb_bram_if_cntlr : label is "byte  0x00000000 32 > design_1 microblaze_0_local_memory/lmb_bram";
 begin
   DLMB_ce <= microblaze_0_dlmb_CE;
   DLMB_readdbus(0 to 31) <= microblaze_0_dlmb_READDBUS(0 to 31);
@@ -1857,10 +1857,10 @@ entity design_1 is
     usb_uart_rxd : in STD_LOGIC;
     usb_uart_txd : out STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=9,da_mb_cnt=1,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=9,da_mb_cnt=1,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
@@ -2334,17 +2334,6 @@ architecture STRUCTURE of design_1 is
   end component design_1_axi_smc_0;
   component design_1_MinerCoprocessor_0_0 is
   port (
-    readEnable : out STD_LOGIC;
-    validData : out STD_LOGIC;
-    allWordsSent : out STD_LOGIC;
-    counterSlave : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    counterMaster : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    hashOut : out STD_LOGIC_VECTOR ( 255 downto 0 );
-    tempHash : out STD_LOGIC_VECTOR ( 255 downto 0 );
-    nonce : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    mEnable : out STD_LOGIC;
-    update : out STD_LOGIC;
-    hashInputWord : out STD_LOGIC_VECTOR ( 287 downto 0 );
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m00_axis_tlast : out STD_LOGIC;
@@ -2610,18 +2599,7 @@ architecture STRUCTURE of design_1 is
   signal rst_clk_wiz_1_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sys_clock_1 : STD_LOGIC;
-  signal NLW_MinerCoprocessor_0_allWordsSent_UNCONNECTED : STD_LOGIC;
-  signal NLW_MinerCoprocessor_0_mEnable_UNCONNECTED : STD_LOGIC;
-  signal NLW_MinerCoprocessor_0_readEnable_UNCONNECTED : STD_LOGIC;
-  signal NLW_MinerCoprocessor_0_update_UNCONNECTED : STD_LOGIC;
-  signal NLW_MinerCoprocessor_0_validData_UNCONNECTED : STD_LOGIC;
-  signal NLW_MinerCoprocessor_0_counterMaster_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_MinerCoprocessor_0_counterSlave_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_MinerCoprocessor_0_hashInputWord_UNCONNECTED : STD_LOGIC_VECTOR ( 287 downto 0 );
-  signal NLW_MinerCoprocessor_0_hashOut_UNCONNECTED : STD_LOGIC_VECTOR ( 255 downto 0 );
   signal NLW_MinerCoprocessor_0_m00_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_MinerCoprocessor_0_nonce_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_MinerCoprocessor_0_tempHash_UNCONNECTED : STD_LOGIC_VECTOR ( 255 downto 0 );
   signal NLW_axi_emc_0_mem_cken_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_emc_0_mem_lbon_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_emc_0_mem_rnw_UNCONNECTED : STD_LOGIC;
@@ -2655,41 +2633,41 @@ architecture STRUCTURE of design_1 is
   signal NLW_microblaze_0_M_AXI_IC_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_microblaze_0_M_AXI_IC_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute BMM_INFO_PROCESSOR : string;
-  attribute BMM_INFO_PROCESSOR of microblaze_0 : label is "microblaze-le > design_1 microblaze_0_local_memory/dlmb_bram_if_cntlr";
   attribute KEEP_HIERARCHY : string;
   attribute KEEP_HIERARCHY of microblaze_0 : label is "yes";
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of cellular_ram_adv_ldn : signal is "xilinx.com:interface:emc:1.0 cellular_ram ADV_LDN";
-  attribute X_INTERFACE_INFO of cellular_ram_ce_n : signal is "xilinx.com:interface:emc:1.0 cellular_ram CE_N";
-  attribute X_INTERFACE_INFO of cellular_ram_cre : signal is "xilinx.com:interface:emc:1.0 cellular_ram CRE";
-  attribute X_INTERFACE_INFO of cellular_ram_oen : signal is "xilinx.com:interface:emc:1.0 cellular_ram OEN";
-  attribute X_INTERFACE_INFO of cellular_ram_wait : signal is "xilinx.com:interface:emc:1.0 cellular_ram WAIT";
-  attribute X_INTERFACE_INFO of cellular_ram_wen : signal is "xilinx.com:interface:emc:1.0 cellular_ram WEN";
-  attribute X_INTERFACE_INFO of eth_mdio_mdc_mdc : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDC";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of eth_mdio_mdc_mdc : signal is "XIL_INTERFACENAME eth_mdio_mdc, CAN_DEBUG false";
-  attribute X_INTERFACE_INFO of eth_mdio_mdc_mdio_i : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDIO_I";
-  attribute X_INTERFACE_INFO of eth_mdio_mdc_mdio_o : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDIO_O";
-  attribute X_INTERFACE_INFO of eth_mdio_mdc_mdio_t : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDIO_T";
-  attribute X_INTERFACE_INFO of eth_ref_clk : signal is "xilinx.com:signal:clock:1.0 CLK.ETH_REF_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of eth_ref_clk : signal is "XIL_INTERFACENAME CLK.ETH_REF_CLK, CLK_DOMAIN /clk_wiz_1_clk_out1, FREQ_HZ 50000000, PHASE 0.0";
-  attribute X_INTERFACE_INFO of eth_rmii_crs_dv : signal is "xilinx.com:interface:rmii:1.0 eth_rmii CRS_DV";
-  attribute X_INTERFACE_INFO of eth_rmii_rx_er : signal is "xilinx.com:interface:rmii:1.0 eth_rmii RX_ER";
-  attribute X_INTERFACE_INFO of eth_rmii_tx_en : signal is "xilinx.com:interface:rmii:1.0 eth_rmii TX_EN";
-  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, POLARITY ACTIVE_LOW";
-  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 100000000, PHASE 0.000";
-  attribute X_INTERFACE_INFO of usb_uart_rxd : signal is "xilinx.com:interface:uart:1.0 usb_uart RxD";
-  attribute X_INTERFACE_INFO of usb_uart_txd : signal is "xilinx.com:interface:uart:1.0 usb_uart TxD";
-  attribute X_INTERFACE_INFO of cellular_ram_addr : signal is "xilinx.com:interface:emc:1.0 cellular_ram ADDR";
-  attribute X_INTERFACE_INFO of cellular_ram_ben : signal is "xilinx.com:interface:emc:1.0 cellular_ram BEN";
-  attribute X_INTERFACE_INFO of cellular_ram_dq_i : signal is "xilinx.com:interface:emc:1.0 cellular_ram DQ_I";
-  attribute X_INTERFACE_INFO of cellular_ram_dq_o : signal is "xilinx.com:interface:emc:1.0 cellular_ram DQ_O";
-  attribute X_INTERFACE_INFO of cellular_ram_dq_t : signal is "xilinx.com:interface:emc:1.0 cellular_ram DQ_T";
-  attribute X_INTERFACE_INFO of eth_rmii_rxd : signal is "xilinx.com:interface:rmii:1.0 eth_rmii RXD";
-  attribute X_INTERFACE_INFO of eth_rmii_txd : signal is "xilinx.com:interface:rmii:1.0 eth_rmii TXD";
+  attribute bmm_info_processor : string;
+  attribute bmm_info_processor of microblaze_0 : label is "microblaze-le > design_1 microblaze_0_local_memory/dlmb_bram_if_cntlr";
+  attribute x_interface_info : string;
+  attribute x_interface_info of cellular_ram_adv_ldn : signal is "xilinx.com:interface:emc:1.0 cellular_ram ADV_LDN";
+  attribute x_interface_info of cellular_ram_ce_n : signal is "xilinx.com:interface:emc:1.0 cellular_ram CE_N";
+  attribute x_interface_info of cellular_ram_cre : signal is "xilinx.com:interface:emc:1.0 cellular_ram CRE";
+  attribute x_interface_info of cellular_ram_oen : signal is "xilinx.com:interface:emc:1.0 cellular_ram OEN";
+  attribute x_interface_info of cellular_ram_wait : signal is "xilinx.com:interface:emc:1.0 cellular_ram WAIT";
+  attribute x_interface_info of cellular_ram_wen : signal is "xilinx.com:interface:emc:1.0 cellular_ram WEN";
+  attribute x_interface_info of eth_mdio_mdc_mdc : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDC";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of eth_mdio_mdc_mdc : signal is "XIL_INTERFACENAME eth_mdio_mdc, CAN_DEBUG false";
+  attribute x_interface_info of eth_mdio_mdc_mdio_i : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDIO_I";
+  attribute x_interface_info of eth_mdio_mdc_mdio_o : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDIO_O";
+  attribute x_interface_info of eth_mdio_mdc_mdio_t : signal is "xilinx.com:interface:mdio:1.0 eth_mdio_mdc MDIO_T";
+  attribute x_interface_info of eth_ref_clk : signal is "xilinx.com:signal:clock:1.0 CLK.ETH_REF_CLK CLK";
+  attribute x_interface_parameter of eth_ref_clk : signal is "XIL_INTERFACENAME CLK.ETH_REF_CLK, CLK_DOMAIN /clk_wiz_1_clk_out1, FREQ_HZ 50000000, PHASE 0.0";
+  attribute x_interface_info of eth_rmii_crs_dv : signal is "xilinx.com:interface:rmii:1.0 eth_rmii CRS_DV";
+  attribute x_interface_info of eth_rmii_rx_er : signal is "xilinx.com:interface:rmii:1.0 eth_rmii RX_ER";
+  attribute x_interface_info of eth_rmii_tx_en : signal is "xilinx.com:interface:rmii:1.0 eth_rmii TX_EN";
+  attribute x_interface_info of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
+  attribute x_interface_parameter of reset : signal is "XIL_INTERFACENAME RST.RESET, POLARITY ACTIVE_LOW";
+  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 100000000, PHASE 0.000";
+  attribute x_interface_info of usb_uart_rxd : signal is "xilinx.com:interface:uart:1.0 usb_uart RxD";
+  attribute x_interface_info of usb_uart_txd : signal is "xilinx.com:interface:uart:1.0 usb_uart TxD";
+  attribute x_interface_info of cellular_ram_addr : signal is "xilinx.com:interface:emc:1.0 cellular_ram ADDR";
+  attribute x_interface_info of cellular_ram_ben : signal is "xilinx.com:interface:emc:1.0 cellular_ram BEN";
+  attribute x_interface_info of cellular_ram_dq_i : signal is "xilinx.com:interface:emc:1.0 cellular_ram DQ_I";
+  attribute x_interface_info of cellular_ram_dq_o : signal is "xilinx.com:interface:emc:1.0 cellular_ram DQ_O";
+  attribute x_interface_info of cellular_ram_dq_t : signal is "xilinx.com:interface:emc:1.0 cellular_ram DQ_T";
+  attribute x_interface_info of eth_rmii_rxd : signal is "xilinx.com:interface:rmii:1.0 eth_rmii RXD";
+  attribute x_interface_info of eth_rmii_txd : signal is "xilinx.com:interface:rmii:1.0 eth_rmii TXD";
 begin
   axi_emc_0_EMC_INTF_DQ_I(15 downto 0) <= cellular_ram_dq_i(15 downto 0);
   axi_emc_0_EMC_INTF_WAIT <= cellular_ram_wait;
@@ -2718,11 +2696,6 @@ begin
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
 MinerCoprocessor_0: component design_1_MinerCoprocessor_0_0
      port map (
-      allWordsSent => NLW_MinerCoprocessor_0_allWordsSent_UNCONNECTED,
-      counterMaster(3 downto 0) => NLW_MinerCoprocessor_0_counterMaster_UNCONNECTED(3 downto 0),
-      counterSlave(3 downto 0) => NLW_MinerCoprocessor_0_counterSlave_UNCONNECTED(3 downto 0),
-      hashInputWord(287 downto 0) => NLW_MinerCoprocessor_0_hashInputWord_UNCONNECTED(287 downto 0),
-      hashOut(255 downto 0) => NLW_MinerCoprocessor_0_hashOut_UNCONNECTED(255 downto 0),
       m00_axis_aclk => microblaze_0_Clk,
       m00_axis_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       m00_axis_tdata(31 downto 0) => MinerCoprocessor_0_M00_AXIS_TDATA(31 downto 0),
@@ -2730,19 +2703,13 @@ MinerCoprocessor_0: component design_1_MinerCoprocessor_0_0
       m00_axis_tready => MinerCoprocessor_0_M00_AXIS_TREADY,
       m00_axis_tstrb(3 downto 0) => NLW_MinerCoprocessor_0_m00_axis_tstrb_UNCONNECTED(3 downto 0),
       m00_axis_tvalid => MinerCoprocessor_0_M00_AXIS_TVALID,
-      mEnable => NLW_MinerCoprocessor_0_mEnable_UNCONNECTED,
-      nonce(31 downto 0) => NLW_MinerCoprocessor_0_nonce_UNCONNECTED(31 downto 0),
-      readEnable => NLW_MinerCoprocessor_0_readEnable_UNCONNECTED,
       s00_axis_aclk => microblaze_0_Clk,
       s00_axis_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       s00_axis_tdata(31 downto 0) => microblaze_0_M0_AXIS_TDATA(31 downto 0),
       s00_axis_tlast => microblaze_0_M0_AXIS_TLAST,
       s00_axis_tready => microblaze_0_M0_AXIS_TREADY,
       s00_axis_tstrb(3 downto 0) => B"1111",
-      s00_axis_tvalid => microblaze_0_M0_AXIS_TVALID,
-      tempHash(255 downto 0) => NLW_MinerCoprocessor_0_tempHash_UNCONNECTED(255 downto 0),
-      update => NLW_MinerCoprocessor_0_update_UNCONNECTED,
-      validData => NLW_MinerCoprocessor_0_validData_UNCONNECTED
+      s00_axis_tvalid => microblaze_0_M0_AXIS_TVALID
     );
 axi_emc_0: component design_1_axi_emc_0_0
      port map (

@@ -16,21 +16,16 @@ entity MinerCoprocessor_v1_0_S00_AXIS is
 	);
 	port (
 		-- Users to add ports here
-        readEnable   : in std_logic;
-        allWordsSent : in std_logic;
-		validData    : out std_logic;
-        hash_output  : out std_logic_vector(INPUT_MESSAGE_LENGTH-1 downto 0);
-        counterSlave : out std_logic_vector(3 downto 0);
-        tempHash : out std_logic_vector(INPUT_MESSAGE_LENGTH-1 downto 0);
-        nonce : out std_logic_vector(C_S_AXIS_TDATA_WIDTH-1 downto 0);
-        mEnable: out std_logic;
-        update : out std_logic;
-        hashInputWord : out std_logic_vector(HASHED_MESSAGE_LENGTH-1 downto 0);
+        readEnable      : in std_logic;
+        allWordsSent    : in std_logic;
+		validData       : out std_logic;
+        hash_output     : out std_logic_vector(INPUT_MESSAGE_LENGTH-1 downto 0);
+        nonce           : out std_logic_vector(C_S_AXIS_TDATA_WIDTH-1 downto 0);
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
 		-- AXI4Stream sink: Clock
-		S_AXIS_ACLK	: in std_logic;
+		S_AXIS_ACLK	    : in std_logic;
 		-- AXI4Stream sink: Reset
 		S_AXIS_ARESETN	: in std_logic;
 		-- Ready to accept data in
@@ -47,36 +42,31 @@ entity MinerCoprocessor_v1_0_S00_AXIS is
 end MinerCoprocessor_v1_0_S00_AXIS;
 
 architecture Behavioral of MinerCoprocessor_v1_0_S00_AXIS is
-    signal s_enable   : std_logic := '0';
-    signal s_dataOut  : std_logic_vector(255 downto 0); 
-    signal s_ready, s_POFready    : std_logic;
-    signal s_hashInputWord : std_logic_vector(HASHED_MESSAGE_LENGTH-1 downto 0);
-    
-    -- Input word builder
-    signal s_counter  : integer;
+    -- Input and output word builder
+    signal s_counter               : integer;
     signal s_hashOriginalInputWord : std_logic_vector(INPUT_MESSAGE_LENGTH-1 downto 0);
-    
-    -- Nonce
-    signal s_nonce: integer := 0;
-    
-    -- Start processing the next block
-    signal s_update : std_logic;
-    signal s_hash : std_logic_vector(INPUT_MESSAGE_LENGTH-1 downto 0); 
-    
-    signal Hashes : std_logic_vector( 255 downto 0 ) := ( others => '0' ); -- A generic 256-bit register. Holds H(7-0) values.
-    signal W : wordArray;
-    signal a, b, c, d, e, f, g, h : std_logic_vector( 31 downto 0 ); -- Working registers.
-    -- A N x 512-bit array which holds every block of the padded message.
-    signal M : BlockM ((kCalculator(HASHED_MESSAGE_LENGTH) + HASHED_MESSAGE_LENGTH + 1 + 64 )/ 512 - 1 downto 0 ) := ( (others => ( others => '0' ) ) );
-    signal init, ready, padded, schedulled, hashed : std_logic := '0';  -- Main process flags.
-begin
-   
-    counterSlave <= std_logic_vector(to_unsigned(s_counter, 4));
-    nonce <= std_logic_vector(to_unsigned(s_nonce, 32));
-    tempHash <= s_hash;
-    mEnable <= s_enable;
-    update <= s_update;
-    hashInputWord <= s_hashInputWord;
+    signal s_dataOut               : std_logic_vector(255 downto 0); 
+
+    -- Miner signals
+    signal s_nonce                : integer   := 0;
+    signal s_ready, s_POFready    : std_logic;
+    signal s_enable               : std_logic := '0';
+    signal s_hashInputWord        : std_logic_vector(HASHED_MESSAGE_LENGTH-1 downto 0);
+    signal s_update               : std_logic;
+    signal s_hash                 : std_logic_vector(INPUT_MESSAGE_LENGTH-1 downto 0); 
+
+    -- Sha256 signals
+    signal Hashes                 : std_logic_vector( 255 downto 0 ) := ( others => '0' ); -- A generic 256-bit register. Holds H(7-0) values.
+    signal W                      : wordArray;
+    signal a, b, c, d, e, f, g, h : std_logic_vector( 31 downto 0 );       -- Working registers.
+    signal M                      : BlockM ((kCalculator(HASHED_MESSAGE_LENGTH) + HASHED_MESSAGE_LENGTH + 1 + 64 )/ 512 - 1 downto 0 ) := ( (others => ( others => '0' ) ) );
+    signal init, ready, padded, schedulled, hashed : std_logic := '0';     -- Main process flags.
+begin    
+
+    validData     <= s_POFready;
+    hash_output   <= s_dataOut;
+    nonce         <= std_logic_vector(to_unsigned(s_nonce, 32));
+    S_AXIS_TREADY <= not s_enable;
     
     ------------------------------------------------------
     -----  Input word builder and miner management  ------
@@ -107,9 +97,8 @@ begin
                 end if;
             end if;
             
-            s_update <= '0';
-            
             -- Miner management
+            s_update <= '0';
             if (s_ready = '1') then
                 if (s_hash(255 downto 240) = X"0000") then
                     s_POFready <= '1';
@@ -132,10 +121,10 @@ begin
     end process;
     
     ------------------------------------------------
-    -----           Miner code                ------
+    -----           SHA256 code               ------
     ------------------------------------------------
 
-    hasher: process(S_AXIS_ACLK, S_AXIS_ARESETN, s_enable, s_update)
+    hasher: process(S_AXIS_ACLK, S_AXIS_ARESETN, s_enable, s_update, Hashes)
         variable i, t, hashIt : integer := 0; -- Iterators.
         variable N : integer := 0; -- Holds total number of Message blocks.
         variable T1, T2 : std_logic_vector( 31 downto 0 ); -- Hold temporary values.
@@ -213,25 +202,4 @@ begin
             end if;     
         end if;
     end process hasher;
-    
-    ------------------------------------------------
-    -----         Output word sender          ------
-    ------------------------------------------------
-        
---    process(S_AXIS_ACLK)
---    begin
---        if (rising_edge(S_AXIS_ACLK)) then
---            if (S_AXIS_ARESETN = '0') then
---                s_dataOut  <= (others => '0');
---            elsif (s_ready = '1') then
---                s_dataOut  <= s_hash;
---            end if;
---        end if;
---    end process;
-    
-    --s_ready <= (not s_POFready) or readEnable;
-    --validData <= s_POFready;
-    validData <= s_POFready;
-    hash_output <= s_dataOut;
-    S_AXIS_TREADY <= not s_enable;
 end Behavioral;

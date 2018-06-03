@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat Jun  2 04:21:45 2018
-# Process ID: 7784
+# Start of session at: Sat Jun  2 23:17:43 2018
+# Process ID: 7272
 # Current directory: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_MinerCoprocessor_0_0_synth_1
 # Command line: vivado.exe -log design_1_MinerCoprocessor_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_MinerCoprocessor_0_0.tcl
 # Log file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_MinerCoprocessor_0_0_synth_1/design_1_MinerCoprocessor_0_0.vds
@@ -15,17 +15,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9380 
+INFO: Helper process launched with PID 9696 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 357.855 ; gain = 103.520
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 357.449 ; gain = 103.469
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_MinerCoprocessor_0_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/synth/design_1_MinerCoprocessor_0_0.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'design_1_MinerCoprocessor_0_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/synth/design_1_MinerCoprocessor_0_0.vhd:75]
 	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
 	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter HASH_LENGTH bound to: 256 - type: integer 
-INFO: [Synth 8-3491] module 'MinerCoprocessor_v1_0' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0.vhd:5' bound to instance 'U0' of component 'MinerCoprocessor_v1_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/synth/design_1_MinerCoprocessor_0_0.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'MinerCoprocessor_v1_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0.vhd:57]
+INFO: [Synth 8-3491] module 'MinerCoprocessor_v1_0' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0.vhd:5' bound to instance 'U0' of component 'MinerCoprocessor_v1_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/synth/design_1_MinerCoprocessor_0_0.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'MinerCoprocessor_v1_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0.vhd:46]
 	Parameter HASH_LENGTH bound to: 256 - type: integer 
 	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
@@ -33,26 +33,25 @@ INFO: [Synth 8-638] synthesizing module 'MinerCoprocessor_v1_0' [c:/CR_Projects/
 	Parameter INPUT_MESSAGE_LENGTH bound to: 256 - type: integer 
 	Parameter HASHED_MESSAGE_LENGTH bound to: 288 - type: integer 
 	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'MinerCoprocessor_v1_0_S00_AXIS' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:6' bound to instance 'MinerCoprocessor_v1_0_S00_AXIS_inst' of component 'MinerCoprocessor_v1_0_S00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0.vhd:120]
-INFO: [Synth 8-638] synthesizing module 'MinerCoprocessor_v1_0_S00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:49]
+INFO: [Synth 8-3491] module 'MinerCoprocessor_v1_0_S00_AXIS' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:6' bound to instance 'MinerCoprocessor_v1_0_S00_AXIS_inst' of component 'MinerCoprocessor_v1_0_S00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'MinerCoprocessor_v1_0_S00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:44]
 	Parameter INPUT_MESSAGE_LENGTH bound to: 256 - type: integer 
 	Parameter HASHED_MESSAGE_LENGTH bound to: 288 - type: integer 
 	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-WARNING: [Synth 8-614] signal 'Hashes' is read in the process but is not in the sensitivity list [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:138]
-WARNING: [Synth 8-6014] Unused sequential element T1_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:184]
-WARNING: [Synth 8-6014] Unused sequential element T2_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:185]
-INFO: [Synth 8-256] done synthesizing module 'MinerCoprocessor_v1_0_S00_AXIS' (1#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element T1_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:173]
+WARNING: [Synth 8-6014] Unused sequential element T2_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:174]
+INFO: [Synth 8-256] done synthesizing module 'MinerCoprocessor_v1_0_S00_AXIS' (1#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:44]
 	Parameter HASH_LENGTH bound to: 256 - type: integer 
 	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_START_COUNT bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'MinerCoprocessor_v1_0_M00_AXIS' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd:5' bound to instance 'MinerCoprocessor_v1_0_M00_AXIS_inst' of component 'MinerCoprocessor_v1_0_M00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0.vhd:145]
-INFO: [Synth 8-638] synthesizing module 'MinerCoprocessor_v1_0_M00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd:45]
+INFO: [Synth 8-3491] module 'MinerCoprocessor_v1_0_M00_AXIS' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd:5' bound to instance 'MinerCoprocessor_v1_0_M00_AXIS_inst' of component 'MinerCoprocessor_v1_0_M00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'MinerCoprocessor_v1_0_M00_AXIS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd:44]
 	Parameter HASH_LENGTH bound to: 256 - type: integer 
 	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_START_COUNT bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'MinerCoprocessor_v1_0_M00_AXIS' (2#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'MinerCoprocessor_v1_0' (3#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0.vhd:57]
-INFO: [Synth 8-256] done synthesizing module 'design_1_MinerCoprocessor_0_0' (4#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/synth/design_1_MinerCoprocessor_0_0.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'MinerCoprocessor_v1_0_M00_AXIS' (2#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_M00_AXIS.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'MinerCoprocessor_v1_0' (3#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'design_1_MinerCoprocessor_0_0' (4#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/synth/design_1_MinerCoprocessor_0_0.vhd:75]
 WARNING: [Synth 8-3331] design MinerCoprocessor_v1_0_M00_AXIS has unconnected port nonce[31]
 WARNING: [Synth 8-3331] design MinerCoprocessor_v1_0_M00_AXIS has unconnected port M_AXIS_ARESETN
 WARNING: [Synth 8-3331] design MinerCoprocessor_v1_0_S00_AXIS has unconnected port readEnable
@@ -62,7 +61,7 @@ WARNING: [Synth 8-3331] design MinerCoprocessor_v1_0_S00_AXIS has unconnected po
 WARNING: [Synth 8-3331] design MinerCoprocessor_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[0]
 WARNING: [Synth 8-3331] design MinerCoprocessor_v1_0_S00_AXIS has unconnected port S_AXIS_TLAST
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 410.500 ; gain = 156.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 410.512 ; gain = 156.531
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,7 +71,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 410.500 ; gain = 156.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 410.512 ; gain = 156.531
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -84,34 +83,34 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 754.625 ; gain = 0.020
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.285 . Memory (MB): peak = 754.254 ; gain = 0.805
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 754.625 ; gain = 500.289
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:01:21 . Memory (MB): peak = 754.254 ; gain = 500.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 754.625 ; gain = 500.289
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:01:21 . Memory (MB): peak = 754.254 ; gain = 500.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 754.625 ; gain = 500.289
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:21 . Memory (MB): peak = 754.254 ; gain = 500.273
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "s_POFready" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "s_enable" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "s_update" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "s_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "s_nonce" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element t_reg_rep was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:156]
-WARNING: [Synth 8-6014] Unused sequential element hashIt_reg_rep was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/3944/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:157]
+WARNING: [Synth 8-6014] Unused sequential element t_reg_rep was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:145]
+WARNING: [Synth 8-6014] Unused sequential element hashIt_reg_rep was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/46e1/hdl/MinerCoprocessor_v1_0_S00_AXIS.vhd:146]
 INFO: [Synth 8-5545] ROM "s_allSent" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "s_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 754.625 ; gain = 500.289
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:13 ; elapsed = 00:02:07 . Memory (MB): peak = 754.254 ; gain = 500.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,7 +320,7 @@ INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instan
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (MinerCoprocessor_v1_0_S00_AXIS_insti_0/\M_reg[0][31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (MinerCoprocessor_v1_0_S00_AXIS_insti_1/\N_reg[31] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:43 . Memory (MB): peak = 754.625 ; gain = 500.289
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:03:56 . Memory (MB): peak = 754.254 ; gain = 500.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -354,19 +353,19 @@ Report RTL Partitions:
 +------+------------------------------------+------------+----------+
 |1     |MinerCoprocessor_v1_0_S00_AXIS__GB0 |           1|      3648|
 |2     |MinerCoprocessor_v1_0_S00_AXIS__GB1 |           1|      3647|
-|3     |MinerCoprocessor_v1_0_M00_AXIS      |           1|       594|
+|3     |MinerCoprocessor_v1_0_M00_AXIS      |           1|       855|
 +------+------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 827.074 ; gain = 572.738
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:04:35 . Memory (MB): peak = 827.930 ; gain = 573.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 827.227 ; gain = 572.891
+Finished Timing Optimization : Time (s): cpu = 00:02:43 ; elapsed = 00:04:35 . Memory (MB): peak = 828.004 ; gain = 574.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -389,7 +388,7 @@ Report RTL Partitions:
 +------+------------------------------------+------------+----------+
 |1     |MinerCoprocessor_v1_0_S00_AXIS__GB0 |           1|      3648|
 |2     |MinerCoprocessor_v1_0_S00_AXIS__GB1 |           1|      3647|
-|3     |MinerCoprocessor_v1_0_M00_AXIS      |           1|       594|
+|3     |MinerCoprocessor_v1_0_M00_AXIS      |           1|       855|
 +------+------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -397,7 +396,7 @@ Start Technology Mapping
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/MinerCoprocessor_v1_0_S00_AXIS_inst/s_dataOut_reg[255] )
 INFO: [Synth 8-3332] Sequential element (U0/MinerCoprocessor_v1_0_S00_AXIS_inst/s_dataOut_reg[255]) is unused and will be removed from module design_1_MinerCoprocessor_0_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished Technology Mapping : Time (s): cpu = 00:02:47 ; elapsed = 00:04:42 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -421,7 +420,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:05 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished IO Insertion : Time (s): cpu = 00:02:49 ; elapsed = 00:04:46 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -434,7 +433,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:05 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:49 ; elapsed = 00:04:46 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -446,25 +445,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:50 ; elapsed = 00:04:47 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:50 ; elapsed = 00:04:47 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:50 ; elapsed = 00:04:47 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:50 ; elapsed = 00:04:47 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -481,14 +480,14 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |   191|
-|2     |LUT1   |    64|
-|3     |LUT2   |   536|
-|4     |LUT3   |   365|
+|2     |LUT1   |    63|
+|3     |LUT2   |   537|
+|4     |LUT3   |   366|
 |5     |LUT4   |   319|
-|6     |LUT5   |   216|
-|7     |LUT6   |   426|
+|6     |LUT5   |   209|
+|7     |LUT6   |   424|
 |8     |RAM64M |    65|
-|9     |FDCE   |   703|
+|9     |FDCE   |   704|
 |10    |FDPE   |   136|
 |11    |FDRE   |  1109|
 +------+-------+------+
@@ -497,17 +496,17 @@ Report Instance Areas:
 +------+----------------------------------------+-------------------------------+------+
 |      |Instance                                |Module                         |Cells |
 +------+----------------------------------------+-------------------------------+------+
-|1     |top                                     |                               |  4130|
-|2     |  U0                                    |MinerCoprocessor_v1_0          |  4130|
-|3     |    MinerCoprocessor_v1_0_M00_AXIS_inst |MinerCoprocessor_v1_0_M00_AXIS |   148|
-|4     |    MinerCoprocessor_v1_0_S00_AXIS_inst |MinerCoprocessor_v1_0_S00_AXIS |  3982|
+|1     |top                                     |                               |  4123|
+|2     |  U0                                    |MinerCoprocessor_v1_0          |  4123|
+|3     |    MinerCoprocessor_v1_0_M00_AXIS_inst |MinerCoprocessor_v1_0_M00_AXIS |   138|
+|4     |    MinerCoprocessor_v1_0_S00_AXIS_inst |MinerCoprocessor_v1_0_S00_AXIS |  3985|
 +------+----------------------------------------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 828.418 ; gain = 574.082
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:50 ; elapsed = 00:04:47 . Memory (MB): peak = 829.473 ; gain = 575.492
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 828.418 ; gain = 229.957
-Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 828.418 ; gain = 574.082
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:18 ; elapsed = 00:04:19 . Memory (MB): peak = 829.473 ; gain = 231.750
+Synthesis Optimization Complete : Time (s): cpu = 00:02:50 ; elapsed = 00:04:47 . Memory (MB): peak = 829.473 ; gain = 575.492
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 256 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -519,13 +518,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 65 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-141 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+141 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:06 ; elapsed = 00:02:10 . Memory (MB): peak = 828.418 ; gain = 582.301
+synth_design: Time (s): cpu = 00:02:53 ; elapsed = 00:04:55 . Memory (MB): peak = 829.473 ; gain = 583.617
 INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_MinerCoprocessor_0_0_synth_1/design_1_MinerCoprocessor_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/design_1_MinerCoprocessor_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_MinerCoprocessor_0_0_synth_1/design_1_MinerCoprocessor_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_MinerCoprocessor_0_0_utilization_synth.rpt -pb design_1_MinerCoprocessor_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 828.418 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Jun  2 04:24:13 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.241 . Memory (MB): peak = 829.473 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  2 23:23:17 2018...
