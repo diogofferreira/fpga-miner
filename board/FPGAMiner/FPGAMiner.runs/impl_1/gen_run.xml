@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1527982972">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1528149827">
   <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
   <File Type="PA-DCP" Name="design_1_wrapper.dcp"/>
   <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
@@ -99,6 +99,14 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/constrs_1/imports/Pins/Nexys4_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Pins/Nexys4_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1378297582"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/eth_ref_clk.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
@@ -122,23 +130,22 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_microblaze_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_mdm_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_clk_wiz_1_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_lmb_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_microblaze_0_xlconcat_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_dlmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_microblaze_0_axi_intc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_emc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_mii_to_rmii_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_ethernetlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_timer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ilmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_clk_wiz_1_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_ethernetlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_microblaze_0_axi_intc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ilmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_MinerCoprocessor_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_emc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_mii_to_rmii_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_DisplayController_0_0"/>
 </GenRun>

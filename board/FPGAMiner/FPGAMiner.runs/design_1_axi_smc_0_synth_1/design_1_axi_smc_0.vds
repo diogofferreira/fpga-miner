@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu May  3 19:44:45 2018
-# Process ID: 6265
-# Current directory: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1
-# Command line: vivado -log design_1_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_0.tcl
-# Log file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.vds
-# Journal file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/vivado.jou
+# Start of session at: Mon Jun  4 22:19:50 2018
+# Process ID: 1712
+# Current directory: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1
+# Command line: vivado.exe -log design_1_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_0.tcl
+# Log file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.vds
+# Journal file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_axi_smc_0.tcl -notrace
 Command: synth_design -top design_1_axi_smc_0 -part xc7a100tcsg324-1 -mode out_of_context
@@ -15,20 +15,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6324 
+INFO: Helper process launched with PID 2260 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1282.805 ; gain = 97.000 ; free physical = 12995 ; free virtual = 14444
+Starting RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 392.125 ; gain = 111.438
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
-INFO: [Synth 8-638] synthesizing module 'clk_map_imp_5Y9LOC' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1130]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_one_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'xlconstant_v1_1_3_xlconstant' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/0750/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
+INFO: [Synth 8-638] synthesizing module 'clk_map_imp_5Y9LOC' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1130]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_one_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xlconstant_v1_1_3_xlconstant' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/0750/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'xlconstant_v1_1_3_xlconstant' (1#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/0750/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_one_0' (2#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'xlconstant_v1_1_3_xlconstant' (1#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/0750/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_one_0' (2#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -38,8 +38,8 @@ INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [/home/pbm/Document
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -53,37 +53,37 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/pbm/Documents/UA
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-3491] module 'SRL16' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50689' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
-INFO: [Synth 8-638] synthesizing module 'SRL16' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50689]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50689' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-638] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50689]
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-256] done synthesizing module 'SRL16' (3#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50689]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'SRL16' (3#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50689]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -91,37 +91,37 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/pbm/Documents/UA/4_yea
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_psr_aclk_0' (9#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
-WARNING: [Synth 8-350] instance 'psr_aclk' of module 'bd_afc3_psr_aclk_0' requires 10 connections, but only 6 given [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1171]
-WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_5Y9LOC does not have driver. [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1150]
-INFO: [Synth 8-256] done synthesizing module 'clk_map_imp_5Y9LOC' (10#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1130]
-INFO: [Synth 8-638] synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1180]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00e_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/synth/bd_afc3_m00e_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00e_0' (19#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/synth/bd_afc3_m00e_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' (20#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1180]
-INFO: [Synth 8-638] synthesizing module 'm00_nodes_imp_1GOYQYZ' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1551]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00arn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/synth/bd_afc3_m00arn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_psr_aclk_0' (9#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-350] instance 'psr_aclk' of module 'bd_afc3_psr_aclk_0' requires 10 connections, but only 6 given [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1171]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_5Y9LOC does not have driver. [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1150]
+INFO: [Synth 8-256] done synthesizing module 'clk_map_imp_5Y9LOC' (10#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1130]
+INFO: [Synth 8-638] synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1180]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00e_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/synth/bd_afc3_m00e_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00e_0' (19#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/synth/bd_afc3_m00e_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' (20#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1180]
+INFO: [Synth 8-638] synthesizing module 'm00_nodes_imp_1GOYQYZ' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1551]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00arn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/synth/bd_afc3_m00arn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 32 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -183,13 +183,13 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base' [/opt/Xilinx/Vivado/20
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 1 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base' (26#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base' (26#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram' (27#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram' (27#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized0' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized0' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized0' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized0' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 4992 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -251,29 +251,29 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized0' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized0' (30#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized0' (30#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized0' (30#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized0' (30#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00arn_0' (36#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/synth/bd_afc3_m00arn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00awn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/synth/bd_afc3_m00awn_0.sv:58]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00arn_0' (36#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/synth/bd_afc3_m00arn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00awn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/synth/bd_afc3_m00awn_0.sv:58]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00awn_0' (37#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/synth/bd_afc3_m00awn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00bn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/synth/bd_afc3_m00bn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized1' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized1' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00awn_0' (37#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/synth/bd_afc3_m00awn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00bn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/synth/bd_afc3_m00bn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized1' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized1' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 608 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -335,13 +335,13 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized1' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized1' (37#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized1' (37#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized1' (37#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized1' (37#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized2' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized2' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized2' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized2' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 192 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -403,21 +403,21 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized2' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized2' (37#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized2' (37#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized2' (37#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized2' (37#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00bn_0' (38#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/synth/bd_afc3_m00bn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00rn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/synth/bd_afc3_m00rn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized3' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized3' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00bn_0' (38#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/synth/bd_afc3_m00bn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00rn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/synth/bd_afc3_m00rn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized3' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized3' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 1664 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -479,21 +479,21 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized3' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized3' (38#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized3' (38#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized3' (38#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized3' (38#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00rn_0' (39#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/synth/bd_afc3_m00rn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00wn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/synth/bd_afc3_m00wn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized4' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized4' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00rn_0' (39#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/synth/bd_afc3_m00rn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00wn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/synth/bd_afc3_m00wn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized4' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized4' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 4 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -555,17 +555,17 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized4' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 1 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized4' (39#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized4' (39#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized4' (39#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized4' (39#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized5' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized5' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized5' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized5' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 2240 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -627,22 +627,9 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized5' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized5' (39#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized5' (39#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized5' (39#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00wn_0' (40#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/synth/bd_afc3_m00wn_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized5' (39#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
@@ -655,24 +642,37 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'm00_nodes_imp_1GOYQYZ' (41#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1551]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00s2a_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/synth/bd_afc3_m00s2a_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00s2a_0' (43#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/synth/bd_afc3_m00s2a_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00a2s_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_s00a2s_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00a2s_0' (45#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_s00a2s_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 's00_entry_pipeline_imp_USCCV8' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1856]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00mmu_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_s00mmu_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00mmu_0' (49#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_s00mmu_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00sic_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_s00sic_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00sic_0' (54#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_s00sic_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00tr_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_s00tr_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00tr_0' (57#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_s00tr_0.sv:58]
-WARNING: [Synth 8-350] instance 's00_transaction_regulator' of module 'bd_afc3_s00tr_0' requires 82 connections, but only 80 given [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2384]
-INFO: [Synth 8-256] done synthesizing module 's00_entry_pipeline_imp_USCCV8' (58#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1856]
-INFO: [Synth 8-638] synthesizing module 's00_nodes_imp_Y7M43I' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2467]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_sarn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_sarn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized6' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized6' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00wn_0' (40#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/synth/bd_afc3_m00wn_0.sv:58]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'm00_nodes_imp_1GOYQYZ' (41#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1551]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_m00s2a_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/synth/bd_afc3_m00s2a_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_m00s2a_0' (43#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/synth/bd_afc3_m00s2a_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00a2s_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_s00a2s_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00a2s_0' (45#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_s00a2s_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 's00_entry_pipeline_imp_USCCV8' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1856]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00mmu_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_s00mmu_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00mmu_0' (49#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_s00mmu_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00sic_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_s00sic_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00sic_0' (54#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_s00sic_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s00tr_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_s00tr_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s00tr_0' (57#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_s00tr_0.sv:58]
+WARNING: [Synth 8-350] instance 's00_transaction_regulator' of module 'bd_afc3_s00tr_0' requires 82 connections, but only 80 given [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2384]
+INFO: [Synth 8-256] done synthesizing module 's00_entry_pipeline_imp_USCCV8' (58#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1856]
+INFO: [Synth 8-638] synthesizing module 's00_nodes_imp_Y7M43I' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2467]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_sarn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_sarn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized6' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized6' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 576 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -734,13 +734,13 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized6' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized6' (58#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized6' (58#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized6' (58#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized6' (58#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized7' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized7' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized7' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized7' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 4416 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -802,9 +802,9 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized7' [/opt/
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized7' (58#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized7' (58#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized7' (58#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized7' (58#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
@@ -813,12 +813,12 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Common 17-14] Message 'Synth 8-5772' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sarn_0' (59#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_sarn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_sawn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/synth/bd_afc3_sawn_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sawn_0' (60#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/synth/bd_afc3_sawn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_sbn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/synth/bd_afc3_sbn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized8' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized8' [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sarn_0' (59#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/synth/bd_afc3_sarn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_sawn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/synth/bd_afc3_sawn_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sawn_0' (60#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/synth/bd_afc3_sawn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_sbn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/synth/bd_afc3_sbn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_sdpram__parameterized8' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized8' [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 768 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 1 - type: integer 
@@ -878,46 +878,46 @@ INFO: [Synth 8-638] synthesizing module 'xpm_memory_base__parameterized8' [/opt/
 	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 24 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized8' (60#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized8' (60#1) [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sbn_0' (61#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/synth/bd_afc3_sbn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_srn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_srn_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_srn_0' (62#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_srn_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_swn_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/synth/bd_afc3_swn_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_swn_0' (63#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/synth/bd_afc3_swn_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 's00_nodes_imp_Y7M43I' (64#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2467]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01a2s_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/synth/bd_afc3_s01a2s_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01a2s_0' (65#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/synth/bd_afc3_s01a2s_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 's01_entry_pipeline_imp_1W4H5O0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2763]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01mmu_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/synth/bd_afc3_s01mmu_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01mmu_0' (66#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/synth/bd_afc3_s01mmu_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01sic_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_18/synth/bd_afc3_s01sic_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01sic_0' (67#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_18/synth/bd_afc3_s01sic_0.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01tr_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/synth/bd_afc3_s01tr_0.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01tr_0' (68#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/synth/bd_afc3_s01tr_0.sv:58]
-WARNING: [Synth 8-350] instance 's01_transaction_regulator' of module 'bd_afc3_s01tr_0' requires 38 connections, but only 37 given [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3010]
-INFO: [Synth 8-256] done synthesizing module 's01_entry_pipeline_imp_1W4H5O0' (69#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2763]
-INFO: [Synth 8-638] synthesizing module 's01_nodes_imp_1RW0SI0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3050]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_sarn_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/synth/bd_afc3_sarn_1.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sarn_1' (70#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/synth/bd_afc3_sarn_1.sv:58]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_srn_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/synth/bd_afc3_srn_1.sv:58]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_srn_1' (71#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/synth/bd_afc3_srn_1.sv:58]
-INFO: [Synth 8-256] done synthesizing module 's01_nodes_imp_1RW0SI0' (72#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3050]
-INFO: [Synth 8-638] synthesizing module 'switchboards_imp_4N4PBE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3181]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_arsw_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_arsw_0.sv:57]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_arsw_0' (75#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_arsw_0.sv:57]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_awsw_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_awsw_0.sv:57]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_awsw_0' (76#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_awsw_0.sv:57]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_bsw_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_bsw_0.sv:57]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_bsw_0' (77#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_bsw_0.sv:57]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_rsw_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_rsw_0.sv:57]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_rsw_0' (78#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_rsw_0.sv:57]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_wsw_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_wsw_0.sv:57]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_wsw_0' (79#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_wsw_0.sv:57]
-INFO: [Synth 8-256] done synthesizing module 'switchboards_imp_4N4PBE' (80#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3181]
-WARNING: [Synth 8-350] instance 'switchboards' of module 'switchboards_imp_4N4PBE' requires 77 connections, but only 71 given [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1056]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3' (81#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_smc_0' (82#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_base__parameterized8' (60#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'xpm_memory_sdpram__parameterized8' (60#1) [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:6877]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sbn_0' (61#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/synth/bd_afc3_sbn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_srn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_srn_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_srn_0' (62#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/synth/bd_afc3_srn_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_swn_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/synth/bd_afc3_swn_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_swn_0' (63#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/synth/bd_afc3_swn_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 's00_nodes_imp_Y7M43I' (64#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2467]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01a2s_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/synth/bd_afc3_s01a2s_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01a2s_0' (65#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/synth/bd_afc3_s01a2s_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 's01_entry_pipeline_imp_1W4H5O0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2763]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01mmu_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/synth/bd_afc3_s01mmu_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01mmu_0' (66#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/synth/bd_afc3_s01mmu_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01sic_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_18/synth/bd_afc3_s01sic_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01sic_0' (67#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_18/synth/bd_afc3_s01sic_0.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_s01tr_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/synth/bd_afc3_s01tr_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_s01tr_0' (68#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/synth/bd_afc3_s01tr_0.sv:58]
+WARNING: [Synth 8-350] instance 's01_transaction_regulator' of module 'bd_afc3_s01tr_0' requires 38 connections, but only 37 given [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3010]
+INFO: [Synth 8-256] done synthesizing module 's01_entry_pipeline_imp_1W4H5O0' (69#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:2763]
+INFO: [Synth 8-638] synthesizing module 's01_nodes_imp_1RW0SI0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3050]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_sarn_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/synth/bd_afc3_sarn_1.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_sarn_1' (70#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/synth/bd_afc3_sarn_1.sv:58]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_srn_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/synth/bd_afc3_srn_1.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_srn_1' (71#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/synth/bd_afc3_srn_1.sv:58]
+INFO: [Synth 8-256] done synthesizing module 's01_nodes_imp_1RW0SI0' (72#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3050]
+INFO: [Synth 8-638] synthesizing module 'switchboards_imp_4N4PBE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3181]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_arsw_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_arsw_0.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_arsw_0' (75#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_arsw_0.sv:57]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_awsw_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_awsw_0.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_awsw_0' (76#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_awsw_0.sv:57]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_bsw_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_bsw_0.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_bsw_0' (77#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_bsw_0.sv:57]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_rsw_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_rsw_0.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_rsw_0' (78#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_rsw_0.sv:57]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_wsw_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_wsw_0.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_wsw_0' (79#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_wsw_0.sv:57]
+INFO: [Synth 8-256] done synthesizing module 'switchboards_imp_4N4PBE' (80#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:3181]
+WARNING: [Synth 8-350] instance 'switchboards' of module 'switchboards_imp_4N4PBE' requires 77 connections, but only 71 given [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1056]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3' (81#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_smc_0' (82#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
 WARNING: [Synth 8-3331] design sc_util_v1_0_2_pipeline__parameterized7 has unconnected port aclk
 WARNING: [Synth 8-3331] design sc_util_v1_0_2_pipeline__parameterized7 has unconnected port aclken
 WARNING: [Synth 8-3331] design sc_util_v1_0_2_pipeline__parameterized7 has unconnected port areset
@@ -1020,7 +1020,7 @@ WARNING: [Synth 8-3331] design xpm_memory_base__parameterized5 has unconnected p
 WARNING: [Synth 8-3331] design xpm_memory_base__parameterized5 has unconnected port dinb[4]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1453.336 ; gain = 267.531 ; free physical = 12837 ; free virtual = 14277
+Finished RTL Elaboration : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 596.305 ; gain = 315.617
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1030,7 +1030,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1453.336 ; gain = 267.531 ; free physical = 12847 ; free virtual = 14287
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 596.305 ; gain = 315.617
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1039,93 +1039,93 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_smc_0_propImpl.xdc].
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_smc_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_smc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
@@ -1134,21 +1134,21 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.63 . Memory (MB): peak = 2196.656 ; gain = 0.000 ; free physical = 12046 ; free virtual = 13522
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1484.043 ; gain = 0.707
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12552 ; free virtual = 14028
+Finished Constraint Validation : Time (s): cpu = 00:02:34 ; elapsed = 00:02:42 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12552 ; free virtual = 14028
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:34 ; elapsed = 00:02:42 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc, line 145).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc, line 145).
 Applied set_property DONT_TOUCH = true for inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
@@ -1176,11 +1176,11 @@ Applied set_property DONT_TOUCH = true for inst/s01_nodes/s01_ar_node/inst/inst_
 Applied set_property DONT_TOUCH = true for inst/s01_nodes/s01_r_node/inst/inst_mi_handler/\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/s01_nodes/s01_r_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12548 ; free virtual = 14024
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:35 ; elapsed = 00:02:42 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element q_int_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:138]
-INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
-WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+WARNING: [Synth 8-6014] Unused sequential element q_int_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:138]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-5546] ROM "gen_pipelined.next0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
@@ -1215,7 +1215,7 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_r
 INFO: [Synth 8-5546] ROM "gen_pipelined.next0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:13 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12529 ; free virtual = 14005
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:43 ; elapsed = 00:02:51 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3429,7 +3429,7 @@ INFO: [Synth 8-5544] ROM "ar_wrap_type" won't be mapped to Block RAM because add
 INFO: [Synth 8-5546] ROM "r_word_cnt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "r_unshelve" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "w_accum_continue" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element clk_map/psr_aclk/U0/SEQ/SEQ_COUNTER/q_int_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:138]
+WARNING: [Synth 8-6014] Unused sequential element clk_map/psr_aclk/U0/SEQ/SEQ_COUNTER/q_int_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:138]
 INFO: [Synth 8-3886] merging instance 'sc_mmu_v1_0_5_top:/i_0/gen_endpoint.w_state_reg[2]' (FDRE) to 'sc_mmu_v1_0_5_top:/i_0/gen_endpoint.w_state_reg[31]'
 INFO: [Synth 8-3886] merging instance 'sc_mmu_v1_0_5_top:/i_0/gen_endpoint.w_state_reg[3]' (FDRE) to 'sc_mmu_v1_0_5_top:/i_0/gen_endpoint.w_state_reg[31]'
 INFO: [Synth 8-3886] merging instance 'sc_mmu_v1_0_5_top:/i_0/gen_endpoint.w_state_reg[4]' (FDRE) to 'sc_mmu_v1_0_5_top:/i_0/gen_endpoint.w_state_reg[31]'
@@ -3734,7 +3734,7 @@ INFO: [Synth 8-3886] merging instance 'inst/s01_entry_pipeline/s01_si_converter/
 INFO: [Synth 8-3886] merging instance 'inst/s01_entry_pipeline/s01_si_converter/inst/converter.wrap_narrow_insti_0/w_accum_reg[sc_route][18]' (FDE) to 'inst/s01_entry_pipeline/s01_si_converter/inst/converter.wrap_narrow_insti_0/w_accum_reg[sc_route][19]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:44 ; elapsed = 00:02:03 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12323 ; free virtual = 13802
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:34 ; elapsed = 00:04:52 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3809,13 +3809,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:50 ; elapsed = 00:02:11 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12208 ; free virtual = 13694
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:50 ; elapsed = 00:05:08 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:02:16 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12092 ; free virtual = 13579
+Finished Timing Optimization : Time (s): cpu = 00:04:58 ; elapsed = 00:05:16 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3889,7 +3889,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:01 ; elapsed = 00:02:23 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12224 ; free virtual = 13712
+Finished Technology Mapping : Time (s): cpu = 00:05:07 ; elapsed = 00:05:27 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3953,7 +3953,7 @@ INFO: [Synth 8-5365] Flop inst_mi_handler/gen_normal_area.inst_fifo_node_payld/g
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:02 ; elapsed = 00:02:24 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12749 ; free virtual = 14242
+Finished IO Insertion : Time (s): cpu = 00:05:09 ; elapsed = 00:05:29 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3966,7 +3966,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:02 ; elapsed = 00:02:24 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12749 ; free virtual = 14242
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:09 ; elapsed = 00:05:29 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3978,25 +3978,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:03 ; elapsed = 00:02:25 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12743 ; free virtual = 14235
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:11 ; elapsed = 00:05:31 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:03 ; elapsed = 00:02:25 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12743 ; free virtual = 14235
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:11 ; elapsed = 00:05:31 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:04 ; elapsed = 00:02:26 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12732 ; free virtual = 14225
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:12 ; elapsed = 00:05:31 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:04 ; elapsed = 00:02:26 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12730 ; free virtual = 14223
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:12 ; elapsed = 00:05:31 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4609,67 +4609,67 @@ Report Instance Areas:
 |559   |          \gen_mi[0].inst_opipe_payld                                                           |sc_util_v1_0_2_pipeline__parameterized12                  |    51|
 +------+------------------------------------------------------------------------------------------------+----------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:04 ; elapsed = 00:02:26 . Memory (MB): peak = 2196.656 ; gain = 1010.852 ; free physical = 12730 ; free virtual = 14223
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:12 ; elapsed = 00:05:31 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4774 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:35 ; elapsed = 00:01:51 . Memory (MB): peak = 2196.656 ; gain = 267.531 ; free physical = 12776 ; free virtual = 14269
-Synthesis Optimization Complete : Time (s): cpu = 00:02:04 ; elapsed = 00:02:26 . Memory (MB): peak = 2196.664 ; gain = 1010.852 ; free physical = 12781 ; free virtual = 14274
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:48 ; elapsed = 00:04:11 . Memory (MB): peak = 1484.043 ; gain = 315.617
+Synthesis Optimization Complete : Time (s): cpu = 00:05:12 ; elapsed = 00:05:32 . Memory (MB): peak = 1484.043 ; gain = 1203.355
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 220 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 213 instances were transformed.
@@ -4682,11 +4682,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 548 Infos, 234 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:02:30 . Memory (MB): peak = 2196.664 ; gain = 1035.684 ; free physical = 12787 ; free virtual = 14281
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci
+synth_design: Time (s): cpu = 00:05:21 ; elapsed = 00:05:41 . Memory (MB): peak = 1484.043 ; gain = 1214.824
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci
 INFO: [Coretcl 2-1174] Renamed 558 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_smc_0_utilization_synth.rpt -pb design_1_axi_smc_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2220.668 ; gain = 0.000 ; free physical = 12606 ; free virtual = 14114
-INFO: [Common 17-206] Exiting Vivado at Thu May  3 19:47:38 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.163 . Memory (MB): peak = 1484.043 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  4 22:26:28 2018...

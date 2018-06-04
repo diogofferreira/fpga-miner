@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed May 30 00:48:08 2018
+-- Date        : Wed May 30 00:47:57 2018
 -- Host        : hp-laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_microblaze_0_0 -prefix
+--               design_1_microblaze_0_0_ design_1_microblaze_0_0_stub.vhdl
 -- Design      : design_1_microblaze_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

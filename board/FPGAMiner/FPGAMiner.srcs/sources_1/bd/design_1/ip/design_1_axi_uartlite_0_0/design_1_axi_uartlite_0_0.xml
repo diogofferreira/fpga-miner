@@ -873,7 +873,7 @@ Writing a 1 to this bit position clears the receive FIFO
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 11:52:45 UTC 2018</spirit:value>
+            <spirit:value>Mon Jun 04 21:05:01 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -892,7 +892,7 @@ Writing a 1 to this bit position clears the receive FIFO
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 11:52:45 UTC 2018</spirit:value>
+            <spirit:value>Mon Jun 04 21:05:01 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -923,7 +923,7 @@ Writing a 1 to this bit position clears the receive FIFO
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 11:52:45 UTC 2018</spirit:value>
+            <spirit:value>Mon Jun 04 21:05:01 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -942,7 +942,7 @@ Writing a 1 to this bit position clears the receive FIFO
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 11:52:45 UTC 2018</spirit:value>
+            <spirit:value>Mon Jun 04 21:05:01 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -960,7 +960,7 @@ Writing a 1 to this bit position clears the receive FIFO
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 11:52:45 UTC 2018</spirit:value>
+            <spirit:value>Mon Jun 04 21:05:01 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -978,7 +978,7 @@ Writing a 1 to this bit position clears the receive FIFO
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 11:58:16 UTC 2018</spirit:value>
+            <spirit:value>Mon Jun 04 21:22:00 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>

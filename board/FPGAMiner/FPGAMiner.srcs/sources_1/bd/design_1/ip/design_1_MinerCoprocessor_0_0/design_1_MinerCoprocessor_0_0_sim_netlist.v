@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sat Jun  2 23:23:14 2018
+// Date        : Sat Jun  2 23:23:07 2018
 // Host        : hp-laptop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/design_1_MinerCoprocessor_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_MinerCoprocessor_0_0 -prefix
+//               design_1_MinerCoprocessor_0_0_ design_1_MinerCoprocessor_0_0_sim_netlist.v
 // Design      : design_1_MinerCoprocessor_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,72 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_MinerCoprocessor_0_0,MinerCoprocessor_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MinerCoprocessor_v1_0,Vivado 2017.4" *) 
-(* NotValidForBitStream *)
-module design_1_MinerCoprocessor_0_0
-   (m00_axis_tdata,
-    m00_axis_tstrb,
-    m00_axis_tlast,
-    m00_axis_tvalid,
-    m00_axis_tready,
-    m00_axis_aclk,
-    m00_axis_aresetn,
-    s00_axis_tdata,
-    s00_axis_tstrb,
-    s00_axis_tlast,
-    s00_axis_tvalid,
-    s00_axis_tready,
-    s00_axis_aclk,
-    s00_axis_aresetn);
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, LAYERED_METADATA undef" *) output [31:0]m00_axis_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB" *) output [3:0]m00_axis_tstrb;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TLAST" *) output m00_axis_tlast;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TVALID" *) output m00_axis_tvalid;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TREADY" *) input m00_axis_tready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input m00_axis_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW" *) input m00_axis_aresetn;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, LAYERED_METADATA undef" *) input [31:0]s00_axis_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TSTRB" *) input [3:0]s00_axis_tstrb;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TLAST" *) input s00_axis_tlast;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID" *) input s00_axis_tvalid;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TREADY" *) output s00_axis_tready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXIS_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXIS_CLK, ASSOCIATED_BUSIF S00_AXIS, ASSOCIATED_RESET s00_axis_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input s00_axis_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXIS_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXIS_RST, POLARITY ACTIVE_LOW" *) input s00_axis_aresetn;
-
-  wire \<const0> ;
-  wire \<const1> ;
-  wire m00_axis_aclk;
-  wire [31:0]m00_axis_tdata;
-  wire m00_axis_tready;
-  wire m00_axis_tvalid;
-  wire s00_axis_aclk;
-  wire s00_axis_aresetn;
-  wire [31:0]s00_axis_tdata;
-  wire s00_axis_tready;
-  wire s00_axis_tvalid;
-
-  assign m00_axis_tlast = \<const0> ;
-  assign m00_axis_tstrb[3] = \<const1> ;
-  assign m00_axis_tstrb[2] = \<const1> ;
-  assign m00_axis_tstrb[1] = \<const1> ;
-  assign m00_axis_tstrb[0] = \<const1> ;
-  GND GND
-       (.G(\<const0> ));
-  design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0 U0
-       (.m00_axis_aclk(m00_axis_aclk),
-        .m00_axis_tdata(m00_axis_tdata),
-        .m00_axis_tready(m00_axis_tready),
-        .m00_axis_tvalid(m00_axis_tvalid),
-        .s00_axis_aclk(s00_axis_aclk),
-        .s00_axis_aresetn(s00_axis_aresetn),
-        .s00_axis_tdata(s00_axis_tdata),
-        .s00_axis_tready(s00_axis_tready),
-        .s00_axis_tvalid(s00_axis_tvalid));
-  VCC VCC
-       (.P(\<const1> ));
-endmodule
-
-(* ORIG_REF_NAME = "MinerCoprocessor_v1_0" *) 
 module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0
    (m00_axis_tvalid,
     s00_axis_tready,
@@ -395,7 +329,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0
         .s_validData(s_validData));
 endmodule
 
-(* ORIG_REF_NAME = "MinerCoprocessor_v1_0_M00_AXIS" *) 
 module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
    (\s_counter_reg[4]_0 ,
     O,
@@ -1948,7 +1881,6 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "MinerCoprocessor_v1_0_S00_AXIS" *) 
 module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
    (s_validData,
     nonce,
@@ -35399,6 +35331,71 @@ module design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS
         .CLR(\M[0][254]_i_1_n_0 ),
         .D(p_2_in[9]),
         .Q(t[9]));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_MinerCoprocessor_0_0,MinerCoprocessor_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MinerCoprocessor_v1_0,Vivado 2017.4" *) 
+(* NotValidForBitStream *)
+module design_1_MinerCoprocessor_0_0
+   (m00_axis_tdata,
+    m00_axis_tstrb,
+    m00_axis_tlast,
+    m00_axis_tvalid,
+    m00_axis_tready,
+    m00_axis_aclk,
+    m00_axis_aresetn,
+    s00_axis_tdata,
+    s00_axis_tstrb,
+    s00_axis_tlast,
+    s00_axis_tvalid,
+    s00_axis_tready,
+    s00_axis_aclk,
+    s00_axis_aresetn);
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, LAYERED_METADATA undef" *) output [31:0]m00_axis_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB" *) output [3:0]m00_axis_tstrb;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TLAST" *) output m00_axis_tlast;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TVALID" *) output m00_axis_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TREADY" *) input m00_axis_tready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input m00_axis_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW" *) input m00_axis_aresetn;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, LAYERED_METADATA undef" *) input [31:0]s00_axis_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TSTRB" *) input [3:0]s00_axis_tstrb;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TLAST" *) input s00_axis_tlast;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID" *) input s00_axis_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS TREADY" *) output s00_axis_tready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXIS_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXIS_CLK, ASSOCIATED_BUSIF S00_AXIS, ASSOCIATED_RESET s00_axis_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input s00_axis_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXIS_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXIS_RST, POLARITY ACTIVE_LOW" *) input s00_axis_aresetn;
+
+  wire \<const0> ;
+  wire \<const1> ;
+  wire m00_axis_aclk;
+  wire [31:0]m00_axis_tdata;
+  wire m00_axis_tready;
+  wire m00_axis_tvalid;
+  wire s00_axis_aclk;
+  wire s00_axis_aresetn;
+  wire [31:0]s00_axis_tdata;
+  wire s00_axis_tready;
+  wire s00_axis_tvalid;
+
+  assign m00_axis_tlast = \<const0> ;
+  assign m00_axis_tstrb[3] = \<const1> ;
+  assign m00_axis_tstrb[2] = \<const1> ;
+  assign m00_axis_tstrb[1] = \<const1> ;
+  assign m00_axis_tstrb[0] = \<const1> ;
+  GND GND
+       (.G(\<const0> ));
+  design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0 U0
+       (.m00_axis_aclk(m00_axis_aclk),
+        .m00_axis_tdata(m00_axis_tdata),
+        .m00_axis_tready(m00_axis_tready),
+        .m00_axis_tvalid(m00_axis_tvalid),
+        .s00_axis_aclk(s00_axis_aclk),
+        .s00_axis_aresetn(s00_axis_aresetn),
+        .s00_axis_tdata(s00_axis_tdata),
+        .s00_axis_tready(s00_axis_tready),
+        .s00_axis_tvalid(s00_axis_tvalid));
+  VCC VCC
+       (.P(\<const1> ));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -16,9 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,7 +28,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys4:part0:1.1 [current_project]
-set_property ip_repo_paths c:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0 [current_project]
+set_property ip_repo_paths {
+  c:/CR_Projects/Project/Development/ip_repo/DisplayController_1.0
+  c:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0
+} [current_project]
 set_property ip_output_repo c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
@@ -95,6 +95,9 @@ set_property used_in_implementation false [get_files -all c:/CR_Projects/Project
 set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,6 +110,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc
 set_property used_in_implementation false [get_files C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/new/eth_ref_clk.xdc]
+
+read_xdc C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/imports/Pins/Nexys4_Master.xdc
+set_property used_in_implementation false [get_files C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/constrs_1/imports/Pins/Nexys4_Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

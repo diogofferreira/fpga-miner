@@ -60,19 +60,20 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
   reset_param project.defaultXPMLibraries 
   open_checkpoint C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/impl_1/design_1_wrapper.dcp
   set_property webtalk.parent_dir C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/wt [current_project]
   set_property parent.project_path C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.xpr [current_project]
-  set_property ip_repo_paths C:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0 [current_project]
+  set_property ip_repo_paths {
+  C:/CR_Projects/Project/Development/ip_repo/DisplayController_1.0
+  C:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0
+} [current_project]
   set_property ip_output_repo C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

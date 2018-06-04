@@ -24,38 +24,42 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.cache/wt [current_project]
-set_property parent.project_path /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.xpr [current_project]
+set_property webtalk.parent_dir C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/wt [current_project]
+set_property parent.project_path C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys4:part0:1.1 [current_project]
-set_property ip_output_repo /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.cache/ip [current_project]
+set_property ip_repo_paths {
+  c:/CR_Projects/Project/Development/ip_repo/DisplayController_1.0
+  c:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0
+} [current_project]
+set_property ip_output_repo c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/bd_afc3_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/bd_afc3_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/bd_afc3_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/bd_afc3_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/bd_afc3_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/bd_afc3_sarn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/bd_afc3_srn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/bd_afc3_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/bd_afc3_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/bd_afc3_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/bd_afc3_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/bd_afc3_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc]
+read_ip -quiet C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/bd_afc3_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/bd_afc3_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/bd_afc3_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/bd_afc3_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/bd_afc3_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/bd_afc3_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/bd_afc3_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/bd_afc3_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/bd_afc3_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/bd_afc3_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/bd_afc3_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/bd_afc3_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -68,7 +72,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1 -new_name design_1_axi_smc_0 -ip [get_ips design_1_axi_smc_0]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1 -new_name design_1_axi_smc_0 -ip [get_ips design_1_axi_smc_0]]
 
 if { $cached_ip eq {} } {
 
@@ -107,32 +111,32 @@ write_checkpoint -force -noxdef design_1_axi_smc_0.dcp
 create_report "design_1_axi_smc_0_synth_1_synth_report_utilization_0" "report_utilization -file design_1_axi_smc_0_utilization_synth.rpt -pb design_1_axi_smc_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp
+  file copy -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v
+  write_verilog -force -mode synth_stub C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v
+  write_verilog -force -mode funcsim C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -142,46 +146,46 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp
+  file copy -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_stub.v /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v
+  file rename -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_stub.v C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_stub.vhdl /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl
+  file rename -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_stub.vhdl C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_sim_netlist.v /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v
+  file rename -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_sim_netlist.v C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_sim_netlist.vhdl /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
+  file rename -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0_sim_netlist.vhdl C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.ip_user_files/ip/design_1_axi_smc_0]} {
+if {[file isdir C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.ip_user_files/ip/design_1_axi_smc_0]} {
   catch { 
-    file copy -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.ip_user_files/ip/design_1_axi_smc_0
+    file copy -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.ip_user_files/ip/design_1_axi_smc_0
   }
 }
 
-if {[file isdir /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.ip_user_files/ip/design_1_axi_smc_0]} {
+if {[file isdir C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.ip_user_files/ip/design_1_axi_smc_0]} {
   catch { 
-    file copy -force /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.ip_user_files/ip/design_1_axi_smc_0
+    file copy -force C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.ip_user_files/ip/design_1_axi_smc_0
   }
 }

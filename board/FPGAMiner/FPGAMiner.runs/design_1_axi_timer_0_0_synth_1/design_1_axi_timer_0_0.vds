@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu May  3 12:58:38 2018
-# Process ID: 15334
-# Current directory: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1
-# Command line: vivado -log design_1_axi_timer_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_timer_0_0.tcl
-# Log file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1/design_1_axi_timer_0_0.vds
-# Journal file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1/vivado.jou
+# Start of session at: Mon Jun  4 22:14:14 2018
+# Process ID: 980
+# Current directory: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1
+# Command line: vivado.exe -log design_1_axi_timer_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_timer_0_0.tcl
+# Log file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1/design_1_axi_timer_0_0.vds
+# Journal file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_axi_timer_0_0.tcl -notrace
 Command: synth_design -top design_1_axi_timer_0_0 -part xc7a100tcsg324-1 -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15343 
+INFO: Helper process launched with PID 9848 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1259.078 ; gain = 86.000 ; free physical = 8889 ; free virtual = 11897
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 364.504 ; gain = 103.641
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/synth/design_1_axi_timer_0_0.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/synth/design_1_axi_timer_0_0.vhd:90]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_COUNT_WIDTH bound to: 32 - type: integer 
 	Parameter C_ONE_TIMER_ONLY bound to: 0 - type: integer 
@@ -29,8 +29,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [/home/pbm/Docu
 	Parameter C_GEN1_ASSERT bound to: 1'b1 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'axi_timer' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2082' bound to instance 'U0' of component 'axi_timer' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/synth/design_1_axi_timer_0_0.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'axi_timer' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
+INFO: [Synth 8-3491] module 'axi_timer' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2082' bound to instance 'U0' of component 'axi_timer' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/synth/design_1_axi_timer_0_0.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'axi_timer' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_COUNT_WIDTH bound to: 32 - type: integer 
 	Parameter C_ONE_TIMER_ONLY bound to: 0 - type: integer 
@@ -40,9 +40,9 @@ INFO: [Synth 8-638] synthesizing module 'axi_timer' [/home/pbm/Documents/UA/4_ye
 	Parameter C_GEN1_ASSERT bound to: 1'b1 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2106]
-INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2107]
-INFO: [Synth 8-638] synthesizing module 'tc_core' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1698]
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2106]
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2107]
+INFO: [Synth 8-638] synthesizing module 'tc_core' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1698]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_COUNT_WIDTH bound to: 32 - type: integer 
 	Parameter C_ONE_TIMER_ONLY bound to: 0 - type: integer 
@@ -53,246 +53,246 @@ INFO: [Synth 8-638] synthesizing module 'tc_core' [/home/pbm/Documents/UA/4_year
 	Parameter C_GEN0_ASSERT bound to: 1'b1 
 	Parameter C_GEN1_ASSERT bound to: 1'b1 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000001000 
-INFO: [Synth 8-638] synthesizing module 'mux_onehot_f' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'mux_onehot_f' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:365]
 	Parameter C_DW bound to: 32 - type: integer 
 	Parameter C_NB bound to: 6 - type: integer 
 	Parameter C_FAMILY bound to: artix7 - type: string 
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-638] synthesizing module 'MUXCY' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611]
-INFO: [Synth 8-256] done synthesizing module 'MUXCY' (1#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-3491] module 'MUXCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
-INFO: [Synth 8-256] done synthesizing module 'mux_onehot_f' (2#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:365]
-INFO: [Synth 8-638] synthesizing module 'count_module' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-638] synthesizing module 'MUXCY' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611]
+INFO: [Synth 8-256] done synthesizing module 'MUXCY' (1#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-3491] module 'MUXCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26611' bound to instance 'MUXCY_I' of component 'MUXCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:462]
+INFO: [Synth 8-256] done synthesizing module 'mux_onehot_f' (2#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'count_module' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1434]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_COUNT_WIDTH bound to: 32 - type: integer 
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
-INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:148]
+INFO: [Synth 8-113] binding component instance 'LOAD_REG_I' to cell 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1470]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:148]
 	Parameter C_NUM_BITS bound to: 32 - type: integer 
 	Parameter C_FAMILY bound to: artix7 - type: string 
-INFO: [Synth 8-256] done synthesizing module 'counter_f' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:148]
-INFO: [Synth 8-256] done synthesizing module 'count_module' (4#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1434]
-INFO: [Synth 8-638] synthesizing module 'timer_control' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:835]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (3#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'count_module' (4#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-638] synthesizing module 'timer_control' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:835]
 	Parameter C_TRIG0_ASSERT bound to: 1'b1 
 	Parameter C_TRIG1_ASSERT bound to: 1'b1 
 	Parameter C_GEN0_ASSERT bound to: 1'b1 
@@ -304,176 +304,176 @@ INFO: [Synth 8-638] synthesizing module 'timer_control' [/home/pbm/Documents/UA/
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
+INFO: [Synth 8-113] binding component instance 'TCSR0_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:917]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
+INFO: [Synth 8-113] binding component instance 'TCSR1_FF_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:998]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'READ_DONE0_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1070]
+INFO: [Synth 8-113] binding component instance 'READ_DONE0_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1070]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'READ_DONE1_I' to cell 'FDRSE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1080]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-113] binding component instance 'READ_DONE1_I' to cell 'FDRSE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1080]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -481,27 +481,27 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/pbm/Documents/UA/4_yea
 	Parameter C_VECTOR_WIDTH bound to: 32 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'timer_control' (6#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:835]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'timer_control' (6#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:835]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'PWM_FF_I' to cell 'FDRS' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1904]
-INFO: [Synth 8-256] done synthesizing module 'tc_core' (7#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1698]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-113] binding component instance 'PWM_FF_I' to cell 'FDRS' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1904]
+INFO: [Synth 8-256] done synthesizing module 'tc_core' (7#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:1698]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000000011111 
@@ -510,7 +510,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/pbm/Documents/UA/
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000001000 
 	Parameter C_FAMILY bound to: artix7 - type: string 
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000001000 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 5 - type: integer 
@@ -519,66 +519,66 @@ INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/pbm/Documents/
 	Parameter C_USE_WSTRB bound to: 0 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 32 - type: integer 
 	Parameter C_FAMILY bound to: artix7 - type: string 
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 	Parameter C_BUS_AWIDTH bound to: 5 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 31 - type: integer 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000001000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (9#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (10#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (11#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-256] done synthesizing module 'axi_timer' (12#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_timer_0_0' (13#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/synth/design_1_axi_timer_0_0.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (9#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (10#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (11#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_timer' (12#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_timer_0_0' (13#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/synth/design_1_axi_timer_0_0.vhd:90]
 WARNING: [Synth 8-3331] design address_decoder has unconnected port Address_In_Erly[3]
 WARNING: [Synth 8-3331] design address_decoder has unconnected port Address_In_Erly[4]
 WARNING: [Synth 8-3331] design address_decoder has unconnected port Bus_RNW
@@ -659,7 +659,7 @@ WARNING: [Synth 8-3331] design tc_core has unconnected port Bus2ip_addr[2]
 WARNING: [Synth 8-3331] design tc_core has unconnected port Bus2ip_addr[3]
 WARNING: [Synth 8-3331] design tc_core has unconnected port Bus2ip_addr[4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1303.609 ; gain = 130.531 ; free physical = 8886 ; free virtual = 11895
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 419.008 ; gain = 158.145
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -669,21 +669,21 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1303.609 ; gain = 130.531 ; free physical = 8880 ; free virtual = 11889
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 419.008 ; gain = 158.145
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 108 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'U0'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'U0'
+Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -692,32 +692,32 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDRS => FDRS (FDRE, LUT2, VCC): 1 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 25 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1642.445 ; gain = 0.000 ; free physical = 8601 ; free virtual = 11596
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 770.168 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1642.445 ; gain = 469.367 ; free physical = 8649 ; free virtual = 11628
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 770.168 ; gain = 509.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1642.445 ; gain = 469.367 ; free physical = 8649 ; free virtual = 11628
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 770.168 ; gain = 509.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1642.445 ; gain = 469.367 ; free physical = 8651 ; free virtual = 11631
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:17 . Memory (MB): peak = 770.168 ; gain = 509.305
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:176]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:176]
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
+WARNING: [Synth 8-6014] Unused sequential element INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1642.445 ; gain = 469.367 ; free physical = 8640 ; free virtual = 11620
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:01:19 . Memory (MB): peak = 770.168 ; gain = 509.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -851,8 +851,8 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element AXI4_LITE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].cs_out_i_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2004]
-WARNING: [Synth 8-6014] Unused sequential element AXI4_LITE_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
+WARNING: [Synth 8-6014] Unused sequential element AXI4_LITE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].cs_out_i_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2004]
+WARNING: [Synth 8-6014] Unused sequential element AXI4_LITE_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
 WARNING: [Synth 8-3331] design axi_timer has unconnected port s_axi_wstrb[3]
 WARNING: [Synth 8-3331] design axi_timer has unconnected port s_axi_wstrb[2]
 WARNING: [Synth 8-3331] design axi_timer has unconnected port s_axi_wstrb[1]
@@ -870,7 +870,7 @@ INFO: [Synth 8-3332] Sequential element (AXI4_LITE_I/I_SLAVE_ATTACHMENT/s_axi_rr
 INFO: [Synth 8-3332] Sequential element (AXI4_LITE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[1]) is unused and will be removed from module axi_timer.
 INFO: [Synth 8-3332] Sequential element (AXI4_LITE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[0]) is unused and will be removed from module axi_timer.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1642.445 ; gain = 469.367 ; free physical = 8640 ; free virtual = 11604
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:25 . Memory (MB): peak = 770.168 ; gain = 509.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -882,13 +882,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 1642.445 ; gain = 469.367 ; free physical = 8486 ; free virtual = 11450
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:02:03 . Memory (MB): peak = 770.168 ; gain = 509.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1642.445 ; gain = 469.367 ; free physical = 8465 ; free virtual = 11430
+Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:02:08 . Memory (MB): peak = 788.293 ; gain = 527.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -902,7 +902,7 @@ Start Technology Mapping
 INFO: [Synth 8-3332] Sequential element (AXI4_LITE_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0]) is unused and will be removed from module axi_timer.
 INFO: [Synth 8-3332] Sequential element (AXI4_LITE_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0]) is unused and will be removed from module axi_timer.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8461 ; free virtual = 11426
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:02:09 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -926,7 +926,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8454 ; free virtual = 11419
+Finished IO Insertion : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -939,7 +939,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8454 ; free virtual = 11419
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -951,25 +951,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8454 ; free virtual = 11419
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8454 ; free virtual = 11418
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8454 ; free virtual = 11418
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8454 ; free virtual = 11418
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1025,11 +1025,11 @@ Report Instance Areas:
 |21    |        INPUT_DOUBLE_REGS3                                                |cdc_sync_2                |    14|
 +------+--------------------------------------------------------------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1650.453 ; gain = 477.375 ; free physical = 8453 ; free virtual = 11418
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1650.453 ; gain = 138.539 ; free physical = 8507 ; free virtual = 11472
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1650.461 ; gain = 477.375 ; free physical = 8507 ; free virtual = 11472
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:50 . Memory (MB): peak = 795.930 ; gain = 183.906
+Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:02:12 . Memory (MB): peak = 795.930 ; gain = 535.066
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 94 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1043,11 +1043,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 204 Infos, 86 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 1650.461 ; gain = 496.480 ; free physical = 8495 ; free virtual = 11460
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1/design_1_axi_timer_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xci
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:02:19 . Memory (MB): peak = 795.930 ; gain = 545.586
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1/design_1_axi_timer_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 20 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_axi_timer_0_0_synth_1/design_1_axi_timer_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_axi_timer_0_0_synth_1/design_1_axi_timer_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_timer_0_0_utilization_synth.rpt -pb design_1_axi_timer_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1674.465 ; gain = 0.000 ; free physical = 8488 ; free virtual = 11454
-INFO: [Common 17-206] Exiting Vivado at Thu May  3 12:59:43 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.485 . Memory (MB): peak = 795.930 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  4 22:16:56 2018...

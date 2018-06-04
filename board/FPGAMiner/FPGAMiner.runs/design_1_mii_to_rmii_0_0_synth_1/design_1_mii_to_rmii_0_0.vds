@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon May 14 15:39:25 2018
-# Process ID: 1886
-# Current directory: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1
-# Command line: vivado -log design_1_mii_to_rmii_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mii_to_rmii_0_0.tcl
-# Log file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1/design_1_mii_to_rmii_0_0.vds
-# Journal file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1/vivado.jou
+# Start of session at: Mon Jun  4 22:17:27 2018
+# Process ID: 7716
+# Current directory: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1
+# Command line: vivado.exe -log design_1_mii_to_rmii_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mii_to_rmii_0_0.tcl
+# Log file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1/design_1_mii_to_rmii_0_0.vds
+# Journal file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_mii_to_rmii_0_0.tcl -notrace
 Command: synth_design -top design_1_mii_to_rmii_0_0 -part xc7a100tcsg324-1 -mode out_of_context
@@ -15,81 +15,81 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1896 
+INFO: Helper process launched with PID 3688 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1261.383 ; gain = 88.000 ; free physical = 13120 ; free virtual = 14289
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 365.320 ; gain = 103.297
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_mii_to_rmii_0_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/synth/design_1_mii_to_rmii_0_0.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'design_1_mii_to_rmii_0_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/synth/design_1_mii_to_rmii_0_0.vhd:81]
 	Parameter C_INSTANCE bound to: design_1_mii_to_rmii_0_0 - type: string 
 	Parameter C_FIXED_SPEED bound to: 1'b1 
 	Parameter C_INCLUDE_BUF bound to: 0 - type: integer 
 	Parameter C_SPEED_100 bound to: 1'b1 
 	Parameter C_FAMILY bound to: artix7 - type: string 
-INFO: [Synth 8-3491] module 'mii_to_rmii' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:4153' bound to instance 'U0' of component 'mii_to_rmii' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/synth/design_1_mii_to_rmii_0_0.vhd:141]
-INFO: [Synth 8-638] synthesizing module 'mii_to_rmii' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:4219]
+INFO: [Synth 8-3491] module 'mii_to_rmii' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:4153' bound to instance 'U0' of component 'mii_to_rmii' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/synth/design_1_mii_to_rmii_0_0.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'mii_to_rmii' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:4219]
 	Parameter C_INSTANCE bound to: design_1_mii_to_rmii_0_0 - type: string 
 	Parameter C_FIXED_SPEED bound to: 1'b1 
 	Parameter C_INCLUDE_BUF bound to: 0 - type: integer 
 	Parameter C_SPEED_100 bound to: 1'b1 
 	Parameter C_FAMILY bound to: artix7 - type: string 
-INFO: [Synth 8-638] synthesizing module 'rmii_tx_fixed' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1751]
+INFO: [Synth 8-638] synthesizing module 'rmii_tx_fixed' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1751]
 	Parameter C_RESET_ACTIVE bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'rmii_tx_fixed' (1#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1751]
-INFO: [Synth 8-638] synthesizing module 'rmii_rx_fixed' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:2664]
+INFO: [Synth 8-256] done synthesizing module 'rmii_tx_fixed' (1#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1751]
+INFO: [Synth 8-638] synthesizing module 'rmii_rx_fixed' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:2664]
 	Parameter C_RESET_ACTIVE bound to: 1'b0 
 	Parameter C_SPEED_100 bound to: 1'b1 
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "no" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3323]
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "no" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3333]
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "no" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3340]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "no" *) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3323]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "no" *) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3333]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "no" *) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3340]
 	Parameter C_DATA_BITS bound to: 5 - type: integer 
 	Parameter C_DEPTH bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'SRL_FIFO' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1434' bound to instance 'I_SRL_FIFO' of component 'srl_fifo' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3385]
-INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1454]
+INFO: [Synth 8-3491] module 'SRL_FIFO' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1434' bound to instance 'I_SRL_FIFO' of component 'srl_fifo' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:3385]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1454]
 	Parameter C_DATA_BITS bound to: 5 - type: integer 
 	Parameter C_DEPTH bound to: 16 - type: integer 
 	Parameter C_XON bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'FDR' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3951' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1548]
-INFO: [Synth 8-638] synthesizing module 'FDR' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3951]
+INFO: [Synth 8-3491] module 'FDR' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3951' bound to instance 'Data_Exists_DFF' of component 'FDR' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1548]
+INFO: [Synth 8-638] synthesizing module 'FDR' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3951]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'FDR' (2#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3951]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
-INFO: [Synth 8-638] synthesizing module 'MUXCY_L' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636]
-INFO: [Synth 8-256] done synthesizing module 'MUXCY_L' (3#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
-INFO: [Synth 8-638] synthesizing module 'XORCY' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717]
-INFO: [Synth 8-256] done synthesizing module 'XORCY' (4#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
-INFO: [Synth 8-638] synthesizing module 'FDRE' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDR' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3951]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
+INFO: [Synth 8-638] synthesizing module 'MUXCY_L' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636]
+INFO: [Synth 8-256] done synthesizing module 'MUXCY_L' (3#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
+INFO: [Synth 8-638] synthesizing module 'XORCY' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717]
+INFO: [Synth 8-256] done synthesizing module 'XORCY' (4#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
+INFO: [Synth 8-638] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'FDRE' (5#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
-INFO: [Synth 8-638] synthesizing module 'SRL16E' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705]
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (5#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:26636' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1565]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:52717' bound to instance 'XORCY_I' of component 'XORCY' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1572]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:3964' bound to instance 'FDRE_I' of component 'FDRE' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1578]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
+INFO: [Synth 8-638] synthesizing module 'SRL16E' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705]
 	Parameter INIT bound to: 16'b0000000000000000 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'SRL16E' (6#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
-INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (7#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1454]
-INFO: [Synth 8-256] done synthesizing module 'rmii_rx_fixed' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:2664]
-INFO: [Synth 8-256] done synthesizing module 'mii_to_rmii' (9#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:4219]
-INFO: [Synth 8-256] done synthesizing module 'design_1_mii_to_rmii_0_0' (10#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/synth/design_1_mii_to_rmii_0_0.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'SRL16E' (6#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50705' bound to instance 'SRL16E_I' of component 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1589]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (7#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:1454]
+INFO: [Synth 8-256] done synthesizing module 'rmii_rx_fixed' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:2664]
+INFO: [Synth 8-256] done synthesizing module 'mii_to_rmii' (9#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/c9c6/hdl/mii_to_rmii_v2_0_vh_rfs.vhd:4219]
+INFO: [Synth 8-256] done synthesizing module 'design_1_mii_to_rmii_0_0' (10#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/synth/design_1_mii_to_rmii_0_0.vhd:81]
 WARNING: [Synth 8-3331] design rmii_rx_fixed has unconnected port Rx_speed_100
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1303.914 ; gain = 130.531 ; free physical = 13132 ; free virtual = 14303
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 418.992 ; gain = 156.969
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -99,7 +99,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1303.914 ; gain = 130.531 ; free physical = 13132 ; free virtual = 14303
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 418.992 ; gain = 156.969
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -108,12 +108,12 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'U0'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_board.xdc] for cell 'U0'
+Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -121,23 +121,23 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 1 instances
   MUXCY_L => MUXCY: 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1638.750 ; gain = 0.000 ; free physical = 12855 ; free virtual = 14043
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 762.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12933 ; free virtual = 14121
+Finished Constraint Validation : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 762.277 ; gain = 500.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12933 ; free virtual = 14121
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 762.277 ; gain = 500.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12935 ; free virtual = 14123
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:01:04 . Memory (MB): peak = 762.277 ; gain = 500.254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'rmii_tx_fixed'
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -173,7 +173,7 @@ INFO: [Synth 8-5544] ROM "buffer_Full" won't be mapped to Block RAM because addr
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'sequential' in module 'rmii_tx_fixed'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12926 ; free virtual = 14114
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:01:05 . Memory (MB): peak = 762.277 ; gain = 500.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,7 +262,7 @@ INFO: [Synth 8-3886] merging instance 'U0/RMII_FIXED.I_RX/RX_100_MBPS.phy2Rmii_r
 INFO: [Synth 8-3886] merging instance 'U0/RMII_FIXED.I_RX/RX_100_MBPS.phy2Rmii_rxd_d2_reg[1]' (FDR) to 'U0/RMII_FIXED.I_RX/RX_100_MBPS.phy2Rmii_rxd_d3_reg[3]'
 INFO: [Synth 8-3332] Sequential element (RMII_FIXED.I_RX/RX_100_MBPS.fifo_din_dv_reg) is unused and will be removed from module mii_to_rmii.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12914 ; free virtual = 14104
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 762.277 ; gain = 500.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -274,13 +274,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12784 ; free virtual = 13981
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:36 . Memory (MB): peak = 762.277 ; gain = 500.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12783 ; free virtual = 13980
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:36 . Memory (MB): peak = 762.277 ; gain = 500.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,7 +292,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished Technology Mapping : Time (s): cpu = 00:01:21 ; elapsed = 00:01:36 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -316,7 +316,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -329,7 +329,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -341,25 +341,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -399,11 +399,11 @@ Report Instance Areas:
 |5     |    \RMII_FIXED.I_TX           |rmii_tx_fixed |    25|
 +------+-------------------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.750 ; gain = 465.367 ; free physical = 12782 ; free virtual = 13980
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1638.750 ; gain = 130.531 ; free physical = 12837 ; free virtual = 14035
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1638.758 ; gain = 465.367 ; free physical = 12840 ; free virtual = 14037
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:18 . Memory (MB): peak = 771.230 ; gain = 165.922
+Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:39 . Memory (MB): peak = 771.230 ; gain = 509.207
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -417,11 +417,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 66 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 1638.758 ; gain = 484.473 ; free physical = 12829 ; free virtual = 14027
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1/design_1_mii_to_rmii_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0.xci
+synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:01:44 . Memory (MB): peak = 771.230 ; gain = 521.223
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1/design_1_mii_to_rmii_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 4 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mii_to_rmii_0_0_synth_1/design_1_mii_to_rmii_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mii_to_rmii_0_0_synth_1/design_1_mii_to_rmii_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_mii_to_rmii_0_0_utilization_synth.rpt -pb design_1_mii_to_rmii_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1662.762 ; gain = 0.000 ; free physical = 12829 ; free virtual = 14028
-INFO: [Common 17-206] Exiting Vivado at Mon May 14 15:40:23 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 771.230 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  4 22:19:36 2018...

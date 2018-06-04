@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu May  3 12:55:10 2018
-# Process ID: 13454
-# Current directory: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1
-# Command line: vivado -log design_1_mdm_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mdm_1_0.tcl
-# Log file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1/design_1_mdm_1_0.vds
-# Journal file: /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1/vivado.jou
+# Start of session at: Mon Jun  4 22:17:20 2018
+# Process ID: 10788
+# Current directory: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1
+# Command line: vivado.exe -log design_1_mdm_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mdm_1_0.tcl
+# Log file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1/design_1_mdm_1_0.vds
+# Journal file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_mdm_1_0.tcl -notrace
 Command: synth_design -top design_1_mdm_1_0 -part xc7a100tcsg324-1 -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13508 
+INFO: Helper process launched with PID 10144 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1264.086 ; gain = 84.000 ; free physical = 9173 ; free virtual = 12051
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 368.605 ; gain = 102.547
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:74]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -50,8 +50,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [/home/pbm/Documents/
 	Parameter C_DATA_SIZE bound to: 32 - type: integer 
 	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
-INFO: [Synth 8-3491] module 'MDM' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:12362' bound to instance 'U0' of component 'MDM' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:1651]
-INFO: [Synth 8-638] synthesizing module 'MDM' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:14013]
+INFO: [Synth 8-3491] module 'MDM' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:12362' bound to instance 'U0' of component 'MDM' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:1651]
+INFO: [Synth 8-638] synthesizing module 'MDM' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:14013]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -82,25 +82,25 @@ INFO: [Synth 8-638] synthesizing module 'MDM' [/home/pbm/Documents/UA/4_year/cr/
 	Parameter C_DATA_SIZE bound to: 32 - type: integer 
 	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* buffer_type = "none" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15517]
+INFO: [Synth 8-5534] Detected attribute (* buffer_type = "none" *) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15517]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter DISABLE_JTAG bound to: FALSE - type: string 
 	Parameter JTAG_CHAIN bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'MB_BSCANE2' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:253' bound to instance 'BSCAN_I' of component 'MB_BSCANE2' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15584]
-INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-3491] module 'MB_BSCANE2' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:253' bound to instance 'BSCAN_I' of component 'MB_BSCANE2' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15584]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:277]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter DISABLE_JTAG bound to: FALSE - type: string 
 	Parameter JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter DISABLE_JTAG bound to: FALSE - type: string 
 	Parameter JTAG_CHAIN bound to: 2 - type: integer 
-INFO: [Synth 8-113] binding component instance 'BSCANE2_I' to cell 'BSCANE2' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:287]
-INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-113] binding component instance 'BSCANE2_I' to cell 'BSCANE2' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:287]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:277]
 	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_BUFG' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:315' bound to instance 'BUFG_DRCK' of component 'MB_BUFG' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15737]
-INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-3491] module 'MB_BUFG' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:315' bound to instance 'BUFG_DRCK' of component 'MB_BUFG' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15737]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:328]
 	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'BUFG' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:338]
-INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'BUFG' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:338]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:328]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -130,8 +130,8 @@ INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [/home/pbm/Document
 	Parameter C_TRACE_ID bound to: 110 - type: integer 
 	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
-INFO: [Synth 8-3491] module 'MDM_Core' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:5413' bound to instance 'MDM_Core_I1' of component 'MDM_Core' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15821]
-INFO: [Synth 8-638] synthesizing module 'MDM_Core' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:6649]
+INFO: [Synth 8-3491] module 'MDM_Core' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:5413' bound to instance 'MDM_Core_I1' of component 'MDM_Core' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:15821]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:6649]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -178,8 +178,8 @@ INFO: [Synth 8-638] synthesizing module 'MDM_Core' [/home/pbm/Documents/UA/4_yea
 	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
 	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_EN_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'JTAG_CONTROL' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:2846' bound to instance 'JTAG_CONTROL_I' of component 'JTAG_CONTROL' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:9985]
-INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3117]
+INFO: [Synth 8-3491] module 'JTAG_CONTROL' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:2846' bound to instance 'JTAG_CONTROL_I' of component 'JTAG_CONTROL' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:9985]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3117]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
 	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
@@ -199,84 +199,84 @@ INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [/home/pbm/Documents/UA/4
 	Parameter C_EN_WIDTH bound to: 1 - type: integer 
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDC_1' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:614' bound to instance 'FDC_I' of component 'MB_FDC_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3466]
-INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-3491] module 'MB_FDC_1' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:614' bound to instance 'FDC_I' of component 'MB_FDC_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3466]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:630]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDC_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:651]
-INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (3#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDC_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:651]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (3#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:630]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRE_1' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:673' bound to instance 'SYNC_FDRE' of component 'MB_FDRE_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3476]
-INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-3491] module 'MB_FDRE_1' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:673' bound to instance 'SYNC_FDRE' of component 'MB_FDRE_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3476]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:690]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE_1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:713]
-INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (4#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE_1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:713]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (4#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:690]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000101100111 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_1' of component 'MB_SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3617]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_1' of component 'MB_SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3617]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000101100111 
 	Parameter INIT bound to: 16'b0000000101100111 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (5#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (5#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100001010000111 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_2' of component 'MB_SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3634]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_2' of component 'MB_SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3634]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100001010000111 
 	Parameter INIT bound to: 16'b0100001010000111 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (5#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (5#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100010001000011 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_1' of component 'MB_SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3703]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_1' of component 'MB_SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3703]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100010001000011 
 	Parameter INIT bound to: 16'b0100010001000011 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (5#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (5#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0101100001001101 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_2' of component 'MB_SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3720]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_2' of component 'MB_SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3720]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0101100001001101 
 	Parameter INIT bound to: 16'b0101100001001101 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (5#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3879]
-WARNING: [Synth 8-6014] Unused sequential element set_Ext_BRK_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3807]
-INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (6#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3117]
-INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (7#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:6649]
-INFO: [Synth 8-256] done synthesizing module 'MDM' (8#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:14013]
-INFO: [Synth 8-256] done synthesizing module 'design_1_mdm_1_0' (9#1) [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:74]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (5#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3879]
+WARNING: [Synth 8-6014] Unused sequential element set_Ext_BRK_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3807]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (6#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3117]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (7#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:6649]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (8#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:14013]
+INFO: [Synth 8-256] done synthesizing module 'design_1_mdm_1_0' (9#1) [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:74]
 WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Clk
 WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Rst
 WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Clear_Ext_BRK
@@ -379,7 +379,7 @@ WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[5
 WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[6]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1315.617 ; gain = 135.531 ; free physical = 9168 ; free virtual = 12047
+Finished RTL Elaboration : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 433.672 ; gain = 167.613
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -389,7 +389,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1315.617 ; gain = 135.531 ; free physical = 9169 ; free virtual = 12048
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 433.672 ; gain = 167.613
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -398,14 +398,14 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_ooc_trace.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_ooc_trace.xdc] for cell 'U0'
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_mdm_1_0_propImpl.xdc].
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_mdm_1_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_mdm_1_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -413,29 +413,29 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDC_1 => FDCE (inverted pins: C): 1 instances
   FDRE_1 => FDRE (inverted pins: C): 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1648.430 ; gain = 0.000 ; free physical = 8846 ; free virtual = 11724
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 777.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 8793 ; free virtual = 11672
+Finished Constraint Validation : Time (s): cpu = 00:01:04 ; elapsed = 00:01:17 . Memory (MB): peak = 777.020 ; gain = 510.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 8793 ; free virtual = 11672
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:04 ; elapsed = 00:01:17 . Memory (MB): peak = 777.020 ; gain = 510.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 8793 ; free virtual = 11672
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:17 . Memory (MB): peak = 777.020 ; gain = 510.961
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "mb_data_overrun" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element shift_Count_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3602]
-WARNING: [Synth 8-6014] Unused sequential element Use_Serial_Unified_Completion.count_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3971]
+WARNING: [Synth 8-6014] Unused sequential element shift_Count_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3602]
+WARNING: [Synth 8-6014] Unused sequential element Use_Serial_Unified_Completion.count_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3971]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 8837 ; free virtual = 11716
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:18 . Memory (MB): peak = 777.020 ; gain = 510.961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -531,15 +531,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "mb_data_overrun" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element Use_Serial_Unified_Completion.count_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3971]
-WARNING: [Synth 8-6014] Unused sequential element shift_Count_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3602]
-WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/Use_Serial_Unified_Completion.clear_overrun_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3888]
-WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3971]
-WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/shift_Count_reg was removed.  [/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3602]
+WARNING: [Synth 8-6014] Unused sequential element Use_Serial_Unified_Completion.count_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3971]
+WARNING: [Synth 8-6014] Unused sequential element shift_Count_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3602]
+WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/Use_Serial_Unified_Completion.clear_overrun_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3888]
+WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3971]
+WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/shift_Count_reg was removed.  [c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ipshared/8608/hdl/mdm_v3_2_vh_rfs.vhd:3602]
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31] )
 WARNING: [Synth 8-3332] Sequential element (MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31]) is unused and will be removed from module MDM.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 8824 ; free virtual = 11703
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:22 . Memory (MB): peak = 777.020 ; gain = 510.961
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -551,13 +551,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9073 ; free virtual = 11998
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:36 ; elapsed = 00:01:50 . Memory (MB): peak = 777.020 ; gain = 510.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9064 ; free virtual = 11988
+Finished Timing Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:51 . Memory (MB): peak = 781.039 ; gain = 514.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -569,7 +569,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9063 ; free virtual = 11987
+Finished Technology Mapping : Time (s): cpu = 00:01:38 ; elapsed = 00:01:52 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -593,7 +593,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9047 ; free virtual = 11972
+Finished IO Insertion : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -606,7 +606,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9047 ; free virtual = 11972
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -618,25 +618,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9047 ; free virtual = 11971
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9047 ; free virtual = 11971
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9047 ; free virtual = 11971
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9047 ; free virtual = 11971
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -702,11 +702,11 @@ Report Instance Areas:
 |12    |    \Use_E2.BSCAN_I                  |MB_BSCANE2                |     9|
 +------+-------------------------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.430 ; gain = 468.344 ; free physical = 9047 ; free virtual = 11971
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4318 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1648.430 ; gain = 135.531 ; free physical = 9099 ; free virtual = 12023
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1648.438 ; gain = 468.344 ; free physical = 9099 ; free virtual = 12023
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:33 . Memory (MB): peak = 784.215 ; gain = 174.809
+Synthesis Optimization Complete : Time (s): cpu = 00:01:40 ; elapsed = 00:01:54 . Memory (MB): peak = 784.215 ; gain = 518.156
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -720,11 +720,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 63 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1648.438 ; gain = 487.449 ; free physical = 9082 ; free virtual = 12006
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1/design_1_mdm_1_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xci
+synth_design: Time (s): cpu = 00:01:43 ; elapsed = 00:01:59 . Memory (MB): peak = 784.215 ; gain = 520.277
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1/design_1_mdm_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xci
 INFO: [Coretcl 2-1174] Renamed 11 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.runs/design_1_mdm_1_0_synth_1/design_1_mdm_1_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_mdm_1_0_synth_1/design_1_mdm_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_mdm_1_0_utilization_synth.rpt -pb design_1_mdm_1_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1672.441 ; gain = 0.000 ; free physical = 9060 ; free virtual = 11986
-INFO: [Common 17-206] Exiting Vivado at Thu May  3 12:56:18 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 784.215 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  4 22:19:54 2018...

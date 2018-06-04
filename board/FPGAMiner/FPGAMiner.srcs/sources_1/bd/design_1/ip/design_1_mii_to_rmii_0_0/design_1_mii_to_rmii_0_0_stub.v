@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Mon May 14 15:40:23 2018
-// Host        : mac running 64-bit Arch Linux
+// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+// Date        : Mon Jun  4 22:19:36 2018
+// Host        : hp-laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               /home/pbm/Documents/UA/4_year/cr/EthernetTest/EthernetTest.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_stub.v
+//               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_stub.v
 // Design      : design_1_mii_to_rmii_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
