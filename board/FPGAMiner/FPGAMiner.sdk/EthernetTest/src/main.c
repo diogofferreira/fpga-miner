@@ -290,7 +290,7 @@ int main()
 	 *  b11d28ba4889f8b22bb2de2a075112131f0c1046acc9a3d1e623b7280f16f460
 	 */
 
-	putfsl(0xdc28ac8a, 0);
+	/*putfsl(0xdc28ac8a, 0);
 	putfsl(0xd8d35f48, 0);
 	putfsl(0x8955dc9c, 0);
 	putfsl(0x703fb90b, 0);
@@ -317,7 +317,7 @@ int main()
 	xil_printf("\nR:%08x", r);
 	getfsl(r, 0);
 	xil_printf("\nN:%08x", r);
-	xil_printf("\nDone!");
+	xil_printf("\nDone!");*/
 
 	/*
 	 * WORD:  0xdc28ac8ad8d35f488955dc9c703fb90babc15025fba1dc0dae41ab6a78298907
@@ -330,7 +330,7 @@ int main()
 	 * NONCE:  47966
 	 */
 
-	putfsl(0x59a92bcb, 0);
+	/*putfsl(0x59a92bcb, 0);
 	putfsl(0x27bfe7ea, 0);
 	putfsl(0x0cd94440, 0);
 	putfsl(0x8e8627b2, 0);
@@ -357,7 +357,7 @@ int main()
 	xil_printf("\nR:%08x", r);
 	getfsl(r, 0);
 	xil_printf("\nN:%08x", r);
-	xil_printf("\nDone!");
+	xil_printf("\nDone!");*/
 
 	/*
 		WORD:  0x59a92bcb27bfe7ea0cd944408e8627b20de9ff4895a434c8b2ae4b8ce98ae603
@@ -370,7 +370,7 @@ int main()
 		NONCE:  58213
 	*/
 
-	putfsl(0xa526db7b, 0);
+	/*putfsl(0xa526db7b, 0);
 	putfsl(0xc6abe973, 0);
 	putfsl(0x55da536c, 0);
 	putfsl(0x11c82a71, 0);
@@ -397,7 +397,7 @@ int main()
 	xil_printf("\nR:%08x", r);
 	getfsl(r, 0);
 	xil_printf("\nN:%08x", r);
-	xil_printf("\nDone!");
+	xil_printf("\nDone!");*/
 
 	/*
 	 * WORD:  0xa526db7bc6abe97355da536c11c82a71b5f235d4d62274452f6d02bbf4f1a7a0
@@ -410,7 +410,7 @@ int main()
 	 * NONCE:  40375
 	 */
 
-	putfsl(0x3a43745f, 0);
+	/*putfsl(0x3a43745f, 0);
 	putfsl(0x8fe945e0, 0);
 	putfsl(0x86bb1a3c, 0);
 	putfsl(0x11c8a00a, 0);
@@ -437,7 +437,7 @@ int main()
 	xil_printf("\nR:%08x", r);
 	getfsl(r, 0);
 	xil_printf("\nN:%08x", r);
-	xil_printf("\nDone!");
+	xil_printf("\nDone!");*/
 
 	/*
 	 * WORD:  0x3a43745f8fe945e086bb1a3c11c8a00addcada3a86270d96f137d860efc7f4ee

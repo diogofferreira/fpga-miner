@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Mon Jun  4 22:38:21 2018
+--Date        : Tue Jun  5 05:08:24 2018
 --Host        : hp-laptop running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -66,15 +66,15 @@ architecture STRUCTURE of design_1_wrapper is
     eth_mdio_mdc_mdio_i : in STD_LOGIC;
     eth_mdio_mdc_mdio_o : out STD_LOGIC;
     eth_mdio_mdc_mdio_t : out STD_LOGIC;
+    led_16bits_tri_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    led_16bits_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    led_16bits_tri_t : out STD_LOGIC_VECTOR ( 15 downto 0 );
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC;
     eth_ref_clk : out STD_LOGIC;
-    an : out STD_LOGIC_VECTOR ( 7 downto 0 );
     seg : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    dp : out STD_LOGIC;
-    led_16bits_tri_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    led_16bits_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    led_16bits_tri_t : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    an : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    dp : out STD_LOGIC
   );
   end component design_1;
   component IOBUF is

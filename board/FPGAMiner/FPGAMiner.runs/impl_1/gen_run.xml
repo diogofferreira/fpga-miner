@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1528149827">
-  <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
-  <File Type="PA-DCP" Name="design_1_wrapper.dcp"/>
-  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1528171813">
+  <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
@@ -10,9 +8,10 @@
   <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
+  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="design_1_wrapper_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="design_1_wrapper_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="design_1_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="design_1_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="design_1_wrapper_placed.dcp"/>
@@ -148,4 +147,5 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DisplayController_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_MinerCoprocessor_0_0"/>
 </GenRun>

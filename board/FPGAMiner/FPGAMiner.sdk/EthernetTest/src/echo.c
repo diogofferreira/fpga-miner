@@ -32,7 +32,8 @@
 
 #include <stdio.h>
 #include <string.h>
-
+#include <stdint.h>
+#include "xparameters.h"
 #include "lwip/err.h"
 #include "lwip/tcp.h"
 #if defined (__arm__) || defined (__aarch64__)
@@ -52,10 +53,11 @@ void print_app_header()
 err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
                                struct pbuf *p, err_t err)
 {
-	xil_printf("length of tcp packet: %d\n\r", p->len);
-	xil_printf("payload of tcp packet: \n\r %s \n\rEND\r\n", p->payload);
-	xil_printf("TCP_SND_BUF: %d\n\r", tcp_sndbuf(tpcb));
-	//putchar('.');
+	int output_number_pkts = 9;
+	unsigned int *recv, send[output_number_pkts];
+	unsigned int r;
+	int mask = 0xF0000000;
+	int packet_size;
 
 	/* do not read the packet if we are not in ESTABLISHED state */
 	if (!p) {
@@ -64,13 +66,40 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 		return ERR_OK;
 	}
 
+	recv = p->payload;
+	packet_size = p->len / 4;
+	unsigned int tmp[packet_size];
+
+	// Convert from big endian to little endian and remove initial zeros
+	xil_printf("\nReceived new block to hash...");
+	recv[packet_size] = ntohl(recv[packet_size]);
+	for (int i = packet_size - 1; i >= 0; i--) {
+		recv[i] = ntohl(recv[i]);
+		tmp[i] = (recv[i] & 0x0000FFFF) << 16 | (recv[i + 1] & 0xFFFF0000) >> 16;
+	}
+
+	// Generate mask given the number of zeros
+	tmp[packet_size - 1] = tmp[packet_size - 1] < 1 || tmp[packet_size - 1] > 8 ?
+			mask : mask >> (tmp[packet_size - 1] - 1) * 4;
+
+	// Produce hash
+	for (int i = 0; i < packet_size; i++)
+		putfsl(tmp[i], 0);
+
+	for (int i = 0; i < output_number_pkts; i++) {
+		getfsl(r, 0);
+		send[i] = htonl(r);
+	}
+
+	xil_printf("\nBlock hashed. Sending value to remote server...");
+
 	/* indicate that the packet has been received */
 	tcp_recved(tpcb, p->len);
 
 	/* echo back the payload */
 	/* in this case, we assume that the payload is < TCP_SND_BUF */
 	if (tcp_sndbuf(tpcb) > p->len) {
-		err = tcp_write(tpcb, p->payload, p->len, 1);
+		err = tcp_write(tpcb, (void*)&send, output_number_pkts * 4, 1);
 	} else
 		xil_printf("no space in tcp_sndbuf\n\r");
 
@@ -83,9 +112,6 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
 {
 	static int connection = 1;
-
-	xil_printf("accepting new connection\n\r");
-	//putchar('.');
 
 	/* set the receive callback for this connection */
 	tcp_recv(newpcb, recv_callback);

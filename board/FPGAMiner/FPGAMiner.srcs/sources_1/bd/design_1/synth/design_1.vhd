@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Mon Jun  4 22:38:20 2018
+--Date        : Tue Jun  5 05:08:24 2018
 --Host        : hp-laptop running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -2830,24 +2830,6 @@ architecture STRUCTURE of design_1 is
     M00_AXI_rready : out STD_LOGIC
   );
   end component design_1_axi_smc_0;
-  component design_1_MinerCoprocessor_0_0 is
-  port (
-    m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m00_axis_tlast : out STD_LOGIC;
-    m00_axis_tvalid : out STD_LOGIC;
-    m00_axis_tready : in STD_LOGIC;
-    m00_axis_aclk : in STD_LOGIC;
-    m00_axis_aresetn : in STD_LOGIC;
-    s00_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axis_tlast : in STD_LOGIC;
-    s00_axis_tvalid : in STD_LOGIC;
-    s00_axis_tready : out STD_LOGIC;
-    s00_axis_aclk : in STD_LOGIC;
-    s00_axis_aresetn : in STD_LOGIC
-  );
-  end component design_1_MinerCoprocessor_0_0;
   component design_1_DisplayController_0_0 is
   port (
     an : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -2902,6 +2884,24 @@ architecture STRUCTURE of design_1 is
     gpio_io_t : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component design_1_axi_gpio_0_0;
+  component design_1_MinerCoprocessor_0_0 is
+  port (
+    m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axis_tlast : out STD_LOGIC;
+    m00_axis_tvalid : out STD_LOGIC;
+    m00_axis_tready : in STD_LOGIC;
+    m00_axis_aclk : in STD_LOGIC;
+    m00_axis_aresetn : in STD_LOGIC;
+    s00_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axis_tlast : in STD_LOGIC;
+    s00_axis_tvalid : in STD_LOGIC;
+    s00_axis_tready : out STD_LOGIC;
+    s00_axis_aclk : in STD_LOGIC;
+    s00_axis_aresetn : in STD_LOGIC
+  );
+  end component design_1_MinerCoprocessor_0_0;
   signal DisplayController_0_an : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal DisplayController_0_dp : STD_LOGIC;
   signal DisplayController_0_seg : STD_LOGIC_VECTOR ( 6 downto 0 );

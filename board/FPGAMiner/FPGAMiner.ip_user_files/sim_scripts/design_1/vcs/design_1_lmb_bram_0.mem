@@ -1,0 +1,16 @@
+// Mem file initialization records.
+//
+// SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+// Vivado v2017.4 (64-bit)
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Created on Tuesday June 05, 2018 - 05:09:03 am, from:
+//
+//     Map file     - C:\CR_Projects\Project\Development\FPGAMiner\FPGAMiner.srcs\sources_1\bd\design_1\design_1.bmm
+//     Data file(s) - c:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf
+//
+// Address space 'design_1_i_microblaze_0.design_1_i_microblaze_0_local_memory_lmb_bram_32K_6_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    B8000000
