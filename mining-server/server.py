@@ -4,7 +4,6 @@ import hashlib
 import struct
 import argparse
 
-
 def mine(keep_alive, board_hostname, board_port, number_of_zeros):
     mined_words = 0
     zeros = struct.pack(">I", number_of_zeros)
@@ -43,6 +42,7 @@ def mine(keep_alive, board_hostname, board_port, number_of_zeros):
                 result = h.digest()
                 hex_result = ''.join("{0:#0{1}x}".format(x, 4)[2:] for x in result)
                 if hex_result == hash_result and int(hex_result[:number_of_zeros]) == 0:
+                    mined_words += 1
                     print("BLOCK SUCCESSFULLY VALIDATED.")
 
             if not keep_alive:
@@ -69,10 +69,10 @@ def main():
             help='difficulty / number of zeros (default: 5))')
     args = parser.parse_args()
 
-    keep_alive = True if args.keepalive is None else args.keepalive
+    keep_alive = False if args.keepalive == 'False' else True
     board_hostname = '192.168.1.10' if args.ipv4 is None else args.ipv4
-    board_port = 7 if args.port is None else args.port
-    difficulty = 5 if args.difficulty is None else args.difficulty
+    board_port = 7 if args.port is None else int(args.port)
+    difficulty = 5 if args.difficulty is None else int(args.difficulty)
 
     mine(keep_alive, board_hostname, board_port, difficulty)
 

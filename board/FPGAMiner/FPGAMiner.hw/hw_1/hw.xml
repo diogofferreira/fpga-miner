@@ -10,7 +10,7 @@
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bit"/>
-      <Properties Property="SLR.COUNT" value="c:/Users/Diogo Ferreira/AppData/Roaming/Xilinx/Vivado/1"/>
+      <Properties Property="SLR.COUNT" value="C:/Users/Diogo Ferreira/AppData/Roaming/Xilinx/Vivado/1"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">

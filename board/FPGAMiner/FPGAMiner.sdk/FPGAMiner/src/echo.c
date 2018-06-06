@@ -43,7 +43,6 @@
 #include "xuartlite_l.h"
 #include "xil_exception.h"
 #include "platform_config.h"
-
 #include "lwip/err.h"
 #include "lwip/tcp.h"
 #if defined (__arm__) || defined (__aarch64__)
@@ -55,7 +54,7 @@
 #define FIT_TIMER_0_INT_ID		XPAR_MICROBLAZE_0_AXI_INTC_FIT_TIMER_0_INTERRUPT_INTR
 #define FIT_TIMER_0_INT_MASK	XPAR_FIT_TIMER_0_INTERRUPT_MASK
 
-static unsigned int loadingBarActive = 0;
+static unsigned int miningCount = 0;
 
 int transfer_data() {
 	return 0;
@@ -107,33 +106,26 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 4, 1);
 	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 8, 0);
 
-	unsigned int nonce;
-	for (int i = 0; i < output_number_pkts-1; i++) {
+	// Get mining result
+	for (int i = 0; i < output_number_pkts; i++) {
 		getfsl(r, 0);
-		if (i == output_number_pkts-1)
-			nonce = r;
 		send[i] = htonl(r);
 	}
 
 	// Stop loading bar
-	loadingBarActive = 2;
-
-	// Read nonce
-	getfsl(nonce, 0);
-	send[output_number_pkts-1] = htonl(nonce);
-
-	// Split nonce into digits
-	int digits[8] = {0, 0, 0, 0, 0, 0, 0, 0};
-	unsigned int step = 0;
-	while (nonce > 0 && step < 8) {
-		digits[step++] = nonce % 10;
-		nonce /= 10;
-	}
-
-	// Stops loading bar
 	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 8, 1);
 
-	// Show nonce on displays
+	// Increase mining count and split it into digits
+	miningCount++;
+	int digits[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+	unsigned int tmpCount = miningCount;
+	unsigned int step = 0;
+	while (tmpCount > 0 && step < 8) {
+		digits[step++] = tmpCount % 10;
+		tmpCount /= 10;
+	}
+
+	// Show miner count on displays
 	unsigned int digitsValue = digits[7] << 28 | digits[6] << 24 | digits[5] << 20
 			| digits[4] << 16 | digits[3] << 12 | digits[2] << 8 | digits[1] << 4 | digits[0];
 	XGpio_WriteReg(XPAR_DISPLAYCONTROLLER_0_S00_AXI_BASEADDR, 4, digitsValue);
