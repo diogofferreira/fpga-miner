@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Jun  6 00:03:11 2018
+| Date         : Wed Jun  6 13:36:42 2018
 | Host         : hp-laptop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -146,41 +146,40 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   52 |                  IO |
-| IBUF     |   40 |                  IO |
-| OBUFT    |   33 |                  IO |
+| OBUF     |   68 |                  IO |
+| IBUF     |   24 |                  IO |
+| OBUFT    |   17 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------------------------------+------+
-|             Ref Name             | Used |
-+----------------------------------+------+
-| design_1_xbar_0                  |    1 |
-| design_1_rst_clk_wiz_1_100M_0    |    1 |
-| design_1_mii_to_rmii_0_0         |    1 |
-| design_1_microblaze_0_xlconcat_0 |    1 |
-| design_1_microblaze_0_axi_intc_0 |    1 |
-| design_1_microblaze_0_0          |    1 |
-| design_1_mdm_1_0                 |    1 |
-| design_1_lmb_bram_0              |    1 |
-| design_1_ilmb_v10_0              |    1 |
-| design_1_ilmb_bram_if_cntlr_0    |    1 |
-| design_1_fit_timer_0_0           |    1 |
-| design_1_dlmb_v10_0              |    1 |
-| design_1_dlmb_bram_if_cntlr_0    |    1 |
-| design_1_clk_wiz_1_0             |    1 |
-| design_1_axi_uartlite_0_0        |    1 |
-| design_1_axi_timer_0_0           |    1 |
-| design_1_axi_smc_0               |    1 |
-| design_1_axi_gpio_0_1            |    1 |
-| design_1_axi_ethernetlite_0_0    |    1 |
-| design_1_axi_emc_0_0             |    1 |
-| design_1_MinerCoprocessor_0_0    |    1 |
-| design_1_DisplayController_0_1   |    1 |
-+----------------------------------+------+
++-----------------------------------+------+
+|              Ref Name             | Used |
++-----------------------------------+------+
+| design_1_xbar_0                   |    1 |
+| design_1_rst_clk_wiz_1_100M_0     |    1 |
+| design_1_mii_to_rmii_0_0          |    1 |
+| design_1_microblaze_0_xlconcat_0  |    1 |
+| design_1_microblaze_0_axi_intc_0  |    1 |
+| design_1_microblaze_0_0           |    1 |
+| design_1_mdm_1_0                  |    1 |
+| design_1_lmb_bram_0               |    1 |
+| design_1_ilmb_v10_0               |    1 |
+| design_1_ilmb_bram_if_cntlr_0     |    1 |
+| design_1_dlmb_v10_0               |    1 |
+| design_1_dlmb_bram_if_cntlr_0     |    1 |
+| design_1_clk_wiz_1_0              |    1 |
+| design_1_axi_uartlite_0_0         |    1 |
+| design_1_axi_timer_0_0            |    1 |
+| design_1_axi_smc_0                |    1 |
+| design_1_axi_ethernetlite_0_0     |    1 |
+| design_1_axi_emc_0_0              |    1 |
+| design_1_MinerCoprocessor_0_0     |    1 |
+| design_1_LoadingBarController_0_0 |    1 |
+| design_1_DisplayController_0_1    |    1 |
++-----------------------------------+------+
 
 
 9. Instantiated Netlists

@@ -1,14 +1,14 @@
 src/echo.o src/echo.o: ../src/echo.c \
- ../../FPGAMiner_bsp/microblaze_0/include/xparameters.h \
- ../../FPGAMiner_bsp/microblaze_0/include/xgpio_l.h \
+ ../../FPGAMiner_bsp/microblaze_0/include/xparameters.h ../src/platform.h \
+ ../../FPGAMiner_bsp/microblaze_0/include/xstatus.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xil_types.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xil_assert.h \
+ ../../FPGAMiner_bsp/microblaze_0/include/xgpio_l.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xil_io.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xil_printf.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xparameters.h \
  ../../FPGAMiner_bsp/microblaze_0/include/mb_interface.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xil_exception.h \
- ../src/platform.h ../../FPGAMiner_bsp/microblaze_0/include/xstatus.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xintc_l.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xil_io.h \
  ../../FPGAMiner_bsp/microblaze_0/include/xuartlite_l.h \
@@ -32,11 +32,15 @@ src/echo.o src/echo.o: ../src/echo.c \
 
 ../../FPGAMiner_bsp/microblaze_0/include/xparameters.h:
 
-../../FPGAMiner_bsp/microblaze_0/include/xgpio_l.h:
+../src/platform.h:
+
+../../FPGAMiner_bsp/microblaze_0/include/xstatus.h:
 
 ../../FPGAMiner_bsp/microblaze_0/include/xil_types.h:
 
 ../../FPGAMiner_bsp/microblaze_0/include/xil_assert.h:
+
+../../FPGAMiner_bsp/microblaze_0/include/xgpio_l.h:
 
 ../../FPGAMiner_bsp/microblaze_0/include/xil_io.h:
 
@@ -47,10 +51,6 @@ src/echo.o src/echo.o: ../src/echo.c \
 ../../FPGAMiner_bsp/microblaze_0/include/mb_interface.h:
 
 ../../FPGAMiner_bsp/microblaze_0/include/xil_exception.h:
-
-../src/platform.h:
-
-../../FPGAMiner_bsp/microblaze_0/include/xstatus.h:
 
 ../../FPGAMiner_bsp/microblaze_0/include/xintc_l.h:
 

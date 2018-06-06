@@ -37,6 +37,7 @@
 #include "xintc_l.h"
 #include "xil_exception.h"
 #include "xil_io.h"
+#include "xstatus.h"
 #include "xgpio_l.h"
 #include "xuartlite_l.h"
 
@@ -195,6 +196,11 @@ int main()
 	char brightness = 7;
 	XGpio_WriteReg(XPAR_DISPLAYCONTROLLER_0_S00_AXI_BASEADDR, 8, brightness << 3 | refreshRate);
 	XGpio_WriteReg(XPAR_DISPLAYCONTROLLER_0_S00_AXI_BASEADDR, 0, 0x0FF00);
+
+	/* Configure loading bar leds */
+	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 0, 3);
+	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 4, 0);
+	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 8, 0);
 
 	/* Coprocessor test */
 	unsigned int i, v, r;

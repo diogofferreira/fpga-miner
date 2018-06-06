@@ -475,6 +475,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver LOADINGBARCONTROLLER */
+#define XPAR_LOADINGBARCONTROLLER_NUM_INSTANCES 1
+
+/* Definitions for peripheral LOADINGBARCONTROLLER_0 */
+#define XPAR_LOADINGBARCONTROLLER_0_DEVICE_ID 0
+#define XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR 0x44A10000
+#define XPAR_LOADINGBARCONTROLLER_0_S00_AXI_HIGHADDR 0x44A1FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver BRAM */
 #define XPAR_XBRAM_NUM_INSTANCES 2U
 
@@ -603,30 +614,7 @@
 
 /******************************************************************/
 
-/* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 1
-
-/* Definitions for peripheral AXI_GPIO_LED */
-#define XPAR_AXI_GPIO_LED_BASEADDR 0x40000000
-#define XPAR_AXI_GPIO_LED_HIGHADDR 0x4000FFFF
-#define XPAR_AXI_GPIO_LED_DEVICE_ID 0
-#define XPAR_AXI_GPIO_LED_INTERRUPT_PRESENT 0
-#define XPAR_AXI_GPIO_LED_IS_DUAL 0
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral AXI_GPIO_LED */
-#define XPAR_GPIO_0_BASEADDR 0x40000000
-#define XPAR_GPIO_0_HIGHADDR 0x4000FFFF
-#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_LED_DEVICE_ID
-#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_0_IS_DUAL 0
-
-
-/******************************************************************/
-
-#define XPAR_INTC_MAX_NUM_INTR_INPUTS 3
+#define XPAR_INTC_MAX_NUM_INTR_INPUTS 2
 #define XPAR_XINTC_HAS_IPR 1
 #define XPAR_XINTC_HAS_SIE 1
 #define XPAR_XINTC_HAS_CIE 1
@@ -641,7 +629,7 @@
 #define XPAR_MICROBLAZE_0_AXI_INTC_KIND_OF_INTR 0xFFFFFFFA
 #define XPAR_MICROBLAZE_0_AXI_INTC_HAS_FAST 1
 #define XPAR_MICROBLAZE_0_AXI_INTC_IVAR_RESET_VALUE 0x00000010
-#define XPAR_MICROBLAZE_0_AXI_INTC_NUM_INTR_INPUTS 3
+#define XPAR_MICROBLAZE_0_AXI_INTC_NUM_INTR_INPUTS 2
 
 
 /******************************************************************/
@@ -654,8 +642,6 @@
 #define XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMER_0_INTERRUPT_INTR 0U
 #define XPAR_AXI_ETHERNETLITE_0_IP2INTC_IRPT_MASK 0X000002U
 #define XPAR_MICROBLAZE_0_AXI_INTC_AXI_ETHERNETLITE_0_IP2INTC_IRPT_INTR 1U
-#define XPAR_FIT_TIMER_0_INTERRUPT_MASK 0X000004U
-#define XPAR_MICROBLAZE_0_AXI_INTC_FIT_TIMER_0_INTERRUPT_INTR 2U
 
 /******************************************************************/
 
@@ -666,7 +652,7 @@
 #define XPAR_INTC_0_KIND_OF_INTR 0xFFFFFFFAU
 #define XPAR_INTC_0_HAS_FAST 1U
 #define XPAR_INTC_0_IVAR_RESET_VALUE 0x00000010U
-#define XPAR_INTC_0_NUM_INTR_INPUTS 3U
+#define XPAR_INTC_0_NUM_INTR_INPUTS 2U
 #define XPAR_INTC_0_INTC_TYPE 0U
 
 #define XPAR_INTC_0_TMRCTR_0_VEC_ID XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMER_0_INTERRUPT_INTR

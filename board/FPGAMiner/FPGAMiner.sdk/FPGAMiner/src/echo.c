@@ -34,9 +34,9 @@
 #include <string.h>
 #include <stdint.h>
 #include "xparameters.h"
-#include "xgpio_l.h"
 #include "platform.h"
 #include "xstatus.h"
+#include "xgpio_l.h"
 #include "xintc_l.h"
 #include "xparameters.h"
 #include "xil_io.h"
@@ -67,31 +67,6 @@ void print_app_header()
 	xil_printf("TCP packets sent to port 6001 will be echoed back\n\r");
 }
 
-
-void TimerIntCallbackHandler(void *CallbackRef) // Will be called at every timer output event
-{
-	static int irqCount = 0;
-	static int counter = 0;
-	unsigned int loadingValues[16] = {0x01, 0x03, 0x07, 0x0F, 0x01F, 0x03F, 0x07F, 0x0FF,
-			0x01FF, 0x03FF, 0x07FF, 0x0FFF, 0x01FFF, 0x03FFF, 0x07FFF, 0x0FFFF};
-	xil_printf("HELLOOOOOOOOOOOOO");
-
-	irqCount++;
-	// loadingBarActive codes:
-	// 0 stops
-	// 1 starts
-	// 2 enable all
-	if (loadingBarActive == 2)
-		counter = 15;
-	else if (irqCount == 500 && loadingBarActive) {
-		irqCount = 0;
-		counter = (counter+1) % 16;
-	}
-
-	// Leds
-	XGpio_WriteReg(XPAR_AXI_GPIO_LED_BASEADDR, XGPIO_DATA_OFFSET, loadingValues[counter]);
-}
-
 err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
                                struct pbuf *p, err_t err)
 {
@@ -110,7 +85,7 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 
 	recv = p->payload;
 	packet_size = p->len / 4;
-	unsigned int tmp[packet_size];
+	unsigned int tmp[packet_size + 1];
 
 	// Convert from big endian to little endian and remove initial zeros
 	xil_printf("\nReceived new block to hash...");
@@ -121,15 +96,16 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 	}
 
 	// Generate mask given the number of zeros
-	tmp[packet_size - 1] = tmp[packet_size - 1] < 1 || tmp[packet_size - 1] > 8 ?
-			mask : mask >> (tmp[packet_size - 1] - 1) * 4;
+	tmp[packet_size] = tmp[packet_size - 2] < 1 || tmp[packet_size - 2] > 8 ?
+			mask : mask >> (tmp[packet_size - 2] - 1) * 4;
 
 	// Produce hash
-	for (int i = 0; i < packet_size; i++)
+	for (int i = 0; i < packet_size + 1; i++)
 		putfsl(tmp[i], 0);
 
 	// Start loading bar
-	loadingBarActive = 1;
+	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 4, 1);
+	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 8, 0);
 
 	unsigned int nonce;
 	for (int i = 0; i < output_number_pkts-1; i++) {
@@ -153,6 +129,9 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 		digits[step++] = nonce % 10;
 		nonce /= 10;
 	}
+
+	// Stops loading bar
+	XGpio_WriteReg(XPAR_LOADINGBARCONTROLLER_0_S00_AXI_BASEADDR, 8, 1);
 
 	// Show nonce on displays
 	unsigned int digitsValue = digits[7] << 28 | digits[6] << 24 | digits[5] << 20
@@ -194,66 +173,11 @@ err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
 	return ERR_OK;
 }
 
-int SetupInterrupts(u32 IntcBaseAddress)
-{
-	/*
-	 * Connect a callback handler that will be called when an interrupt for the timer occurs,
-	 * to perform the specific interrupt processing for the timer.
-	 */
-	XIntc_RegisterHandler(IntcBaseAddress, FIT_TIMER_0_INT_ID,
-						  (XInterruptHandler)TimerIntCallbackHandler, (void *)0);
-
-
-	/*
-	 * Enable interrupts for all devices that cause interrupts, and enable
-	 * the INTC master enable bit.
-	 */
-	//XIntc_EnableIntr(IntcBaseAddress, FIT_TIMER_0_INT_MASK | );
-
-	/*
-	 * Set the master enable bit.
-	 */
-	XIntc_Out32(IntcBaseAddress + XIN_MER_OFFSET, XIN_INT_HARDWARE_ENABLE_MASK |
-												  XIN_INT_MASTER_ENABLE_MASK);
-
-	/*
-	 * This step is processor specific, connect the handler for the
-	 * interrupt controller to the interrupt source for the processor.
-	 */
-	Xil_ExceptionInit();
-
-	/*
-	 * Register the interrupt controller handler with the exception table.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-								 (Xil_ExceptionHandler)XIntc_DeviceInterruptHandler,
-								 INTC_DEVICE_ID);
-
-	/*
-	 * Enable exceptions.
-	 */
-	Xil_ExceptionEnable();
-
-	return XST_SUCCESS;
-}
-
-
 int start_application()
 {
 	struct tcp_pcb *pcb;
 	err_t err;
 	unsigned port = 7;
-
-	/*
-	 * Run the low level example of Interrupt Controller, specify the Base
-	 * Address generated in xparameters.h.
-	 */
-	int status = SetupInterrupts(INTC_BASEADDR);
-	if (status != XST_SUCCESS) {
-		xil_printf("Setup interrupts failed\r\n");
-		cleanup_platform();
-		return XST_FAILURE;
-	}
 
 	/* create new TCP PCB structure */
 	pcb = tcp_new();

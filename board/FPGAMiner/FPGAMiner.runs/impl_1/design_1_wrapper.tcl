@@ -74,6 +74,7 @@ set rc [catch {
   set_property webtalk.parent_dir C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.cache/wt [current_project]
   set_property parent.project_path C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.xpr [current_project]
   set_property ip_repo_paths {
+  C:/CR_Projects/Project/Development/ip_repo/LoadingBarController_1.0
   C:/CR_Projects/Project/Development/ip_repo/DisplayController_1.0
   C:/CR_Projects/Project/Development/ip_repo/MinerCoprocessor_1.0
 } [current_project]

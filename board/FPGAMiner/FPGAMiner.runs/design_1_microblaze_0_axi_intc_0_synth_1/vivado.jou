@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Jun  5 23:59:44 2018
-# Process ID: 5936
+# Start of session at: Wed Jun  6 11:48:26 2018
+# Process ID: 6052
 # Current directory: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_microblaze_0_axi_intc_0_synth_1
 # Command line: vivado.exe -log design_1_microblaze_0_axi_intc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_microblaze_0_axi_intc_0.tcl
 # Log file: C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.runs/design_1_microblaze_0_axi_intc_0_synth_1/design_1_microblaze_0_axi_intc_0.vds

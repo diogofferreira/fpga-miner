@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Jun  6 00:12:38 2018
+| Date         : Wed Jun  6 13:43:50 2018
 | Host         : hp-laptop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 | Design       : design_1_wrapper
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs                 |  9921 |     0 |     63400 | 15.65 |
-|   LUT as Logic             |  8557 |     0 |     63400 | 13.50 |
-|   LUT as Memory            |  1364 |     0 |     19000 |  7.18 |
+| Slice LUTs                 | 10533 |     0 |     63400 | 16.61 |
+|   LUT as Logic             |  9174 |     0 |     63400 | 14.47 |
+|   LUT as Memory            |  1359 |     0 |     19000 |  7.15 |
 |     LUT as Distributed RAM |   718 |     0 |           |       |
-|     LUT as Shift Register  |   646 |     0 |           |       |
-| Slice Registers            | 11454 |    11 |    126800 |  9.03 |
-|   Register as Flip Flop    | 11450 |    11 |    126800 |  9.03 |
+|     LUT as Shift Register  |   641 |     0 |           |       |
+| Slice Registers            | 10736 |    11 |    126800 |  8.47 |
+|   Register as Flip Flop    | 10732 |    11 |    126800 |  8.46 |
 |   Register as Latch        |     0 |     0 |    126800 |  0.00 |
 |   Register as AND/OR       |     4 |     0 |    126800 | <0.01 |
 | F7 Muxes                   |   344 |     0 |     31700 |  1.09 |
@@ -58,9 +58,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 182   |          Yes |           - |          Set |
-| 1312  |          Yes |           - |        Reset |
-| 377   |          Yes |         Set |            - |
-| 9654  |          Yes |       Reset |            - |
+| 1282  |          Yes |           - |        Reset |
+| 367   |          Yes |         Set |            - |
+| 8976  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -70,27 +70,27 @@ Table of Contents
 +-------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
-| Slice                                     | 4234 |     0 |     15850 | 26.71 |
-|   SLICEL                                  | 2951 |     0 |           |       |
-|   SLICEM                                  | 1283 |     0 |           |       |
-| LUT as Logic                              | 8557 |     0 |     63400 | 13.50 |
-|   using O5 output only                    |   10 |       |           |       |
-|   using O6 output only                    | 6883 |       |           |       |
-|   using O5 and O6                         | 1664 |       |           |       |
-| LUT as Memory                             | 1364 |     0 |     19000 |  7.18 |
+| Slice                                     | 4115 |     0 |     15850 | 25.96 |
+|   SLICEL                                  | 2887 |     0 |           |       |
+|   SLICEM                                  | 1228 |     0 |           |       |
+| LUT as Logic                              | 9174 |     0 |     63400 | 14.47 |
+|   using O5 output only                    |   11 |       |           |       |
+|   using O6 output only                    | 7426 |       |           |       |
+|   using O5 and O6                         | 1737 |       |           |       |
+| LUT as Memory                             | 1359 |     0 |     19000 |  7.15 |
 |   LUT as Distributed RAM                  |  718 |     0 |           |       |
 |     using O5 output only                  |    0 |       |           |       |
 |     using O6 output only                  |  266 |       |           |       |
 |     using O5 and O6                       |  452 |       |           |       |
-|   LUT as Shift Register                   |  646 |     0 |           |       |
+|   LUT as Shift Register                   |  641 |     0 |           |       |
 |     using O5 output only                  |   13 |       |           |       |
-|     using O6 output only                  |  465 |       |           |       |
+|     using O6 output only                  |  460 |       |           |       |
 |     using O5 and O6                       |  168 |       |           |       |
-| LUT Flip Flop Pairs                       | 4362 |     0 |     63400 |  6.88 |
-|   fully used LUT-FF pairs                 |  719 |       |           |       |
-|   LUT-FF pairs with one unused LUT output | 3307 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  | 3329 |       |           |       |
-| Unique Control Sets                       |  549 |       |           |       |
+| LUT Flip Flop Pairs                       | 4874 |     0 |     63400 |  7.69 |
+|   fully used LUT-FF pairs                 |  755 |       |           |       |
+|   LUT-FF pairs with one unused LUT output | 3798 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  | 3780 |       |           |       |
+| Unique Control Sets                       |  544 |       |           |       |
 +-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
 
@@ -187,29 +187,29 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 9654 |        Flop & Latch |
-| LUT6       | 2709 |                 LUT |
-| LUT3       | 2104 |                 LUT |
-| LUT4       | 1850 |                 LUT |
-| LUT5       | 1817 |                 LUT |
-| LUT2       | 1478 |                 LUT |
-| FDCE       | 1312 |        Flop & Latch |
+| FDRE       | 8976 |        Flop & Latch |
+| LUT6       | 2847 |                 LUT |
+| LUT5       | 2263 |                 LUT |
+| LUT4       | 2168 |                 LUT |
+| LUT3       | 1863 |                 LUT |
+| LUT2       | 1504 |                 LUT |
+| FDCE       | 1282 |        Flop & Latch |
 | RAMD32     |  712 |  Distributed Memory |
 | SRLC32E    |  474 |  Distributed Memory |
-| CARRY4     |  407 |          CarryLogic |
-| FDSE       |  377 |        Flop & Latch |
+| CARRY4     |  425 |          CarryLogic |
+| FDSE       |  367 |        Flop & Latch |
 | MUXF7      |  344 |               MuxFx |
-| SRL16E     |  329 |  Distributed Memory |
-| LUT1       |  263 |                 LUT |
+| SRL16E     |  326 |  Distributed Memory |
+| LUT1       |  266 |                 LUT |
 | RAMD64E    |  260 |  Distributed Memory |
 | RAMS32     |  198 |  Distributed Memory |
 | FDPE       |  182 |        Flop & Latch |
+| OBUF       |   67 |                  IO |
 | MUXF8      |   66 |               MuxFx |
-| OBUF       |   51 |                  IO |
-| IBUF       |   40 |                  IO |
-| OBUFT      |   33 |                  IO |
 | RAMB36E1   |   24 |        Block Memory |
-| SRLC16E    |   11 |  Distributed Memory |
+| IBUF       |   24 |                  IO |
+| OBUFT      |   17 |                  IO |
+| SRLC16E    |    9 |  Distributed Memory |
 | BUFG       |    7 |               Clock |
 | AND2B1L    |    4 |              Others |
 | BSCANE2    |    2 |              Others |
@@ -228,33 +228,32 @@ Table of Contents
 10. Instantiated Netlists
 -------------------------
 
-+----------------------------------+------+
-|             Ref Name             | Used |
-+----------------------------------+------+
-| u_ila_0_CV                       |    1 |
-| design_1_xbar_0                  |    1 |
-| design_1_rst_clk_wiz_1_100M_0    |    1 |
-| design_1_mii_to_rmii_0_0         |    1 |
-| design_1_microblaze_0_xlconcat_0 |    1 |
-| design_1_microblaze_0_axi_intc_0 |    1 |
-| design_1_microblaze_0_0          |    1 |
-| design_1_mdm_1_0                 |    1 |
-| design_1_lmb_bram_0              |    1 |
-| design_1_ilmb_v10_0              |    1 |
-| design_1_ilmb_bram_if_cntlr_0    |    1 |
-| design_1_fit_timer_0_0           |    1 |
-| design_1_dlmb_v10_0              |    1 |
-| design_1_dlmb_bram_if_cntlr_0    |    1 |
-| design_1_clk_wiz_1_0             |    1 |
-| design_1_axi_uartlite_0_0        |    1 |
-| design_1_axi_timer_0_0           |    1 |
-| design_1_axi_smc_0               |    1 |
-| design_1_axi_gpio_0_1            |    1 |
-| design_1_axi_ethernetlite_0_0    |    1 |
-| design_1_axi_emc_0_0             |    1 |
-| design_1_MinerCoprocessor_0_0    |    1 |
-| design_1_DisplayController_0_1   |    1 |
-| dbg_hub_CV                       |    1 |
-+----------------------------------+------+
++-----------------------------------+------+
+|              Ref Name             | Used |
++-----------------------------------+------+
+| u_ila_0_CV                        |    1 |
+| design_1_xbar_0                   |    1 |
+| design_1_rst_clk_wiz_1_100M_0     |    1 |
+| design_1_mii_to_rmii_0_0          |    1 |
+| design_1_microblaze_0_xlconcat_0  |    1 |
+| design_1_microblaze_0_axi_intc_0  |    1 |
+| design_1_microblaze_0_0           |    1 |
+| design_1_mdm_1_0                  |    1 |
+| design_1_lmb_bram_0               |    1 |
+| design_1_ilmb_v10_0               |    1 |
+| design_1_ilmb_bram_if_cntlr_0     |    1 |
+| design_1_dlmb_v10_0               |    1 |
+| design_1_dlmb_bram_if_cntlr_0     |    1 |
+| design_1_clk_wiz_1_0              |    1 |
+| design_1_axi_uartlite_0_0         |    1 |
+| design_1_axi_timer_0_0            |    1 |
+| design_1_axi_smc_0                |    1 |
+| design_1_axi_ethernetlite_0_0     |    1 |
+| design_1_axi_emc_0_0              |    1 |
+| design_1_MinerCoprocessor_0_0     |    1 |
+| design_1_LoadingBarController_0_0 |    1 |
+| design_1_DisplayController_0_1    |    1 |
+| dbg_hub_CV                        |    1 |
++-----------------------------------+------+
 
 
