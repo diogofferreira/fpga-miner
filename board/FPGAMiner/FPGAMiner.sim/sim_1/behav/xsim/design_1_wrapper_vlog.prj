@@ -1,0 +1,45 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/4868" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/02c8/hdl/verilog" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/e2dd/hdl/verilog" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2017.4/data/xilinx_vip/include" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/sim/design_1_microblaze_0_xlconcat_0.v" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_clk_wiz.v" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.v" \
+
+sv xil_defaultlib  --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/4868" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/02c8/hdl/verilog" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/e2dd/hdl/verilog" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2017.4/data/xilinx_vip/include" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/sim/bd_afc3_s00a2s_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/sim/bd_afc3_s01a2s_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/sim/bd_afc3_m00s2a_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/sim/bd_afc3_m00e_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/sim/bd_afc3_m00arn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/sim/bd_afc3_m00rn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/sim/bd_afc3_m00awn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/sim/bd_afc3_m00wn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/sim/bd_afc3_m00bn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/sim/bd_afc3_sarn_1.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/sim/bd_afc3_srn_1.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/sim/bd_afc3_s01mmu_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/sim/bd_afc3_s01tr_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_18/sim/bd_afc3_s01sic_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/sim/bd_afc3_sarn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/sim/bd_afc3_srn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/sim/bd_afc3_sawn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/sim/bd_afc3_swn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/sim/bd_afc3_sbn_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/sim/bd_afc3_s00mmu_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/sim/bd_afc3_s00tr_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/sim/bd_afc3_s00sic_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/sim/bd_afc3_arsw_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/sim/bd_afc3_rsw_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/sim/bd_afc3_awsw_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/sim/bd_afc3_wsw_0.sv" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/sim/bd_afc3_bsw_0.sv" \
+
+verilog xil_defaultlib  --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/4868" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/02c8/hdl/verilog" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/e2dd/hdl/verilog" --include "../../../../FPGAMiner.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "C:/Xilinx/Vivado/2017.4/data/xilinx_vip/include" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+"../../../../FPGAMiner.ip_user_files/bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

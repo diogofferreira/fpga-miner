@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Jun  5 05:12:26 2018
+-- Date        : Tue Jun  5 05:12:23 2018
 -- Host        : hp-laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_MinerCoprocessor_0_0/design_1_MinerCoprocessor_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_MinerCoprocessor_0_0 -prefix
+--               design_1_MinerCoprocessor_0_0_ design_1_MinerCoprocessor_0_0_sim_netlist.vhdl
 -- Design      : design_1_MinerCoprocessor_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -44,8 +44,6 @@ entity design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS is
     \s_counter_reg[0]_0\ : in STD_LOGIC;
     s_POWready_reg_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS : entity is "MinerCoprocessor_v1_0_M00_AXIS";
 end design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS;
 
 architecture STRUCTURE of design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_M00_AXIS is
@@ -1462,8 +1460,6 @@ entity design_1_MinerCoprocessor_0_0_SHA256 is
     s_allWordsSent : in STD_LOGIC;
     \s_hashInputWord_reg[671]\ : in STD_LOGIC_VECTOR ( 671 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_MinerCoprocessor_0_0_SHA256 : entity is "SHA256";
 end design_1_MinerCoprocessor_0_0_SHA256;
 
 architecture STRUCTURE of design_1_MinerCoprocessor_0_0_SHA256 is
@@ -45727,8 +45723,6 @@ entity design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS is
     \s_counter_reg[0]_6\ : in STD_LOGIC;
     s00_axis_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS : entity is "MinerCoprocessor_v1_0_S00_AXIS";
 end design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS;
 
 architecture STRUCTURE of design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0_S00_AXIS is
@@ -65362,8 +65356,6 @@ entity design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0 is
     s00_axis_aclk : in STD_LOGIC;
     m00_axis_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0 : entity is "MinerCoprocessor_v1_0";
 end design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0;
 
 architecture STRUCTURE of design_1_MinerCoprocessor_0_0_MinerCoprocessor_v1_0 is

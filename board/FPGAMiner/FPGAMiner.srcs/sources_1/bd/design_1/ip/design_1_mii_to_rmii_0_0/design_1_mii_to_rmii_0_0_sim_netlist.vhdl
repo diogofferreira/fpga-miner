@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Mon Jun  4 22:19:36 2018
+-- Date        : Mon Jun  4 22:19:35 2018
 -- Host        : hp-laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_mii_to_rmii_0_0 -prefix
+--               design_1_mii_to_rmii_0_0_ design_1_mii_to_rmii_0_0_sim_netlist.vhdl
 -- Design      : design_1_mii_to_rmii_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,8 +27,6 @@ entity design_1_mii_to_rmii_0_0_SRL_FIFO is
     \RX_100_MBPS.fifo_flshr_cs_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \rst_n_d_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_mii_to_rmii_0_0_SRL_FIFO : entity is "SRL_FIFO";
 end design_1_mii_to_rmii_0_0_SRL_FIFO;
 
 architecture STRUCTURE of design_1_mii_to_rmii_0_0_SRL_FIFO is
@@ -408,8 +406,6 @@ entity design_1_mii_to_rmii_0_0_rmii_tx_fixed is
     mac2Rmii_tx_en_d2 : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_mii_to_rmii_0_0_rmii_tx_fixed : entity is "rmii_tx_fixed";
 end design_1_mii_to_rmii_0_0_rmii_tx_fixed;
 
 architecture STRUCTURE of design_1_mii_to_rmii_0_0_rmii_tx_fixed is
@@ -706,8 +702,6 @@ entity design_1_mii_to_rmii_0_0_rmii_rx_fixed is
     \phy2Rmii_rxd_d2_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     mac2Rmii_tx_en_d2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_mii_to_rmii_0_0_rmii_rx_fixed : entity is "rmii_rx_fixed";
 end design_1_mii_to_rmii_0_0_rmii_rx_fixed;
 
 architecture STRUCTURE of design_1_mii_to_rmii_0_0_rmii_rx_fixed is
@@ -1163,8 +1157,6 @@ entity design_1_mii_to_rmii_0_0_mii_to_rmii is
   attribute C_INSTANCE of design_1_mii_to_rmii_0_0_mii_to_rmii : entity is "design_1_mii_to_rmii_0_0";
   attribute C_SPEED_100 : string;
   attribute C_SPEED_100 of design_1_mii_to_rmii_0_0_mii_to_rmii : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_mii_to_rmii_0_0_mii_to_rmii : entity is "mii_to_rmii";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_mii_to_rmii_0_0_mii_to_rmii : entity is "yes";
   attribute hdl : string;

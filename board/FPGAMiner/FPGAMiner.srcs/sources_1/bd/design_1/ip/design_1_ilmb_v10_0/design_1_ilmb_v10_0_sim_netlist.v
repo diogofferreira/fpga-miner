@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Mon Jun  4 22:09:29 2018
+// Date        : Mon Jun  4 22:09:27 2018
 // Host        : hp-laptop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_ilmb_v10_0 -prefix
+//               design_1_ilmb_v10_0_ design_1_ilmb_v10_0_sim_netlist.v
 // Design      : design_1_ilmb_v10_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -125,7 +125,7 @@ module design_1_ilmb_v10_0
 endmodule
 
 (* C_EXT_RESET_HIGH = "1" *) (* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) 
-(* C_LMB_NUM_SLAVES = "1" *) (* ORIG_REF_NAME = "lmb_v10" *) 
+(* C_LMB_NUM_SLAVES = "1" *) 
 module design_1_ilmb_v10_0_lmb_v10
    (LMB_Clk,
     SYS_Rst,

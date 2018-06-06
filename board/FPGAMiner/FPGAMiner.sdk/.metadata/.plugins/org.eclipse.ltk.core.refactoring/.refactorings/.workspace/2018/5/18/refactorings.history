@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;EthernetTest&apos;" deleteContents="true" description="Delete resource &apos;EthernetTest&apos;" element1="/EthernetTest" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1525380863000"/>&#x0A;<refactoring comment="Delete resource &apos;EthernetTest_bsp&apos;" deleteContents="true" description="Delete resource &apos;EthernetTest_bsp&apos;" element1="/EthernetTest_bsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1525380912173"/>
-</session>

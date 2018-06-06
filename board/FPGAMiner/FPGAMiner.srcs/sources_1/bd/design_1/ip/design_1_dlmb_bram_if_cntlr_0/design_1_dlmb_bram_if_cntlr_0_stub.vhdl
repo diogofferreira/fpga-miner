@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Mon Jun  4 22:19:41 2018
 -- Host        : hp-laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_dlmb_bram_if_cntlr_0 -prefix
+--               design_1_dlmb_bram_if_cntlr_0_ design_1_dlmb_bram_if_cntlr_0_stub.vhdl
 -- Design      : design_1_dlmb_bram_if_cntlr_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

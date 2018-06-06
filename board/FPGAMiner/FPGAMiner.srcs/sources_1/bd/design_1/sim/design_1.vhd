@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Tue Jun  5 05:08:24 2018
+--Date        : Tue Jun  5 23:31:35 2018
 --Host        : hp-laptop running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -2356,7 +2356,7 @@ entity design_1 is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=30,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=10,da_clkrst_cnt=1,da_mb_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=11,da_clkrst_cnt=2,da_mb_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -2521,7 +2521,7 @@ architecture STRUCTURE of design_1 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    intr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    intr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     processor_clk : in STD_LOGIC;
     processor_rst : in STD_LOGIC;
     irq : out STD_LOGIC;
@@ -2533,7 +2533,8 @@ architecture STRUCTURE of design_1 is
   port (
     In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component design_1_microblaze_0_xlconcat_0;
   component design_1_mdm_1_0 is
@@ -2830,7 +2831,25 @@ architecture STRUCTURE of design_1 is
     M00_AXI_rready : out STD_LOGIC
   );
   end component design_1_axi_smc_0;
-  component design_1_DisplayController_0_0 is
+  component design_1_MinerCoprocessor_0_0 is
+  port (
+    m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axis_tlast : out STD_LOGIC;
+    m00_axis_tvalid : out STD_LOGIC;
+    m00_axis_tready : in STD_LOGIC;
+    m00_axis_aclk : in STD_LOGIC;
+    m00_axis_aresetn : in STD_LOGIC;
+    s00_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axis_tlast : in STD_LOGIC;
+    s00_axis_tvalid : in STD_LOGIC;
+    s00_axis_tready : out STD_LOGIC;
+    s00_axis_aclk : in STD_LOGIC;
+    s00_axis_aresetn : in STD_LOGIC
+  );
+  end component design_1_MinerCoprocessor_0_0;
+  component design_1_DisplayController_0_1 is
   port (
     an : out STD_LOGIC_VECTOR ( 7 downto 0 );
     seg : out STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -2857,8 +2876,8 @@ architecture STRUCTURE of design_1 is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component design_1_DisplayController_0_0;
-  component design_1_axi_gpio_0_0 is
+  end component design_1_DisplayController_0_1;
+  component design_1_axi_gpio_0_1 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -2883,25 +2902,14 @@ architecture STRUCTURE of design_1 is
     gpio_io_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
     gpio_io_t : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  end component design_1_axi_gpio_0_0;
-  component design_1_MinerCoprocessor_0_0 is
+  end component design_1_axi_gpio_0_1;
+  component design_1_fit_timer_0_0 is
   port (
-    m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m00_axis_tlast : out STD_LOGIC;
-    m00_axis_tvalid : out STD_LOGIC;
-    m00_axis_tready : in STD_LOGIC;
-    m00_axis_aclk : in STD_LOGIC;
-    m00_axis_aresetn : in STD_LOGIC;
-    s00_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s00_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axis_tlast : in STD_LOGIC;
-    s00_axis_tvalid : in STD_LOGIC;
-    s00_axis_tready : out STD_LOGIC;
-    s00_axis_aclk : in STD_LOGIC;
-    s00_axis_aresetn : in STD_LOGIC
+    Clk : in STD_LOGIC;
+    Rst : in STD_LOGIC;
+    Interrupt : out STD_LOGIC
   );
-  end component design_1_MinerCoprocessor_0_0;
+  end component design_1_fit_timer_0_0;
   signal DisplayController_0_an : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal DisplayController_0_dp : STD_LOGIC;
   signal DisplayController_0_seg : STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -2934,9 +2942,9 @@ architecture STRUCTURE of design_1 is
   signal axi_ethernetlite_0_MII_TX_CLK : STD_LOGIC;
   signal axi_ethernetlite_0_MII_TX_EN : STD_LOGIC;
   signal axi_ethernetlite_0_ip2intc_irpt : STD_LOGIC;
-  signal axi_gpio_led_GPIO_TRI_I : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal axi_gpio_led_GPIO_TRI_O : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal axi_gpio_led_GPIO_TRI_T : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal axi_gpio_0_GPIO_TRI_I : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal axi_gpio_0_GPIO_TRI_T : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal axi_smc_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_smc_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_smc_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2973,6 +2981,7 @@ architecture STRUCTURE of design_1 is
   signal axi_uartlite_0_UART_TxD : STD_LOGIC;
   signal clk_wiz_1_clk_out2 : STD_LOGIC;
   signal clk_wiz_1_locked : STD_LOGIC;
+  signal fit_timer_0_Interrupt : STD_LOGIC;
   signal mdm_1_debug_sys_rst : STD_LOGIC;
   signal microblaze_0_Clk : STD_LOGIC;
   signal microblaze_0_M0_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3181,7 +3190,7 @@ architecture STRUCTURE of design_1 is
   signal microblaze_0_interrupt_ACK : STD_LOGIC_VECTOR ( 0 to 1 );
   signal microblaze_0_interrupt_ADDRESS : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_interrupt_INTERRUPT : STD_LOGIC;
-  signal microblaze_0_intr : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal microblaze_0_intr : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal mii_to_rmii_0_RMII_PHY_M_CRS_DV : STD_LOGIC;
   signal mii_to_rmii_0_RMII_PHY_M_RXD : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal mii_to_rmii_0_RMII_PHY_M_RX_ER : STD_LOGIC;
@@ -3192,6 +3201,7 @@ architecture STRUCTURE of design_1 is
   signal rst_clk_wiz_1_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_clk_wiz_1_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal rst_clk_wiz_1_100M_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sys_clock_1 : STD_LOGIC;
   signal NLW_MinerCoprocessor_0_m00_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_emc_0_mem_cken_UNCONNECTED : STD_LOGIC;
@@ -3226,7 +3236,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_microblaze_0_M_AXI_IC_AWSIZE_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_microblaze_0_M_AXI_IC_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_microblaze_0_M_AXI_IC_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute BMM_INFO_PROCESSOR : string;
   attribute BMM_INFO_PROCESSOR of microblaze_0 : label is "microblaze-le > design_1 microblaze_0_local_memory/dlmb_bram_if_cntlr";
   attribute KEEP_HIERARCHY : string;
@@ -3270,7 +3279,7 @@ begin
   axi_emc_0_EMC_INTF_DQ_I(15 downto 0) <= cellular_ram_dq_i(15 downto 0);
   axi_emc_0_EMC_INTF_WAIT <= cellular_ram_wait;
   axi_ethernetlite_0_MDIO_MDIO_I <= eth_mdio_mdc_mdio_i;
-  axi_gpio_led_GPIO_TRI_I(15 downto 0) <= led_16bits_tri_i(15 downto 0);
+  axi_gpio_0_GPIO_TRI_I(15 downto 0) <= led_16bits_tri_i(15 downto 0);
   axi_uartlite_0_UART_RxD <= usb_uart_rxd;
   cellular_ram_addr(22 downto 0) <= axi_emc_0_EMC_INTF_ADDR(22 downto 0);
   cellular_ram_adv_ldn <= axi_emc_0_EMC_INTF_ADV_LDN;
@@ -3288,8 +3297,8 @@ begin
   eth_ref_clk <= clk_wiz_1_clk_out2;
   eth_rmii_tx_en <= mii_to_rmii_0_RMII_PHY_M_TX_EN;
   eth_rmii_txd(1 downto 0) <= mii_to_rmii_0_RMII_PHY_M_TXD(1 downto 0);
-  led_16bits_tri_o(15 downto 0) <= axi_gpio_led_GPIO_TRI_O(15 downto 0);
-  led_16bits_tri_t(15 downto 0) <= axi_gpio_led_GPIO_TRI_T(15 downto 0);
+  led_16bits_tri_o(15 downto 0) <= axi_gpio_0_GPIO_TRI_O(15 downto 0);
+  led_16bits_tri_t(15 downto 0) <= axi_gpio_0_GPIO_TRI_T(15 downto 0);
   mii_to_rmii_0_RMII_PHY_M_CRS_DV <= eth_rmii_crs_dv;
   mii_to_rmii_0_RMII_PHY_M_RXD(1 downto 0) <= eth_rmii_rxd(1 downto 0);
   mii_to_rmii_0_RMII_PHY_M_RX_ER <= eth_rmii_rx_er;
@@ -3297,7 +3306,7 @@ begin
   seg(6 downto 0) <= DisplayController_0_seg(6 downto 0);
   sys_clock_1 <= sys_clock;
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
-DisplayController_0: component design_1_DisplayController_0_0
+DisplayController_0: component design_1_DisplayController_0_1
      port map (
       an(7 downto 0) => DisplayController_0_an(7 downto 0),
       dp => DisplayController_0_dp,
@@ -3433,11 +3442,11 @@ axi_ethernetlite_0: component design_1_axi_ethernetlite_0_0
       s_axi_wstrb(3 downto 0) => microblaze_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => microblaze_0_axi_periph_M02_AXI_WVALID
     );
-axi_gpio_led: component design_1_axi_gpio_0_0
+axi_gpio_led: component design_1_axi_gpio_0_1
      port map (
-      gpio_io_i(15 downto 0) => axi_gpio_led_GPIO_TRI_I(15 downto 0),
-      gpio_io_o(15 downto 0) => axi_gpio_led_GPIO_TRI_O(15 downto 0),
-      gpio_io_t(15 downto 0) => axi_gpio_led_GPIO_TRI_T(15 downto 0),
+      gpio_io_i(15 downto 0) => axi_gpio_0_GPIO_TRI_I(15 downto 0),
+      gpio_io_o(15 downto 0) => axi_gpio_0_GPIO_TRI_O(15 downto 0),
+      gpio_io_t(15 downto 0) => axi_gpio_0_GPIO_TRI_T(15 downto 0),
       s_axi_aclk => microblaze_0_Clk,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M05_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
@@ -3605,6 +3614,12 @@ clk_wiz_1: component design_1_clk_wiz_1_0
       clk_out2 => clk_wiz_1_clk_out2,
       locked => clk_wiz_1_locked,
       resetn => reset_1
+    );
+fit_timer_0: component design_1_fit_timer_0_0
+     port map (
+      Clk => microblaze_0_Clk,
+      Interrupt => fit_timer_0_Interrupt,
+      Rst => rst_clk_wiz_1_100M_peripheral_reset(0)
     );
 mdm_1: component design_1_mdm_1_0
      port map (
@@ -3790,7 +3805,7 @@ microblaze_0: component design_1_microblaze_0_0
 microblaze_0_axi_intc: component design_1_microblaze_0_axi_intc_0
      port map (
       interrupt_address(31 downto 0) => microblaze_0_interrupt_ADDRESS(31 downto 0),
-      intr(1 downto 0) => microblaze_0_intr(1 downto 0),
+      intr(2 downto 0) => microblaze_0_intr(2 downto 0),
       irq => microblaze_0_interrupt_INTERRUPT,
       processor_ack(1) => microblaze_0_interrupt_ACK(0),
       processor_ack(0) => microblaze_0_interrupt_ACK(1),
@@ -3986,7 +4001,8 @@ microblaze_0_xlconcat: component design_1_microblaze_0_xlconcat_0
      port map (
       In0(0) => axi_timer_0_interrupt,
       In1(0) => axi_ethernetlite_0_ip2intc_irpt,
-      dout(1 downto 0) => microblaze_0_intr(1 downto 0)
+      In2(0) => fit_timer_0_Interrupt,
+      dout(2 downto 0) => microblaze_0_intr(2 downto 0)
     );
 mii_to_rmii_0: component design_1_mii_to_rmii_0_0
      port map (
@@ -4018,7 +4034,7 @@ rst_clk_wiz_1_100M: component design_1_rst_clk_wiz_1_100M_0
       mb_debug_sys_rst => mdm_1_debug_sys_rst,
       mb_reset => rst_clk_wiz_1_100M_mb_reset,
       peripheral_aresetn(0) => rst_clk_wiz_1_100M_peripheral_aresetn(0),
-      peripheral_reset(0) => NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED(0),
+      peripheral_reset(0) => rst_clk_wiz_1_100M_peripheral_reset(0),
       slowest_sync_clk => microblaze_0_Clk
     );
 end STRUCTURE;

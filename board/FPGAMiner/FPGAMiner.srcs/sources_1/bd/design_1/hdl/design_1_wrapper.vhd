@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Tue Jun  5 05:08:24 2018
+--Date        : Tue Jun  5 23:31:35 2018
 --Host        : hp-laptop running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -72,8 +72,8 @@ architecture STRUCTURE of design_1_wrapper is
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC;
     eth_ref_clk : out STD_LOGIC;
-    seg : out STD_LOGIC_VECTOR ( 6 downto 0 );
     an : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    seg : out STD_LOGIC_VECTOR ( 6 downto 0 );
     dp : out STD_LOGIC
   );
   end component design_1;

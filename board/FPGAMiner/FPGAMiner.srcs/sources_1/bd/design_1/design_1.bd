@@ -206,21 +206,21 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>seg</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>6</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>an</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
               <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>seg</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>6</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
           </spirit:wire>
@@ -284,6 +284,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_microblaze_0_xlconcat_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">3</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -375,26 +376,33 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>MinerCoprocessor_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="MinerCoprocessor" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_MinerCoprocessor_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>DisplayController_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="DisplayController" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_DisplayController_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_DisplayController_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>axi_gpio_led</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="axi_gpio" spirit:vendor="xilinx.com" spirit:version="2.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_axi_gpio_0_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USE_BOARD_FLOW">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="GPIO_BOARD_INTERFACE">led_16bits</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>MinerCoprocessor_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="MinerCoprocessor" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>fit_timer_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fit_timer" spirit:vendor="xilinx.com" spirit:version="2.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_MinerCoprocessor_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_fit_timer_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -504,8 +512,10 @@
         <spirit:internalPortReference spirit:componentRef="axi_uartlite_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_ethernetlite_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_timer_0" spirit:portRef="s_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_gpio_led" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="m00_axis_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="s00_axis_aclk"/>
         <spirit:internalPortReference spirit:componentRef="DisplayController_0" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_gpio_led" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M00_ACLK"/>
@@ -515,8 +525,7 @@
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M03_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M05_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="m00_axis_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="s00_axis_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="fit_timer_0" spirit:portRef="Clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_1_locked</spirit:name>
@@ -548,6 +557,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_uartlite_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_ethernetlite_0" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_timer_0" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="m00_axis_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="s00_axis_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="DisplayController_0" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_led" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="S00_ARESETN"/>
@@ -557,8 +568,6 @@
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M03_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M04_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_periph" spirit:portRef="M05_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="m00_axis_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="MinerCoprocessor_0" spirit:portRef="s00_axis_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mdm_1_debug_sys_rst</spirit:name>
@@ -594,19 +603,29 @@
         <spirit:internalPortReference spirit:componentRef="mii_to_rmii_0" spirit:portRef="ref_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>DisplayController_0_seg</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="DisplayController_0" spirit:portRef="seg"/>
-        <spirit:externalPortReference spirit:portRef="seg"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>DisplayController_0_an</spirit:name>
         <spirit:internalPortReference spirit:componentRef="DisplayController_0" spirit:portRef="an"/>
         <spirit:externalPortReference spirit:portRef="an"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>DisplayController_0_seg</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="DisplayController_0" spirit:portRef="seg"/>
+        <spirit:externalPortReference spirit:portRef="seg"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>DisplayController_0_dp</spirit:name>
         <spirit:internalPortReference spirit:componentRef="DisplayController_0" spirit:portRef="dp"/>
         <spirit:externalPortReference spirit:portRef="dp"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rst_clk_wiz_1_100M_peripheral_reset</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rst_clk_wiz_1_100M" spirit:portRef="peripheral_reset"/>
+        <spirit:internalPortReference spirit:componentRef="fit_timer_0" spirit:portRef="Rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fit_timer_0_Interrupt</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fit_timer_0" spirit:portRef="Interrupt"/>
+        <spirit:internalPortReference spirit:componentRef="microblaze_0_xlconcat" spirit:portRef="In2"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -622,7 +641,7 @@
       <spirit:hierConnection spirit:interfaceRef="eth_mdio_mdc/axi_ethernetlite_0_MDIO">
         <spirit:activeInterface spirit:busRef="MDIO" spirit:componentRef="axi_ethernetlite_0"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="led_16bits/axi_gpio_led_GPIO">
+      <spirit:hierConnection spirit:interfaceRef="led_16bits/axi_gpio_0_GPIO">
         <spirit:activeInterface spirit:busRef="GPIO" spirit:componentRef="axi_gpio_led"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
@@ -2685,20 +2704,20 @@
         </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
-        <spirit:name>M_AXI_DP</spirit:name>
-        <spirit:master>
-          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
-        </spirit:master>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
         <spirit:name>DLMB</spirit:name>
         <spirit:master>
           <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
         </spirit:master>
         <spirit:busType spirit:library="interface" spirit:name="lmb" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="lmb_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>M_AXI_DP</spirit:name>
+        <spirit:master>
+          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
+        </spirit:master>
+        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>M_AXI_IC</spirit:name>
@@ -2748,7 +2767,7 @@
             <spirit:range>64K</spirit:range>
           </spirit:segment>
           <spirit:segment>
-            <spirit:name>SEG_axi_gpio_led_Reg</spirit:name>
+            <spirit:name>SEG_axi_gpio_0_Reg</spirit:name>
             <spirit:displayName>/axi_gpio_led/S_AXI/Reg</spirit:displayName>
             <spirit:addressOffset>0x40000000</spirit:addressOffset>
             <spirit:range>64K</spirit:range>

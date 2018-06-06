@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  5 05:08:41 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  5 23:32:09 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4:part0:1.1" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -52,14 +52,14 @@
         <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out2"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="6" NAME="seg" RIGHT="0" SIGIS="undef" SIGNAME="DisplayController_0_seg">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="DisplayController_0" PORT="seg"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" LEFT="7" NAME="an" RIGHT="0" SIGIS="undef" SIGNAME="DisplayController_0_an">
       <CONNECTIONS>
         <CONNECTION INSTANCE="DisplayController_0" PORT="an"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="seg" RIGHT="0" SIGIS="undef" SIGNAME="DisplayController_0_seg">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DisplayController_0" PORT="seg"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="dp" SIGIS="undef" SIGNAME="DisplayController_0_dp">
@@ -133,7 +133,7 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_DisplayController_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_DisplayController_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S00_AXI_BASEADDR" VALUE="0x44A00000"/>
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x44A0FFFF"/>
@@ -1592,7 +1592,7 @@
         <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
         <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
         <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_gpio_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_gpio_0_1"/>
         <PARAMETER NAME="USE_BOARD_FLOW" VALUE="true"/>
         <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="led_16bits"/>
         <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
@@ -3843,8 +3843,10 @@
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_ethernetlite_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_timer_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="DisplayController_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M00_ACLK"/>
@@ -3857,8 +3859,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M05_ACLK"/>
-            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="m00_axis_aclk"/>
-            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="fit_timer_0" PORT="Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out2">
@@ -3870,6 +3871,37 @@
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_1_locked">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="dcm_locked"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/fit_timer_0" HWVERSION="2.0" INSTANCE="fit_timer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fit_timer" VLNV="xilinx.com:ip:fit_timer:2.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=fit_timer;v=v2_0;d=pg110-fit-timer.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_NO_CLOCKS" VALUE="6216"/>
+        <PARAMETER NAME="C_INACCURACY" VALUE="0"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fit_timer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Rst" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="fit_timer_0_Interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_xlconcat" PORT="In2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5110,7 +5142,7 @@
             <REGISTER NAME="ISR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Status Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -5123,14 +5155,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="IPR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Pending Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-only"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -5143,14 +5175,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="IER">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Enable Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -5163,14 +5195,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="IAR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Acknowledge Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="write-only"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -5183,14 +5215,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="SIE">
               <PROPERTY NAME="DESCRIPTION" VALUE="Set Interrupt Enables"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x10"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -5203,14 +5235,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="CIE">
               <PROPERTY NAME="DESCRIPTION" VALUE="Clear Interrupt Enables"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x14"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -5223,7 +5255,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -5280,7 +5312,7 @@
             <REGISTER NAME="IMR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Mode Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x20"/>
-              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -5293,7 +5325,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -5362,7 +5394,7 @@
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x108"/>
               <PROPERTY NAME="SIZE" VALUE="32"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="16"/>
               <FIELDS>
                 <FIELD NAME="IVA">
@@ -5965,12 +5997,12 @@
         <PARAMETER NAME="C_INSTANCE" VALUE="design_1_microblaze_0_axi_intc_0"/>
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_NUM_INTR_INPUTS" VALUE="2"/>
+        <PARAMETER NAME="C_NUM_INTR_INPUTS" VALUE="3"/>
         <PARAMETER NAME="C_NUM_SW_INTR" VALUE="0"/>
-        <PARAMETER NAME="C_KIND_OF_INTR" VALUE="0xfffffffe"/>
+        <PARAMETER NAME="C_KIND_OF_INTR" VALUE="0xfffffffa"/>
         <PARAMETER NAME="C_KIND_OF_EDGE" VALUE="0xFFFFFFFF"/>
         <PARAMETER NAME="C_KIND_OF_LVL" VALUE="0xFFFFFFFF"/>
-        <PARAMETER NAME="C_ASYNC_INTR" VALUE="0xFFFFFFFE"/>
+        <PARAMETER NAME="C_ASYNC_INTR" VALUE="0xFFFFFFFA"/>
         <PARAMETER NAME="C_NUM_SYNC_FF" VALUE="2"/>
         <PARAMETER NAME="C_IVAR_RESET_VALUE" VALUE="0x00000010"/>
         <PARAMETER NAME="C_ENABLE_ASYNC" VALUE="0"/>
@@ -6093,7 +6125,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="intr" RIGHT="0" SENSITIVITY="EDGE_RISING:LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="microblaze_0_xlconcat_dout">
+        <PORT DIR="I" LEFT="2" NAME="intr" RIGHT="0" SENSITIVITY="LEVEL_HIGH:EDGE_RISING:LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="microblaze_0_xlconcat_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_xlconcat" PORT="dout"/>
           </CONNECTIONS>
@@ -8343,8 +8375,8 @@
         <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="dout_width" VALUE="2"/>
-        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="dout_width" VALUE="3"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="3"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_microblaze_0_xlconcat_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -8359,7 +8391,12 @@
             <CONNECTION INSTANCE="axi_ethernetlite_0" PORT="ip2intc_irpt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_xlconcat_dout">
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="fit_timer_0_Interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fit_timer_0" PORT="Interrupt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_xlconcat_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_intc" PORT="intr"/>
           </CONNECTIONS>
@@ -8528,7 +8565,11 @@
             <CONNECTION INSTANCE="microblaze_0_local_memory_ilmb_bram_if_cntlr" PORT="LMB_Rst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fit_timer_0" PORT="Rst"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_interconnect_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="ARESETN"/>
@@ -8542,6 +8583,8 @@
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_ethernetlite_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_timer_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="DisplayController_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="S00_ARESETN"/>
@@ -8551,8 +8594,6 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ARESETN"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M04_ARESETN"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M05_ARESETN"/>
-            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="m00_axis_aresetn"/>
-            <CONNECTION INSTANCE="MinerCoprocessor_0" PORT="s00_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

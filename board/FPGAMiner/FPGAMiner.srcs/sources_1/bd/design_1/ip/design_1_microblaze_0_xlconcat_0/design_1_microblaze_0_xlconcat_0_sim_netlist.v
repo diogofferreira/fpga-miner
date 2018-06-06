@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Mon Jun  4 22:09:29 2018
+// Date        : Tue Jun  5 23:39:01 2018
 // Host        : hp-laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/CR_Projects/Project/Development/FPGAMiner/FPGAMiner.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/design_1_microblaze_0_xlconcat_0_sim_netlist.v
@@ -17,14 +17,18 @@
 module design_1_microblaze_0_xlconcat_0
    (In0,
     In1,
+    In2,
     dout);
   input [0:0]In0;
   input [0:0]In1;
-  output [1:0]dout;
+  input [0:0]In2;
+  output [2:0]dout;
 
   wire [0:0]In0;
   wire [0:0]In1;
+  wire [0:0]In2;
 
+  assign dout[2] = In2;
   assign dout[1] = In1;
   assign dout[0] = In0;
 endmodule

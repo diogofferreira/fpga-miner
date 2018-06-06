@@ -6,7 +6,7 @@
 <Project Version="7" Minor="35" Path="c:/cr_projects/project/development/fpgaminer/fpgaminer.tmp/displaycontroller_v1_0_project/DisplayController_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="b2319a17a00a411496dd3f9b15640145"/>
+    <Option Name="Id" Val="39d75060df5d4492b10abded918b0d3d"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
